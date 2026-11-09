@@ -18,7 +18,7 @@ function head({ title, description, site, assets, url }) {
 <title>${esc(full)}</title>
 <meta name="description" content="${esc(description || site.config.description)}">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0b0a12">
+<meta name="theme-color" content="#0a0a0b">
 <link rel="icon" href="${assets.favicon}" type="image/svg+xml">
 ${assets.preload.map((f) => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
 <link rel="stylesheet" href="${assets.css}">
@@ -29,14 +29,14 @@ ${assets.dev ? `<script src="${assets.dev}" defer></script>` : ''}
 }
 
 function logo() {
-  return `<svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset=".55" stop-color="#e2a93b"/><stop offset="1" stop-color="#9b5cff"/></linearGradient></defs><rect x="9" y="4" width="22" height="32" rx="4" fill="none" stroke="url(#lg-a)" stroke-width="2.4" transform="rotate(-8 20 20)"/><rect x="11" y="6" width="22" height="32" rx="4" fill="#15131f" stroke="url(#lg-a)" stroke-width="2.4" transform="rotate(7 22 22)"/><path d="M22 14l2.4 5 5.4.6-4 3.7 1.1 5.3-4.9-2.7-4.9 2.7 1.1-5.3-4-3.7 5.4-.6z" fill="url(#lg-a)" transform="rotate(7 22 22)"/></svg>`;
+  return `<svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="4.5" y="3" width="11" height="15" rx="2" transform="rotate(-8 10 10.5)" opacity=".45"/><rect x="8.5" y="5.5" width="11" height="15" rx="2"/><path d="M14 9.6l1 2 2.2.3-1.6 1.5.4 2.2-2-1.1-2 1.1.4-2.2-1.6-1.5 2.2-.3z" fill="currentColor" stroke="none"/></svg>`;
 }
 
 function header(site) {
   return `<a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
 <button class="icon-btn menu-btn" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">${icon('menu')}</button>
-<a class="brand" href="/" aria-label="${esc(site.config.name)} home">${logo()}<span class="brand__text"><span class="brand__name">Card Battles</span><span class="brand__sub">Prestige Wiki</span></span></a>
+<a class="brand" href="/" aria-label="${esc(site.config.name)} home">${logo()}<span class="brand__text"><span class="brand__name">Card Battles: Prestige</span><span class="brand__sub">Wiki</span></span></a>
 <button class="search-trigger" type="button" data-search-open aria-haspopup="dialog">${icon('search')}<span class="search-trigger__text">Search the wiki</span><kbd>Ctrl K</kbd></button>
 <span class="topbar__spacer"></span>
 <a class="update-chip" href="/update-3/" title="What's new">${icon('spark')}Update ${esc(site.config.currentUpdate)}</a>
@@ -119,11 +119,11 @@ export function layoutHome({ page, site, assets, ctx }) {
   const h = site.home;
   const count = (kind) => [...site.entities.values()].filter((e) => e.kind === kind && !e.placeholder).length;
   const stats = h.stats
-    .map((s) => `<li><span class="hero__stat-num">${esc(s.value ?? count(s.count))}</span><span class="hero__stat-label">${esc(s.label)}</span></li>`)
+    .map((s) => `<li class="stat"><b>${esc(s.value ?? count(s.count))}</b><span>${esc(s.label)}</span></li>`)
     .join('');
   const quick = h.quickLinks
     .map(
-      (q, i) => `<a class="quick tilt tier-${q.tier} reveal" href="${q.href}" data-sound="tick"><span class="quick__icon">${icon(q.icon)}</span><span class="quick__title">${esc(q.title)}</span><span class="quick__blurb">${esc(q.blurb)}</span><span class="quick__go">${icon('arrow-right')}</span><span class="quick__shine" aria-hidden="true"></span></a>`
+      (q) => `<a class="quick reveal" href="${q.href}"><span class="quick__icon">${icon(q.icon)}</span><span class="quick__title">${esc(q.title)}</span><span class="quick__blurb">${esc(q.blurb)}</span><span class="quick__go">${icon('arrow-right')}</span></a>`
     )
     .join('');
   const steps = h.startHere
@@ -139,8 +139,6 @@ export function layoutHome({ page, site, assets, ctx }) {
       (g) => `<div class="browse__group reveal"><p class="browse__label">${icon(g.icon)}${esc(g.label)}</p><ul>${g.items.map((p) => `<li><a href="${p.url}">${esc(p.fm.navTitle || p.title)}</a></li>`).join('')}</ul></div>`
     )
     .join('');
-  const heroCard = (cls, ic, label) =>
-    `<span class="hero-card ${cls}"><span class="hero-card__inner"><span class="hero-card__emblem">${icon(ic)}</span><span class="hero-card__label">${label}</span><span class="hero-card__shine"></span></span></span>`;
   const onPage = [
     ['quick-links', 'Most-used pages'],
     ['start-here', 'Start here'],
@@ -155,19 +153,18 @@ ${sidebar(site, '/')}
 <main id="main" class="main main--home" tabindex="-1">
 <section class="hero">
 <div class="hero__text">
-<p class="eyebrow">${icon('spark')}Fan wiki · Update ${esc(site.config.currentUpdate)}</p>
-<h1 class="hero__title">Card Battles<span>Prestige</span></h1>
+<p class="eyebrow"><i></i>Fan wiki · Update ${esc(site.config.currentUpdate)}</p>
+<h1 class="hero__title">Card Battles: Prestige</h1>
 <p class="hero__lede">${esc(h.tagline)}</p>
-<button class="hero-search" type="button" data-search-open aria-haspopup="dialog">${icon('search')}<span>Search cards, items, materials, bosses…</span><kbd>Ctrl K</kbd></button>
-<ul class="hero__stats">${stats}</ul>
 </div>
-<div class="hero__cards" aria-hidden="true">${heroCard('hero-card--a tier-4', 'potion', 'Potions')}${heroCard('hero-card--b tier-7', 'tower', 'Prestige')}${heroCard('hero-card--c tier-6', 'boss', 'Bosses')}</div>
+<ul class="hero__stats">${stats}</ul>
 </section>
+<button class="hero-search" type="button" data-search-open aria-haspopup="dialog">${icon('search')}<span>Search cards, items, materials, bosses…</span><kbd>Ctrl K</kbd></button>
 <nav class="onpage" aria-label="On this page"><span class="onpage__label">On this page</span>${onPage.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</nav>
 <section class="home-section" aria-labelledby="quick-links"><h2 id="quick-links">Most-used pages<a class="h-anchor" href="#quick-links" aria-label="Copy link to this section" data-copy>${icon('link')}</a></h2><div class="quick-grid">${quick}</div></section>
 <div class="home-split">
 <section class="home-section start" aria-labelledby="start-here"><h2 id="start-here">Start here<a class="h-anchor" href="#start-here" aria-label="Copy link to this section" data-copy>${icon('link')}</a></h2><p class="home-section__lede">${esc(h.startHereIntro)}</p><ol class="path">${steps}</ol></section>
-<section class="home-section news-panel reveal" aria-labelledby="new-in-update-3"><h2 id="new-in-update-3">${icon('spark')}New in Update ${esc(site.config.currentUpdate)}<a class="h-anchor" href="#new-in-update-3" aria-label="Copy link to this section" data-copy>${icon('link')}</a></h2>${news}<a class="news-panel__more" href="/update-3/">Read the Update ${esc(site.config.currentUpdate)} page${icon('arrow-right')}</a></section>
+<section class="home-section news-panel reveal" aria-labelledby="new-in-update-3"><h2 id="new-in-update-3">New in Update ${esc(site.config.currentUpdate)}<a class="h-anchor" href="#new-in-update-3" aria-label="Copy link to this section" data-copy>${icon('link')}</a></h2>${news}<a class="news-panel__more" href="/update-3/">Read the Update ${esc(site.config.currentUpdate)} page${icon('arrow-right')}</a></section>
 </div>
 <section class="home-section" aria-labelledby="browse"><h2 id="browse">Browse everything<a class="h-anchor" href="#browse" aria-label="Copy link to this section" data-copy>${icon('link')}</a></h2><div class="browse">${browse}</div></section>
 </main>

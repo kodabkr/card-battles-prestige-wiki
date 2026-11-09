@@ -1,38 +1,57 @@
-# Alternative: host on Cloudflare Pages
+# Host on Cloudflare Pages from a private GitHub repo (free)
 
-Cloudflare Pages hosts the same `dist/` folder for free, so your PC does not need
-to stay on. The security headers come from `dist/_headers`, which the build copies
-from `deploy/_headers`.
+Cloudflare Pages builds the site straight from the GitHub repo, and the repo can
+be **private**. Every push to `main` rebuilds and republishes the site, just
+like GitHub Pages, and the full security headers in `deploy/_headers` apply.
 
-## Option A: upload in the dashboard (no tools needed)
+The site address will be `https://<project-name>.pages.dev`.
 
-1. Run `npm run build`.
-2. In the Cloudflare dashboard, open **Workers & Pages → Create → Pages →
-   Upload assets** (the wording may differ slightly; look for "Direct Upload").
-3. Name the project, for example `cbp-wiki`.
-4. Drag the **`dist`** folder in and click **Deploy**.
-5. Your site is live at `https://cbp-wiki.pages.dev`.
-6. Optional: **Custom domains → Set up a custom domain** to use `wiki.yourdomain.com`.
+## One-time setup (about 5 minutes)
 
-To update: build again, open the project, **Create new deployment**, and upload
-`dist` again.
+1. Make a free account at https://dash.cloudflare.com/sign-up (skip adding a
+   domain if it asks).
+2. Go to **Workers & Pages → Create → Pages → Connect to Git**.
+3. Choose **GitHub**, then authorize Cloudflare. When GitHub asks which
+   repositories to allow, pick **Only select repositories →
+   `card-battles-prestige-wiki`**.
+4. Select the repo and use these build settings:
+   - Project name: `card-battles-wiki` (this becomes the address)
+   - Production branch: `main`
+   - Framework preset: **None**
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - Leave root directory empty. Node 22 is picked up from `.nvmrc`.
+5. Click **Save and Deploy**. The first build takes 1–2 minutes.
+6. Open `https://card-battles-wiki.pages.dev` to check it.
 
-## Option B: deploy from the command line
+## Then make the repo private
 
-```powershell
-npm run build
-npx wrangler login
-npx wrangler pages deploy dist --project-name cbp-wiki
-```
+Once the Cloudflare site works:
 
-Run the last two lines again whenever you want to publish changes.
+1. GitHub repo → **Settings → General → Danger Zone → Change visibility →
+   Make private**.
+2. GitHub Pages stops (free accounts can't serve Pages from private repos), so
+   delete `.github/workflows/deploy.yml` from the repo, otherwise every push
+   reports a failed run.
+
+Cloudflare keeps building from the private repo.
+
+## Updating
+
+Push to `main` (or edit a file on github.com). Cloudflare rebuilds in about a
+minute. Each build's log is under **Workers & Pages → card-battles-wiki →
+Deployments**.
 
 ## Notes
 
-- **Missing pages:** Pages serves `404.html` automatically.
-- **File size limit:** each file must be under 25 MB. Keep route videos short and
-  compressed (I will convert them for you).
-- **Keep it script-free:** in the project's settings, leave **Web Analytics** off.
-  The same Cloudflare features listed in `CLOUDFLARE-TUNNEL.md` step 5 (Rocket
-  Loader, Email Obfuscation, Zaraz) should stay off on a custom domain.
-- **Check headers:** `curl.exe -sI https://cbp-wiki.pages.dev`
+- **File size limit:** each file must be under 25 MB. Keep route videos short
+  and compressed (I will convert them for you).
+- **Keep it script-free:** leave **Web Analytics** off in the project settings.
+  Cloudflare features like Rocket Loader, Email Obfuscation and Zaraz inject
+  scripts the site's security policy blocks, so leave them off too.
+- **Check headers:** `curl.exe -sI https://card-battles-wiki.pages.dev`
+
+## Alternative: upload by hand (no Git connection)
+
+Run `npm run build`, then **Workers & Pages → Create → Pages → Upload assets**
+and drag in the `dist` folder. Repeat for each update.

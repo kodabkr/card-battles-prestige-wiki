@@ -1,7 +1,7 @@
 {
   "_about": "The site's single colour scale (1 = grey ... 8 = admin). Any entry with \"tier\" gets the matching colour. Named tiers map onto the same scale.",
   "names": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "rare": 3, "mythic": 5, "exalted": 7, "admin": 8 },
-  "labels": { "rare": "Rare", "mythic": "Mythic", "exalted": "Exalted", "admin": "Admin only" },
+  "labels": { "rare": "Rare", "mythic": "Mythic", "exalted": "Exalted", "admin": "Admin" },
   "_cardOddsBandsNote": "TODO: display convention only. Colours cards by their 1-in-N odds. Replace with the game's own rarity tiers if it has named ones.",
   "cardOddsBands": [
     { "upTo": 1000, "level": 1 },

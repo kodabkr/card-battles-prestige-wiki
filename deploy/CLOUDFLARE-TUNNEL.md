@@ -45,8 +45,8 @@ caddy run --config deploy\Caddyfile
 Open http://127.0.0.1:8080 in your browser. You should see the wiki.
 Press **Ctrl+C** to stop Caddy.
 
-> The Caddyfile points at `C:/Users/austi/Desktop/CardBattlesPrestigeWiki/dist`.
-> If you move the project, update the `root` line in `deploy/Caddyfile`.
+> Before the first run, change the `root` line in `deploy/Caddyfile` to the full
+> path of this project's `dist` folder.
 
 ## 3. Create the tunnel (Cloudflare dashboard, easiest)
 
@@ -77,11 +77,11 @@ cloudflared tunnel create cbp-wiki
 cloudflared tunnel route dns cbp-wiki wiki.yourdomain.com
 ```
 
-Create `C:\Users\austi\.cloudflared\config.yml`:
+Create `C:\Users\<you>\.cloudflared\config.yml`:
 
 ```yaml
 tunnel: cbp-wiki
-credentials-file: C:\Users\austi\.cloudflared\<TUNNEL-ID>.json
+credentials-file: C:\Users\<you>\.cloudflared\<TUNNEL-ID>.json
 ingress:
   - hostname: wiki.yourdomain.com
     service: http://127.0.0.1:8080
@@ -98,7 +98,7 @@ In **PowerShell as administrator** (adjust the `caddy.exe` path to where it is
 installed; `(Get-Command caddy).Source` shows it):
 
 ```powershell
-sc.exe create caddy start= auto binPath= "C:\caddy\caddy.exe run --config C:\Users\austi\Desktop\CardBattlesPrestigeWiki\deploy\Caddyfile"
+sc.exe create caddy start= auto binPath= "C:\caddy\caddy.exe run --config C:\path\to\CardBattlesPrestigeWiki\deploy\Caddyfile"
 sc.exe start caddy
 ```
 

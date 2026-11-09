@@ -237,7 +237,7 @@
       el.style.setProperty('--ry', '0deg');
     });
   }
-  $$('.gcard').forEach(function (el) { tilt(el, 11); });
+  $$('.gcard').forEach(function (el) { tilt(el, 6); });
   $$('.tilt').forEach(function (el) { tilt(el, 4); });
 
   /* ---------------- Card flip ---------------- */

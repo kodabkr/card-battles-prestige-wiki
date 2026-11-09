@@ -177,7 +177,7 @@ export function finalizeHeadings(html, ctx) {
     return id;
   };
   html = html.replace(/<h([234])([^>]*)>([\s\S]*?)<\/h\1>/g, (m, lvl, attrs, inner) => {
-    const text = stripTags(inner);
+    const text = stripTags(inner.replace(/<abbr class="unconfirmed"[^>]*>.*?<\/abbr>/g, ''));
     let target = (attrs.match(/\sid="([^"]+)"/) || [])[1] || (attrs.match(/\sdata-anchor="([^"]+)"/) || [])[1];
     if (!target) {
       target = uniq(slug(text));

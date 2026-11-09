@@ -42,7 +42,7 @@ function prepareAssets(root, outDir, dev, base = '') {
     if (f.endsWith('.woff2')) fonts[f] = copyHashed(path.join(A, 'fonts', f), outDir, 'assets/fonts');
     if (f.endsWith('.txt')) writeFile(path.join(outDir, 'assets/fonts', f), fs.readFileSync(path.join(A, 'fonts', f)));
   }
-  a.preload = [fonts['inter-latin-wght-normal.woff2'], fonts['cinzel-latin-700-normal.woff2']].filter(Boolean);
+  a.preload = [fonts['inter-latin-wght-normal.woff2'], fonts['geist-mono-latin-wght-normal.woff2']].filter(Boolean);
   for (const f of fs.existsSync(path.join(A, 'audio')) ? fs.readdirSync(path.join(A, 'audio')) : []) {
     if (/\.(wav|ogg|mp3|webm)$/.test(f)) a.audio[path.basename(f, path.extname(f))] = copyHashed(path.join(A, 'audio', f), outDir, 'assets/audio');
   }
