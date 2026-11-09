@@ -1,0 +1,59 @@
+# Caddy config for the Card Battles: Prestige Wiki.
+#
+# Serves ONLY the built site folder (dist/), with strict security headers,
+# compression and long-term caching for fingerprinted files.
+#
+# It listens on 127.0.0.1:8080 only, so nothing is reachable from your network
+# or the internet directly. Cloudflare Tunnel connects to it from inside your PC.
+#
+# Run it:   caddy run --config deploy/Caddyfile
+# (from the project folder, after `npm run build`)
+
+{
+	# No admin API, no automatic HTTPS (Cloudflare handles HTTPS for visitors).
+	admin off
+	auto_https off
+}
+
+http://127.0.0.1:8080 {
+	bind 127.0.0.1
+
+	# Change this if you move the project.
+	root * C:/Users/austi/Desktop/CardBattlesPrestigeWiki/dist
+
+	encode zstd gzip
+
+	header {
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-ancestors 'none'"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+		X-Frame-Options "DENY"
+		Cross-Origin-Opener-Policy "same-origin"
+		Cross-Origin-Resource-Policy "same-origin"
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+		-Via
+	}
+
+	# Everything in these folders has a content hash in its file name, so it
+	# never changes: cache it for a year.
+	@hashed path /assets/* /img/* /media/* /search-index.*
+	header @hashed Cache-Control "public, max-age=31536000, immutable"
+
+	# Pages and everything else: always check for a newer version.
+	@pages not path /assets/* /img/* /media/* /search-index.*
+	header @pages Cache-Control "public, max-age=0, must-revalidate"
+
+	# Never serve build notes for Cloudflare Pages.
+	@private path /_headers
+	respond @private 404
+
+	# Static files only. No "browse", so there is never a directory listing.
+	file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}

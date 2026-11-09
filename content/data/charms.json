@@ -1,0 +1,23 @@
+[
+  { "_todo": "TODO: there are 13 charms in total. Add the other 11 with their stats, recipes and eternal status." },
+  {
+    "id": "orb-of-transcendence", "name": "Orb of Transcendence", "best": "Best charm",
+    "summary": "The strongest charm in the game.",
+    "stats": { "Luck": "+30", "Luck %": "+75%", "Roll speed": "+30%", "Battle speed": "+25%" },
+    "recipe": [
+      { "ref": "material:orb-fragments", "qty": 5 },
+      { "ref": "material:hollow-mask-shards", "qty": 20 },
+      { "ref": "material:divine-fragments", "qty": 15 },
+      { "ref": "material:abyssal-fragments", "qty": 10 },
+      { "ref": "material:celestial-shards", "qty": 25 }
+    ],
+    "eternal": "TODO"
+  },
+  {
+    "id": "tinkers-charm", "name": "Tinker's Charm", "aliases": ["Tinkers Charm"],
+    "summary": "One of the few charms you keep when you prestige.",
+    "stats": "TODO(stats)",
+    "recipe": "TODO(recipe)",
+    "eternal": true
+  }
+]

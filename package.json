@@ -1,0 +1,25 @@
+{
+  "name": "card-battles-prestige-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fan wiki for the Roblox game Card Battles: Prestige. Static site.",
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "dev": "node src/dev.mjs",
+    "serve": "node src/serve.mjs",
+    "preview": "node src/build.mjs && node src/serve.mjs",
+    "sounds": "node src/tools/make-sounds.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource/cinzel": "^5.3.0",
+    "js-yaml": "^5.5.0",
+    "marked": "^15.0.12",
+    "sharp": "^0.35.5"
+  }
+}

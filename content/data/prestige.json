@@ -1,0 +1,12 @@
+{
+  "_about": "Prestige Tower numbers. Each milestone: { \"label\": \"Floor 100\", \"title\": \"+N prestige luck\", \"detail\": \"optional\" }",
+  "milestones": "TODO(prestige luck at every 100-floor milestone)",
+  "scaling": [
+    {
+      "label": "Floor 3,001",
+      "title": "About 130–143x base strength",
+      "detail": "Applies to every NPC enemy, secret bosses included.",
+      "tier": "6"
+    }
+  ]
+}

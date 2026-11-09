@@ -1,0 +1,11 @@
+[
+  { "_todo": "TODO: per-weather luck and roll speed buffs, duration, how often it appears, and every exclusive card." },
+  { "id": "cataclysm", "name": "Cataclysm", "tier": "exalted", "best": "Best weather", "summary": "The best natural weather.", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "awakened", "name": "Awakened", "tier": "mythic", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "arcane", "name": "Arcane", "unconfirmed": true, "tier": "mythic", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "goofy", "name": "Goofy", "tier": "rare", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "glitch", "name": "Glitch", "tier": "rare", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "doodle", "name": "Doodle", "tier": "rare", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "eclipse", "name": "Eclipse", "tier": "rare", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO", "Duration": "TODO", "How often": "TODO" } },
+  { "id": "weather-mashup", "name": "Weather Mashup", "tier": "admin", "adminOnly": true, "summary": "Every weather combined, with higher luck than Cataclysm. Only admins can start it.", "facts": { "Luck buff": "TODO", "Roll speed buff": "TODO" } }
+]

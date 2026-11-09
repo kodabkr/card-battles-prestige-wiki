@@ -1,0 +1,5 @@
+[
+  { "_todo": "TODO: every title and profile frame from Victory Road." },
+  { "id": "tower-legend", "name": "Tower Legend", "typeLabel": "Title", "noImage": true, "summary": "A title for reaching prestige floor 3,000.", "sources": ["place:victory-road"] },
+  { "id": "fire-frame", "name": "Fire Frame", "typeLabel": "Profile frame", "summary": "A profile frame for reaching prestige floor 3,000.", "sources": ["place:victory-road"] }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "auto-boss", "name": "Auto Boss",
+    "summary": "A deck slot you choose fights the bosses and difficulties you pick, from anywhere.",
+    "facts": { "Set up": "Settings → Battle → Auto Boss → Pick Bosses" }
+  },
+  {
+    "id": "vip", "name": "VIP",
+    "summary": "Permanent boosts to luck, roll speed and battle speed.",
+    "facts": { "Luck": "1.5x", "Roll speed": "1.3x", "Battle speed": "1.5x" }
+  },
+  {
+    "id": "double-roll", "name": "Double Roll",
+    "summary": "Roll 2 cards at once, permanently.",
+    "body": "You can also get Double Roll free through a quest line, but that version **resets on prestige**. The pass version does not.\n\nQuest line name: TODO(The Journey or Twin Fates?)"
+  },
+  { "id": "extra-charm-slot", "name": "+1 Charm Slot", "aliases": ["Charm Slot"], "summary": "Equip 2 charms instead of 1." },
+  { "id": "longer-potions", "name": "Longer Potions", "summary": "Potions last 50% longer.", "facts": { "Potion duration": "1.5x" } },
+  { "id": "bonus-drops", "name": "Bonus Drops", "summary": "A 50% chance to double the items you get from [[place:infinite]]." },
+  { "id": "more-scrap", "name": "+50% Scrap", "summary": "+50% [[currency:scrap]] from recycling at the [[place:recycler]]." },
+  { "id": "double-pack-equip", "name": "Double Pack Equip", "summary": "Equip 2 [[Card packs|card packs]] and roll from both at once." }
+]

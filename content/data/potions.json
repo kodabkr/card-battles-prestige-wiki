@@ -1,0 +1,32 @@
+[
+  { "_todo": "TODO: confirm the in-game names of the tiered potions. 'Tier N Luck Potion' is a placeholder description." },
+
+  { "id": "luck-1", "name": "Tier 1 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "1", "tierNum": 1, "effect": "+1 luck", "duration": "5 min", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "luck-2", "name": "Tier 2 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "2", "tierNum": 2, "effect": "+3 luck", "duration": "15 min", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "luck-3", "name": "Tier 3 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "3", "tierNum": 3, "effect": ["+5 luck", "+10% luck"], "unverified": true, "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "luck-4", "name": "Tier 4 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "4", "tierNum": 4, "effect": ["+10 luck", "+20% luck"], "unverified": true, "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "luck-5", "name": "Tier 5 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "5", "tierNum": 5, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "luck-6", "name": "Tier 6 Luck Potion", "type": "luck", "typeLabel": "Luck", "tier": "6", "tierNum": 6, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+
+  { "id": "roll-speed-1", "name": "Tier 1 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "1", "tierNum": 1, "effect": "1.1x roll speed", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "roll-speed-2", "name": "Tier 2 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "2", "tierNum": 2, "effect": "1.2x roll speed", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "roll-speed-3", "name": "Tier 3 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "3", "tierNum": 3, "effect": "1.3x roll speed", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "roll-speed-4", "name": "Tier 4 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "4", "tierNum": 4, "effect": "1.5x roll speed", "duration": "TODO", "eternal": "TODO", "sources": ["place:victory-road", "TODO(recipe or other sources)"] },
+  { "id": "roll-speed-5", "name": "Tier 5 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "5", "tierNum": 5, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "roll-speed-6", "name": "Tier 6 Roll Speed Potion", "type": "roll-speed", "typeLabel": "Roll speed", "tier": "6", "tierNum": 6, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+
+  { "id": "battle-speed-1", "name": "Tier 1 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "1", "tierNum": 1, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "battle-speed-2", "name": "Tier 2 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "2", "tierNum": 2, "effect": "1.2x battle speed", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "battle-speed-3", "name": "Tier 3 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "3", "tierNum": 3, "effect": "1.25x battle speed", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "battle-speed-4", "name": "Tier 4 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "4", "tierNum": 4, "effect": "1.3x battle speed", "duration": "TODO", "eternal": "TODO", "sources": ["place:victory-road", "TODO(recipe or other sources)"] },
+  { "id": "battle-speed-5", "name": "Tier 5 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "5", "tierNum": 5, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "battle-speed-6", "name": "Tier 6 Battle Speed Potion", "type": "battle-speed", "typeLabel": "Battle speed", "tier": "6", "tierNum": 6, "effect": "TODO", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+
+  { "id": "weather-reroll", "name": "Weather Reroll", "aliases": ["Weather Rerolls"], "type": "special", "typeLabel": "Special", "effect": "Rerolls the server's current weather", "duration": "Instant", "eternal": "TODO", "soldAt": ["place:shadow-market"], "sources": ["place:victory-road"] },
+  { "id": "boss-potion", "name": "Boss Potion", "type": "special", "typeLabel": "Special", "effect": "While active, you can roll the cards of boss NPCs you have fought", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "pack-xp-tonic", "name": "Pack XP Tonic", "type": "special", "typeLabel": "Special", "effect": "More [[place:pack-upgrader]] XP while rolling", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "echo-elixir", "name": "Echo Elixir", "type": "special", "typeLabel": "Special", "effect": "+25% luck", "duration": "30 min", "summary": "Stacks with other potions.", "eternal": "TODO", "sources": ["Only obtainable in [[place:echo-depths]]"] },
+  { "id": "incense", "name": "Incense", "type": "special", "typeLabel": "Special", "effect": "+50% [[currency:echo-marks]]", "duration": "TODO", "eternal": "TODO", "sources": "TODO(recipe or where to get it)" },
+  { "id": "raid-potion", "name": "Raid Potion", "type": "special", "typeLabel": "Special", "effect": "TODO", "duration": "TODO", "eternal": "TODO", "soldAt": ["place:shadow-market"] },
+  { "id": "fortune-draught", "name": "Fortune Draught", "unconfirmed": true, "type": "special", "typeLabel": "Special", "effect": "TODO", "duration": "TODO", "eternal": "TODO", "soldAt": ["place:shadow-market"] }
+]

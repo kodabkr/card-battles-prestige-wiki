@@ -1,0 +1,18 @@
+[
+  { "_todo": "TODO: real names for all 8 secret bosses. Route images go in images/routes/<boss-id>-1.png etc., videos in media/videos/routes/<boss-id>.mp4." },
+  { "id": "lobby-secret-1", "name": "Lobby secret boss 1", "placeholder": true, "secret": true, "foundIn": ["world:lobby"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "lobby-secret-2", "name": "Lobby secret boss 2", "placeholder": true, "secret": true, "foundIn": ["world:lobby"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "shiganshina-secret", "name": "Shiganshina secret boss", "placeholder": true, "secret": true, "foundIn": ["world:shiganshina"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "leaf-village-secret", "name": "Leaf Village secret boss", "placeholder": true, "secret": true, "foundIn": ["world:leaf-village"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "infinity-castle-secret", "name": "Infinity Castle secret boss", "placeholder": true, "secret": true, "foundIn": ["world:infinity-castle"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "rainford-secret", "name": "Rainford secret boss", "placeholder": true, "secret": true, "foundIn": ["world:rainford"], "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "world-5-secret", "name": "Secret boss A (world to be confirmed)", "placeholder": true, "secret": true, "foundIn": "TODO(world)", "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+  { "id": "world-6-secret", "name": "Secret boss B (world to be confirmed)", "placeholder": true, "secret": true, "foundIn": "TODO(world)", "facts": { "Card": "TODO", "Unlock chance (Normal / Hard / Extreme / Nightmare)": "TODO" } },
+
+  {
+    "id": "final-world-final-boss", "name": "Final boss of the final world", "placeholder": true, "page": "/world/worlds/",
+    "summary": "Its two hardest difficulties are the only source of [[material:orb-fragments]].",
+    "foundIn": "TODO(final world)",
+    "facts": { "Difficulties": "TODO" }
+  }
+]

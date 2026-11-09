@@ -1,0 +1,90 @@
+[
+  {
+    "id": "the-hall", "name": "The Hall", "typeLabel": "Victory Road hub", "page": "/world/the-hall/",
+    "summary": "The Victory Road hub, with portals to areas that are not worlds or raids."
+  },
+  {
+    "id": "victory-road", "name": "Victory Road menu", "typeLabel": "Menu", "page": "/progression/victory-road/", "noImage": true,
+    "summary": "Rewards for reaching prestige-floor milestones."
+  },
+  {
+    "id": "prestige-tower", "name": "Prestige Tower", "typeLabel": "Game mode", "page": "/progression/prestige-tower/",
+    "summary": "Climb floors in 4v4 battles. Prestige luck grows every 100 floors."
+  },
+  {
+    "id": "infinite", "name": "Infinite", "typeLabel": "Game mode", "page": "/progression/infinite/",
+    "summary": "An endless battle mode that drops cards and items."
+  },
+  {
+    "id": "echo-depths", "name": "Echo Depths", "typeLabel": "Roguelike dungeon", "page": "/world/echo-depths/",
+    "summary": "A roguelike dungeon mode with 6 zones, reached from [[place:the-hall]].",
+    "facts": { "Zones": "6", "Entry": "1 [[currency:echo-keys|Echo Key]] per run", "Key refill": "1 key every 3 hours" }
+  },
+  {
+    "id": "junkyard", "name": "The Junkyard", "aliases": ["Junkyard"], "typeLabel": "Area", "page": "/world/junkyard/",
+    "summary": "Home of the [[place:recycler]] and the [[place:scrap-shop]]. Connected to the [[place:science-lab]]."
+  },
+  {
+    "id": "science-lab", "name": "Science Lab", "typeLabel": "Area", "page": "/world/science-lab/",
+    "summary": "Connected to [[place:junkyard]]. Has the [[place:potion-fuser]], [[place:pack-upgrader]] and [[place:workshop]]."
+  },
+  {
+    "id": "recycler", "name": "Recycler", "page": "/world/junkyard/", "foundIn": ["place:junkyard"],
+    "summary": "Turns items and materials into [[currency:scrap]]. The rate is poor, so it is not recommended.",
+    "facts": { "Unlocked by": "[[place:scrap-shop]] (TODO(which level))", "Gives": "[[currency:scrap]]", "Rate": "TODO(scrap per item or material)" }
+  },
+  {
+    "id": "scrap-shop", "name": "Scrap Shop", "typeLabel": "Shop", "page": "/economy/scrap-shop/", "foundIn": ["place:junkyard"],
+    "summary": "A levelled shop. Levels cost scrap, there is a daily XP cap, and each level unlocks new stock.",
+    "facts": { "Currency": "[[currency:scrap]]", "Daily XP cap": "TODO", "Max level": "TODO" },
+    "levels": [
+      { "label": "Level 1", "detail": "TODO(cost and unlocks)" },
+      { "label": "Level 5", "title": "Unlocks the [[pack:forge]]", "detail": "Cost: TODO" },
+      { "label": "Recycler unlock", "detail": "The [[place:recycler]] is unlocked through the Scrap Shop. TODO(which level)" }
+    ],
+    "stock": "TODO(every item, its price in scrap and the level it unlocks at)"
+  },
+  {
+    "id": "potion-fuser", "name": "Potion Fuser", "page": "/world/science-lab/", "foundIn": ["place:science-lab"],
+    "summary": "TODO(what the Potion Fuser does)"
+  },
+  {
+    "id": "pack-upgrader", "name": "Pack Upgrader", "page": "/cards/pack-upgrader/", "foundIn": ["place:science-lab"],
+    "summary": "Rolling on a pack earns XP toward levelling it. Each level multiplies that pack's card stats."
+  },
+  {
+    "id": "workshop", "name": "Workshop", "page": "/world/science-lab/", "foundIn": ["place:science-lab"],
+    "summary": "TODO(what the Workshop does)"
+  },
+  {
+    "id": "archivist", "name": "Archivist", "typeLabel": "NPC", "page": "/economy/archivist-shard-fuser/", "foundIn": ["place:echo-depths"],
+    "summary": "Sells run boosts and buffs to your Echo Mark and Echo Core gains.",
+    "facts": { "Location": "TODO(exact location)" },
+    "stock": "TODO(every boost and buff, its effect and its price)"
+  },
+  {
+    "id": "shard-fuser", "name": "Shard Fuser", "page": "/economy/archivist-shard-fuser/", "foundIn": ["place:echo-depths"],
+    "summary": "Fuse 15 zone shards to unlock that zone's special card. Also the main use of Echo Cores.",
+    "facts": { "Shards per card": "15 (one zone's full set)", "Location": "TODO(exact location)", "Echo Core cost": "TODO" }
+  },
+  {
+    "id": "kaiju-raid", "name": "Kaiju Raid", "typeLabel": "Raid", "page": "/economy/kaiju-raid/",
+    "summary": "A raid that rewards four Kaiju currencies.",
+    "facts": { "How to enter": "TODO", "Team size": "TODO", "Rewards": "TODO(drop amounts per clear)" }
+  },
+  {
+    "id": "kaiju-raid-shop", "name": "Kaiju Raid Shop", "typeLabel": "Shop", "page": "/economy/kaiju-raid/",
+    "summary": "The only place to spend Kaiju Raid currencies. Sells potions, items, relics, and unlocks for rolling the raid enemies' cards.",
+    "stock": "TODO(every item, price and limit)"
+  },
+  {
+    "id": "shadow-garden-raid", "name": "Shadow Garden Raid", "typeLabel": "Raid", "page": "/economy/shadow-garden-raid/",
+    "summary": "The same raid format as the Kaiju Raid, reskinned, with a better shop.",
+    "facts": { "How to enter": "TODO", "Team size": "TODO", "Rewards": "TODO(drop amounts per clear)" }
+  },
+  {
+    "id": "shadow-market", "name": "Shadow Market", "typeLabel": "Shop", "page": "/economy/shadow-garden-raid/",
+    "summary": "The Shadow Garden Raid shop. Sells Weather Rerolls, Raid Potions, Fortune Draughts, 2 relics and raid card unlocks.",
+    "stock": "TODO(prices and limits for every item)"
+  }
+]

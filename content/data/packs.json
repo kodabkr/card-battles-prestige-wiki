@@ -1,0 +1,7 @@
+[
+  { "_todo": "TODO: unlock method for Cursed, Otherworld and Ascended; max level and per-level multipliers for every pack; card lists." },
+  { "id": "cursed", "name": "Cursed Pack", "aliases": ["Cursed"], "facts": { "Cards": "13", "Supports": "7", "Unlock": "TODO", "Max upgrade level": "TODO" } },
+  { "id": "otherworld", "name": "Otherworld Pack", "aliases": ["Otherworld"], "facts": { "Cards": "9", "Supports": "8", "Unlock": "TODO", "Max upgrade level": "TODO" } },
+  { "id": "ascended", "name": "Ascended Pack", "aliases": ["Ascended"], "facts": { "Cards": "8", "Supports": "5", "Unlock": "TODO", "Max upgrade level": "8", "Level 5 multiplier": "3.25x" } },
+  { "id": "forge", "name": "Forge Pack", "aliases": ["Forge"], "facts": { "Cards": "7", "Supports": "2", "Unlock": "[[place:scrap-shop]] level 5", "Max upgrade level": "TODO" } }
+]

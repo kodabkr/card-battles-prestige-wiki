@@ -1,0 +1,16 @@
+[
+  { "_todo": "TODO: deeper explanations for each stat (topic 13)." },
+  { "id": "battle-power", "name": "Battle Power", "summary": "TODO(what it measures)" },
+  { "id": "prestige-luck", "name": "Prestige Luck", "summary": "Luck from your current Prestige Tower floor. It grows at milestones every 100 floors and depends only on your current floor.", "body": "See the [[place:prestige-tower]] for the milestone table." },
+  { "id": "current-luck", "name": "Current Luck", "summary": "Your total luck right now, with every boost applied. TODO(confirm exactly what it includes)" },
+  { "id": "item-luck", "name": "Item Luck", "summary": "Raises **how many** items you get when [[place:infinite]] drops items. Often misunderstood. TODO(does it affect anything else?)" },
+  { "id": "roll-speed", "name": "Roll Speed", "summary": "How fast you roll cards." },
+  { "id": "max-battle-speed", "name": "Max Battle Speed", "summary": "The fastest battle speed you can use. TODO(confirm)" },
+  { "id": "tower-speed", "name": "Tower Speed", "summary": "Battle speed inside the [[place:prestige-tower]] and [[place:infinite]] only." },
+  { "id": "potion-duration", "name": "Potion Duration", "summary": "How long your potions last: 1x normally, 1.5x with [[gamepass:longer-potions]]." },
+  { "id": "total-prestige-floors", "name": "Total Prestige Floors", "summary": "Your highest Prestige Tower floor." },
+  { "id": "highest-infinite-floor", "name": "Highest Infinite Floor", "summary": "The furthest floor you have reached in [[place:infinite]]." },
+  { "id": "rolls", "name": "Rolls", "summary": "How many times you have rolled." },
+  { "id": "scrap-stat", "name": "Scrap (stat)", "summary": "Your [[currency:scrap]] balance. TODO(confirm: current balance or lifetime total?)" },
+  { "id": "playtime", "name": "Playtime", "summary": "Total time played." }
+]

@@ -1,0 +1,24 @@
+{
+  "_about": "Victory Road rewards by prestige floor. TODO: every milestone before 3,000 and after 3,500.",
+  "rewards": [
+    {
+      "label": "Floor 3,000",
+      "tier": "5",
+      "detail": [
+        { "text": "Skill points", "qty": 4 },
+        { "text": "Luck potions TODO(which tiers and how many)" },
+        { "ref": "potion:battle-speed-4", "qty": "TODO" },
+        { "ref": "potion:roll-speed-4", "qty": "TODO" },
+        { "ref": "potion:weather-reroll", "qty": 150 },
+        { "ref": "currency:scrap", "qty": "150M" },
+        { "ref": "cosmetic:tower-legend", "note": "title" },
+        { "ref": "cosmetic:fire-frame", "note": "profile frame" }
+      ]
+    },
+    {
+      "label": "Floor 3,500",
+      "tier": "7",
+      "detail": [{ "text": "Second relic slot" }]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  { "_todo": "TODO: there are 6 worlds. Confirm all 6 names and their order. The Lobby is not one of the 6." },
+  { "id": "lobby", "name": "Lobby", "typeLabel": "Hub", "summary": "The starting area. Home to 2 of the 8 secret bosses.", "facts": { "Secret bosses": "2" } },
+  { "id": "shiganshina", "name": "Shiganshina", "unconfirmed": true, "aliases": ["Shikenshina"], "facts": { "World number": "TODO", "Secret bosses": "1" } },
+  { "id": "leaf-village", "name": "Leaf Village", "facts": { "World number": "TODO", "Secret bosses": "1" } },
+  { "id": "infinity-castle", "name": "Infinity Castle", "facts": { "World number": "TODO", "Secret bosses": "1" } },
+  { "id": "rainford", "name": "Rainford", "facts": { "World number": "TODO", "Secret bosses": "1" } }
+]

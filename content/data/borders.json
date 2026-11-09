@@ -1,0 +1,6 @@
+[
+  { "_todo": "TODO: full border list, in order, with each border's rarity and stat multiplier." },
+  { "id": "shiny", "name": "Shiny", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } },
+  { "id": "galactic", "name": "Galactic", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } },
+  { "id": "shiny-galactic", "name": "Shiny Galactic", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } }
+]

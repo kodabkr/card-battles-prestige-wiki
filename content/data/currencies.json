@@ -1,0 +1,22 @@
+[
+  { "id": "kaiju-shards", "name": "Kaiju Shards", "typeLabel": "Kaiju Raid currency", "earnedFrom": ["place:kaiju-raid"], "spentAt": ["place:kaiju-raid-shop"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "kaiju-nuclei", "name": "Kaiju Nuclei", "typeLabel": "Kaiju Raid currency", "earnedFrom": ["place:kaiju-raid"], "spentAt": ["place:kaiju-raid-shop"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "bluray-shards", "name": "Blu-ray Shards", "unconfirmed": true, "aliases": ["Bluray Shards", "Blu ray Shards"], "typeLabel": "Kaiju Raid currency", "earnedFrom": ["place:kaiju-raid"], "spentAt": ["place:kaiju-raid-shop"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "kaiju-cores", "name": "Kaiju Cores", "typeLabel": "Kaiju Raid currency", "earnedFrom": ["place:kaiju-raid"], "spentAt": ["place:kaiju-raid-shop"], "isMaterial": true, "eternal": "TODO" },
+
+  { "id": "violet-raid-shards", "name": "Violet Raid Shards", "typeLabel": "Shadow Garden Raid currency", "earnedFrom": ["place:shadow-garden-raid"], "spentAt": ["place:shadow-market"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "shadow-shards", "name": "Shadow Shards", "typeLabel": "Shadow Garden Raid currency", "earnedFrom": ["place:shadow-garden-raid"], "spentAt": ["place:shadow-market"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "atomic-cores", "name": "Atomic Cores", "typeLabel": "Shadow Garden Raid currency", "earnedFrom": ["place:shadow-garden-raid"], "spentAt": ["place:shadow-market"], "isMaterial": true, "eternal": "TODO" },
+  { "id": "shadow-seals", "name": "Shadow Seals", "typeLabel": "Shadow Garden Raid currency", "earnedFrom": ["place:shadow-garden-raid"], "spentAt": ["place:shadow-market"], "isMaterial": true, "eternal": "TODO" },
+
+  {
+    "id": "scrap", "name": "Scrap", "typeLabel": "Junkyard currency",
+    "summary": "Earned mainly by sacrificing duplicate cards.",
+    "earnedFrom": ["Sacrificing duplicates beyond 4 copies of a card (each border counts separately)", "place:recycler"],
+    "spentAt": ["place:scrap-shop"], "eternal": "TODO"
+  },
+
+  { "id": "echo-marks", "name": "Echo Marks", "typeLabel": "Echo Depths currency", "summary": "The common Echo Depths currency.", "earnedFrom": ["place:echo-depths"], "spentAt": ["place:archivist"], "eternal": "TODO" },
+  { "id": "echo-cores", "name": "Echo Cores", "typeLabel": "Echo Depths currency", "summary": "The rarer Echo Depths currency, mainly spent at the Shard Fuser.", "earnedFrom": ["place:echo-depths"], "spentAt": ["place:shard-fuser", "place:archivist"], "eternal": "TODO" },
+  { "id": "echo-keys", "name": "Echo Keys", "typeLabel": "Echo Depths entry", "summary": "Lets you start an Echo Depths run. You get 1 every 3 hours.", "earnedFrom": ["1 every 3 hours", "TODO(any other sources)"], "spentAt": ["place:echo-depths"], "eternal": "TODO" }
+]

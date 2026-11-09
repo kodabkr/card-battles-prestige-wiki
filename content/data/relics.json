@@ -1,0 +1,11 @@
+[
+  { "_todo": "TODO: add every relic with its name, stats, shop and cost. The best relic's name is not known yet." },
+  {
+    "id": "best-relic", "name": "Best relic", "placeholder": true, "best": "Best relic",
+    "summary": "The strongest relic in the game.",
+    "stats": { "Luck": "+15", "Luck %": "+35%", "Roll speed": "+15%", "Battle speed": "+15%", "Item luck": "+40%" },
+    "soldAt": "TODO(which raid shop sells it)",
+    "cost": "TODO(price)",
+    "eternal": true
+  }
+]

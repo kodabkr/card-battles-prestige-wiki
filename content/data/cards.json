@@ -1,0 +1,15 @@
+[
+  { "_todo": "TODO: full card database. Fields: id, name, type (battle or support), rarity (the N in 1 in N, as a number), hp, dmg, ability {name, text}, source (pack:x, weather:x, boss:x, zone:x; leave out for the general pool), border." },
+  { "id": "snacktime-menace", "name": "Snacktime Menace", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
+  { "id": "lord-of-hemomancy", "name": "Lord of Hemomancy", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
+  { "id": "demon-general", "name": "Demon General", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
+  { "id": "final-juggernaut", "name": "Final Juggernaut", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
+  {
+    "id": "mach-20-teacher", "name": "Mach 20 Teacher", "unconfirmed": true, "source": "zone:lantern-cistern",
+    "rarity": "TODO", "hp": "TODO", "dmg": "TODO",
+    "ability": {
+      "name": "Mach 20 Lesson",
+      "text": "The first attack against each card in his party misses. He dodges 35% of attacks. Whenever an ally dodges, he strikes the attacker for 100% of his attack, and that attacker deals 30% less damage for 2 turns."
+    }
+  }
+]

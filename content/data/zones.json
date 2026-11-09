@@ -1,0 +1,8 @@
+[
+  { "_todo": "TODO: Echo Depths has 6 zones. Add the other 5 with their special cards." },
+  {
+    "id": "lantern-cistern", "name": "Lantern Cistern",
+    "summary": "Finish runs here to collect its 15 shards, then fuse them for its special card.",
+    "facts": { "Shards needed": "15", "Special card": "[[card:mach-20-teacher]]", "Zone number": "TODO" }
+  }
+]

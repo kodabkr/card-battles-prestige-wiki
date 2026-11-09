@@ -1,0 +1,32 @@
+{
+  "tagline": "The fan-made reference for every card, potion, charm, relic, boss and Prestige Tower floor. Organised, searchable and kept up to date.",
+  "stats": [
+    { "value": "13", "label": "charms" },
+    { "value": "8", "label": "secret bosses" },
+    { "value": "4", "label": "card packs" },
+    { "value": "6", "label": "Echo Depths zones" },
+    { "value": "8", "label": "game passes" }
+  ],
+  "quickLinks": [
+    { "title": "Prestige builds", "href": "/guides/prestige-builds/", "blurb": "Team builds for climbing the Prestige Tower", "icon": "tower", "tier": 5 },
+    { "title": "Infinite", "href": "/progression/infinite/", "blurb": "The endless battle mode and what it drops", "icon": "infinite", "tier": 3 },
+    { "title": "Potions", "href": "/items/potions/", "blurb": "Luck, roll speed and battle speed, tiers 1–6", "icon": "potion", "tier": 2 },
+    { "title": "Charms & Relics", "href": "/items/charms-relics/", "blurb": "Recipes, costs and stats side by side", "icon": "charm", "tier": 4 },
+    { "title": "Secret Bosses", "href": "/world/secret-bosses/", "blurb": "All 8 hidden bosses, with route guides", "icon": "boss", "tier": 6 },
+    { "title": "Weathers", "href": "/cards/weathers/", "blurb": "Server weathers, their buffs and exclusive cards", "icon": "weather", "tier": 7 }
+  ],
+  "startHereIntro": "New to the game? Read these in order.",
+  "startHere": [
+    { "title": "Rolling and luck", "href": "/basics/rolling/", "text": "How rolling works, what “1 in N” means, and how luck and speed help." },
+    { "title": "Where cards come from", "href": "/basics/card-sources/", "text": "Why pack, weather and boss cards hit harder than general-pool cards." },
+    { "title": "Potions", "href": "/items/potions/", "text": "Stack luck, roll speed and battle speed boosts." },
+    { "title": "Worlds and bosses", "href": "/world/worlds/", "text": "Fight through the worlds and unlock boss cards." },
+    { "title": "Infinite", "href": "/progression/infinite/", "text": "Farm cards, items and crafting materials." },
+    { "title": "Charms and relics", "href": "/items/charms-relics/", "text": "Craft charms and buy relics for big boosts." },
+    { "title": "Prestige Tower", "href": "/progression/prestige-tower/", "text": "Climb floors for prestige luck. Know what resets first." }
+  ],
+  "newInUpdate": {
+    "_todo": "TODO: list what Update 3 added, one short line each. Links work, for example [[place:echo-depths]].",
+    "items": []
+  }
+}

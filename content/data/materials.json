@@ -1,0 +1,24 @@
+[
+  { "_todo": "TODO: every material's drop source and eternal status. 'Used to craft' fills in automatically from recipes." },
+  { "id": "spear-fragment", "name": "Spear Fragment", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "shine-fragment", "name": "Shine Fragment", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "sand-gourd", "name": "Sand Gourd", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "dragon-scales", "name": "Dragon Scales", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "crimson-feather", "name": "Crimson Feather", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "compass-needle", "name": "Compass Needle", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "blood-vial", "name": "Blood Vial", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "binding-cloth", "name": "Binding Cloth", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "rogue-embers", "name": "Rogue Embers", "dropsFrom": "TODO", "eternal": "TODO" },
+  {
+    "id": "orb-fragments", "name": "Orb Fragments", "aliases": ["Orb Fragment"],
+    "summary": "Needed for the [[charm:orb-of-transcendence]].",
+    "dropsFrom": [{ "ref": "boss:final-world-final-boss", "note": "two hardest difficulties only" }],
+    "eternal": "TODO"
+  },
+  { "id": "hollow-mask-shards", "name": "Hollow Mask Shards", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "divine-fragments", "name": "Divine Fragments", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "abyssal-fragments", "name": "Abyssal Fragments", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "celestial-shards", "name": "Celestial Shards", "dropsFrom": "TODO", "eternal": "TODO" },
+  { "id": "enchanted-core", "name": "Enchanted Core", "dropsFrom": ["place:infinite"], "eternal": "TODO" },
+  { "id": "spirit-dust", "name": "Spirit Dust", "dropsFrom": ["place:infinite"], "eternal": "TODO" }
+]
