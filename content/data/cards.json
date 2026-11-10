@@ -18,7 +18,12 @@
       "trait:freeze",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232049.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232049.png",
+    "roles": [
+      "crowd-control",
+      "tank",
+      "entry-effect"
+    ]
   },
   {
     "id": "absolute-zero",
@@ -36,7 +41,11 @@
       "trait:freeze",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232309.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232309.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "almighty-tyrant",
@@ -55,7 +64,13 @@
       "trait:revive",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232237.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232237.png",
+    "roles": [
+      "cheat-death",
+      "evasion",
+      "crowd-control",
+      "death-effect"
+    ]
   },
   {
     "id": "ant-king",
@@ -73,7 +88,12 @@
       "trait:revive",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232643.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232643.png",
+    "roles": [
+      "self-scaling",
+      "cheat-death",
+      "healer"
+    ]
   },
   {
     "id": "architect-of-agony",
@@ -102,7 +122,13 @@
       "trait:shield",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231951.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231951.png",
+    "roles": [
+      "damage-over-time",
+      "area-damage",
+      "counter",
+      "crowd-control"
+    ]
   },
   {
     "id": "armored-titan",
@@ -117,7 +143,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232012.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232012.png",
+    "roles": [
+      "tank"
+    ]
   },
   {
     "id": "artillery-captain",
@@ -132,7 +161,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232341.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232341.png",
+    "roles": [
+      "team-support",
+      "bench"
+    ]
   },
   {
     "id": "ascension-catalyst",
@@ -148,7 +181,11 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233245.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233245.png",
+    "roles": [
+      "healer",
+      "self-scaling"
+    ]
   },
   {
     "id": "assimilator-kaiju",
@@ -163,7 +200,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232320.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232320.png",
+    "roles": [
+      "crowd-control",
+      "self-scaling"
+    ]
   },
   {
     "id": "astral-devourer",
@@ -192,7 +233,13 @@
       "trait:hits-all",
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232344.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232344.png",
+    "roles": [
+      "self-scaling",
+      "nuker",
+      "area-damage",
+      "cheat-death"
+    ]
   },
   {
     "id": "attack-titan",
@@ -209,7 +256,10 @@
     "traits": [
       "trait:one-per-party"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231946.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231946.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "axe-prodigy",
@@ -226,7 +276,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232425.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232425.png",
+    "roles": [
+      "area-damage",
+      "healer"
+    ]
   },
   {
     "id": "bandit",
@@ -248,7 +302,11 @@
     "traits": [
       "trait:stun"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231905.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231905.png",
+    "roles": [
+      "multi-hit",
+      "bench"
+    ]
   },
   {
     "id": "beast-titan",
@@ -271,7 +329,10 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232034.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232034.png",
+    "roles": [
+      "entry-effect"
+    ]
   },
   {
     "id": "beautiful-abomination",
@@ -291,7 +352,13 @@
       "trait:revive",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231941.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231941.png",
+    "roles": [
+      "cheat-death",
+      "summoner",
+      "crowd-control",
+      "death-effect"
+    ]
   },
   {
     "id": "blade-vice-captain",
@@ -314,7 +381,11 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232403.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232403.png",
+    "roles": [
+      "evasion",
+      "counter"
+    ]
   },
   {
     "id": "blank-chess-prodigy",
@@ -329,7 +400,12 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232713.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232713.png",
+    "roles": [
+      "team-support",
+      "area-damage",
+      "bench"
+    ]
   },
   {
     "id": "blessed-mage",
@@ -344,7 +420,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232044.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232044.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "blessed-sorcerer",
@@ -365,7 +444,13 @@
       "trait:ignores-defense",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232221.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232221.png",
+    "roles": [
+      "tank",
+      "crowd-control",
+      "nuker",
+      "healer"
+    ]
   },
   {
     "id": "blight-veil",
@@ -381,7 +466,11 @@
       "trait:support",
       "trait:not-on-bosses"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233517.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233517.png",
+    "roles": [
+      "counter",
+      "debuffer"
+    ]
   },
   {
     "id": "blind-board-master",
@@ -396,7 +485,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232528.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232528.png",
+    "roles": [
+      "team-support",
+      "bench"
+    ]
   },
   {
     "id": "blizzard-baddie",
@@ -413,7 +506,12 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232006.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232006.png",
+    "roles": [
+      "tank",
+      "self-scaling",
+      "entry-effect"
+    ]
   },
   {
     "id": "blood-brother",
@@ -437,7 +535,12 @@
       "trait:pierce",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232704.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232704.png",
+    "roles": [
+      "damage-over-time",
+      "healer",
+      "area-damage"
+    ]
   },
   {
     "id": "blood-fiend",
@@ -452,7 +555,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232217.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232217.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "bloodchain-reaper",
@@ -476,7 +582,12 @@
       "trait:ignores-defense",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231911.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231911.png",
+    "roles": [
+      "nuker",
+      "self-scaling",
+      "cheat-death"
+    ]
   },
   {
     "id": "bloodmoon-demon",
@@ -493,7 +604,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231943.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231943.png",
+    "roles": [
+      "healer",
+      "counter"
+    ]
   },
   {
     "id": "bloodthirsty-monarch",
@@ -514,7 +629,13 @@
       "trait:execute",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232146.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232146.png",
+    "roles": [
+      "self-scaling",
+      "cheat-death",
+      "healer",
+      "execute"
+    ]
   },
   {
     "id": "blooming-wrath",
@@ -533,7 +654,13 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232639.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232639.png",
+    "roles": [
+      "debuffer",
+      "self-scaling",
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "blue-flame-heir",
@@ -551,7 +678,11 @@
       "trait:once-per-battle",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232036.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232036.png",
+    "roles": [
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "bone-knight",
@@ -569,7 +700,12 @@
       "trait:pierce",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232330.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232330.png",
+    "roles": [
+      "debuffer",
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "brood-kaiju",
@@ -587,7 +723,11 @@
       "trait:summon",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232328.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232328.png",
+    "roles": [
+      "summoner",
+      "entry-effect"
+    ]
   },
   {
     "id": "cart-titan",
@@ -604,7 +744,11 @@
     "traits": [
       "trait:shield"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231959.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231959.png",
+    "roles": [
+      "team-support",
+      "tank"
+    ]
   },
   {
     "id": "celestial-attendant",
@@ -621,7 +765,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232208.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232208.png",
+    "roles": [
+      "tank",
+      "healer"
+    ]
   },
   {
     "id": "celestial-circlet",
@@ -636,7 +784,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233322.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233322.png",
+    "roles": [
+      "tank"
+    ]
   },
   {
     "id": "chainsaw-fiend",
@@ -653,7 +804,10 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232201.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232201.png",
+    "roles": [
+      "healer"
+    ]
   },
   {
     "id": "chainsaw-revving",
@@ -669,7 +823,11 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233356.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233356.png",
+    "roles": [
+      "healer",
+      "multi-hit"
+    ]
   },
   {
     "id": "chair-guy",
@@ -704,7 +862,12 @@
       "trait:heal",
       "trait:immune"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232308.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232308.png",
+    "roles": [
+      "tank",
+      "healer",
+      "area-damage"
+    ]
   },
   {
     "id": "colossal-titan",
@@ -722,7 +885,11 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232101.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232101.png",
+    "roles": [
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "combat-instinct",
@@ -738,7 +905,10 @@
       "trait:support",
       "trait:pierce"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233239.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233239.png",
+    "roles": [
+      "area-damage"
+    ]
   },
   {
     "id": "command-sigil",
@@ -755,7 +925,11 @@
       "trait:cant-miss",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233716.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233716.png",
+    "roles": [
+      "nuker",
+      "healer"
+    ]
   },
   {
     "id": "controller",
@@ -772,7 +946,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232527.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232527.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "copyblade-mentor",
@@ -789,7 +967,10 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232218.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232218.png",
+    "roles": [
+      "entry-effect"
+    ]
   },
   {
     "id": "corroded-chain",
@@ -805,7 +986,11 @@
       "trait:support",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233112.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233112.png",
+    "roles": [
+      "debuffer",
+      "death-effect"
+    ]
   },
   {
     "id": "counter-trigger",
@@ -820,7 +1005,11 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233435.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233435.png",
+    "roles": [
+      "counter",
+      "nuker"
+    ]
   },
   {
     "id": "crash-out-queen",
@@ -835,7 +1024,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232134.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232134.png",
+    "roles": [
+      "debuffer"
+    ]
   },
   {
     "id": "crescent-reaper",
@@ -856,7 +1048,12 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232415.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232415.png",
+    "roles": [
+      "multi-hit",
+      "tank",
+      "self-scaling"
+    ]
   },
   {
     "id": "crimson-crow",
@@ -878,7 +1075,12 @@
     "traits": [
       "trait:burn"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232300.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232300.png",
+    "roles": [
+      "damage-over-time",
+      "evasion",
+      "tank"
+    ]
   },
   {
     "id": "crimson-egg",
@@ -894,7 +1096,11 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233700.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233700.png",
+    "roles": [
+      "cheat-death",
+      "healer"
+    ]
   },
   {
     "id": "crimson-phantom",
@@ -919,7 +1125,13 @@
       "trait:revive",
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231916.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231916.png",
+    "roles": [
+      "cheat-death",
+      "team-support",
+      "crowd-control",
+      "nuker"
+    ]
   },
   {
     "id": "crimson-ruin-princess",
@@ -934,7 +1146,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232551.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232551.png",
+    "roles": [
+      "team-support",
+      "bench"
+    ]
   },
   {
     "id": "crimson-thorn",
@@ -951,7 +1167,11 @@
       "trait:stun",
       "trait:entry-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233447.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233447.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "crimson-warlord",
@@ -969,7 +1189,12 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232313.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232313.png",
+    "roles": [
+      "area-damage",
+      "tank",
+      "entry-effect"
+    ]
   },
   {
     "id": "crowned-strategist",
@@ -984,7 +1209,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232326.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232326.png",
+    "roles": [
+      "crowd-control"
+    ]
   },
   {
     "id": "curse-tyrant",
@@ -1007,7 +1235,12 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232532.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232532.png",
+    "roles": [
+      "area-damage",
+      "healer",
+      "damage-over-time"
+    ]
   },
   {
     "id": "cursed-vessel",
@@ -1028,7 +1261,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232352.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232352.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "darkin-lord",
@@ -1062,7 +1298,12 @@
       "trait:pierce",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232442.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232442.png",
+    "roles": [
+      "area-damage",
+      "healer",
+      "cheat-death"
+    ]
   },
   {
     "id": "deadbeat-dad",
@@ -1077,7 +1318,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232546.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232546.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "deathless-king",
@@ -1096,7 +1340,13 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232622.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232622.png",
+    "roles": [
+      "self-scaling",
+      "debuffer",
+      "tank",
+      "healer"
+    ]
   },
   {
     "id": "defense-director",
@@ -1113,7 +1363,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232355.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232355.png",
+    "roles": [
+      "tank",
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "defense-force-suit",
@@ -1130,7 +1385,10 @@
       "trait:once-per-battle",
       "trait:shield"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233734.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233734.png",
+    "roles": [
+      "tank"
+    ]
   },
   {
     "id": "demon-flame",
@@ -1153,7 +1411,12 @@
     "traits": [
       "trait:burn"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232536.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232536.png",
+    "roles": [
+      "damage-over-time",
+      "crowd-control",
+      "self-scaling"
+    ]
   },
   {
     "id": "demon-general",
@@ -1187,7 +1450,14 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232601.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232601.png",
+    "origin": "weather",
+    "roles": [
+      "self-scaling",
+      "area-damage",
+      "healer",
+      "bench"
+    ]
   },
   {
     "id": "demon-slime",
@@ -1202,7 +1472,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232319.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232319.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "destiny-thread",
@@ -1218,7 +1491,11 @@
       "trait:support",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233453.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233453.png",
+    "roles": [
+      "team-support",
+      "death-effect"
+    ]
   },
   {
     "id": "devil-hunter",
@@ -1246,7 +1523,13 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232627.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232627.png",
+    "roles": [
+      "evasion",
+      "counter",
+      "tank",
+      "area-damage"
+    ]
   },
   {
     "id": "devils-contract",
@@ -1262,7 +1545,10 @@
       "trait:support",
       "trait:lifesteal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233407.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233407.png",
+    "roles": [
+      "healer"
+    ]
   },
   {
     "id": "divine-rivals",
@@ -1292,7 +1578,13 @@
       "trait:ignores-defense",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232105.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232105.png",
+    "roles": [
+      "self-scaling",
+      "nuker",
+      "area-damage",
+      "healer"
+    ]
   },
   {
     "id": "dragon-emperor",
@@ -1310,7 +1602,12 @@
       "trait:stun",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232632.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232632.png",
+    "roles": [
+      "tank",
+      "crowd-control",
+      "death-effect"
+    ]
   },
   {
     "id": "dragon-girl",
@@ -1328,7 +1625,10 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232014.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232014.png",
+    "roles": [
+      "healer"
+    ]
   },
   {
     "id": "dragon-sin",
@@ -1348,7 +1648,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232103.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232103.png",
+    "roles": [
+      "counter"
+    ]
   },
   {
     "id": "dreamer",
@@ -1363,7 +1666,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232321.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232321.png",
+    "roles": [
+      "crowd-control",
+      "debuffer"
+    ]
   },
   {
     "id": "dumb-hair-guy",
@@ -1386,7 +1693,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232453.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232453.png",
+    "roles": [
+      "self-scaling",
+      "healer",
+      "nuker"
+    ]
   },
   {
     "id": "dumb-nine-tail-prodigy",
@@ -1405,7 +1717,11 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232416.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232416.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "dumb-stretchy-guy",
@@ -1428,7 +1744,12 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232438.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232438.png",
+    "roles": [
+      "area-damage",
+      "counter",
+      "healer"
+    ]
   },
   {
     "id": "dumb-threeblade-ronin",
@@ -1450,7 +1771,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232401.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232401.png",
+    "roles": [
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "eight-handled-general",
@@ -1467,7 +1792,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232053.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232053.png",
+    "roles": [
+      "tank",
+      "healer",
+      "cheat-death"
+    ]
   },
   {
     "id": "eternal-blight",
@@ -1485,7 +1815,11 @@
       "trait:one-per-party",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232212.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232212.png",
+    "roles": [
+      "debuffer",
+      "self-scaling"
+    ]
   },
   {
     "id": "fabled-soldier",
@@ -1502,7 +1836,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232609.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232609.png",
+    "roles": [
+      "execute",
+      "entry-effect"
+    ]
   },
   {
     "id": "faceless-prophet",
@@ -1536,7 +1874,13 @@
       "trait:ignores-defense",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231834.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231834.png",
+    "roles": [
+      "crowd-control",
+      "self-scaling",
+      "death-effect",
+      "area-damage"
+    ]
   },
   {
     "id": "feral-hound",
@@ -1553,7 +1897,12 @@
     "traits": [
       "trait:lifesteal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232247.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232247.png",
+    "roles": [
+      "nuker",
+      "healer",
+      "cheat-death"
+    ]
   },
   {
     "id": "fiend-heart",
@@ -1568,7 +1917,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233413.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233413.png",
+    "roles": [
+      "tank"
+    ]
   },
   {
     "id": "final-juggernaut",
@@ -1588,7 +1940,13 @@
       "trait:revive",
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232532.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232532.png",
+    "origin": "weather",
+    "roles": [
+      "self-scaling",
+      "cheat-death",
+      "crowd-control"
+    ]
   },
   {
     "id": "fire-fist",
@@ -1617,7 +1975,13 @@
       "trait:burn",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231930.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231930.png",
+    "roles": [
+      "area-damage",
+      "damage-over-time",
+      "team-support",
+      "entry-effect"
+    ]
   },
   {
     "id": "first-sunblade",
@@ -1640,7 +2004,12 @@
       "trait:one-per-party",
       "trait:burn"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231905.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231905.png",
+    "roles": [
+      "damage-over-time",
+      "debuffer",
+      "multi-hit"
+    ]
   },
   {
     "id": "flame-colonel",
@@ -1666,7 +2035,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232430.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232430.png",
+    "roles": [
+      "crowd-control",
+      "nuker",
+      "cheat-death",
+      "entry-effect"
+    ]
   },
   {
     "id": "flame-core",
@@ -1682,7 +2057,10 @@
       "trait:support",
       "trait:burn"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233118.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233118.png",
+    "roles": [
+      "damage-over-time"
+    ]
   },
   {
     "id": "force-breaker",
@@ -1698,7 +2076,10 @@
       "trait:support",
       "trait:stun"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233724.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233724.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "fortune-clover",
@@ -1713,7 +2094,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233623.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233623.png",
+    "roles": [
+      "cheat-death"
+    ]
   },
   {
     "id": "fractured-lens",
@@ -1728,7 +2112,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233107.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233107.png",
+    "roles": [
+      "evasion"
+    ]
   },
   {
     "id": "frost-rookie",
@@ -1745,7 +2132,10 @@
     "traits": [
       "trait:freeze"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232441.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232441.png",
+    "roles": [
+      "crowd-control"
+    ]
   },
   {
     "id": "frost-wizard",
@@ -1760,7 +2150,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232126.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232126.png",
+    "roles": [
+      "multi-hit"
+    ]
   },
   {
     "id": "frostbane",
@@ -1778,7 +2171,11 @@
       "trait:freeze",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232203.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232203.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "galactic-tyrant",
@@ -1795,7 +2192,12 @@
     "traits": [
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232350.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232350.png",
+    "roles": [
+      "self-scaling",
+      "area-damage",
+      "tank"
+    ]
   },
   {
     "id": "gamer-captain",
@@ -1818,7 +2220,11 @@
     "traits": [
       "trait:shield"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232336.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232336.png",
+    "roles": [
+      "multi-hit",
+      "tank"
+    ]
   },
   {
     "id": "gentle-fist-heiress",
@@ -1833,7 +2239,12 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232605.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232605.png",
+    "roles": [
+      "crowd-control",
+      "debuffer",
+      "bench"
+    ]
   },
   {
     "id": "ghost-netrunner",
@@ -1850,7 +2261,12 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232648.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232648.png",
+    "roles": [
+      "debuffer",
+      "entry-effect",
+      "bench"
+    ]
   },
   {
     "id": "glitched-entity",
@@ -1868,7 +2284,12 @@
       "trait:immune",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232414.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232414.png",
+    "roles": [
+      "debuffer",
+      "entry-effect",
+      "self-scaling"
+    ]
   },
   {
     "id": "god-muncher",
@@ -1885,7 +2306,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231918.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231918.png",
+    "roles": [
+      "healer",
+      "tank"
+    ]
   },
   {
     "id": "grapple-harness",
@@ -1902,7 +2327,12 @@
       "trait:dodge",
       "trait:pierce"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233609.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233609.png",
+    "roles": [
+      "evasion",
+      "multi-hit",
+      "area-damage"
+    ]
   },
   {
     "id": "green-beast",
@@ -1917,7 +2347,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232020.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232020.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "half-demon",
@@ -1942,7 +2375,11 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232031.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232031.png",
+    "roles": [
+      "nuker",
+      "area-damage"
+    ]
   },
   {
     "id": "hand-of-conquest",
@@ -1965,7 +2402,12 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232519.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232519.png",
+    "roles": [
+      "area-damage",
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "havoc-wreaker",
@@ -1988,7 +2430,12 @@
       "trait:stun",
       "trait:hits-all"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232515.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232515.png",
+    "roles": [
+      "crowd-control",
+      "area-damage",
+      "multi-hit"
+    ]
   },
   {
     "id": "hawkeye-sniper",
@@ -2014,7 +2461,12 @@
     "traits": [
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232626.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232626.png",
+    "roles": [
+      "bench",
+      "nuker",
+      "counter"
+    ]
   },
   {
     "id": "height-of-painting",
@@ -2040,7 +2492,13 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232403.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232403.png",
+    "roles": [
+      "tank",
+      "nuker",
+      "self-scaling",
+      "crowd-control"
+    ]
   },
   {
     "id": "heros-journey",
@@ -2055,7 +2513,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233830.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233830.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "hex-mark",
@@ -2070,7 +2531,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233223.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233223.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "hextech-brawler",
@@ -2096,7 +2560,12 @@
       "trait:cant-miss",
       "trait:shield"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232436.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232436.png",
+    "roles": [
+      "nuker",
+      "crowd-control",
+      "tank"
+    ]
   },
   {
     "id": "hollow-armor",
@@ -2113,7 +2582,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232537.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232537.png",
+    "roles": [
+      "tank",
+      "cheat-death",
+      "healer"
+    ]
   },
   {
     "id": "hollow-bat",
@@ -2146,7 +2620,13 @@
       "trait:cant-miss",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232324.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232324.png",
+    "roles": [
+      "nuker",
+      "area-damage",
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "hotheaded-gunner",
@@ -2163,7 +2643,12 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232434.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232434.png",
+    "roles": [
+      "self-scaling",
+      "evasion",
+      "bench"
+    ]
   },
   {
     "id": "hush-talisman",
@@ -2180,7 +2665,11 @@
       "trait:support",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233510.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233510.png",
+    "roles": [
+      "crowd-control",
+      "death-effect"
+    ]
   },
   {
     "id": "ice-queen",
@@ -2197,7 +2686,10 @@
     "traits": [
       "trait:freeze"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232340.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232340.png",
+    "roles": [
+      "crowd-control"
+    ]
   },
   {
     "id": "ice-reaper",
@@ -2215,7 +2707,12 @@
       "trait:freeze",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232154.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232154.png",
+    "roles": [
+      "crowd-control",
+      "debuffer",
+      "death-effect"
+    ]
   },
   {
     "id": "immortal-beast",
@@ -2232,7 +2729,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232317.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232317.png",
+    "roles": [
+      "self-scaling",
+      "tank",
+      "healer"
+    ]
   },
   {
     "id": "immortal-vampire",
@@ -2252,7 +2754,12 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232137.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232137.png",
+    "roles": [
+      "crowd-control",
+      "healer",
+      "entry-effect"
+    ]
   },
   {
     "id": "immortal-witch",
@@ -2267,7 +2774,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232634.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232634.png",
+    "roles": [
+      "team-support",
+      "bench"
+    ]
   },
   {
     "id": "impact-core",
@@ -2283,7 +2794,11 @@
       "trait:support",
       "trait:shield"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233307.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233307.png",
+    "roles": [
+      "counter",
+      "tank"
+    ]
   },
   {
     "id": "ink-anamloy",
@@ -2303,7 +2818,13 @@
       "trait:heal",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232356.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232356.png",
+    "roles": [
+      "tank",
+      "debuffer",
+      "healer",
+      "cheat-death"
+    ]
   },
   {
     "id": "ink-artist",
@@ -2325,7 +2846,12 @@
     "traits": [
       "trait:summon"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232338.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232338.png",
+    "roles": [
+      "summoner",
+      "area-damage",
+      "tank"
+    ]
   },
   {
     "id": "insect-eater",
@@ -2344,7 +2870,13 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232348.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232348.png",
+    "roles": [
+      "debuffer",
+      "crowd-control",
+      "healer",
+      "entry-effect"
+    ]
   },
   {
     "id": "iron-fist-disciple",
@@ -2359,7 +2891,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231921.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231921.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "irregular-boy",
@@ -2374,7 +2909,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232408.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232408.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "junk-recycler",
@@ -2390,7 +2928,11 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233258.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233258.png",
+    "roles": [
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "karma-vessel",
@@ -2422,7 +2964,13 @@
     "traits": [
       "trait:one-per-party"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232131.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232131.png",
+    "roles": [
+      "damage-over-time",
+      "self-scaling",
+      "counter",
+      "nuker"
+    ]
   },
   {
     "id": "kindness-spreader",
@@ -2439,7 +2987,10 @@
     "traits": [
       "trait:not-on-bosses"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232639.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232639.png",
+    "roles": [
+      "debuffer"
+    ]
   },
   {
     "id": "ko-king",
@@ -2456,7 +3007,11 @@
     "traits": [
       "trait:hits-all"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232323.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232323.png",
+    "roles": [
+      "nuker",
+      "area-damage"
+    ]
   },
   {
     "id": "last-legacy",
@@ -2472,7 +3027,11 @@
       "trait:support",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233751.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233751.png",
+    "roles": [
+      "team-support",
+      "death-effect"
+    ]
   },
   {
     "id": "legendary-duo",
@@ -2492,7 +3051,13 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231854.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231854.png",
+    "roles": [
+      "nuker",
+      "evasion",
+      "crowd-control",
+      "self-scaling"
+    ]
   },
   {
     "id": "leopard-assassin",
@@ -2516,7 +3081,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232604.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232604.png",
+    "roles": [
+      "multi-hit"
+    ]
   },
   {
     "id": "light-ambassador",
@@ -2536,7 +3104,13 @@
       "trait:shield",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232509.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232509.png",
+    "roles": [
+      "debuffer",
+      "execute",
+      "counter",
+      "entry-effect"
+    ]
   },
   {
     "id": "lightborne-admiral",
@@ -2553,7 +3127,12 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232257.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232257.png",
+    "roles": [
+      "area-damage",
+      "evasion",
+      "entry-effect"
+    ]
   },
   {
     "id": "lightning-shout",
@@ -2577,7 +3156,12 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232028.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232028.png",
+    "roles": [
+      "crowd-control",
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "limit-breaker",
@@ -2592,7 +3176,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233823.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233823.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "lone-wolf",
@@ -2623,7 +3210,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232259.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232259.png",
+    "roles": [
+      "summoner",
+      "multi-hit",
+      "counter",
+      "entry-effect"
+    ]
   },
   {
     "id": "longnose-liar",
@@ -2644,7 +3237,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231907.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231907.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "lord-of-hemomancy",
@@ -2662,7 +3258,14 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232612.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232612.png",
+    "origin": "weather",
+    "roles": [
+      "nuker",
+      "healer",
+      "area-damage",
+      "self-scaling"
+    ]
   },
   {
     "id": "mach-20-teacher",
@@ -2676,7 +3279,14 @@
       "name": "Mach 20 Lesson",
       "text": "The first attack against each card in his party misses. He dodges 35% of attacks. Whenever an ally dodges, he strikes the attacker for 100% of his attack, and that attacker deals 30% less damage for 2 turns."
     },
-    "type": "battle"
+    "type": "battle",
+    "origin": "echo-depths",
+    "roles": [
+      "evasion",
+      "team-support",
+      "counter",
+      "debuffer"
+    ]
   },
   {
     "id": "madness-blade",
@@ -2699,7 +3309,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232432.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232432.png",
+    "roles": [
+      "tank",
+      "nuker",
+      "healer"
+    ]
   },
   {
     "id": "meteor-conqueror",
@@ -2717,7 +3332,12 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232228.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232228.png",
+    "roles": [
+      "nuker",
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "mimic",
@@ -2745,7 +3365,10 @@
     "traits": [
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231914.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231914.png",
+    "roles": [
+      "death-effect"
+    ]
   },
   {
     "id": "mirror-traitor",
@@ -2768,7 +3391,12 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232232.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232232.png",
+    "roles": [
+      "cheat-death",
+      "debuffer",
+      "area-damage"
+    ]
   },
   {
     "id": "mist-executioner",
@@ -2785,7 +3413,10 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232117.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232117.png",
+    "roles": [
+      "evasion"
+    ]
   },
   {
     "id": "mochi-man",
@@ -2802,7 +3433,10 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232624.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232624.png",
+    "roles": [
+      "evasion"
+    ]
   },
   {
     "id": "moon-mother",
@@ -2819,7 +3453,12 @@
     "traits": [
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232226.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232226.png",
+    "roles": [
+      "crowd-control",
+      "nuker",
+      "execute"
+    ]
   },
   {
     "id": "moon-reaper",
@@ -2842,7 +3481,11 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232405.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232405.png",
+    "roles": [
+      "multi-hit",
+      "cheat-death"
+    ]
   },
   {
     "id": "neural-overclock",
@@ -2857,7 +3500,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233552.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233552.png",
+    "roles": [
+      "multi-hit"
+    ]
   },
   {
     "id": "nine-tail-prodigy",
@@ -2872,7 +3518,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232620.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232620.png",
+    "roles": [
+      "debuffer"
+    ]
   },
   {
     "id": "noble-companion",
@@ -2887,7 +3536,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231940.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231940.png",
+    "roles": [
+      "team-support",
+      "bench"
+    ]
   },
   {
     "id": "nullblade-knight",
@@ -2904,7 +3557,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232235.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232235.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "numbers-weapon",
@@ -2919,7 +3576,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233758.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233758.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "oblivion-eraser",
@@ -2936,7 +3596,13 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233638.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233638.png",
+    "roles": [
+      "counter",
+      "debuffer",
+      "entry-effect",
+      "death-effect"
+    ]
   },
   {
     "id": "oceans-guardian",
@@ -2960,7 +3626,12 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232158.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232158.png",
+    "roles": [
+      "healer",
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "omni-sovereign",
@@ -2977,7 +3648,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232454.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232454.png",
+    "roles": [
+      "execute",
+      "entry-effect"
+    ]
   },
   {
     "id": "one-eyed",
@@ -2994,7 +3669,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232539.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232539.png",
+    "roles": [
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "otherwordly-being",
@@ -3012,7 +3691,13 @@
       "trait:dodge",
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232641.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232641.png",
+    "roles": [
+      "evasion",
+      "self-scaling",
+      "nuker",
+      "cheat-death"
+    ]
   },
   {
     "id": "panther-king",
@@ -3036,7 +3721,11 @@
       "trait:cant-miss",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232503.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232503.png",
+    "roles": [
+      "multi-hit",
+      "healer"
+    ]
   },
   {
     "id": "paper-pal",
@@ -3065,7 +3754,11 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231951.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231951.png",
+    "roles": [
+      "area-damage",
+      "entry-effect"
+    ]
   },
   {
     "id": "phantom",
@@ -3080,7 +3773,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232001.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232001.png",
+    "roles": [
+      "evasion"
+    ]
   },
   {
     "id": "pinnacle-of-sorcery",
@@ -3117,7 +3813,13 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231837.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_231837.png",
+    "roles": [
+      "area-damage",
+      "nuker",
+      "entry-effect",
+      "death-effect"
+    ]
   },
   {
     "id": "poison-princess",
@@ -3136,7 +3838,11 @@
       "trait:hits-all",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232105.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232105.png",
+    "roles": [
+      "debuffer",
+      "death-effect"
+    ]
   },
   {
     "id": "portal-blade",
@@ -3152,7 +3858,11 @@
       "trait:support",
       "trait:pierce"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233805.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233805.png",
+    "roles": [
+      "area-damage",
+      "nuker"
+    ]
   },
   {
     "id": "possesive-rabbit",
@@ -3171,7 +3881,12 @@
       "trait:revive",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232505.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232505.png",
+    "roles": [
+      "cheat-death",
+      "crowd-control",
+      "death-effect"
+    ]
   },
   {
     "id": "primordial-colossus",
@@ -3199,7 +3914,12 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232606.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232606.png",
+    "roles": [
+      "area-damage",
+      "entry-effect",
+      "death-effect"
+    ]
   },
   {
     "id": "primordial-dread",
@@ -3221,7 +3941,13 @@
     "traits": [
       "trait:one-per-party"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232058.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232058.png",
+    "roles": [
+      "debuffer",
+      "counter",
+      "evasion",
+      "self-scaling"
+    ]
   },
   {
     "id": "psychic-esper",
@@ -3244,7 +3970,12 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232524.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232524.png",
+    "roles": [
+      "multi-hit",
+      "area-damage",
+      "cheat-death"
+    ]
   },
   {
     "id": "psychic-girl",
@@ -3261,7 +3992,12 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232233.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232233.png",
+    "roles": [
+      "team-support",
+      "evasion",
+      "bench"
+    ]
   },
   {
     "id": "puppeteer",
@@ -3278,7 +4014,11 @@
     "traits": [
       "trait:poison"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232123.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232123.png",
+    "roles": [
+      "debuffer",
+      "tank"
+    ]
   },
   {
     "id": "rain-mage",
@@ -3295,7 +4035,11 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232009.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232009.png",
+    "roles": [
+      "debuffer",
+      "entry-effect"
+    ]
   },
   {
     "id": "realm-cleaver",
@@ -3311,7 +4055,10 @@
       "trait:support",
       "trait:pierce"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233536.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233536.png",
+    "roles": [
+      "area-damage"
+    ]
   },
   {
     "id": "reapers-lantern",
@@ -3330,7 +4077,10 @@
       "trait:poison",
       "trait:bleed"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233617.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233617.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "red-dog",
@@ -3354,7 +4104,12 @@
       "trait:hits-all",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232629.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232629.png",
+    "roles": [
+      "damage-over-time",
+      "death-effect",
+      "area-damage"
+    ]
   },
   {
     "id": "regressor",
@@ -3371,7 +4126,10 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232504.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232504.png",
+    "roles": [
+      "cheat-death"
+    ]
   },
   {
     "id": "rejection-maiden",
@@ -3389,7 +4147,12 @@
       "trait:once-per-battle",
       "trait:revive"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232511.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232511.png",
+    "roles": [
+      "team-support",
+      "cheat-death",
+      "bench"
+    ]
   },
   {
     "id": "restless-coffin",
@@ -3404,7 +4167,11 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233500.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233500.png",
+    "roles": [
+      "debuffer",
+      "crowd-control"
+    ]
   },
   {
     "id": "revival-seed",
@@ -3420,7 +4187,10 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233213.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233213.png",
+    "roles": [
+      "healer"
+    ]
   },
   {
     "id": "rift-anchor",
@@ -3436,7 +4206,10 @@
       "trait:support",
       "trait:once-per-battle"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233707.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233707.png",
+    "roles": [
+      "cheat-death"
+    ]
   },
   {
     "id": "royal-vanguard",
@@ -3451,7 +4224,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232517.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232517.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "rubberbound-captain",
@@ -3466,7 +4242,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232151.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232151.png",
+    "roles": [
+      "multi-hit"
+    ]
   },
   {
     "id": "ruler",
@@ -3484,7 +4263,11 @@
       "trait:revive",
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232636.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232636.png",
+    "roles": [
+      "nuker",
+      "cheat-death"
+    ]
   },
   {
     "id": "sand-vessel",
@@ -3499,7 +4282,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232142.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232142.png",
+    "roles": [
+      "nuker",
+      "tank"
+    ]
   },
   {
     "id": "sand-warden",
@@ -3514,7 +4301,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232212.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232212.png",
+    "roles": [
+      "tank",
+      "counter"
+    ]
   },
   {
     "id": "sand-warlord",
@@ -3529,7 +4320,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232548.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232548.png",
+    "roles": [
+      "self-scaling",
+      "debuffer"
+    ]
   },
   {
     "id": "scythe-meister",
@@ -3558,7 +4353,11 @@
       "trait:one-per-party",
       "trait:hits-all"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232222.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232222.png",
+    "roles": [
+      "area-damage",
+      "execute"
+    ]
   },
   {
     "id": "sea-sovereign",
@@ -3573,7 +4372,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232215.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232215.png",
+    "roles": [
+      "multi-hit",
+      "execute"
+    ]
   },
   {
     "id": "sea-valkyrie",
@@ -3590,7 +4393,10 @@
     "traits": [
       "trait:ignores-defense"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232140.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232140.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "serpent-sage",
@@ -3608,7 +4414,12 @@
       "trait:revive",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232231.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232231.png",
+    "roles": [
+      "cheat-death",
+      "healer",
+      "self-scaling"
+    ]
   },
   {
     "id": "serpent-witch",
@@ -3630,7 +4441,10 @@
     "traits": [
       "trait:poison"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232223.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232223.png",
+    "roles": [
+      "damage-over-time"
+    ]
   },
   {
     "id": "shade-prince",
@@ -3654,7 +4468,13 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232542.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232542.png",
+    "roles": [
+      "area-damage",
+      "self-scaling",
+      "cheat-death",
+      "entry-effect"
+    ]
   },
   {
     "id": "shadow-armor",
@@ -3669,7 +4489,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233339.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233339.png",
+    "roles": [
+      "tank"
+    ]
   },
   {
     "id": "shadow-fragment",
@@ -3684,7 +4507,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233329.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233329.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "shadow-heir",
@@ -3709,7 +4535,13 @@
       "trait:ignores-defense",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232617.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232617.png",
+    "roles": [
+      "nuker",
+      "evasion",
+      "counter",
+      "entry-effect"
+    ]
   },
   {
     "id": "shadow-king",
@@ -3727,7 +4559,11 @@
       "trait:not-on-bosses",
       "trait:summon"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232545.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232545.png",
+    "roles": [
+      "summoner",
+      "self-scaling"
+    ]
   },
   {
     "id": "shadow-monarch",
@@ -3744,7 +4580,10 @@
     "traits": [
       "trait:summon"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232522.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232522.png",
+    "roles": [
+      "summoner"
+    ]
   },
   {
     "id": "shadow-strategist",
@@ -3762,7 +4601,11 @@
       "trait:stun",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231924.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231924.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "shark-swordsman",
@@ -3779,7 +4622,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232206.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232206.png",
+    "roles": [
+      "healer",
+      "area-damage"
+    ]
   },
   {
     "id": "sharpshooter",
@@ -3803,7 +4650,11 @@
       "trait:stun",
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232419.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232419.png",
+    "roles": [
+      "nuker",
+      "crowd-control"
+    ]
   },
   {
     "id": "shrine-maiden-princess",
@@ -3821,7 +4672,12 @@
       "trait:shield",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232645.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232645.png",
+    "roles": [
+      "team-support",
+      "healer",
+      "bench"
+    ]
   },
   {
     "id": "silent-swordsman",
@@ -3844,7 +4700,11 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232023.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232023.png",
+    "roles": [
+      "evasion",
+      "nuker"
+    ]
   },
   {
     "id": "sixfold-prophet",
@@ -3873,7 +4733,13 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232450.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232450.png",
+    "roles": [
+      "area-damage",
+      "multi-hit",
+      "crowd-control",
+      "summoner"
+    ]
   },
   {
     "id": "skeleton-boy",
@@ -3890,7 +4756,12 @@
     "traits": [
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232513.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232513.png",
+    "roles": [
+      "debuffer",
+      "nuker",
+      "death-effect"
+    ]
   },
   {
     "id": "sketching-menace",
@@ -3907,7 +4778,11 @@
     "traits": [
       "trait:not-on-bosses"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232344.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232344.png",
+    "roles": [
+      "crowd-control",
+      "damage-over-time"
+    ]
   },
   {
     "id": "slime",
@@ -3924,7 +4799,10 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231911.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231911.png",
+    "roles": [
+      "cheat-death"
+    ]
   },
   {
     "id": "slime-virtuoso",
@@ -3952,7 +4830,11 @@
     "traits": [
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232304.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232304.png",
+    "roles": [
+      "multi-hit",
+      "nuker"
+    ]
   },
   {
     "id": "snacktime-menace",
@@ -3980,7 +4862,14 @@
       "trait:hits-all",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232543.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232543.png",
+    "origin": "weather",
+    "roles": [
+      "healer",
+      "self-scaling",
+      "area-damage",
+      "cheat-death"
+    ]
   },
   {
     "id": "solar-brawler",
@@ -3995,7 +4884,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232358.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232358.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "sorceresss-sorrow",
@@ -4012,7 +4904,12 @@
       "trait:poison",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233441.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233441.png",
+    "roles": [
+      "debuffer",
+      "damage-over-time",
+      "death-effect"
+    ]
   },
   {
     "id": "soul-reaper",
@@ -4029,7 +4926,10 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232335.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232335.png",
+    "roles": [
+      "cheat-death"
+    ]
   },
   {
     "id": "soul-siphon",
@@ -4044,7 +4944,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233252.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233252.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "sovereign-will",
@@ -4060,7 +4963,12 @@
       "trait:support",
       "trait:entry-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233334.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233334.png",
+    "roles": [
+      "self-scaling",
+      "team-support",
+      "entry-effect"
+    ]
   },
   {
     "id": "spider-tattoo",
@@ -4079,7 +4987,11 @@
       "trait:bleed",
       "trait:pierce"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233524.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233524.png",
+    "roles": [
+      "damage-over-time",
+      "area-damage"
+    ]
   },
   {
     "id": "spirit-thread",
@@ -4095,7 +5007,11 @@
       "trait:support",
       "trait:heal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233218.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233218.png",
+    "roles": [
+      "evasion",
+      "healer"
+    ]
   },
   {
     "id": "spirit-undertaker",
@@ -4111,7 +5027,12 @@
       "trait:support",
       "trait:lifesteal"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233207.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233207.png",
+    "roles": [
+      "nuker",
+      "healer",
+      "tank"
+    ]
   },
   {
     "id": "steel-alchemist",
@@ -4128,7 +5049,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232643.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232643.png",
+    "roles": [
+      "tank",
+      "summoner",
+      "self-scaling",
+      "entry-effect"
+    ]
   },
   {
     "id": "stitched-professor",
@@ -4144,7 +5071,11 @@
       "trait:support",
       "trait:stun"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233232.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233232.png",
+    "roles": [
+      "debuffer",
+      "crowd-control"
+    ]
   },
   {
     "id": "stone-world-scientist",
@@ -4159,7 +5090,12 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232654.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232654.png",
+    "roles": [
+      "team-support",
+      "damage-over-time",
+      "bench"
+    ]
   },
   {
     "id": "string-emperor",
@@ -4178,7 +5114,13 @@
       "trait:heal",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232615.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232615.png",
+    "roles": [
+      "debuffer",
+      "area-damage",
+      "healer",
+      "entry-effect"
+    ]
   },
   {
     "id": "sun-god",
@@ -4195,7 +5137,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232511.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232511.png",
+    "roles": [
+      "tank",
+      "counter",
+      "debuffer",
+      "entry-effect"
+    ]
   },
   {
     "id": "sunbreath-swordsman",
@@ -4210,7 +5158,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231934.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231934.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "sungsho",
@@ -4225,7 +5176,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232304.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232304.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "surgeon",
@@ -4242,7 +5196,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232156.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232156.png",
+    "roles": [
+      "debuffer",
+      "healer"
+    ]
   },
   {
     "id": "symmetry-reaper",
@@ -4270,7 +5228,11 @@
     "traits": [
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232017.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232017.png",
+    "roles": [
+      "multi-hit",
+      "nuker"
+    ]
   },
   {
     "id": "territory-surge",
@@ -4286,7 +5248,10 @@
       "trait:support",
       "trait:hits-all"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233349.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233349.png",
+    "roles": [
+      "area-damage"
+    ]
   },
   {
     "id": "the-dancer",
@@ -4301,7 +5266,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232342.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232342.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "the-griefer",
@@ -4323,7 +5291,12 @@
     "traits": [
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232458.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232458.png",
+    "roles": [
+      "debuffer",
+      "team-support",
+      "cheat-death"
+    ]
   },
   {
     "id": "the-needle-hunter",
@@ -4352,7 +5325,12 @@
       "trait:hits-all",
       "trait:pierce"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232206.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232206.png",
+    "roles": [
+      "evasion",
+      "counter",
+      "area-damage"
+    ]
   },
   {
     "id": "the-struggler",
@@ -4367,7 +5345,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232336.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232336.png",
+    "roles": [
+      "self-scaling",
+      "cheat-death"
+    ]
   },
   {
     "id": "thorn-fragment",
@@ -4385,7 +5367,13 @@
       "trait:dodge",
       "trait:entry-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233401.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233401.png",
+    "roles": [
+      "self-scaling",
+      "healer",
+      "tank",
+      "evasion"
+    ]
   },
   {
     "id": "thread-demon",
@@ -4404,7 +5392,13 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232312.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232312.png",
+    "roles": [
+      "counter",
+      "area-damage",
+      "entry-effect",
+      "death-effect"
+    ]
   },
   {
     "id": "threeblade-ronin",
@@ -4425,7 +5419,11 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232420.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232420.png",
+    "roles": [
+      "nuker",
+      "cheat-death"
+    ]
   },
   {
     "id": "thriller-king",
@@ -4443,7 +5441,11 @@
       "trait:not-on-bosses",
       "trait:revive"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232429.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232429.png",
+    "roles": [
+      "cheat-death",
+      "damage-over-time"
+    ]
   },
   {
     "id": "thunder-maniac",
@@ -4467,7 +5469,12 @@
       "trait:stun",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231937.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231937.png",
+    "roles": [
+      "crowd-control",
+      "self-scaling",
+      "entry-effect"
+    ]
   },
   {
     "id": "thunder-prodigy",
@@ -4482,7 +5489,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232046.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232046.png",
+    "roles": [
+      "nuker",
+      "area-damage"
+    ]
   },
   {
     "id": "tidal-queen",
@@ -4505,7 +5516,13 @@
     "traits": [
       "trait:hits-all"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232350.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232350.png",
+    "roles": [
+      "area-damage",
+      "self-scaling",
+      "debuffer",
+      "crowd-control"
+    ]
   },
   {
     "id": "time-master",
@@ -4520,7 +5537,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232611.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232611.png",
+    "roles": [
+      "crowd-control",
+      "cheat-death"
+    ]
   },
   {
     "id": "time-trickster",
@@ -4541,7 +5562,13 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232455.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232455.png",
+    "roles": [
+      "cheat-death",
+      "crowd-control",
+      "entry-effect",
+      "death-effect"
+    ]
   },
   {
     "id": "titan-hunter",
@@ -4558,7 +5585,10 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232302.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232302.png",
+    "roles": [
+      "evasion"
+    ]
   },
   {
     "id": "transmutation-circle",
@@ -4574,7 +5604,11 @@
       "trait:support",
       "trait:shield"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233559.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233559.png",
+    "roles": [
+      "summoner",
+      "tank"
+    ]
   },
   {
     "id": "trash-kid",
@@ -4601,7 +5635,11 @@
     "traits": [
       "trait:pierce"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232025.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232025.png",
+    "roles": [
+      "area-damage",
+      "tank"
+    ]
   },
   {
     "id": "tremor-emperor",
@@ -4625,7 +5663,12 @@
       "trait:entry-effect",
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232634.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232634.png",
+    "roles": [
+      "area-damage",
+      "entry-effect",
+      "cheat-death"
+    ]
   },
   {
     "id": "trickster-ace",
@@ -4640,7 +5683,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232551.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232551.png",
+    "roles": [
+      "debuffer"
+    ]
   },
   {
     "id": "true-hero",
@@ -4657,7 +5703,12 @@
     "traits": [
       "trait:death-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231900.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231900.png",
+    "roles": [
+      "team-support",
+      "tank",
+      "death-effect"
+    ]
   },
   {
     "id": "turbo-occultist",
@@ -4678,7 +5729,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232423.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232423.png",
+    "roles": [
+      "multi-hit"
+    ]
   },
   {
     "id": "undying-rogue",
@@ -4693,7 +5747,10 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232530.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232530.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "volcano-head",
@@ -4716,7 +5773,11 @@
       "trait:burn",
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232659.png"
+    "screenshot": "Battles/Skarmbild_2026-11-09_232659.png",
+    "roles": [
+      "damage-over-time",
+      "healer"
+    ]
   },
   {
     "id": "voodoo-doll",
@@ -4731,7 +5792,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233631.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233631.png",
+    "roles": [
+      "debuffer"
+    ]
   },
   {
     "id": "warhammer-titan",
@@ -4749,7 +5813,11 @@
       "trait:stun",
       "trait:pierce"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232041.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232041.png",
+    "roles": [
+      "crowd-control",
+      "area-damage"
+    ]
   },
   {
     "id": "weirdo-warrior",
@@ -4772,7 +5840,12 @@
       "trait:stun",
       "trait:poison"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232307.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232307.png",
+    "roles": [
+      "crowd-control",
+      "damage-over-time",
+      "debuffer"
+    ]
   },
   {
     "id": "white-hawk",
@@ -4787,7 +5860,11 @@
     },
     "atkScaling": [],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232346.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232346.png",
+    "roles": [
+      "crowd-control",
+      "evasion"
+    ]
   },
   {
     "id": "white-lotus",
@@ -4806,7 +5883,13 @@
       "trait:freeze",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232328.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232328.png",
+    "roles": [
+      "evasion",
+      "crowd-control",
+      "nuker",
+      "entry-effect"
+    ]
   },
   {
     "id": "wildheart-hunter",
@@ -4827,7 +5910,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231946.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231946.png",
+    "roles": [
+      "nuker"
+    ]
   },
   {
     "id": "wind-shinobi",
@@ -4848,7 +5934,10 @@
       }
     ],
     "traits": [],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232003.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232003.png",
+    "roles": [
+      "area-damage"
+    ]
   },
   {
     "id": "worthy-fighter",
@@ -4865,7 +5954,11 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232332.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232332.png",
+    "roles": [
+      "self-scaling",
+      "healer"
+    ]
   },
   {
     "id": "wraith-mask-fragment",
@@ -4880,7 +5973,10 @@
     "traits": [
       "trait:support"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233124.png"
+    "screenshot": "Supports/Skarmbild_2026-11-09_233124.png",
+    "roles": [
+      "self-scaling"
+    ]
   },
   {
     "id": "yellow-flash",
@@ -4898,7 +5994,13 @@
       "trait:dodge",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232120.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232120.png",
+    "roles": [
+      "evasion",
+      "counter",
+      "nuker",
+      "entry-effect"
+    ]
   },
   {
     "id": "yo-yo-kid",
@@ -4916,7 +6018,11 @@
       "trait:stun",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232108.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232108.png",
+    "roles": [
+      "crowd-control",
+      "entry-effect"
+    ]
   },
   {
     "id": "yordle-inventor",
@@ -4938,7 +6044,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232502.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232502.png",
+    "roles": [
+      "summoner",
+      "multi-hit",
+      "tank",
+      "entry-effect"
+    ]
   },
   {
     "id": "young-shadow-heir",
@@ -4960,7 +6072,10 @@
     "traits": [
       "trait:burn"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231931.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231931.png",
+    "roles": [
+      "damage-over-time"
+    ]
   },
   {
     "id": "young-spirit-vessel",
@@ -4977,6 +6092,9 @@
     "traits": [
       "trait:dodge"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_231929.png"
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231929.png",
+    "roles": [
+      "evasion"
+    ]
   }
 ]

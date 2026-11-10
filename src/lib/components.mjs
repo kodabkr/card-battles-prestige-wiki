@@ -117,7 +117,7 @@ function relationSections(e, ctx) {
   out += sub('Rewards', links(r.gives));
   out += sub(e.kind === 'card' ? 'Related' : 'Exclusive cards', links(r.cards));
   out += sub('Found here', links(r.contains));
-  out += sub(`Cards with this trait (${r.holders.length})`, r.holders.length ? links(r.holders) : '');
+  out += sub(`Cards with this ${e.kind === 'role' ? 'role' : 'trait'} (${r.holders.length})`, r.holders.length ? links(r.holders) : '');
   if (e.kind === 'material' || e.kind === 'currency') {
     out += sub('Used to craft or buy', r.usedIn.length ? links(r.usedIn) : `<p class="sub__soon">${soon('what this is used for')}</p>`);
   } else {
@@ -255,7 +255,7 @@ export function gameCard(e, ctx, opts = {}) {
   const typeLabel = e.type === 'support' ? 'Support card' : e.type === 'battle' ? 'Battle card' : 'Card';
   // A real card image already shows the name, HP and DMG, so skip our overlay.
   const hasArt = ctx.images.has(imagePath(e));
-  return `<div class="gcard-wrap reveal"${idAttr(e, ctx)}>
+  return `<div class="gcard-wrap reveal"${idAttr(e, ctx)}${opts.data || ''}>
 <button class="gcard${lvl ? ` tier-${lvl}` : ''}${hasArt ? ' gcard--art' : ''}" type="button" aria-pressed="false" data-rare="${lvl >= 6 ? 1 : 0}" aria-label="${esc(e.name)}. Press to flip and read its ability.">
 <span class="gcard__inner">
 <span class="gcard__face gcard__front">
@@ -527,14 +527,16 @@ function cardProfile(args, ctx) {
   const facts = {
     Type: isBattle ? 'Battle card' : 'Support card',
     Rarity: typeof e.rarity === 'number' ? formatOdds(e.rarity) : 'TODO(rarity)',
-    Source: src || 'TODO(where this card comes from)',
+    Origin: originName(e, ctx) || 'TODO(where this card comes from)',
   };
+  if (src) facts.Source = src;
   if (isBattle) {
     facts['Base DMG'] = e.dmg != null ? statText(e.dmg) : 'TODO';
     facts['Base HP'] = e.hp != null ? statText(e.hp) : 'TODO';
   }
   const factHtml = `<dl class="facts">${Object.entries(facts).map(([k, v]) => `<div class="facts__row"><dt>${esc(k)}</dt><dd>${rich(v, ctx)}</dd></div>`).join('')}</dl>`;
   const traitChips = asArray(e.traits).length ? refChips(e.traits, ctx) : '';
+  const roleChips = asArray(e.roles).length ? refChips(asArray(e.roles).map((r) => `role:${r}`), ctx) : '';
   const ability = e.ability
     ? `<h2>Ability: ${esc(e.ability.name || '')}</h2><div class="ability">${renderMarkdown(e.ability.text || 'TODO(ability text)', ctx)}</div>`
     : `<h2>Ability</h2><p>${soon('ability')}</p>`;
@@ -546,6 +548,7 @@ function cardProfile(args, ctx) {
 <div class="profile__card">${gameCard(e, ctx)}</div>
 <div class="profile__info">
 ${badges(e, ctx)}${factHtml}
+${roleChips ? `<div class="sub"><p class="sub__title">Roles <a class="sub__help" href="/cards/roles/">what are these?</a></p>${roleChips}</div>` : ''}
 ${traitChips ? `<div class="sub"><p class="sub__title">Traits</p>${traitChips}</div>` : ''}
 </div>
 </div>
@@ -555,9 +558,69 @@ ${ability}
 ${variantTable(e, ctx)}${scaleNote}${notes}`;
 }
 
+function origins(ctx) {
+  return asArray(ctx.site.extra.origins).filter((o) => o && o.id);
+}
+function originName(e, ctx) {
+  const o = origins(ctx).find((x) => x.id === e.origin);
+  return o ? o.name : null;
+}
+
+// The Card Database browser: search, filters and sorting, all in the browser.
+// Every card is in the page; site.js shows or hides them. Without JS, all show.
+function cardBrowser(args, ctx) {
+  const list = select('card', args, ctx).sort((a, b) => a.name.localeCompare(b.name));
+  const roles = [...ctx.site.entities.values()].filter((x) => x.kind === 'role').sort((a, b) => (a.order || 0) - (b.order || 0));
+  const traits = [...ctx.site.entities.values()].filter((x) => x.kind === 'trait').sort((a, b) => a.name.localeCompare(b.name));
+  const plain = (t) => String(t || '').replace(/\*\*|__|`|#|\[\[|\]\]|[-•]\s/g, ' ').replace(/\s+/g, ' ').toLowerCase();
+  const cards = list
+    .map((e) => {
+      const dmg = parseShort(e.dmg);
+      const hp = parseShort(e.hp);
+      const data = [
+        ['name', e.name.toLowerCase()],
+        ['text', plain(`${e.ability ? e.ability.name : ''} ${e.ability ? e.ability.text : ''}`)],
+        ['type', e.type || ''],
+        ['origin', e.origin || 'unknown'],
+        ['roles', asArray(e.roles).join(' ')],
+        ['main', asArray(e.roles)[0] || ''],
+        ['traits', asArray(e.traits).map((t) => t.replace('trait:', '')).join(' ')],
+        ['dmg', dmg ?? ''],
+        ['hp', hp ?? ''],
+        ['rarity', typeof e.rarity === 'number' ? e.rarity : ''],
+      ]
+        .map(([k, v]) => ` data-${k}="${esc(v)}"`)
+        .join('');
+      return gameCard(e, ctx, { data });
+    })
+    .join('\n');
+  const opt = (v, label) => `<option value="${esc(v)}">${esc(label)}</option>`;
+  return `<div class="browser" data-browser>
+<div class="browser__bar">
+<label class="browser__search">${icon('search')}<input type="search" data-f="q" placeholder="Search name or ability…" autocomplete="off" spellcheck="false" aria-label="Search cards by name or ability"></label>
+<label class="browser__select"><span>Type</span><select data-f="type">${opt('', 'All')}${opt('battle', 'Battle')}${opt('support', 'Support')}</select></label>
+<label class="browser__select"><span>Origin</span><select data-f="origin">${opt('', 'All')}${origins(ctx).map((o) => opt(o.id, o.name)).join('')}${opt('unknown', 'Not known yet')}</select></label>
+<label class="browser__select"><span>Trait</span><select data-f="trait">${opt('', 'Any')}${traits.map((t) => opt(t.id, t.name)).join('')}</select></label>
+<label class="browser__select"><span>Sort</span><select data-f="sort">${opt('name', 'Name A–Z')}${opt('dmg-desc', 'DMG: high to low')}${opt('dmg-asc', 'DMG: low to high')}${opt('hp-desc', 'HP: high to low')}${opt('rarity-desc', 'Rarest first')}</select></label>
+</div>
+<div class="browser__roles" role="group" aria-label="Filter by role">
+<span class="browser__label">Roles</span>
+${roles.map((r) => `<button type="button" class="role-chip" data-role="${esc(r.id)}" aria-pressed="false" title="${esc(r.summary || '')}">${esc(r.name)}</button>`).join('')}
+<label class="browser__main"><input type="checkbox" data-f="mainonly"> Main role only</label>
+<button type="button" class="browser__reset" data-reset hidden>Clear filters</button>
+</div>
+<p class="browser__count" aria-live="polite" data-count>${list.length} cards</p>
+<div class="card-grid" data-grid>
+${cards}
+</div>
+<p class="browser__empty" data-empty hidden>No cards match these filters.</p>
+</div>`;
+}
+
 export const COMPONENTS = {
   'tier-label': tierLabelComp,
   'card-profile': cardProfile,
+  'card-browser': cardBrowser,
   'variant-rules': variantRules,
   items,
   item,

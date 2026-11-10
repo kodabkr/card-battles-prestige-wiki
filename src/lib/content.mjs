@@ -14,7 +14,7 @@ export function loadContent(root) {
   const home = readJSON(path.join(dir, 'home.json'));
   const tiers = readJSON(path.join(dir, 'data', 'tiers.json'));
   const extra = {};
-  for (const name of ['prestige', 'victory-road', 'scaling']) {
+  for (const name of ['prestige', 'victory-road', 'scaling', 'origins']) {
     const f = path.join(dir, 'data', `${name}.json`);
     if (fs.existsSync(f)) extra[name] = readJSON(f);
   }
@@ -81,6 +81,7 @@ export function loadContent(root) {
     link(e, 'sources', e.sources, 'gives');
     link(e, 'earnedFrom', e.earnedFrom, 'gives');
     link(e, 'traits', e.kind === 'card' ? e.traits : null, 'holders');
+    link(e, 'roles', e.kind === 'card' ? asArray(e.roles).map((r) => `role:${r}`) : null, 'holders');
   }
 
   // ---- Variant rules: stat multiplier = 2^(log10 rarity multiplier); combos multiply ----

@@ -47,6 +47,7 @@
       "icon": "cards",
       "pages": [
         "/cards/database/",
+        "/cards/roles/",
         "/cards/traits/",
         "/cards/packs/",
         "/cards/pack-upgrader/",

@@ -1,0 +1,13 @@
+[
+  { "_about": "Where a card comes from, as a category for the Card Database filter. Set a card's \"origin\" to one of these ids. Its \"source\" can still point at the exact pack/weather/boss." },
+  { "id": "general", "name": "General pool" },
+  { "id": "pack", "name": "Card pack" },
+  { "id": "weather", "name": "Weather" },
+  { "id": "event", "name": "Event" },
+  { "id": "raid-shop", "name": "Raid shop" },
+  { "id": "pvp-shop", "name": "PvP shop" },
+  { "id": "boss", "name": "Boss" },
+  { "id": "secret-boss", "name": "Secret boss" },
+  { "id": "echo-depths", "name": "Echo Depths" },
+  { "id": "other", "name": "Other" }
+]

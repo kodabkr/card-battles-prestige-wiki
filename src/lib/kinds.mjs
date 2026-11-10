@@ -19,6 +19,7 @@ export const KINDS = {
   boss:     { file: 'bosses',     label: 'Boss',          plural: 'Bosses',         page: '/world/secret-bosses/',   folder: 'bosses',     shape: 'portrait', icon: 'boss' },
   zone:     { file: 'zones',      label: 'Echo zone',     plural: 'Echo zones',     page: '/world/echo-depths/',     folder: 'zones',      shape: 'wide',     icon: 'echo' },
   stat:     { file: 'stats',      label: 'Player stat',   plural: 'Player stats',   page: '/basics/player-stats/',   folder: null,         shape: null,       icon: 'stat' },
+  role:     { file: 'roles',      label: 'Role',          plural: 'Card roles',     page: '/cards/roles/',           folder: null,         shape: null,       icon: 'stat' },
   trait:    { file: 'traits',     label: 'Trait',         plural: 'Card traits',    page: '/cards/traits/',          folder: null,         shape: null,       icon: 'spark' },
   cosmetic: { file: 'cosmetics',  label: 'Cosmetic',      plural: 'Titles & frames', page: '/progression/victory-road/', folder: 'frames', shape: 'icon',     icon: 'spark' },
 };

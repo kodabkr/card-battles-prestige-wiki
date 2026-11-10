@@ -356,6 +356,99 @@
     });
   }
 
+  /* ---------------- Card Database filters ---------------- */
+  $$('[data-browser]').forEach(function (box) {
+    var grid = $('[data-grid]', box);
+    var cards = $$('.gcard-wrap', grid);
+    var countEl = $('[data-count]', box);
+    var emptyEl = $('[data-empty]', box);
+    var resetBtn = $('[data-reset]', box);
+    var f = {};
+    $$('[data-f]', box).forEach(function (el) { f[el.getAttribute('data-f')] = el; });
+    var chips = $$('[data-role]', box);
+    var num = function (el, k) { var v = el.getAttribute('data-' + k); return v === '' ? null : parseFloat(v); };
+
+    function selectedRoles() {
+      return chips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; }).map(function (c) { return c.getAttribute('data-role'); });
+    }
+    function apply(skipUrl) {
+      var q = f.q.value.trim().toLowerCase();
+      var terms = q ? q.split(/\s+/) : [];
+      var type = f.type.value, origin = f.origin.value, trait = f.trait.value, sort = f.sort.value;
+      var roles = selectedRoles();
+      var mainOnly = f.mainonly.checked;
+      var shown = 0;
+      cards.forEach(function (el) {
+        var hay = el.getAttribute('data-name') + ' ' + el.getAttribute('data-text');
+        var ok = terms.every(function (t) { return hay.indexOf(t) > -1; });
+        if (ok && type) ok = el.getAttribute('data-type') === type;
+        if (ok && origin) ok = el.getAttribute('data-origin') === origin;
+        if (ok && trait) ok = (' ' + el.getAttribute('data-traits') + ' ').indexOf(' ' + trait + ' ') > -1;
+        if (ok && roles.length) {
+          if (mainOnly) ok = roles.indexOf(el.getAttribute('data-main')) > -1;
+          else {
+            var have = ' ' + el.getAttribute('data-roles') + ' ';
+            ok = roles.every(function (r) { return have.indexOf(' ' + r + ' ') > -1; });
+          }
+        }
+        el.hidden = !ok;
+        el.classList.add('is-in');
+        if (ok) shown++;
+      });
+      var key = sort.split('-')[0], dir = sort.indexOf('-asc') > -1 ? 1 : -1;
+      cards.slice().sort(function (a, b) {
+        if (key === 'name') return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+        var x = num(a, key), y = num(b, key);
+        if (x === null && y === null) return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+        if (x === null) return 1;
+        if (y === null) return -1;
+        return (x - y) * dir;
+      }).forEach(function (el) { grid.appendChild(el); });
+      countEl.textContent = shown === cards.length ? cards.length + ' cards' : 'Showing ' + shown + ' of ' + cards.length + ' cards';
+      emptyEl.hidden = shown > 0;
+      resetBtn.hidden = !(q || type || origin || trait || roles.length || mainOnly || sort !== 'name');
+      if (!skipUrl) {
+        var params = new URLSearchParams();
+        if (q) params.set('q', q);
+        if (type) params.set('type', type);
+        if (origin) params.set('origin', origin);
+        if (trait) params.set('trait', trait);
+        if (roles.length) params.set('roles', roles.join(','));
+        if (mainOnly) params.set('main', '1');
+        if (sort !== 'name') params.set('sort', sort);
+        var qs = params.toString();
+        history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+      }
+    }
+    // Restore filters from the link, so a filtered view can be shared.
+    var p = new URLSearchParams(location.search);
+    if (p.get('q')) f.q.value = p.get('q');
+    ['type', 'origin', 'trait', 'sort'].forEach(function (k) { if (p.get(k)) f[k].value = p.get(k); });
+    if (p.get('main')) f.mainonly.checked = true;
+    (p.get('roles') || '').split(',').filter(Boolean).forEach(function (r) {
+      chips.forEach(function (c) { if (c.getAttribute('data-role') === r) c.setAttribute('aria-pressed', 'true'); });
+    });
+
+    var timer;
+    f.q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { apply(); }, 80); });
+    ['type', 'origin', 'trait', 'sort', 'mainonly'].forEach(function (k) {
+      f[k].addEventListener('change', function () { apply(); Sound.play('tick'); });
+    });
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        apply();
+        Sound.play('tick');
+      });
+    });
+    resetBtn.addEventListener('click', function () {
+      f.q.value = ''; f.type.value = ''; f.origin.value = ''; f.trait.value = ''; f.sort.value = 'name'; f.mainonly.checked = false;
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      apply();
+    });
+    if (p.toString()) apply(true);
+  });
+
   /* ---------------- Search ---------------- */
   var dlg = $('#search-dialog');
   var input = $('#search-input');

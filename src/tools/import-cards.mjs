@@ -100,6 +100,7 @@ for (const [id, list] of groups) {
     name: prev.name || best.name,
     type,
     rarity: prev.rarity ?? 'TODO',
+    ...(prev.origin ? { origin: prev.origin } : {}),
     ...(prev.source ? { source: prev.source } : {}),
     ...(prev.border ? { border: prev.border } : {}),
     ...(prev.unconfirmed ? { unconfirmed: prev.unconfirmed } : {}),
@@ -108,6 +109,7 @@ for (const [id, list] of groups) {
     atkScaling,
     ...(impliedScaling.length ? { impliedScaling } : {}),
     traits,
+    ...(prev.roles ? { roles: prev.roles } : {}),
     ...(prev.notes ? { notes: prev.notes } : {}),
     screenshot: `${best.folder}/${best.file}`,
   };
