@@ -92,7 +92,7 @@ ${sidebar(site, page.url)}
 <main id="main" class="main" tabindex="-1">
 <div class="page">
 <article class="article">
-<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${group ? `<li><span>${esc(group.label)}</span></li>` : ''}<li><span aria-current="page">${esc(page.title)}</span></li></ol></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${group ? `<li><span>${esc(group.label)}</span></li>` : ''}${fm.parent ? `<li><a href="${fm.parent.url}">${esc(fm.parent.title)}</a></li>` : ''}<li><span aria-current="page">${esc(page.title)}</span></li></ol></nav>
 <header class="page-head">
 <p class="page-head__group">${icon(fm.icon || (group && group.icon) || 'book')}${esc(group ? group.label : '')}</p>
 <h1>${esc(page.title)}</h1>

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "bleed",
+    "name": "Bleed",
+    "summary": "Can make enemies bleed, hurting them for a few turns."
+  },
+  {
+    "id": "burn",
+    "name": "Burn",
+    "summary": "Can burn enemies, hurting them for a few turns."
+  },
+  {
+    "id": "cant-miss",
+    "name": "Can't Miss",
+    "summary": "Some of its attacks can't be dodged."
+  },
+  {
+    "id": "death-effect",
+    "name": "Death Effect",
+    "summary": "Does something when this card is knocked out."
+  },
+  {
+    "id": "dodge",
+    "name": "Dodge",
+    "summary": "Can dodge enemy attacks."
+  },
+  {
+    "id": "entry-effect",
+    "name": "Entry Effect",
+    "summary": "Does something as soon as this card enters a fight."
+  },
+  {
+    "id": "execute",
+    "name": "Execute",
+    "summary": "Can instantly finish off a weakened enemy."
+  },
+  {
+    "id": "freeze",
+    "name": "Freeze",
+    "summary": "Can freeze enemies."
+  },
+  {
+    "id": "heal",
+    "name": "Heal",
+    "summary": "Can restore HP."
+  },
+  {
+    "id": "hits-all",
+    "name": "Hits All",
+    "summary": "Can hit every enemy at once."
+  },
+  {
+    "id": "ignores-defense",
+    "name": "Ignores Defense",
+    "summary": "Some of its damage ignores the enemy's damage reduction."
+  },
+  {
+    "id": "immune",
+    "name": "Immune",
+    "summary": "Status effects like burn and stun don't affect this card."
+  },
+  {
+    "id": "lifesteal",
+    "name": "Lifesteal",
+    "summary": "Can heal itself from the damage it deals."
+  },
+  {
+    "id": "not-on-bosses",
+    "name": "Not On Bosses",
+    "summary": "Part of this card's ability doesn't work on bosses."
+  },
+  {
+    "id": "once-per-battle",
+    "name": "Once Per Battle",
+    "summary": "Part of this card's ability can only happen once per fight."
+  },
+  {
+    "id": "one-per-party",
+    "name": "One Per Party",
+    "summary": "Only one copy can be in your party."
+  },
+  {
+    "id": "pierce",
+    "name": "Pierce",
+    "summary": "Some of its attacks also hit the enemy behind the target."
+  },
+  {
+    "id": "poison",
+    "name": "Poison",
+    "summary": "Can poison enemies, hurting them for a few turns."
+  },
+  {
+    "id": "revive",
+    "name": "Revive",
+    "summary": "Can come back after being knocked out."
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "summary": "Can block hits with a shield."
+  },
+  {
+    "id": "stun",
+    "name": "Stun",
+    "summary": "Can stun enemies so they skip a turn."
+  },
+  {
+    "id": "summon",
+    "name": "Summon",
+    "summary": "Can bring extra cards into the fight."
+  },
+  {
+    "id": "support",
+    "name": "Support",
+    "summary": "Equip this card on a battle card to give that card its ability."
+  }
+]

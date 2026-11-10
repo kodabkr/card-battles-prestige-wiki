@@ -1,7 +1,7 @@
 // Reusable, data-driven components. Use them from Markdown as {{name key="value"}}.
 // Every component reads from content/data, so adding a new card/potion/etc. is
 // a JSON edit, not a layout edit.
-import { esc, isTodo, todoNote, formatOdds, asArray, compact } from './util.mjs';
+import { esc, isTodo, todoNote, formatOdds, asArray, compact, parseShort, gameNum } from './util.mjs';
 import { KINDS, SHAPES } from './kinds.mjs';
 import { icon } from './icons.mjs';
 import { rich, entityLink, soon, renderMarkdown, tierLevel, tierLabel, cardTier, nameHtml, callout } from './render.mjs';
@@ -117,6 +117,7 @@ function relationSections(e, ctx) {
   out += sub('Rewards', links(r.gives));
   out += sub(e.kind === 'card' ? 'Related' : 'Exclusive cards', links(r.cards));
   out += sub('Found here', links(r.contains));
+  out += sub(`Cards with this trait (${r.holders.length})`, r.holders.length ? links(r.holders) : '');
   if (e.kind === 'material' || e.kind === 'currency') {
     out += sub('Used to craft or buy', r.usedIn.length ? links(r.usedIn) : `<p class="sub__soon">${soon('what this is used for')}</p>`);
   } else {
@@ -240,7 +241,7 @@ function compare(args, ctx) {
 
 function statVal(v) {
   if (v == null || isTodo(v)) return `<span class="q" title="Coming soon">?</span>`;
-  return esc(typeof v === 'number' ? compact(v) : v);
+  return esc(typeof v === 'number' ? gameNum(v) : v);
 }
 
 export function gameCard(e, ctx, opts = {}) {
@@ -252,8 +253,10 @@ export function gameCard(e, ctx, opts = {}) {
     ? `<span class="gcard__ability-name">${rich(e.ability.name ?? 'TODO', ctx)}</span><span class="gcard__ability">${rich(e.ability.text ?? 'TODO', ctx)}</span>`
     : `<span class="gcard__ability-name">Ability</span><span class="gcard__ability">${soon('ability')}</span>`;
   const typeLabel = e.type === 'support' ? 'Support card' : e.type === 'battle' ? 'Battle card' : 'Card';
+  // A real card image already shows the name, HP and DMG, so skip our overlay.
+  const hasArt = ctx.images.has(imagePath(e));
   return `<div class="gcard-wrap reveal"${idAttr(e, ctx)}>
-<button class="gcard${lvl ? ` tier-${lvl}` : ''}" type="button" aria-pressed="false" data-rare="${lvl >= 6 ? 1 : 0}" aria-label="${esc(e.name)}. Press to flip and read its ability.">
+<button class="gcard${lvl ? ` tier-${lvl}` : ''}${hasArt ? ' gcard--art' : ''}" type="button" aria-pressed="false" data-rare="${lvl >= 6 ? 1 : 0}" aria-label="${esc(e.name)}. Press to flip and read its ability.">
 <span class="gcard__inner">
 <span class="gcard__face gcard__front">
 <span class="gcard__art">${entImage(e, ctx, { sizes: '(max-width: 600px) 46vw, 240px', small: true })}</span>
@@ -268,7 +271,7 @@ export function gameCard(e, ctx, opts = {}) {
 </span>
 </span>
 </button>
-<p class="gcard-meta"><span>${typeLabel}</span> · ${srcEnt ? entityLink(srcEnt.key, ctx) : src ? rich(src, ctx) : '<span>General pool</span>'}</p>
+<p class="gcard-meta">${isHome(e, ctx) ? `<span>${typeLabel}</span>` : `<a class="gcard-meta__link" href="${e.url}">${nameHtml(e)}</a>`}<span class="gcard-meta__src">${srcEnt ? entityLink(srcEnt.key, ctx) : src ? rich(src, ctx) : ''}</span></p>
 </div>`;
 }
 
@@ -292,9 +295,9 @@ function cardTable(args, ctx) {
         { html: entityLink(e.key, ctx), sort: e.name },
         { html: e.type === 'support' ? 'Support' : e.type === 'battle' ? 'Battle' : soon('card type'), sort: e.type || '' },
         { html: typeof e.rarity === 'number' ? esc(formatOdds(e.rarity)) : soon('rarity'), sort: typeof e.rarity === 'number' ? e.rarity : '' },
-        { html: e.hp == null || isTodo(e.hp) ? soon('HP') : esc(compact(e.hp)), sort: sortKey(e.hp) },
-        { html: e.dmg == null || isTodo(e.dmg) ? soon('DMG') : esc(compact(e.dmg)), sort: sortKey(e.dmg) },
-        { html: src ? rich(src, ctx) : 'General pool', sort: src || 'general' },
+        { html: e.hp == null || isTodo(e.hp) ? (e.type === 'support' ? '<span class="dim">—</span>' : soon('HP')) : esc(statText(e.hp)), sort: parseShort(e.hp) ?? '' },
+        { html: e.dmg == null || isTodo(e.dmg) ? (e.type === 'support' ? '<span class="dim">—</span>' : soon('DMG')) : esc(statText(e.dmg)), sort: parseShort(e.dmg) ?? '' },
+        { html: src ? rich(src, ctx) : soon('source'), sort: src || '' },
       ],
     };
   });
@@ -468,8 +471,94 @@ function tierLabelComp(args, ctx) {
   return `<span class="tier-pill tier-${lvl}">${esc(tierLabel(args.t, ctx))}</span>`;
 }
 
+const statText = (v) => (typeof v === 'number' ? gameNum(v) : String(v));
+
+function variants(ctx) {
+  return [...ctx.site.entities.values()].filter((e) => e.kind === 'border' && e.rarityMult != null).sort((a, b) => a.order - b.order);
+}
+
+// Every variant for one card: rarity, DMG, HP and each ability hit that
+// scales with ATK, all multiplied by the variant.
+function variantTable(e, ctx) {
+  const rows = variants(ctx);
+  const baseRarity = typeof e.rarity === 'number' ? e.rarity : null;
+  const dmg = parseShort(e.dmg);
+  const hp = parseShort(e.hp);
+  const isBattle = e.type !== 'support';
+  const implied = ctx.site.config.countImpliedDamage ? asArray(e.impliedScaling) : [];
+  const scale = isBattle ? [...asArray(e.atkScaling), ...implied].filter((x) => x && typeof x.pct === 'number') : [];
+  const head = [{ label: 'Variant' }, { label: 'Rarity', num: true }];
+  if (isBattle) head.push({ label: 'DMG', num: true }, { label: 'HP', num: true });
+  for (const x of scale) head.push({ label: `${x.label} (${x.pct}%)`, num: true });
+  const body = rows.map((v) => {
+    const cells = [{ html: `<span class="tier-pill tier-${tierLevel(v.tier, ctx)}">${esc(v.name)}</span>`, sort: v.order }];
+    if (baseRarity) cells.push({ html: esc(`1 in ${gameNum(baseRarity * v.rarityMult)}`), sort: baseRarity * v.rarityMult });
+    else cells.push({ html: `<span class="mono">x${esc(gameNum(v.rarityMult))}</span>`, sort: v.rarityMult });
+    if (isBattle) {
+      cells.push(dmg != null ? { html: esc(gameNum(dmg * v.statMult)), sort: dmg * v.statMult } : { html: soon('DMG'), sort: '' });
+      cells.push(hp != null ? { html: esc(gameNum(hp * v.statMult)), sort: hp * v.statMult } : { html: soon('HP'), sort: '' });
+      for (const x of scale) {
+        const val = dmg != null ? (dmg * v.statMult * x.pct) / 100 : null;
+        cells.push(val != null ? { html: esc(gameNum(val)), sort: val } : { html: soon(), sort: '' });
+      }
+    }
+    return { cells };
+  });
+  return table(head, body, { cls: 'variant-table' });
+}
+
+function variantRules(args, ctx) {
+  const rows = variants(ctx).map((v) => ({
+    cells: [
+      { html: `<span class="tier-pill tier-${tierLevel(v.tier, ctx)}">${esc(v.name)}</span>`, sort: v.order },
+      { html: `<span class="mono">x${esc(v.rarityMult.toLocaleString('en-US'))}</span>`, sort: v.rarityMult },
+      { html: `<span class="mono">x${esc(v.statMult.toLocaleString('en-US'))}</span>`, sort: v.statMult },
+      { html: v.combo ? v.combo.map((id) => entityLink(`border:${id}`, ctx)).join(' × ') : v.id === 'rainbow' ? 'Standalone' : '<span class="dim">—</span>' },
+    ],
+  }));
+  return table([{ label: 'Variant' }, { label: 'Rarity multiplier', num: true }, { label: 'Stat multiplier (DMG and HP)', num: true }, { label: 'Made of' }], rows);
+}
+
+function cardProfile(args, ctx) {
+  const e = ctx.site.entities.get(args.ref);
+  if (!e) return soon();
+  const src = e.source ? asArray(e.source)[0] : null;
+  const isBattle = e.type !== 'support';
+  const facts = {
+    Type: isBattle ? 'Battle card' : 'Support card',
+    Rarity: typeof e.rarity === 'number' ? formatOdds(e.rarity) : 'TODO(rarity)',
+    Source: src || 'TODO(where this card comes from)',
+  };
+  if (isBattle) {
+    facts['Base DMG'] = e.dmg != null ? statText(e.dmg) : 'TODO';
+    facts['Base HP'] = e.hp != null ? statText(e.hp) : 'TODO';
+  }
+  const factHtml = `<dl class="facts">${Object.entries(facts).map(([k, v]) => `<div class="facts__row"><dt>${esc(k)}</dt><dd>${rich(v, ctx)}</dd></div>`).join('')}</dl>`;
+  const traitChips = asArray(e.traits).length ? refChips(e.traits, ctx) : '';
+  const ability = e.ability
+    ? `<h2>Ability: ${esc(e.ability.name || '')}</h2><div class="ability">${renderMarkdown(e.ability.text || 'TODO(ability text)', ctx)}</div>`
+    : `<h2>Ability</h2><p>${soon('ability')}</p>`;
+  const scaleNote = isBattle && asArray(e.atkScaling).length
+    ? `<p class="table-note">Ability columns show the damage of each hit for that variant: the variant's DMG times the ability's percentage of ATK. In-game numbers can differ slightly because of rounding.</p>`
+    : `<p class="table-note">In-game numbers can differ slightly because of rounding.</p>`;
+  const notes = e.notes ? callout('note', 'Notes', `<p>${rich(e.notes, ctx)}</p>`) : '';
+  return `<div class="profile">
+<div class="profile__card">${gameCard(e, ctx)}</div>
+<div class="profile__info">
+${badges(e, ctx)}${factHtml}
+${traitChips ? `<div class="sub"><p class="sub__title">Traits</p>${traitChips}</div>` : ''}
+</div>
+</div>
+${ability}
+<h2>Variants</h2>
+<p class="table-lede">Each variant multiplies the base rarity and stats. ${entityLink('border:base', ctx, { thumb: false }).replace(/>Base</, '>How variants work<')}</p>
+${variantTable(e, ctx)}${scaleNote}${notes}`;
+}
+
 export const COMPONENTS = {
   'tier-label': tierLabelComp,
+  'card-profile': cardProfile,
+  'variant-rules': variantRules,
   items,
   item,
   'potion-table': potionTable,

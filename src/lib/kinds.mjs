@@ -6,7 +6,7 @@
 export const KINDS = {
   card:     { file: 'cards',      label: 'Card',          plural: 'Cards',          page: '/cards/database/',        folder: 'cards',      shape: 'card',     icon: 'card' },
   pack:     { file: 'packs',      label: 'Card pack',     plural: 'Card packs',     page: '/cards/packs/',           folder: 'packs',      shape: 'pack',     icon: 'pack' },
-  border:   { file: 'borders',    label: 'Border',        plural: 'Borders',        page: '/basics/borders/',        folder: 'borders',    shape: 'icon',     icon: 'card' },
+  border:   { file: 'borders',    label: 'Variant',       plural: 'Variants',       page: '/basics/borders/',        folder: 'borders',    shape: 'icon',     icon: 'card' },
   weather:  { file: 'weathers',   label: 'Weather',       plural: 'Weathers',       page: '/cards/weathers/',        folder: 'weathers',   shape: 'wide',     icon: 'weather' },
   potion:   { file: 'potions',    label: 'Potion',        plural: 'Potions',        page: '/items/potions/',         folder: 'potions',    shape: 'icon',     icon: 'potion' },
   charm:    { file: 'charms',     label: 'Charm',         plural: 'Charms',         page: '/items/charms-relics/',   folder: 'charms',     shape: 'icon',     icon: 'charm' },
@@ -19,6 +19,7 @@ export const KINDS = {
   boss:     { file: 'bosses',     label: 'Boss',          plural: 'Bosses',         page: '/world/secret-bosses/',   folder: 'bosses',     shape: 'portrait', icon: 'boss' },
   zone:     { file: 'zones',      label: 'Echo zone',     plural: 'Echo zones',     page: '/world/echo-depths/',     folder: 'zones',      shape: 'wide',     icon: 'echo' },
   stat:     { file: 'stats',      label: 'Player stat',   plural: 'Player stats',   page: '/basics/player-stats/',   folder: null,         shape: null,       icon: 'stat' },
+  trait:    { file: 'traits',     label: 'Trait',         plural: 'Card traits',    page: '/cards/traits/',          folder: null,         shape: null,       icon: 'spark' },
   cosmetic: { file: 'cosmetics',  label: 'Cosmetic',      plural: 'Titles & frames', page: '/progression/victory-road/', folder: 'frames', shape: 'icon',     icon: 'spark' },
 };
 

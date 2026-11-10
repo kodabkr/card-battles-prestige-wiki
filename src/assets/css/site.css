@@ -670,3 +670,27 @@ html.is-leaving .main { opacity: 0; transition: opacity 0.12s ease; }
 }
 .ent { height: auto; min-height: 22px; padding-top: 2px; padding-bottom: 2px; line-height: 1.25; }
 table .ent { white-space: nowrap; }
+
+/* ---------- Card profile ---------- */
+.profile { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 8px; }
+.profile__card .gcard-meta { display: none; }
+.profile__info .facts { margin-top: 0; }
+.profile__info .badges { margin: 0 0 10px; }
+.profile__info .badges:empty { display: none; }
+.ability { padding: 14px 16px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--panel); font-size: 14px; color: var(--text-2); max-width: 70ch; }
+.ability > :last-child { margin-bottom: 0; }
+.ability ul { padding-left: 1.2em; }
+.ability strong { color: var(--white); }
+.table-lede { margin: -0.4em 0 0.6em; font-size: 13.5px; color: var(--muted); }
+.table-note { margin: -0.6em 0 1.4em; font-size: 12.5px; color: var(--faint); max-width: 70ch; }
+.variant-table td { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+.gcard-meta__link { color: var(--text); text-decoration: none; font-weight: 500; }
+.gcard-meta__link:hover { text-decoration: underline; }
+.gcard-meta__src:empty { display: none; }
+.gcard-meta { justify-content: space-between; }
+@media (max-width: 720px) {
+  .profile { grid-template-columns: minmax(0, 1fr); }
+  .profile__card { max-width: 240px; }
+}
+.gcard--art .gcard__plate, .gcard--art .gcard__top { display: none; }
+.gcard--art .gcard__art .pic img { object-fit: cover; }

@@ -74,7 +74,8 @@ export function entityLink(inner, ctx, opts = {}) {
     if (key) e = ctx.site.entities.get(key);
     // Plain page links by title also work: [[Potions]]
     if (!e) {
-      const page = ctx.site.pages.find((p) => p.title.toLowerCase() === target.toLowerCase());
+      const t = target.toLowerCase();
+      const page = ctx.site.pages.find((p) => !p.generated && (p.title.toLowerCase() === t || (p.fm.navTitle || '').toLowerCase() === t));
       if (page) return `<a class="ent ent--page" href="${page.url}">${icon('book', 'ent__ico')}<span>${esc(label || page.title)}</span></a>`;
     }
   }

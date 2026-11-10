@@ -1,6 +1,155 @@
 [
-  { "_todo": "TODO: full border list, in order, with each border's rarity and stat multiplier." },
-  { "id": "shiny", "name": "Shiny", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } },
-  { "id": "galactic", "name": "Galactic", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } },
-  { "id": "shiny-galactic", "name": "Shiny Galactic", "facts": { "Rarity multiplier": "TODO", "Stat multiplier": "TODO" } }
+  {
+    "_about": "Card variants (borders). Variant rarity = base rarity x rarityMult. Variant DMG/HP = base DMG/HP x statMult. statMult = 2^(log10 rarityMult); the build checks this. 'combo' lists the variants a Shiny combo multiplies together."
+  },
+  {
+    "id": "base",
+    "name": "Base",
+    "order": 0,
+    "rarityMult": 1,
+    "statMult": 1,
+    "tier": "1",
+    "summary": "No border. The card's own rarity and stats.",
+    "facts": {
+      "Rarity multiplier": "x1",
+      "Stat multiplier": "x1"
+    }
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "order": 1,
+    "rarityMult": 100,
+    "statMult": 4,
+    "tier": "2",
+    "facts": {
+      "Rarity multiplier": "x100",
+      "Stat multiplier": "x4"
+    }
+  },
+  {
+    "id": "prismatic",
+    "name": "Prismatic",
+    "order": 2,
+    "rarityMult": 1000,
+    "statMult": 8,
+    "tier": "3",
+    "facts": {
+      "Rarity multiplier": "x1,000",
+      "Stat multiplier": "x8"
+    }
+  },
+  {
+    "id": "shiny",
+    "name": "Shiny",
+    "order": 3,
+    "rarityMult": 1000,
+    "statMult": 8,
+    "tier": "3",
+    "facts": {
+      "Rarity multiplier": "x1,000",
+      "Stat multiplier": "x8"
+    }
+  },
+  {
+    "id": "cosmic",
+    "name": "Cosmic",
+    "order": 4,
+    "rarityMult": 10000,
+    "statMult": 16,
+    "tier": "4",
+    "facts": {
+      "Rarity multiplier": "x10,000",
+      "Stat multiplier": "x16"
+    }
+  },
+  {
+    "id": "shiny-gold",
+    "name": "Shiny Gold",
+    "order": 5,
+    "rarityMult": 100000,
+    "statMult": 32,
+    "tier": "5",
+    "combo": [
+      "shiny",
+      "gold"
+    ],
+    "facts": {
+      "Rarity multiplier": "x100,000",
+      "Stat multiplier": "x32"
+    }
+  },
+  {
+    "id": "galactic",
+    "name": "Galactic",
+    "order": 6,
+    "rarityMult": 1000000,
+    "statMult": 64,
+    "tier": "5",
+    "facts": {
+      "Rarity multiplier": "x1,000,000",
+      "Stat multiplier": "x64"
+    }
+  },
+  {
+    "id": "shiny-prismatic",
+    "name": "Shiny Prismatic",
+    "order": 7,
+    "rarityMult": 1000000,
+    "statMult": 64,
+    "tier": "5",
+    "combo": [
+      "shiny",
+      "prismatic"
+    ],
+    "facts": {
+      "Rarity multiplier": "x1,000,000",
+      "Stat multiplier": "x64"
+    }
+  },
+  {
+    "id": "shiny-cosmic",
+    "name": "Shiny Cosmic",
+    "order": 8,
+    "rarityMult": 10000000,
+    "statMult": 128,
+    "tier": "6",
+    "combo": [
+      "shiny",
+      "cosmic"
+    ],
+    "facts": {
+      "Rarity multiplier": "x10,000,000",
+      "Stat multiplier": "x128"
+    }
+  },
+  {
+    "id": "shiny-galactic",
+    "name": "Shiny Galactic",
+    "order": 9,
+    "rarityMult": 1000000000,
+    "statMult": 512,
+    "tier": "7",
+    "combo": [
+      "shiny",
+      "galactic"
+    ],
+    "facts": {
+      "Rarity multiplier": "x1,000,000,000",
+      "Stat multiplier": "x512"
+    }
+  },
+  {
+    "id": "rainbow",
+    "name": "Rainbow",
+    "order": 10,
+    "rarityMult": 100000000000,
+    "statMult": 2048,
+    "tier": "8",
+    "summary": "Standalone. Never combined with Shiny or any other variant.",
+    "facts": {
+      "Rarity multiplier": "x100,000,000,000",
+      "Stat multiplier": "x2,048"
+    }
+  }
 ]

@@ -90,3 +90,25 @@ export function compact(n) {
 export const posix = (p) => p.split(path.sep).join('/');
 
 export const asArray = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]);
+
+// "983K" -> 983000, "1.03K" -> 1030, "24" -> 24. Returns null if not a number.
+const SUFFIX = { k: 1e3, m: 1e6, b: 1e9, t: 1e12, qa: 1e15, qi: 1e18, sx: 1e21, sp: 1e24, oc: 1e27, no: 1e30, dc: 1e33 };
+export function parseShort(v) {
+  if (typeof v === 'number') return v;
+  if (typeof v !== 'string') return null;
+  const m = v.trim().replace(/,/g, '').match(/^(\d+(?:\.\d+)?)\s*([a-z]{0,2})$/i);
+  if (!m) return null;
+  const mult = m[2] ? SUFFIX[m[2].toLowerCase()] : 1;
+  return mult ? parseFloat(m[1]) * mult : null;
+}
+
+// Game-style short numbers: 3 significant digits with K/M/B/T/Qa/Qi/Sx/Sp/Oc/No/Dc.
+export function gameNum(n) {
+  if (typeof n !== 'number' || !isFinite(n)) return '';
+  if (Math.abs(n) < 1000) return String(Math.round(n));
+  const units = ['', 'K', 'M', 'B', 'T', 'Qa', 'Qi', 'Sx', 'Sp', 'Oc', 'No', 'Dc'];
+  let i = 0;
+  while (Math.abs(n) >= 1000 && i < units.length - 1) { n /= 1000; i++; }
+  const s = n >= 100 ? Math.round(n).toString() : n >= 10 ? n.toFixed(1) : n.toFixed(2);
+  return s.replace(/\.0+$|(\.\d*[1-9])0+$/, '$1') + units[i];
+}

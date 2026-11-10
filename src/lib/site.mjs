@@ -96,7 +96,7 @@ export async function buildSite({ root = process.cwd(), dev = false, log = conso
   // 2. Search index (pages, sections, every entity).
   const items = [];
   for (const r of rendered) {
-    if (r.page.url === '/404.html') continue;
+    if (r.page.url === '/404.html' || r.page.generated) continue;
     items.push({ t: r.page.title, k: 'Page', u: r.page.url, s: r.page.fm.description || '', x: stripTags(r.html).slice(0, 3000) });
     for (const t of r.toc.filter((t) => t.lvl === 2)) items.push({ t: t.text, k: 'Section', u: `${r.page.url}#${t.id}`, s: r.page.title });
   }
@@ -128,7 +128,9 @@ export async function buildSite({ root = process.cwd(), dev = false, log = conso
     if (r.home) html = layoutHome({ page: r.page, site, assets, ctx: r.ctx });
     else {
       const i = order.indexOf(r.page);
-      html = layoutPage({ page: r.page, site, assets, html: r.html, toc: r.toc, prev: i > 0 ? order[i - 1] : null, next: i >= 0 && i < order.length - 1 ? order[i + 1] : null, ctx: r.ctx });
+      const prev = r.page.generated ? r.page.prevPage : i > 0 ? order[i - 1] : null;
+      const next = r.page.generated ? r.page.nextPage : i >= 0 && i < order.length - 1 ? order[i + 1] : null;
+      html = layoutPage({ page: r.page, site, assets, html: r.html, toc: r.toc, prev, next, ctx: r.ctx });
     }
     r.final = html;
   }

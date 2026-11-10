@@ -173,7 +173,10 @@ export class ImageStore {
       if (!fs.existsSync(cached)) {
         let img = sharp(job.src.file, { animated: job.src.animated }).resize({ width: job.w, withoutEnlargement: true });
         img = job.fmt === 'avif' ? img.avif({ quality: 55, effort: 4 }) : img.webp({ quality: 82, effort: 5 });
-        await img.toFile(cached);
+        // Write then rename, so a build running at the same time never sees a half-written file.
+        const tmp = `${cached}.${process.pid}.tmp`;
+        await img.toFile(tmp);
+        try { fs.renameSync(tmp, cached); } catch { fs.rmSync(tmp, { force: true }); }
         made++;
       } else reused++;
       fs.copyFileSync(cached, dest);

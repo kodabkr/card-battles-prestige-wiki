@@ -3,13 +3,88 @@
   "description": "Unofficial fan wiki for the Roblox game Card Battles: Prestige: cards, potions, charms, relics, bosses, weathers and the Prestige Tower.",
   "currentUpdate": 3,
   "nav": [
-    { "label": "Getting started", "icon": "compass", "pages": ["/start-here/", "/update-3/"] },
-    { "label": "Core concepts", "icon": "book", "pages": ["/basics/rolling/", "/basics/card-sources/", "/basics/borders/", "/basics/eternal-items/", "/basics/player-stats/"] },
-    { "label": "Progression", "icon": "tower", "pages": ["/progression/prestige-tower/", "/progression/victory-road/", "/progression/infinite/", "/progression/fountain-luck/"] },
-    { "label": "Items & boosts", "icon": "potion", "pages": ["/items/potions/", "/items/charms-relics/", "/items/materials/", "/items/game-passes/"] },
-    { "label": "Cards", "icon": "cards", "pages": ["/cards/database/", "/cards/packs/", "/cards/pack-upgrader/", "/cards/weathers/"] },
-    { "label": "Currencies & shops", "icon": "coin", "pages": ["/economy/currencies/", "/economy/kaiju-raid/", "/economy/shadow-garden-raid/", "/economy/scrap-shop/", "/economy/archivist-shard-fuser/"] },
-    { "label": "World", "icon": "world", "pages": ["/world/worlds/", "/world/secret-bosses/", "/world/the-hall/", "/world/echo-depths/", "/world/junkyard/", "/world/science-lab/"] },
-    { "label": "Guides", "icon": "guide", "pages": ["/guides/prestige-builds/", "/guides/infinite-cards/", "/guides/synergies/"] }
-  ]
+    {
+      "label": "Getting started",
+      "icon": "compass",
+      "pages": [
+        "/start-here/",
+        "/update-3/"
+      ]
+    },
+    {
+      "label": "Core concepts",
+      "icon": "book",
+      "pages": [
+        "/basics/rolling/",
+        "/basics/card-sources/",
+        "/basics/borders/",
+        "/basics/eternal-items/",
+        "/basics/player-stats/"
+      ]
+    },
+    {
+      "label": "Progression",
+      "icon": "tower",
+      "pages": [
+        "/progression/prestige-tower/",
+        "/progression/victory-road/",
+        "/progression/infinite/",
+        "/progression/fountain-luck/"
+      ]
+    },
+    {
+      "label": "Items & boosts",
+      "icon": "potion",
+      "pages": [
+        "/items/potions/",
+        "/items/charms-relics/",
+        "/items/materials/",
+        "/items/game-passes/"
+      ]
+    },
+    {
+      "label": "Cards",
+      "icon": "cards",
+      "pages": [
+        "/cards/database/",
+        "/cards/traits/",
+        "/cards/packs/",
+        "/cards/pack-upgrader/",
+        "/cards/weathers/"
+      ]
+    },
+    {
+      "label": "Currencies & shops",
+      "icon": "coin",
+      "pages": [
+        "/economy/currencies/",
+        "/economy/kaiju-raid/",
+        "/economy/shadow-garden-raid/",
+        "/economy/scrap-shop/",
+        "/economy/archivist-shard-fuser/"
+      ]
+    },
+    {
+      "label": "World",
+      "icon": "world",
+      "pages": [
+        "/world/worlds/",
+        "/world/secret-bosses/",
+        "/world/the-hall/",
+        "/world/echo-depths/",
+        "/world/junkyard/",
+        "/world/science-lab/"
+      ]
+    },
+    {
+      "label": "Guides",
+      "icon": "guide",
+      "pages": [
+        "/guides/prestige-builds/",
+        "/guides/infinite-cards/",
+        "/guides/synergies/"
+      ]
+    }
+  ],
+  "countImpliedDamage": false
 }

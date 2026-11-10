@@ -1,15 +1,4982 @@
 [
-  { "_todo": "TODO: full card database. Fields: id, name, type (battle or support), rarity (the N in 1 in N, as a number), hp, dmg, ability {name, text}, source (pack:x, weather:x, boss:x, zone:x; leave out for the general pool), border." },
-  { "id": "snacktime-menace", "name": "Snacktime Menace", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
-  { "id": "lord-of-hemomancy", "name": "Lord of Hemomancy", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
-  { "id": "demon-general", "name": "Demon General", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
-  { "id": "final-juggernaut", "name": "Final Juggernaut", "source": "weather:cataclysm", "rarity": "TODO", "hp": "TODO", "dmg": "TODO" },
   {
-    "id": "mach-20-teacher", "name": "Mach 20 Teacher", "unconfirmed": true, "source": "zone:lantern-cistern",
-    "rarity": "TODO", "hp": "TODO", "dmg": "TODO",
+    "_todo": "TODO: full card database. Fields: id, name, type (battle or support), rarity (the N in 1 in N, as a number), hp, dmg, ability {name, text}, source (pack:x, weather:x, boss:x, zone:x; leave out for the general pool), border."
+  },
+  {
+    "id": "10th-captain",
+    "name": "10th Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "218",
+    "hp": "435",
+    "ability": {
+      "name": "Frost Dragon Domain",
+      "text": "- On entry, freeze enemy for 2 turns.\n- Attacks against frozen targets deal 1.5x damage.\n- 10th Captain takes 20% reduced damage at all times (ice shell)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232049.png"
+  },
+  {
+    "id": "absolute-zero",
+    "name": "Absolute Zero",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "848",
+    "hp": "1.69K",
+    "ability": {
+      "name": "Ice Time Capsule",
+      "text": "- On entry, freeze enemy for 2 turns.\n- Deal 2x damage to frozen targets.\n- When a frozen target is killed, freeze transfers to next card entering (1 turn)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232309.png"
+  },
+  {
+    "id": "almighty-tyrant",
+    "name": "Almighty Tyrant",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "608",
+    "hp": "1.21K",
+    "ability": {
+      "name": "The Almighty",
+      "text": "- See the future: dodge the first attack every 3 turns.\n- On death, alter the future: revive at 60% HP with the enemy's ability disabled for 2 turns.\n- Once."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge",
+      "trait:revive",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232237.png"
+  },
+  {
+    "id": "ant-king",
+    "name": "Ant King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.56K",
+    "hp": "5.12K",
+    "ability": {
+      "name": "Post-Rose Evolution",
+      "text": "- Ant King gains 5% stats every turn.\n- On kill, absorb 15% of the defeated card's stats permanently and heal 25% max HP.\n- On death, Ant King revives once at 50% HP in his Post-Rose form with 50% more attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232643.png"
+  },
+  {
+    "id": "architect-of-agony",
+    "name": "Architect of Agony",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "57.4K",
+    "hp": "114K",
+    "ability": {
+      "name": "The Labyrinth",
+      "text": "- On entry, he opens the Labyrinth for as long as he lives.\n- At the start of each turn, every enemy is bound with 1 Chain (max 10).\n- Chained enemies lose 20% of his ATK per Chain at the end of each turn.\n- When one attacks, hooks tear it for 30% of his ATK per Chain.\n- When one uses an ability, it gains 2 Chains.\n- When one dodges or shields, it gains 3 Chains and is stunned for 1 turn (once every 3 turns per enemy).\n- The Chains are linked: whenever a Chain hurts the enemy on the field, every other chained enemy takes 50% of that damage."
+    },
+    "atkScaling": [
+      {
+        "label": "Chain tick per Chain",
+        "pct": 20
+      },
+      {
+        "label": "Hook tear per Chain",
+        "pct": 30
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:stun",
+      "trait:shield",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231951.png"
+  },
+  {
+    "id": "armored-titan",
+    "name": "Armored Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "465",
+    "hp": "930",
+    "ability": {
+      "name": "Hardened Armor",
+      "text": "- 75% HP: +10% damage reduction.\n- 50% HP: +25% damage reduction.\n- 25% HP: +50% damage reduction.\n- (Doesn't stack)"
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232012.png"
+  },
+  {
+    "id": "artillery-captain",
+    "name": "Artillery Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "16.8K",
+    "hp": "33.7K",
+    "ability": {
+      "name": "Artillery Command",
+      "text": "- While this card is alive in your party, every attack by an ally also deals 25% of its attack to the enemy.\n- Its attacks deal 50% bonus damage to enemies below 50% HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232341.png"
+  },
+  {
+    "id": "ascension-catalyst",
+    "name": "Ascension Catalyst",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Ascension Catalyst",
+      "text": "The first time below 40% HP, heal to 60% and permanently gain +40% attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233245.png"
+  },
+  {
+    "id": "assimilator-kaiju",
+    "name": "Assimilator Kaiju",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11K",
+    "hp": "22.1K",
+    "ability": {
+      "name": "Assimilation",
+      "text": "- When an enemy enters, copy its ability.\n- His first attack on the first enemy he faces permanently disables that enemy's ability.\n- On a kill, gain 50% of his own starting stats."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232320.png"
+  },
+  {
+    "id": "astral-devourer",
+    "name": "Astral Devourer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.12K",
+    "hp": "10.2K",
+    "ability": {
+      "name": "Mode: Cosmic Fear",
+      "text": "- Every turn, Astral Devourer adapts and gains 15% stats.\n- Every 3rd attack becomes Gamma Ray Burst, dealing 4x damage, ignoring damage reduction, and hitting every other enemy card for 20% of Astral Devourer's attack.\n- On receiving fatal damage, Astral Devourer reverses causality once, returning to the HP he had at the beginning of the previous turn and gaining 25% attack permanently."
+    },
+    "atkScaling": [
+      {
+        "label": "Gamma Ray splash",
+        "pct": 20
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Gamma Ray Burst",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232344.png"
+  },
+  {
+    "id": "attack-titan",
+    "name": "Attack Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "69.4K",
+    "hp": "138K",
+    "ability": {
+      "name": "Nine Titans",
+      "text": "**Nine Titans**\n- Every other Titan in your party also gives him its ability (copies of the same Titan count once).\n\n**Titan Devour**\n- When a Titan in your party dies, he devours it.\n- He keeps its ability for the rest of the battle, and his ATK and max HP permanently double.\n\n**Attack Titan**\n- His attacks deal 25% more damage, plus 25% more for every Titan ability he holds."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231946.png"
+  },
+  {
+    "id": "axe-prodigy",
+    "name": "Axe Prodigy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "14.4K",
+    "hp": "28.9K",
+    "ability": {
+      "name": "Prodigy's Axe",
+      "text": "- Damage past what kills an enemy carries over to the next enemy at 120%.\n- On a kill, heal for 75% of that overkill damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232425.png"
+  },
+  {
+    "id": "bandit",
+    "name": "Bandit",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "10",
+    "hp": "20",
+    "ability": {
+      "name": "Backstab",
+      "text": "Whenever an enemy is stunned, frozen or misses an attack, Bandit stabs it for 100% of his attack, even from the bench."
+    },
+    "atkScaling": [
+      {
+        "label": "Backstab hit",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:stun"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231905.png"
+  },
+  {
+    "id": "beast-titan",
+    "name": "Beast Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "507",
+    "hp": "1.01K",
+    "ability": {
+      "name": "Boulder Throw",
+      "text": "On entry, throw a boulder at the last enemy dealing 100% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Entry boulder hit",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232034.png"
+  },
+  {
+    "id": "beautiful-abomination",
+    "name": "Beautiful Abomination",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "73.3K",
+    "hp": "146K",
+    "ability": {
+      "name": "Eternal Parasite",
+      "text": "- When killed, she regenerates at full HP but permanently loses 20% of her original max HP.\n- Each regeneration also grows an Abomination Copy at the back of her team with 50% of her stats (max 3).\n- Copies regenerate once and don't multiply.\n- Each time she regenerates, the card that killed her is Obsessed and stunned for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party",
+      "trait:stun",
+      "trait:revive",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231941.png"
+  },
+  {
+    "id": "blade-vice-captain",
+    "name": "Blade Vice Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "15.7K",
+    "hp": "31.5K",
+    "ability": {
+      "name": "Twin Blade Style",
+      "text": "- Gain 10% dodge chance every other turn (max 40%).\n- After dodging an attack, counterattack for 175% damage (2 turn cooldown)."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Counterattack",
+        "pct": 175
+      }
+    ],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232403.png"
+  },
+  {
+    "id": "blank-chess-prodigy",
+    "name": "Blank Chess Prodigy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "10.9K",
+    "hp": "21.9K",
+    "ability": {
+      "name": "Checkmate",
+      "text": "- When one of your cards hits for at least 1.5x its ATK, the next enemy in line takes 75% of that hit (at most 3x its ATK).\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232713.png"
+  },
+  {
+    "id": "blessed-mage",
+    "name": "Blessed Mage",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "190",
+    "hp": "379",
+    "ability": {
+      "name": "Spirit of Zephyr",
+      "text": "- +20% stats for the entire fight.\n- Every 2 turns, Spirit Dive activates: next attack deals 2x damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232044.png"
+  },
+  {
+    "id": "blessed-sorcerer",
+    "name": "Blessed Sorcerer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "548",
+    "hp": "1.09K",
+    "ability": {
+      "name": "Six Eyes: Hollow Purple",
+      "text": "**Infinity**\n- Take 50% reduced damage from all sources.\n- Every 4 turns, Hollow Purple: 2x damage ignoring all damage reduction.\n- Below 20% HP, Unlimited Void: stun all enemies for 2 turns, heal to 50%.\n- Once per battle."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:once-per-battle",
+      "trait:stun",
+      "trait:hits-all",
+      "trait:ignores-defense",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232221.png"
+  },
+  {
+    "id": "blight-veil",
+    "name": "Blight Veil",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Blight Veil",
+      "text": "- When hit, 40% of the damage hits the enemy back.\n- An enemy with 2x your attack isn't hit, but deals 20% less damage for its next 2 attacks.\n- No effect on boss NPCs."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:not-on-bosses"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233517.png"
+  },
+  {
+    "id": "blind-board-master",
+    "name": "Blind Board Master",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "12.6K",
+    "hp": "25.2K",
+    "ability": {
+      "name": "Practice Makes Perfect",
+      "text": "- Stats your cards gain from their own ability grow 50% more (one-time transforms and revives don't count).\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232528.png"
+  },
+  {
+    "id": "blizzard-baddie",
+    "name": "Blizzard Baddie",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "175",
+    "hp": "350",
+    "ability": {
+      "name": "Psychic Blizzard",
+      "text": "- On entry, create a psychic barrier that grants 30% damage reduction for 3 turns.\n- Each attack reduced by the barrier grants Blizzard Baddie 10% HP permanently."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232006.png"
+  },
+  {
+    "id": "blood-brother",
+    "name": "Blood Brother",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "9.73K",
+    "hp": "19.4K",
+    "ability": {
+      "name": "Blood Manipulation / Piercing Blood",
+      "text": "- Attacks apply bleed for 12% of this card's ATK per turn for 2 turns.\n- Every 4 turns, Blood Brother uses Piercing Blood for 2x damage and pierces to the card behind for 40% damage.\n- Blood Brother heals for 50% of all bleed damage dealt."
+    },
+    "atkScaling": [
+      {
+        "label": "Bleed per turn",
+        "pct": 12
+      }
+    ],
+    "traits": [
+      "trait:bleed",
+      "trait:pierce",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232704.png"
+  },
+  {
+    "id": "blood-fiend",
+    "name": "Blood Fiend",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "429",
+    "hp": "858",
+    "ability": {
+      "name": "Blood Hammer",
+      "text": "- Attacks consume 5% of Blood Fiend's max HP to deal 30% bonus damage.\n- Below 20% HP, next attack deals 3x damage (Blood Spear)."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232217.png"
+  },
+  {
+    "id": "bloodchain-reaper",
+    "name": "Bloodchain Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "85.5K",
+    "hp": "171K",
+    "ability": {
+      "name": "Inner Hollow / Mugetsu",
+      "text": "**Inner Hollow**\n- He gains 2% ATK for every 1% HP he loses, and keeps it even if he heals.\n\n**Mugetsu**\n- The first time he would die, he's left at 1 HP and cuts the enemy in front for 1500% of his ATK, ignoring damage reduction.\n- Then his power is gone: his ATK drops to 10% of what it was."
+    },
+    "atkScaling": [
+      {
+        "label": "Mugetsu cut",
+        "pct": 1500
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:ignores-defense",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231911.png"
+  },
+  {
+    "id": "bloodmoon-demon",
+    "name": "Bloodmoon Demon",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "111",
+    "hp": "222",
+    "ability": {
+      "name": "Blood Demon Art: Exploding Blood",
+      "text": "- Regenerate 10% max HP every turn.\n- When attacked, 40% chance to ignite attacker's blood dealing 10% of their max HP back to them.\n- Below 20% HP, enter awakened form: 2x attack, stop regenerating."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231943.png"
+  },
+  {
+    "id": "bloodthirsty-monarch",
+    "name": "Bloodthirsty Monarch",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "42.7K",
+    "hp": "85.5K",
+    "ability": {
+      "name": "Endless Feast / Last Supper",
+      "text": "**Endless Feast**\n- On entry, consumes up to 3 allies behind him and gains 50% of their ATK and max HP.\n- Each ally consumed is one extra life: when he would die, he revives with 30% of his max HP instead.\n- He also gains one ability per ally consumed, in order:\n  - Blood Drinker: heals for 40% of the damage he deals, and healing past full HP permanently raises his max HP (up to +50%).\n  - Baskerville: when an enemy falls below 25% HP, his hound devours it instantly.\n  - Release Level Zero: every 3rd attack, each consumed ally strikes the enemy with its original ATK.\n\n**Last Supper**\n- Consumed allies die.\n- Their death abilities and supports trigger, and anything they would pass to the next card goes to him."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party",
+      "trait:lifesteal",
+      "trait:revive",
+      "trait:execute",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232146.png"
+  },
+  {
+    "id": "blooming-wrath",
+    "name": "Blooming Wrath",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.93K",
+    "hp": "17.8K",
+    "ability": {
+      "name": "Cursed Bud / Disaster Plants",
+      "text": "- On entry, plant a cursed bud on the active enemy card.\n- Each turn, it drains 5% of that card's attack and Blooming Wrath gains 10% attack.\n- After 3 turns, it blooms, stunning the host for 1 turn and healing Blooming Wrath for 15% max HP.\n- If the host dies first, the bud transfers to the next card."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232639.png"
+  },
+  {
+    "id": "blue-flame-heir",
+    "name": "Blue Flame Heir",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "206",
+    "hp": "411",
+    "ability": {
+      "name": "Blue Flames Unsheathed",
+      "text": "Once per battle, below 50% HP: draws his demon sword for +50% attack and heals 25% of his max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:once-per-battle",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232036.png"
+  },
+  {
+    "id": "bone-knight",
+    "name": "Bone Knight",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.17K",
+    "hp": "2.35K",
+    "ability": {
+      "name": "Sword of Actuation",
+      "text": "- On entry, cut through the enemy's power: reduce their attack by 25% and max HP by 15%.\n- Every attack pierces to the next card in enemy lineup for 40% damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:pierce",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232330.png"
+  },
+  {
+    "id": "brood-kaiju",
+    "name": "Brood Kaiju",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "10.9K",
+    "hp": "21.9K",
+    "ability": {
+      "name": "Kaiju Brood",
+      "text": "- On entry and the first time taking damage each turn, summon a Kaiju Beast with 25% of its stats to the back of the team (max 3).\n- When it dies, it explodes for 20% of its max HP + 5% per beast summoned."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:summon",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232328.png"
+  },
+  {
+    "id": "cart-titan",
+    "name": "Cart Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "418",
+    "hp": "835",
+    "ability": {
+      "name": "Cart Rescue",
+      "text": "- When an ally falls below 25% HP, Cart Titan steps in and gives it a 1-hit shield.\n- After tanking one enemy turn, he retreats to the back of the party.\n- Up to 2 rescues per battle, each ally once.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:shield"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231959.png"
+  },
+  {
+    "id": "celestial-attendant",
+    "name": "Celestial Attendant",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "562",
+    "hp": "1.12K",
+    "ability": {
+      "name": "Temporal Rewind",
+      "text": "- On entry, after 3 turns, rewind HP to what it was 3 turns ago.\n- Celestial Attendant has 40% damage reduction."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232208.png"
+  },
+  {
+    "id": "celestial-circlet",
+    "name": "Celestial Circlet",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Celestial Circlet",
+      "text": "Takes 30% less damage from attacks."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233322.png"
+  },
+  {
+    "id": "chainsaw-fiend",
+    "name": "Chainsaw Fiend",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "380",
+    "hp": "759",
+    "ability": {
+      "name": "Chainsaw Rip",
+      "text": "70% chance on attack to heal for 30% of damage dealt."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232201.png"
+  },
+  {
+    "id": "chainsaw-revving",
+    "name": "Chainsaw Revving",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Chainsaw Revving",
+      "text": "- Heal 30% of damage dealt.\n- On kill, heal 25% max HP and the next attack hits twice."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233356.png"
+  },
+  {
+    "id": "chair-guy",
+    "name": "Chair Guy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "190",
+    "hp": "379",
+    "ability": {
+      "name": "Shame Chair",
+      "text": "This card has no ability."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231956.png"
+  },
+  {
+    "id": "cleanup-kaiju",
+    "name": "Cleanup Kaiju",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "19K",
+    "hp": "38.1K",
+    "ability": {
+      "name": "Kaiju Regeneration",
+      "text": "- Immune to status effects.\n- The first time this card would fall below 60% HP and again below 40% HP, it snaps back to that HP and heals an additional 20% max HP.\n- After its first regeneration, its attacks deal 100% bonus damage and cannot be dodged.\n- After the second, every attack also hits all other enemies for 20% of the damage dealt."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:cant-miss",
+      "trait:heal",
+      "trait:immune"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232308.png"
+  },
+  {
+    "id": "colossal-titan",
+    "name": "Colossal Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "591",
+    "hp": "1.18K",
+    "ability": {
+      "name": "Colossal Blast",
+      "text": "On entry, gain 25% max HP, then deal 30% of the Colossal Titan's HP to all enemies."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232101.png"
+  },
+  {
+    "id": "combat-instinct",
+    "name": "Combat Instinct",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Combat Instinct",
+      "text": "Attacks pierce the next enemy card for 60% of the damage dealt."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:pierce"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233239.png"
+  },
+  {
+    "id": "command-sigil",
+    "name": "Command Sigil",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Command Sigil",
+      "text": "- 3 orders, once each.\n- Its first attack can't be dodged.\n- The first time below 50% HP, it moves to the back of the team and heals 50%.\n- After the first ally death, its next attack deals 4x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:cant-miss",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233716.png"
+  },
+  {
+    "id": "controller",
+    "name": "Controller",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.47K",
+    "hp": "2.94K",
+    "ability": {
+      "name": "Control Devil",
+      "text": "- On entry, take control of the enemy's next card in line — it attacks its own active card once for full damage, then returns to the enemy lineup.\n- Every 4 turns, Controller controls again."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232527.png"
+  },
+  {
+    "id": "copyblade-mentor",
+    "name": "Copyblade Mentor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "299",
+    "hp": "598",
+    "ability": {
+      "name": "Sharingan Copy",
+      "text": "On entry or enemy entry, copy the opponent's active card's ability for the next 6 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232218.png"
+  },
+  {
+    "id": "corroded-chain",
+    "name": "Corroded Chain",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Corroded Chain",
+      "text": "- +20% max HP.\n- On death, the killer permanently loses 35% of its attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233112.png"
+  },
+  {
+    "id": "counter-trigger",
+    "name": "Counter Trigger",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Counter Trigger",
+      "text": "Whenever it takes lethal damage, even if it survives, it deals 250% of its max HP to the enemy in front."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233435.png"
+  },
+  {
+    "id": "crash-out-queen",
+    "name": "Crash Out Queen",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "326",
+    "hp": "651",
+    "ability": {
+      "name": "Corrosion",
+      "text": "- Reduce the enemy card's attack by 15% every turn (permanent, stacking).\n- Deal 25% more damage to cards with less attack than Crash out Queen."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232134.png"
+  },
+  {
+    "id": "crescent-reaper",
+    "name": "Crescent Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "13.7K",
+    "hp": "27.5K",
+    "ability": {
+      "name": "Body Evolution",
+      "text": "- Every turn Crescent Reaper is alive, he takes 7% less damage (up to 70%).\n- Every 2 turns he also grows another arm, adding an extra hit for 50% of his damage (up to 4 extra hits).\n- Killing a card counts as 1 additional turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Extra arm hit",
+        "pct": 50
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232415.png"
+  },
+  {
+    "id": "crimson-crow",
+    "name": "Crimson Crow",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.08K",
+    "hp": "2.16K",
+    "ability": {
+      "name": "Tsukuyomi / Amaterasu",
+      "text": "- On enemy entry, trap the opponent in Tsukuyomi: their next attack misses and deals 25% of its damage to themselves.\n- Every 3rd attack, Crimson Crow uses Amaterasu, applying a burn for 25% of this card's ATK per turn for 3 turns.\n- Each one adds a stack.\n- Below 25% HP, Crimson Crow activates Susano'o and gains 50% damage reduction for 3 turns."
+    },
+    "atkScaling": [
+      {
+        "label": "Amaterasu burn per turn",
+        "pct": 25
+      }
+    ],
+    "traits": [
+      "trait:burn"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232300.png"
+  },
+  {
+    "id": "crimson-egg",
+    "name": "Crimson Egg",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Crimson Egg",
+      "text": "- The first time it would die, the next ally in line falls instead.\n- It lives on with 30% of its max HP and heals 30%."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233700.png"
+  },
+  {
+    "id": "crimson-phantom",
+    "name": "Crimson Phantom",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "81.9K",
+    "hp": "163K",
+    "ability": {
+      "name": "Fate Erasure / Crimson's Curse",
+      "text": "**Fate Erasure**\n- The first time this card or your strongest card (most max HP) dies, its death is erased, reviving it with 75% HP and +100% damage for 2 turns (once per battle).\n\n**Crimson's Curse**\n- Every 3 turns, erase the enemy's next turn and counter for 500% ATK, ignoring 60% of the enemy's damage reduction."
+    },
+    "atkScaling": [
+      {
+        "label": "Curse counter",
+        "pct": 500
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle",
+      "trait:revive",
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231916.png"
+  },
+  {
+    "id": "crimson-ruin-princess",
+    "name": "Crimson Ruin Princess",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.5K",
+    "hp": "23.1K",
+    "ability": {
+      "name": "Evil Pieces",
+      "text": "- All summons on your team get double ATK and HP.\n- Each summon that joins your team while she's alive gives your whole team +10% ATK (up to 5 times).\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232551.png"
+  },
+  {
+    "id": "crimson-thorn",
+    "name": "Crimson Thorn",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Crimson Thorn",
+      "text": "On entry, bind the active enemy: stun it for 1 turn and deal 20% of its max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:stun",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233447.png"
+  },
+  {
+    "id": "crimson-warlord",
+    "name": "Crimson Warlord",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "382",
+    "hp": "763",
+    "ability": {
+      "name": "Tengai Shinsei",
+      "text": "- On entry, call down a meteor that deals 50% damage to all enemies.\n- Every 4 turns, call down another meteor that deals 125% damage to all enemies.\n- Crimson Warlord takes 20% less damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232313.png"
+  },
+  {
+    "id": "crowned-strategist",
+    "name": "Crowned Strategist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "617",
+    "hp": "1.23K",
+    "ability": {
+      "name": "Geass: Absolute Obedience",
+      "text": "On enemy entry, the enemy card attacks itself once for 40% damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232326.png"
+  },
+  {
+    "id": "curse-tyrant",
+    "name": "Curse Tyrant",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.6K",
+    "hp": "23.3K",
+    "ability": {
+      "name": "Cleave / Dismantle / Malevolent Shrine",
+      "text": "- Normal attacks deal 1.5x damage.\n- Every 3rd attack hits all enemy cards for 40% of Curse Tyrant's attack.\n- Below 40% HP, Curse Tyrant opens Malevolent Shrine for 3 turns, causing every card on the field to take 15% max HP per turn.\n- Curse Tyrant heals for 30% of damage dealt by his attacks."
+    },
+    "atkScaling": [
+      {
+        "label": "Every 3rd attack (all)",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232532.png"
+  },
+  {
+    "id": "cursed-vessel",
+    "name": "Cursed Vessel",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "760",
+    "hp": "1.51K",
+    "ability": {
+      "name": "Divergent Fist",
+      "text": "- On attack, leave cursed energy that explodes for 1.8x this card's current attack after 2 turns.\n- One detonation per card."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Cursed energy detonation",
+        "pct": 180
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232352.png"
+  },
+  {
+    "id": "darkin-lord",
+    "name": "Darkin Lord",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.52K",
+    "hp": "7.04K",
+    "ability": {
+      "name": "The World Ender",
+      "text": "- His attacks cycle: the 1st deals 150% damage, the 2nd deals 40% to every enemy, the 3rd pierces the enemy and the one behind it for 80% each.\n- Heals for 30% of all damage he deals.\n- The first time he dies, he revives with 40% damage reduction and heals for 60% of all damage he deals."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "1st cycle attack",
+        "pct": 150
+      },
+      {
+        "label": "2nd cycle (all enemies)",
+        "pct": 40
+      },
+      {
+        "label": "3rd cycle pierce",
+        "pct": 80
+      }
+    ],
+    "traits": [
+      "trait:revive",
+      "trait:hits-all",
+      "trait:pierce",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232442.png"
+  },
+  {
+    "id": "deadbeat-dad",
+    "name": "Deadbeat Dad",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "10.9K",
+    "hp": "21.8K",
+    "ability": {
+      "name": "Heavenly Restriction / Inverted Spear of Heaven",
+      "text": "- Deadbeat Dad is immune to all status effects.\n- His attacks deal 1.5x damage to cards weaker than him.\n- Each attack has a 25% chance to target a random card in their party instead."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232546.png"
+  },
+  {
+    "id": "deathless-king",
+    "name": "Deathless King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.5K",
+    "hp": "23.1K",
+    "ability": {
+      "name": "Realm of Death",
+      "text": "- On entry, drags a random enemy to the front and seals them both in his Realm: it loses its support and all help from its allies, and nothing outside can hit or heal either of them.\n- Each of his turns he steals 10% of its ATK and max HP (up to 75% of his starting stats in all).\n- If it dies in there, he keeps what he stole, his Iron fills up and the Realm reopens on the next strongest enemy.\n\n**Indestructible**\n- 50% of the damage he deals is stored as Iron, a shield of up to 50% of his max HP.\n- Under 50% HP, all of it turns into healing."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:shield",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232622.png"
+  },
+  {
+    "id": "defense-director",
+    "name": "Defense Director",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "9.92K",
+    "hp": "19.8K",
+    "ability": {
+      "name": "Veteran's Guard",
+      "text": "- Takes 25% less damage from attacks, and the damage blocked is permanently added to its attack (up to 50% of its starting ATK per hit).\n- The first time below 35% HP, gain 50% attack and heal 10% max HP every turn for the rest of the battle."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232355.png"
+  },
+  {
+    "id": "defense-force-suit",
+    "name": "Defense Force Suit",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Combat Suit",
+      "text": "- +20% max HP.\n- Once per battle, below 50% HP, gain a 1-hit shield and 20% more attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:once-per-battle",
+      "trait:shield"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233734.png"
+  },
+  {
+    "id": "demon-flame",
+    "name": "Demon Flame",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "6.45K",
+    "hp": "12.9K",
+    "ability": {
+      "name": "Timefire",
+      "text": "- His attacks Burn the target for 30% of his damage per turn for 2 turns.\n- While it Burns from him, it can't use its ability or support.\n- When he hits a Burning enemy, all its Burns go off at once and start over, and he gains +20% ATK for each Burn that went off."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Burn per turn",
+        "pct": 30
+      }
+    ],
+    "traits": [
+      "trait:burn"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232536.png"
+  },
+  {
+    "id": "demon-general",
+    "name": "Demon General",
+    "type": "battle",
+    "rarity": "TODO",
+    "source": "weather:cataclysm",
+    "dmg": "9.1K",
+    "hp": "18.2K",
+    "ability": {
+      "name": "Demonic Ascension",
+      "text": "- Off the field, at the end of every round his ravens hit the enemy in front for 25% ATK and take a Soul.\n- On the field, each of his attacks takes a Soul.\n- Each Soul heals 5% max HP and adds +3% max HP permanently (up to +150%).\n- At 6 Souls he transforms for the rest of the battle and hits the enemy in front for all the max HP he has gained.\n- Transformed, his attacks deal 200% damage, and at the start of each of his turns he hits every enemy (bench included) for 50% of his ATK, heals for all the damage dealt and takes a Soul from each.\n- That damage is also stored: the next enemy to step onto the field takes all of it.\n- With one enemy left, that enemy takes it whenever the store reaches 300% of his ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Raven hit",
+        "pct": 25
+      },
+      {
+        "label": "Transformed hit (all)",
+        "pct": 50
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Transformed attack",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232601.png"
+  },
+  {
+    "id": "demon-slime",
+    "name": "Demon Slime",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "933",
+    "hp": "1.86K",
+    "ability": {
+      "name": "Predator: Gluttony",
+      "text": "- On kill, absorb 25% of defeated card's stats permanently AND copy their ability for the rest of the battle.\n- Keeps the most recent copied ability."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232319.png"
+  },
+  {
+    "id": "destiny-thread",
+    "name": "Destiny Thread",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Destiny Thread",
+      "text": "- On death, the next card in your party borrows its ability for 2 turns, without its entry effects.\n- While it holds the borrowed ability, its own support does nothing.\n- One borrowed ability at a time.\n- Boss cards' abilities can't be borrowed."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233453.png"
+  },
+  {
+    "id": "devil-hunter",
+    "name": "Devil Hunter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.15K",
+    "hp": "8.3K",
+    "ability": {
+      "name": "Style Switching",
+      "text": "Each turn cycles: Trickster (dodge next attack), Swordmaster (1.5x damage), Royalguard (take 50% less damage + counter for 30% of attack), Gunslinger (attack hits active card + next card in line for 40%)."
+    },
+    "atkScaling": [
+      {
+        "label": "Royalguard counter",
+        "pct": 30
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Gunslinger splash",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232627.png"
+  },
+  {
+    "id": "devils-contract",
+    "name": "Devil's Contract",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Devil's Contract",
+      "text": "- +40% attack.\n- 25% lifesteal.\n- Can't heal from anything except lifesteal."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:lifesteal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233407.png"
+  },
+  {
+    "id": "divine-rivals",
+    "name": "Divine Rivals",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "81.9K",
+    "hp": "163K",
+    "ability": {
+      "name": "Final Kamehameha",
+      "text": "- +30% ATK every turn and +25% ATK whenever any card dies.\n- Fires a blast when it drops below 30% HP or on its 4th turn, whichever comes first: 200% ATK damage to every enemy (400% to the enemy in front), ignoring damage reduction.\n- If it fired below 30% HP, it heals 60% of its max HP."
+    },
+    "atkScaling": [
+      {
+        "label": "Blast (all enemies)",
+        "pct": 200
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Blast (front enemy)",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:ignores-defense",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232105.png"
+  },
+  {
+    "id": "dragon-emperor",
+    "name": "Dragon Emperor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "7.01K",
+    "hp": "14K",
+    "ability": {
+      "name": "Dragon Form / Thunder Bagua",
+      "text": "- Above 50% HP, Dragon Emperor takes 30% reduced damage.\n- Below 50% HP, he loses the reduction but gains 2x attack.\n- Every attack has a 25% chance to stun for 1 turn.\n- On death, Dragon Emperor deals 35% of his max HP to the card that defeated him."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232632.png"
+  },
+  {
+    "id": "dragon-girl",
+    "name": "Dragon Girl",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "165",
+    "hp": "330",
+    "ability": {
+      "name": "Sky Dragon's Roar",
+      "text": "- On entry, increase this card's attack by 20% for the rest of the fight.\n- Heal 10% max HP every turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232014.png"
+  },
+  {
+    "id": "dragon-sin",
+    "name": "Dragon Sin",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "197",
+    "hp": "394",
+    "ability": {
+      "name": "Full Counter",
+      "text": "When attacked, counter-attack dealing 30% of Dragon Sin's attack back to the attacker."
+    },
+    "atkScaling": [
+      {
+        "label": "Counter hit",
+        "pct": 30
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232103.png"
+  },
+  {
+    "id": "dreamer",
+    "name": "Dreamer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.22K",
+    "hp": "2.45K",
+    "ability": {
+      "name": "Forced Slumber",
+      "text": "- Every 3 turns, Dreamer puts the active enemy card to sleep for 1 turn.\n- Sleeping cards take 30% more damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232321.png"
+  },
+  {
+    "id": "dumb-hair-guy",
+    "name": "Dumb Hair Guy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.77K",
+    "hp": "5.54K",
+    "ability": {
+      "name": "Senzu Munch",
+      "text": "- Heal 25% max HP every turn (won't stop eating).\n- Attacks deal 0.5x damage while eating.\n- Every 3 turns, finish the meal: an unmissable 4x strike, then gain 25% of its damage as Attack and 50% as max HP (up to 10x his stats).\n- Then starts eating again."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Meal finisher strike",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232453.png"
+  },
+  {
+    "id": "dumb-nine-tail-prodigy",
+    "name": "Dumb Nine-Tail Prodigy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.39K",
+    "hp": "4.78K",
+    "ability": {
+      "name": "Multi Clone Mayhem",
+      "text": "- On entry, stun every enemy: 2 turns if it has less attack than him, 1 turn if not.\n- Every 4 turns send another wave, stunning all enemies for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232416.png"
+  },
+  {
+    "id": "dumb-stretchy-guy",
+    "name": "Dumb Stretchy Guy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.56K",
+    "hp": "5.12K",
+    "ability": {
+      "name": "Gomu Gomu no... Wait What?",
+      "text": "Every attack triggers one of: Gum-Gum Balloon (reflect 50% damage from next hit), Gum-Gum Fireworks (hit all enemies for 50% of attack), or Gum-Gum Flop (miss but heal 40% max HP)."
+    },
+    "atkScaling": [
+      {
+        "label": "Gum-Gum Fireworks",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232438.png"
+  },
+  {
+    "id": "dumb-threeblade-ronin",
+    "name": "Dumb Threeblade Ronin",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.19K",
+    "hp": "4.39K",
+    "ability": {
+      "name": "Three-Sword Confusion",
+      "text": "- Threeblade Ronin is lost.\n- On entry, he accidentally attacks the enemy's entire lineup for 15% of his attack.\n- Every attack has a 30% chance to accidentally hit the enemy's next card too for full damage."
+    },
+    "atkScaling": [
+      {
+        "label": "Entry hit (all enemies)",
+        "pct": 15
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232401.png"
+  },
+  {
+    "id": "eight-handled-general",
+    "name": "Eight-Handled General",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "114K",
+    "hp": "229K",
+    "ability": {
+      "name": "Wheel of Adaptation",
+      "text": "- Whenever an enemy hits him, his wheel spins once for that enemy: he heals 25% of his max HP, that enemy deals 20% less damage to him per spin, and he deals +100% damage to it per spin.\n\n**Adaptation**\n- Each kind of status from the enemy team works on him only once, for at most 1 turn.\n\n**Divine General**\n- The first hit from each enemy that would kill him leaves him at 1 HP and spins his wheel 3 times for that enemy.\n- As a boss enemy, his wheel's healing and damage cut are 50% as strong, and he deals +25% damage per spin."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232053.png"
+  },
+  {
+    "id": "eternal-blight",
+    "name": "Eternal Blight",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "30.7K",
+    "hp": "61.4K",
+    "ability": {
+      "name": "Extinction Plague",
+      "text": "- Attacks apply 1 Infection.\n- Whenever an enemy heals, it takes that amount as damage instead and gains 1 Infection.\n- At the end of each turn, 2 random enemies are infected.\n- Every 2 stacks of Infection lower its ATK and max HP by 20%.\n- When an infected enemy dies, every ally it had gains 1 Infection.\n- Gains 25% of its starting ATK and max HP for each dead enemy."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232212.png"
+  },
+  {
+    "id": "fabled-soldier",
+    "name": "Fabled Soldier",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.25K",
+    "hp": "6.5K",
+    "ability": {
+      "name": "Supernova",
+      "text": "- On entry, if the enemy's active card has less current HP than 20% of Fabled Soldier's attack stat, instantly destroy it.\n- Attacks deal 1.3x base damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232609.png"
+  },
+  {
+    "id": "faceless-prophet",
+    "name": "Faceless Prophet",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "491K",
+    "hp": "983K",
+    "ability": {
+      "name": "The Book of Prophecy",
+      "text": "**The Chosen Ones**\n- Each turn, a random enemy betrays its own team (up to 300% of this card's ATK, 500% during the Blessing).\n\n**Faith**\n- +50% base stats each (max 8), gained from each betrayal while this card is fighting and whenever a chosen one kills its ally.\n- A betrayal kill reveals The Savior: enemies gain +25% ATK for 3 turns.\n- When the Blessing ends, Blessed enemies are Stunned for 1 turn and the next attack gains +50% damage per Faith.\n- On death, becomes a non-attacking Doomsday Clock with 100% max HP: destroy it within 4 turns or all enemies take 500% ATK damage, bypassing defenses."
+    },
+    "atkScaling": [
+      {
+        "label": "Betrayal hit",
+        "pct": 300
+      },
+      {
+        "label": "Betrayal hit (Blessing)",
+        "pct": 500
+      },
+      {
+        "label": "Doomsday Clock",
+        "pct": 500
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:stun",
+      "trait:hits-all",
+      "trait:ignores-defense",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231834.png"
+  },
+  {
+    "id": "feral-hound",
+    "name": "Feral Hound",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "21.1K",
+    "hp": "42.2K",
+    "ability": {
+      "name": "Wild Hunt",
+      "text": "**Wild Hunt**\n- Her attacks deal +45% damage for every 10% of her max HP she has lost.\n\n**Savage Feast**\n- While below 50% HP, she heals for 40% of the damage she deals.\n\n**Beast's Grit**\n- The first 3 times she would die, she stays alive with 15% of her max HP.\n- As a boss enemy, Beast's Grit saves her only once."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:lifesteal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232247.png"
+  },
+  {
+    "id": "fiend-heart",
+    "name": "Fiend Heart",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Fiend Heart",
+      "text": "Takes 15% less damage, plus 0.6% less for every 1% HP missing (up to 60%)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233413.png"
+  },
+  {
+    "id": "final-juggernaut",
+    "name": "Final Juggernaut",
+    "type": "battle",
+    "rarity": "TODO",
+    "source": "weather:cataclysm",
+    "dmg": "7.13K",
+    "hp": "14.2K",
+    "ability": {
+      "name": "Glory in Death",
+      "text": "- Every hit he takes permanently raises his max HP by 5% of the damage.\n- Each kill raises it by 30% of his base max HP.\n- His attacks deal bonus damage equal to 25% of his bonus max HP.\n- The first time he dies, he rises undead: his ATK and max HP swap, and for 3 turns he can't drop below 1 HP.\n- Each kill adds a turn.\n- His first attack after rising can't be dodged or blocked and stuns its target for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:revive",
+      "trait:cant-miss"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232532.png"
+  },
+  {
+    "id": "fire-fist",
+    "name": "Fire Fist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "75.6K",
+    "hp": "151K",
+    "ability": {
+      "name": "Fireflies / Brother's Shield",
+      "text": "**Fireflies**\n- On entry, 5 fireflies drift onto random enemies (bench included), and 3 more after each of his attacks.\n- Any card that hits him gets one too.\n- Every 3rd attack, and when he dies, he snaps his fingers and every firefly explodes for 125% of his ATK and sets its card on fire: Burn for 50% of his ATK per turn for 2 turns.\n\n**Brother's Shield**\n- Once per battle, when an ally would die from a hit, Fire Fist jumps in front and takes it instead."
+    },
+    "atkScaling": [
+      {
+        "label": "Firefly explosion",
+        "pct": 125
+      },
+      {
+        "label": "Burn per turn",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle",
+      "trait:burn",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231930.png"
+  },
+  {
+    "id": "first-sunblade",
+    "name": "First Sunblade",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "89.5K",
+    "hp": "179K",
+    "ability": {
+      "name": "Sun Scars / Thirteenth Form",
+      "text": "**Sun Scars**\n- Every hit he lands leaves a Sun Scar that never fades.\n- A scarred card can't heal or come back to life, and it burns for 200% of his ATK per scar at the end of every turn, even after he's gone.\n\n**Thirteenth Form**\n- Whenever he kills a card, he flows straight into the next form and attacks the next enemy in the same turn."
+    },
+    "atkScaling": [
+      {
+        "label": "Burn per scar",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:burn"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231905.png"
+  },
+  {
+    "id": "flame-colonel",
+    "name": "Flame Colonel",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "13.1K",
+    "hp": "26.3K",
+    "ability": {
+      "name": "Flame Alchemy",
+      "text": "**Oxygen Theft**\n- On entry, he hits the enemy in front for 50% of his ATK and it loses its ability for 2 turns.\n\n**Wildfire**\n- When he kills an enemy, the next enemy to enter takes the same hit and loses its ability for 2 turns.\n\n**Flame Alchemy**\n- His attacks on enemies that have lost their ability deal bonus damage equal to 100% of his starting ATK.\n\n**Cauterize**\n- The first time he would die, he stays at 1 HP and his next attack deals 500% of its normal damage."
+    },
+    "atkScaling": [
+      {
+        "label": "Entry hit",
+        "pct": 50
+      },
+      {
+        "label": "Bonus vs silenced",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232430.png"
+  },
+  {
+    "id": "flame-core",
+    "name": "Flame Core",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Flame Core",
+      "text": "- Every attack applies a burn for 16% of the attacker's ATK per turn, lasting 1 turn.\n- Every hit adds a stack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:burn"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233118.png"
+  },
+  {
+    "id": "force-breaker",
+    "name": "Force Breaker",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Force Breaker",
+      "text": "- Consecutive attacks escalate: 1st hit = 1x, 2nd = 1.5x, 3rd = 2x, 4th = 3x damage.\n- Resets when stunned, frozen or hit by a status effect."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:stun"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233724.png"
+  },
+  {
+    "id": "fortune-clover",
+    "name": "Fortune Clover",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Fortune Clover",
+      "text": "- Survive a lethal attack at 1 HP.\n- Refreshes every 5 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233623.png"
+  },
+  {
+    "id": "fractured-lens",
+    "name": "Fractured Lens",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Ambush",
+      "text": "The first attack from each enemy has a 50% chance to miss."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233107.png"
+  },
+  {
+    "id": "frost-rookie",
+    "name": "Frost Rookie",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.31K",
+    "hp": "16.6K",
+    "ability": {
+      "name": "Frost Combo",
+      "text": "- When this card attacks the same enemy twice, freeze that enemy for 1 turn.\n- This card deals 200% damage to frozen cards."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232441.png"
+  },
+  {
+    "id": "frost-wizard",
+    "name": "Frost Wizard",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "218",
+    "hp": "436",
+    "ability": {
+      "name": "Ice Make: Eagle",
+      "text": "Attacks hit twice (second hit at 40% damage)."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232126.png"
+  },
+  {
+    "id": "frostbane",
+    "name": "Frostbane",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "267",
+    "hp": "534",
+    "ability": {
+      "name": "Spine Rip Combo",
+      "text": "- On entry, freeze enemy for 2 turns.\n- Every attack that hits a frozen target deals 1.5x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232203.png"
+  },
+  {
+    "id": "galactic-tyrant",
+    "name": "Galactic Tyrant",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "519",
+    "hp": "1.03K",
+    "ability": {
+      "name": "Golden Evolution / Death Beam",
+      "text": "- Every 3rd attack becomes a Death Beam, ignoring damage reduction and hitting the enemy's next card as well.\n- Below 50% HP, Galactic Tyrant transforms into Golden Galactic Tyrant, gaining 70% attack and 25% damage reduction for the rest of the battle."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232350.png"
+  },
+  {
+    "id": "gamer-captain",
+    "name": "Gamer Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "17.8K",
+    "hp": "35.6K",
+    "ability": {
+      "name": "Rapid Follow-Up",
+      "text": "When this card kills an enemy, he immediately hits the next enemy for 150% damage and gains a shield that blocks one hit until the end of the enemy's next turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Follow-up hit",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:shield"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232336.png"
+  },
+  {
+    "id": "gentle-fist-heiress",
+    "name": "Gentle Fist Heiress",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.5K",
+    "hp": "23.1K",
+    "ability": {
+      "name": "Encore",
+      "text": "- Every time your team silences an enemy, every other enemy also loses its ability for 2 turns on their entry.\n- Silenced enemies take 15% more damage from your team.\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232605.png"
+  },
+  {
+    "id": "ghost-netrunner",
+    "name": "Ghost Netrunner",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "6.76K",
+    "hp": "13.5K",
+    "ability": {
+      "name": "Breach Protocol",
+      "text": "**Breach Protocol**\n- On entry, every enemy takes 25% more damage from your team for the rest of the battle.\n\n**Daemons**\n- Every hit your cards land adds a Daemon to the enemy, each +5% damage taken from your team (max 6).\n\n**Flatline**\n- When an enemy with Daemons dies, its Daemons move to the next enemy.\n- Daemons and Flatline work while she's alive anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232648.png"
+  },
+  {
+    "id": "glitched-entity",
+    "name": "Glitched Entity",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.09K",
+    "hp": "4.18K",
+    "ability": {
+      "name": "Corrupted Data",
+      "text": "- On entry, duplicate this card's stats (2x stats).\n- Every attack corrupts the enemy: permanently reduce their max HP by 8% (stacking).\n- Glitched Entity is immune to status effects."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:immune",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232414.png"
+  },
+  {
+    "id": "god-muncher",
+    "name": "God Muncher",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "25",
+    "hp": "49",
+    "ability": {
+      "name": "Predator Instinct",
+      "text": "Heal 15% max HP every time this card is attacked."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231918.png"
+  },
+  {
+    "id": "grapple-harness",
+    "name": "Grapple Harness",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Grapple Harness",
+      "text": "- The first attack aimed at it each battle misses.\n- Whenever it dodges, its next attack hits twice and pierces the enemy behind for 50% of the first hit (at most 2x its ATK)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:dodge",
+      "trait:pierce"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233609.png"
+  },
+  {
+    "id": "green-beast",
+    "name": "Green Beast",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "160",
+    "hp": "320",
+    "ability": {
+      "name": "Eight Gates",
+      "text": "- Each attack opens a gate: +15% attack, up to 5 gates.\n- With all 5 open, each attack costs 8% of his max HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232020.png"
+  },
+  {
+    "id": "half-demon",
+    "name": "Half Demon",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "177",
+    "hp": "354",
+    "ability": {
+      "name": "Wind Scar",
+      "text": "Every 3rd attack, unleash Wind Scar: deal 2x damage to the active enemy and 30% damage to the next card in their lineup."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Wind Scar hit",
+        "pct": 200
+      },
+      {
+        "label": "Wind Scar splash",
+        "pct": 30
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232031.png"
+  },
+  {
+    "id": "hand-of-conquest",
+    "name": "Hand of Conquest",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.79K",
+    "hp": "11.5K",
+    "ability": {
+      "name": "Conqueror",
+      "text": "- His first kill gives +25% ATK, and every kill after it +10% more.\n- His attacks inflict Hemorrhage: those enemies take more damage from him the lower their HP, up to +25% below 25% HP.\n- Whenever an enemy falls below 50% HP (once per enemy), he swings his axe at every enemy for 75% ATK and heals 25% of the damage dealt."
+    },
+    "atkScaling": [
+      {
+        "label": "Axe swing (all)",
+        "pct": 75
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232519.png"
+  },
+  {
+    "id": "havoc-wreaker",
+    "name": "Havoc Wreaker",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.21K",
+    "hp": "8.43K",
+    "ability": {
+      "name": "Super Mega Death Rocket",
+      "text": "- Enemies that come onto the field while she's on it are stunned for 2 turns.\n- Every 3rd attack, she fires a rocket that hits every enemy for 85% of her attack.\n- When she kills an enemy, she attacks the next one as it comes in.\n- A kill from that extra attack doesn't trigger it again."
+    },
+    "atkScaling": [
+      {
+        "label": "Rocket (all enemies)",
+        "pct": 85
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:hits-all"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232515.png"
+  },
+  {
+    "id": "hawkeye-sniper",
+    "name": "Hawkeye Sniper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "9.46K",
+    "hp": "18.9K",
+    "ability": {
+      "name": "Overwatch",
+      "text": "**Overwatch**\n- While she's not in front, at the end of every round she shoots the enemy in front for 75% of her ATK.\n\n**Hawk's Eye**\n- Every 3rd shot is a headshot for 300% of her ATK.\n\n**Covering Fire**\n- When another of your cards dies, she shoots its killer.\n- Her shots are attacks that can't be dodged."
+    },
+    "atkScaling": [
+      {
+        "label": "Overwatch shot",
+        "pct": 75
+      },
+      {
+        "label": "Headshot",
+        "pct": 300
+      }
+    ],
+    "traits": [
+      "trait:cant-miss"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232626.png"
+  },
+  {
+    "id": "height-of-painting",
+    "name": "Height of Painting",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.84K",
+    "hp": "3.67K",
+    "ability": {
+      "name": "Twilight of Valhalla",
+      "text": "- On entry, Height of Painting paints Twilight of Valhalla for 4 turns.\n- While it is active, she takes 40% reduced damage, gains 15% attack every turn, and cannot fall below 1 HP.\n- When the painting ends, she heals 40% max HP.\n- Every 3rd attack becomes Masterpiece, dealing 3x damage, ignoring damage reduction, and stunning the enemy for 1 turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Masterpiece hit",
+        "pct": 300
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:ignores-defense",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232403.png"
+  },
+  {
+    "id": "heros-journey",
+    "name": "Hero's Journey",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Hero's Journey",
+      "text": "+20% all stats for each ally that died before it in the fight."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233830.png"
+  },
+  {
+    "id": "hex-mark",
+    "name": "Hex Mark",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Hex Mark",
+      "text": "- +25% attack.\n- Every 3rd attack deals 3x damage.\n- Loses 8% max HP every turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233223.png"
+  },
+  {
+    "id": "hextech-brawler",
+    "name": "Hextech Brawler",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.2K",
+    "hp": "6.4K",
+    "ability": {
+      "name": "Vault Breaker",
+      "text": "**Blast Shield**\n- A shield blocks the first 2 hits she takes.\n\n**Vault Breaker**\n- Her first attack and every other attack after it deal 250% damage, ignore damage reduction, stun the target for 1 turn and can't be dodged or blocked."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Vault Breaker hit",
+        "pct": 250
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:ignores-defense",
+      "trait:cant-miss",
+      "trait:shield"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232436.png"
+  },
+  {
+    "id": "hollow-armor",
+    "name": "Hollow Armor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.6K",
+    "hp": "23.3K",
+    "ability": {
+      "name": "Blood Seal",
+      "text": "**Empty Armor**\n- +100% max HP.\n- His attacks deal bonus damage equal to 20% of his max HP.\n\n**Blood Seal**\n- 2 times per battle, when he would die while no card in your party has more max HP (fallen ones included), he survives, gains +25% max HP and heals to 50% of his max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232537.png"
+  },
+  {
+    "id": "hollow-bat",
+    "name": "Hollow Bat",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "16.6K",
+    "hp": "33.2K",
+    "ability": {
+      "name": "Light Spear",
+      "text": "- Every 4th turn, Hollow Bat throws a Light Spear for 3.5x damage that cannot be dodged and pierces the card behind for 50% damage.\n- Below 50% HP, or when a hit would kill him, he spreads his wings once: 75% more attack and max HP, and he heals 12% max HP every turn.\n- After that, the spear comes every 3rd turn and also hits all other enemy cards for 100% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Light Spear",
+        "pct": 350
+      },
+      {
+        "label": "Spear pierce",
+        "pct": 50
+      },
+      {
+        "label": "Spear splash (evolved)",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:pierce",
+      "trait:cant-miss",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232324.png"
+  },
+  {
+    "id": "hotheaded-gunner",
+    "name": "Hotheaded Gunner",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.78K",
+    "hp": "17.5K",
+    "ability": {
+      "name": "For Fallen Comrades",
+      "text": "Whenever an allied card dies, even while this card is on the bench, gain 25% attack and 15% dodge chance (max 75%)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232434.png"
+  },
+  {
+    "id": "hush-talisman",
+    "name": "Hush Talisman",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Hush Talisman",
+      "text": "- On death, its killer loses its ability for 2 turns.\n- If a burn, poison or bleed kills it, the card that applied it counts as the killer."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party",
+      "trait:support",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233510.png"
+  },
+  {
+    "id": "ice-queen",
+    "name": "Ice Queen",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.07K",
+    "hp": "2.14K",
+    "ability": {
+      "name": "Mahapadma — Time Freeze",
+      "text": "- On enemy entry, freeze them for 1 turn.\n- Attacks have 25% chance to freeze for 1 turn.\n- Ice Queen deals 1.3x damage to frozen targets."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232340.png"
+  },
+  {
+    "id": "ice-reaper",
+    "name": "Ice Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "243",
+    "hp": "485",
+    "ability": {
+      "name": "Final Frost",
+      "text": "When Ice Reaper dies, freeze the enemy card for 3 turns and reduce their attack by 30% permanently."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232154.png"
+  },
+  {
+    "id": "immortal-beast",
+    "name": "Immortal Beast",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.09K",
+    "hp": "2.19K",
+    "ability": {
+      "name": "Nosferatu Transformation",
+      "text": "- Start at 1.2x stats.\n- Below 50% HP, transform to apostle form: 2x attack, 30% damage reduction.\n- On kill in apostle form, heal 25% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232317.png"
+  },
+  {
+    "id": "immortal-vampire",
+    "name": "Immortal Vampire",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "298",
+    "hp": "595",
+    "ability": {
+      "name": "The World: Time Stop",
+      "text": "- On entry and every 4 turns, Immortal Vampire stops time and stuns the active enemy for 2 turns.\n- Immortal Vampire's attacks during stopped time cannot be dodged.\n- When Immortal Vampire defeats a card, he drains its blood and heals 25% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:cant-miss",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232137.png"
+  },
+  {
+    "id": "immortal-witch",
+    "name": "Immortal Witch",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "10.2K",
+    "hp": "20.5K",
+    "ability": {
+      "name": "Immortal Contract",
+      "text": "- Each time a card on your team dies or comes back to life, all your cards gain +15% stats (up to 3 times).\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232634.png"
+  },
+  {
+    "id": "impact-core",
+    "name": "Impact Core",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Impact Core",
+      "text": "- Stores all damage taken.\n- Every 3rd turn, the next attack adds all of it.\n- Against enemies with 2x your attack, that damage becomes a shield instead (up to 30% max HP)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:shield"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233307.png"
+  },
+  {
+    "id": "ink-anamloy",
+    "name": "Ink Anamloy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.71K",
+    "hp": "3.42K",
+    "ability": {
+      "name": "The Ink Demon",
+      "text": "- Ink Anamloy takes 30% reduced damage.\n- Attacks apply Ink Corruption, permanently reducing the enemy's attack by 10%, stacking up to 5 times.\n- Every 3rd attack heals Ink Anamloy for 50% of the damage dealt.\n- On death, Ink Anamloy reforms once at 50% HP and stuns the enemy for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:revive",
+      "trait:heal",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232356.png"
+  },
+  {
+    "id": "ink-artist",
+    "name": "Ink Artist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.49K",
+    "hp": "2.98K",
+    "ability": {
+      "name": "Super Beast Scroll",
+      "text": "- Every attack summons an ink beast that also hits the enemy's next card for 40% of Ink Artist's attack.\n- Every 3rd attack summons a giant ink tiger dealing 2x damage and creates an ink clone that completely blocks the next incoming attack."
+    },
+    "atkScaling": [
+      {
+        "label": "Ink beast hit",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:summon"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232338.png"
+  },
+  {
+    "id": "insect-eater",
+    "name": "Insect Eater",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.55K",
+    "hp": "3.11K",
+    "ability": {
+      "name": "Cryokinesis: Frozen Lotus",
+      "text": "- On entry, freeze the enemy for 1 turn.\n- Attacks apply frostbite, permanently reducing the enemy's attack by 8% stacking up to 5 times.\n- When Insect Eater attacks a frozen target, he heals 15% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:freeze",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232348.png"
+  },
+  {
+    "id": "iron-fist-disciple",
+    "name": "Iron Fist Disciple",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "32",
+    "hp": "64",
+    "ability": {
+      "name": "Eight Gates",
+      "text": "- Every 3 turns, open a Gate: +25% attack permanently.\n- After opening 3 Gates, take 10% max HP per turn (body destruction)."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231921.png"
+  },
+  {
+    "id": "irregular-boy",
+    "name": "Irregular Boy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.23K",
+    "hp": "2.46K",
+    "ability": {
+      "name": "Thorn Absorption",
+      "text": "- Absorb 20% of damage taken as permanent bonus attack (not from a hit that defeats him).\n- Each hit counts up to 50% of his max HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232408.png"
+  },
+  {
+    "id": "junk-recycler",
+    "name": "Junk Recycler",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Junk Recycler",
+      "text": "On kill, heal 35% max HP and gain +40% of its starting attack (up to 3 kills)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233258.png"
+  },
+  {
+    "id": "karma-vessel",
+    "name": "Karma Vessel",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "80.9K",
+    "hp": "161K",
+    "ability": {
+      "name": "Karma / Rasengan Uzuhiko",
+      "text": "**Karma**\n- Statuses, stat cuts and ability damage that enemies aim at him are absorbed by his Karma instead.\n- Each one gives him +20% ATK for the rest of the battle, and his next attack throws every absorbed status back onto its target.\n\n**Rasengan Uzuhiko**\n- His first attack, and every 3rd after it, fires a Rasengan into the target.\n- It grows inside it, dealing 200%, then 300%, then 400% of his ATK at the end of the next 3 turns.\n- If the card dies first, the Rasengan moves into the next enemy that comes in."
+    },
+    "atkScaling": [
+      {
+        "label": "Rasengan turn 3",
+        "pct": 400
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Rasengan turn 1",
+        "pct": 200
+      },
+      {
+        "label": "Rasengan turn 2",
+        "pct": 300
+      }
+    ],
+    "traits": [
+      "trait:one-per-party"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232131.png"
+  },
+  {
+    "id": "kindness-spreader",
+    "name": "Kindness Spreader",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "7.44K",
+    "hp": "14.8K",
+    "ability": {
+      "name": "Idle Transfiguration",
+      "text": "- Attacks have a 35% chance to reshape the target, permanently reducing its max HP by 25%.\n- This can trigger up to twice per target (no effect on boss NPCs)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232639.png"
+  },
+  {
+    "id": "ko-king",
+    "name": "KO King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "843",
+    "hp": "1.68K",
+    "ability": {
+      "name": "Serious Punch",
+      "text": "- Does nothing for 2 turns.\n- Turn 3: 5x damage.\n- Shockwave hits all enemies in lineup for 10% of this attack.\n- 3-turn cooldown."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232323.png"
+  },
+  {
+    "id": "last-legacy",
+    "name": "Last Legacy",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Last Legacy",
+      "text": "- On death, pass 40% of all stats to the next card in your lineup.\n- If no cards remain, deal 100% of those total stats as damage to the enemy instead."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233751.png"
+  },
+  {
+    "id": "legendary-duo",
+    "name": "Legendary Duo",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "53.9K",
+    "hp": "107K",
+    "ability": {
+      "name": "Perfect Synchronization",
+      "text": "- Enters with 3 clones.\n- Every hit it takes has a 40% chance to land on a clone instead, popping it.\n- Each popped clone gives +20% ATK for the rest of the battle.\n- Every 2nd attack deals 350% ATK damage and seals the target's ability for 2 turns.\n- If that strike kills, the seal moves to the next enemy that comes in."
+    },
+    "atkScaling": [
+      {
+        "label": "Every 2nd attack",
+        "pct": 350
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231854.png"
+  },
+  {
+    "id": "leopard-assassin",
+    "name": "Leopard Assassin",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.33K",
+    "hp": "8.67K",
+    "ability": {
+      "name": "Rokushiki / Rokuogan",
+      "text": "- Every attack hits twice, with the second hit dealing 40% damage.\n- Every 4th attack, Leopard Assassin uses Rokuogan, dealing 40% of his attack while ignoring defensive abilities."
+    },
+    "atkScaling": [
+      {
+        "label": "Second hit",
+        "pct": 40
+      },
+      {
+        "label": "Rokuogan",
+        "pct": 40
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232604.png"
+  },
+  {
+    "id": "light-ambassador",
+    "name": "Light Ambassador",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.05K",
+    "hp": "8.11K",
+    "ability": {
+      "name": "Shimmer Retribution",
+      "text": "**Rebuttal**\n- A shield blocks the first hit she takes.\n- On entry she Overwhelms every enemy, and each of her hits Overwhelms the target.\n- Each Overwhelm stack makes it take 20% more damage from everything for the rest of the battle (up to 3 stacks).\n- Her attacks and reflections instantly kill enemies under 10% of their max HP per Overwhelm stack.\n- Every 3rd hit she takes is reflected back at the attacker for 100% of the damage (no effect on boss NPCs)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses",
+      "trait:execute",
+      "trait:shield",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232509.png"
+  },
+  {
+    "id": "lightborne-admiral",
+    "name": "Lightborne Admiral",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "346",
+    "hp": "692",
+    "ability": {
+      "name": "Yasakani no Magatama",
+      "text": "- Every attack hits the enemy + one card in their lineup for 30% damage.\n- Attacks deal 1.5x damage.\n- On entry, blind enemy: their first attack misses."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232257.png"
+  },
+  {
+    "id": "lightning-shout",
+    "name": "Lightning Shout",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "203",
+    "hp": "405",
+    "ability": {
+      "name": "Lightning Dragon's Roar",
+      "text": "- On entry, hit all enemies for 10% of Lightning Shout's attack.\n- Every attack has a 25% chance to stun for 1 turn."
+    },
+    "atkScaling": [
+      {
+        "label": "Entry AoE hit",
+        "pct": 10
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232028.png"
+  },
+  {
+    "id": "limit-breaker",
+    "name": "Limit Breaker",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Limit Breaker",
+      "text": "- -30% damage for the first 2 turns.\n- On turn 3, permanently gain +350% of its base attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233823.png"
+  },
+  {
+    "id": "lone-wolf",
+    "name": "Lone Wolf",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "18.3K",
+    "hp": "36.6K",
+    "ability": {
+      "name": "Pack Hunt",
+      "text": "- On entry, 2 spirit wolves join Lone Wolf, and each bites for 35% damage after his attacks.\n- While a wolf is out, the next enemy attack on Lone Wolf is intercepted: the wolf takes 35% of the hit and explodes on the attacker for 150% damage, then it's gone.\n- When Lone Wolf has no wolves left, his next attack is a Barrage: 6 shots for 40% damage at the front enemy card, moving on to the next card when one dies.\n- Every kill brings a wolf back."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Wolf bite",
+        "pct": 35
+      },
+      {
+        "label": "Wolf explosion",
+        "pct": 150
+      },
+      {
+        "label": "Barrage shot",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232259.png"
+  },
+  {
+    "id": "longnose-liar",
+    "name": "Longnose Liar",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "12",
+    "hp": "24",
+    "ability": {
+      "name": "Sniper King's Gambit",
+      "text": "- 30% chance to miss an attack.\n- After missing, next attack deals 250% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Post-miss attack",
+        "pct": 250
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231907.png"
+  },
+  {
+    "id": "lord-of-hemomancy",
+    "name": "Lord of Hemomancy",
+    "type": "battle",
+    "rarity": "TODO",
+    "source": "weather:cataclysm",
+    "dmg": "10.4K",
+    "hp": "20.8K",
+    "ability": {
+      "name": "Sanguine Dominion",
+      "text": "- 50% of his bonus max HP is added to his ATK.\n- Healing from others doesn't restore his HP: it becomes Blood instead.\n- Each attack spends 35% of his HP into Blood and deals 350% of it as bonus damage, and he heals 40% of the damage dealt.\n- When his Blood reaches his max HP he casts Hemoplague: every enemy takes 20% more damage for 2 turns, then their blood erupts for 100% of his Blood.\n- He heals 50% of the eruption's damage and gains 25% of it as max HP permanently.\n- The first attack that would kill him misses, and he casts Hemoplague right away, even if his Blood isn't full."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232612.png"
+  },
+  {
+    "id": "mach-20-teacher",
+    "name": "Mach 20 Teacher",
+    "unconfirmed": true,
+    "source": "zone:lantern-cistern",
+    "rarity": "TODO",
+    "hp": "TODO",
+    "dmg": "TODO",
     "ability": {
       "name": "Mach 20 Lesson",
       "text": "The first attack against each card in his party misses. He dodges 35% of attacks. Whenever an ally dodges, he strikes the attacker for 100% of his attack, and that attacker deals 30% less damage for 2 turns."
-    }
+    },
+    "type": "battle"
+  },
+  {
+    "id": "madness-blade",
+    "name": "Madness Blade",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.6K",
+    "hp": "3.2K",
+    "ability": {
+      "name": "Black Blood",
+      "text": "- Takes 25% less damage from attacks.\n- Every hit it takes adds 1 Madness.\n- At 4 Madness, its next attack is Screech Alpha: 250% damage, and it heals 45% of its max HP."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Screech Alpha",
+        "pct": 250
+      }
+    ],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232432.png"
+  },
+  {
+    "id": "meteor-conqueror",
+    "name": "Meteor Conqueror",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "640",
+    "hp": "1.28K",
+    "ability": {
+      "name": "Meteoric Burst",
+      "text": "- On entry, deal 15% of his max HP to all enemy cards.\n- 2x attack for 3 turns.\n- After 3 turns, overheat: lose 10% max HP per turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232228.png"
+  },
+  {
+    "id": "mimic",
+    "name": "Mimic",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "15",
+    "hp": "30",
+    "ability": {
+      "name": "Gambler's Curse",
+      "text": "On death: 50% chance to deal 75% of this card's attack to the enemy, or 50% chance to deal 40% to your next card."
+    },
+    "atkScaling": [
+      {
+        "label": "Death hit (enemy)",
+        "pct": 75
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Death hit (own card)",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231914.png"
+  },
+  {
+    "id": "mirror-traitor",
+    "name": "Mirror Traitor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "21.3K",
+    "hp": "42.7K",
+    "ability": {
+      "name": "Hypnosis",
+      "text": "- Mirror Traitor's attacks Hypnotize the target for 2 turns: a Hypnotized card deals 35% less damage.\n- Whenever a new enemy card enters, he Hypnotizes it on sight, and his next attack on it hits twice, dealing 50% more damage.\n- The first 2 times he would die, he evolves instead: he returns at 50% HP with 30% more attack.\n- After his second evolution, his attacks also hit all other enemy cards for 60% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Evolved splash",
+        "pct": 60
+      }
+    ],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232232.png"
+  },
+  {
+    "id": "mist-executioner",
+    "name": "Mist Executioner",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "609",
+    "hp": "1.21K",
+    "ability": {
+      "name": "Silent Ninja",
+      "text": "- If Mist Executioner defeats a card, he enters stealth.\n- In stealth Mist Executioner dodges the next attack, and his next attack deals 1.2x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232117.png"
+  },
+  {
+    "id": "mochi-man",
+    "name": "Mochi Man",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.69K",
+    "hp": "11.3K",
+    "ability": {
+      "name": "Future Sight / Mochi Thrust",
+      "text": "- Mochi Man has a 35% chance to dodge any attack.\n- After dodging, his next attack deals 50% more damage.\n- Every 3 turns, he uses Buzz Cut Mochi for 1.5x damage with a guaranteed hit."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232624.png"
+  },
+  {
+    "id": "moon-mother",
+    "name": "Moon Mother",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "576",
+    "hp": "1.15K",
+    "ability": {
+      "name": "Amenominaka / All-Killing Ash Bones",
+      "text": "- On enemy entry, Moon Mother shifts dimensions, disabling the active enemy's ability for 2 turns.\n- Every 4th attack becomes All-Killing Ash Bones, dealing 3x damage, ignoring damage reduction, and instantly defeating targets below 25% HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232226.png"
+  },
+  {
+    "id": "moon-reaper",
+    "name": "Moon Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.76K",
+    "hp": "3.52K",
+    "ability": {
+      "name": "Moon Breathing / Monstrous Regeneration",
+      "text": "- Every attack hits twice, with the second hit dealing 40% damage.\n- On death, Moon Reaper regenerates once at 40% HP in his transformed state with 50% more attack and 30% damage reduction."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Second hit",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232405.png"
+  },
+  {
+    "id": "neural-overclock",
+    "name": "Neural Overclock",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Neural Overclock",
+      "text": "- Every attack that lands also strikes the same enemy again for 100% of its ATK.\n- Once every 2 turns, an attack that hits 2 or more times is followed by 1 more attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233552.png"
+  },
+  {
+    "id": "nine-tail-prodigy",
+    "name": "Nine-Tail Prodigy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.78K",
+    "hp": "3.56K",
+    "ability": {
+      "name": "Life Force Drain",
+      "text": "- For 4 turns, Nine-Tail Prodigy has 1.75x all stats and every attack permanently reduces the enemy's max HP by 12%.\n- After 4 turns, Nine-Tail Prodigy dies."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232620.png"
+  },
+  {
+    "id": "noble-companion",
+    "name": "Noble Companion",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "105",
+    "hp": "210",
+    "ability": {
+      "name": "Passionate Narration",
+      "text": "All cards in your party gain 20% damage for each Noble Companion in the party (stacks)."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231940.png"
+  },
+  {
+    "id": "nullblade-knight",
+    "name": "Nullblade Knight",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "329",
+    "hp": "658",
+    "ability": {
+      "name": "Anti-Magic: Demon Destroyer",
+      "text": "- On entry, negate the enemy's ability for 2 turns.\n- Nullblade Knight is immune to any ability that would reduce his stats.\n- Attacks deal 1.3x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232235.png"
+  },
+  {
+    "id": "numbers-weapon",
+    "name": "Numbers Weapon",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Numbers Arsenal",
+      "text": "- +50% attack.\n- The first attack on each enemy deals 3x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233758.png"
+  },
+  {
+    "id": "oblivion-eraser",
+    "name": "Oblivion Eraser",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Oblivion Eraser",
+      "text": "- On entry, bind a random enemy card: it also takes 50% of every hit you take.\n- While it has 2x your attack, it takes 25% more damage from your team instead.\n- On death, the bound enemy loses 30% of its ATK."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233638.png"
+  },
+  {
+    "id": "oceans-guardian",
+    "name": "Ocean's Guardian",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "416",
+    "hp": "831",
+    "ability": {
+      "name": "Fish-Man Karate: Vagabond Drill",
+      "text": "- On entry, create rainfall for 3 turns: heal 20% max HP per turn during rainfall.\n- Every 3rd attack sends a shockwave hitting all enemies for 15% of Ocean's Guardian's attack."
+    },
+    "atkScaling": [
+      {
+        "label": "Shockwave (all enemies)",
+        "pct": 15
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232158.png"
+  },
+  {
+    "id": "omni-sovereign",
+    "name": "Omni Sovereign",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.15K",
+    "hp": "8.31K",
+    "ability": {
+      "name": "Erase",
+      "text": "On entry, if the enemy is weaker than Omni Sovereign, erase them from the battle entirely."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232454.png"
+  },
+  {
+    "id": "one-eyed",
+    "name": "One Eyed",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.75K",
+    "hp": "3.5K",
+    "ability": {
+      "name": "Ghoul Awakening",
+      "text": "- Start in human form.\n- Below 50% HP, awaken: 2x attack, heal 30% max HP, and every attack heals for 20% of damage dealt.\n- Below 15% HP in awakened form, go berserk: 3x attack for 2 turns, then die."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232539.png"
+  },
+  {
+    "id": "otherwordly-being",
+    "name": "Otherwordly Being",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.28K",
+    "hp": "10.5K",
+    "ability": {
+      "name": "Ultra Instinct: One Percent",
+      "text": "- He has a 60% chance to dodge any attack.\n- Whenever he dodges, he gains 15% attack permanently, stacking up to 5 times.\n- Every 3rd attack uses one percent of his power, dealing 2x damage and ignoring damage reduction.\n- The first time he receives fatal damage, he survives at 1 HP and gains 1.5x attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge",
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232641.png"
+  },
+  {
+    "id": "panther-king",
+    "name": "Panther King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "12.4K",
+    "hp": "24.9K",
+    "ability": {
+      "name": "Pantera",
+      "text": "- Attacks hit 2 times for 75% damage each.\n- Every attack in a row on the same card deals 20% more damage (up to 2x).\n- Below 50% HP, or when a hit would kill him, Panther King releases Pantera once: he heals 30% max HP, gains 50% attack and hits 3 times, the third hit cannot be dodged."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Per hit (x2)",
+        "pct": 75
+      }
+    ],
+    "traits": [
+      "trait:cant-miss",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232503.png"
+  },
+  {
+    "id": "paper-pal",
+    "name": "Paper Pal",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "136",
+    "hp": "272",
+    "ability": {
+      "name": "Paper Storm",
+      "text": "- On entry, paper shreds deal 10% of Paper Pal's attack to all enemy cards.\n- Attacks have a 25% chance to cut through, dealing 1.5x damage."
+    },
+    "atkScaling": [
+      {
+        "label": "Entry AoE hit",
+        "pct": 10
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Cut-through hit",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231951.png"
+  },
+  {
+    "id": "phantom",
+    "name": "Phantom",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "155",
+    "hp": "309",
+    "ability": {
+      "name": "Hydrification",
+      "text": "- 30% chance to negate any incoming attack entirely.\n- Can't negate the same attacker twice in a row."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232001.png"
+  },
+  {
+    "id": "pinnacle-of-sorcery",
+    "name": "Pinnacle of Sorcery",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "132K",
+    "hp": "265K",
+    "ability": {
+      "name": "Domain Clash",
+      "text": "- On entry, opens its Domain for 5 turns.\n- At the end of each turn while it's open, slashes every enemy for 50% ATK damage.\n- Each enemy killed while it's open adds 1 turn (up to 3 extra turns).\n- Every 3rd attack fires a blazing arrow: 250% ATK damage to the target and 125% ATK damage to the enemy behind it.\n- When it dies permanently, a final beam hits every enemy for 350% ATK damage, ignoring defensive abilities."
+    },
+    "atkScaling": [
+      {
+        "label": "Domain slash",
+        "pct": 50
+      },
+      {
+        "label": "Arrow hit",
+        "pct": 250
+      },
+      {
+        "label": "Arrow pierce",
+        "pct": 125
+      },
+      {
+        "label": "Death beam",
+        "pct": 350
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:pierce",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_231837.png"
+  },
+  {
+    "id": "poison-princess",
+    "name": "Poison Princess",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "288",
+    "hp": "576",
+    "ability": {
+      "name": "Wisteria Poison Finale",
+      "text": "On death, poison the battlefield for 3 turns — all enemies take 30% more damage from all sources."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:poison",
+      "trait:hits-all",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232105.png"
+  },
+  {
+    "id": "portal-blade",
+    "name": "Portal Blade",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Portal Blade",
+      "text": "Every 2nd attack also warps behind the enemy lineup, hitting their last card for 3x its attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:pierce"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233805.png"
+  },
+  {
+    "id": "possesive-rabbit",
+    "name": "Possesive Rabbit",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.76K",
+    "hp": "5.51K",
+    "ability": {
+      "name": "I Always Come Back",
+      "text": "- On death, possess the enemy's active card: it attacks itself for 2 turns for 60% damage (no effect on boss NPCs).\n- After, Possesive Rabbit revives at 100% HP.\n- Can trigger once."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses",
+      "trait:revive",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232505.png"
+  },
+  {
+    "id": "primordial-colossus",
+    "name": "Primordial Colossus",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.51K",
+    "hp": "3.02K",
+    "ability": {
+      "name": "The Rumbling",
+      "text": "- On entry, transform: 1.5x all stats.\n- Every 3 turns, Wall Titans march dealing 20% of Primordial Colossus's attack to all enemy cards.\n- On death, the Rumbling continues for 2 more turns — every enemy takes 100% of Primordial Colossus's attack per turn even after it falls."
+    },
+    "atkScaling": [
+      {
+        "label": "Wall Titans march",
+        "pct": 20
+      },
+      {
+        "label": "Death Rumbling per turn",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232606.png"
+  },
+  {
+    "id": "primordial-dread",
+    "name": "Primordial Dread",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "199K",
+    "hp": "398K",
+    "ability": {
+      "name": "Primal Fear",
+      "text": "- Any skill that targets the Primordial Dread is negated, and each negated skill grants it 1 Darkness.\n- Enemy attacks have a 15% chance to fail, +5% per Darkness, up to 60%.\n- Whenever an enemy's attack fails, the Primordial Dread's arms strike back for 200% of its ATK.\n- While it is alive, enemies can't recover HP, revive or use shields.\n- At the end of each turn, every enemy (bench included) loses 2.5% of its ATK and max HP, and the Primordial Dread gains 1 Darkness.\n- Each Darkness also gives it +75% of its starting ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Counter strike",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:one-per-party"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232058.png"
+  },
+  {
+    "id": "psychic-esper",
+    "name": "Psychic Esper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.34K",
+    "hp": "10.6K",
+    "ability": {
+      "name": "Psychic Barrage",
+      "text": "- Instead of attacking, throws 5 rocks that each deal 30% damage to a random enemy (bench included).\n- Each rock that hits the same enemy as the last one deals +10% more.\n- The first time he dies, he enters ???%: revives at full HP and throws 10 rocks per barrage from then on."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Rock hit",
+        "pct": 30
+      }
+    ],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232524.png"
+  },
+  {
+    "id": "psychic-girl",
+    "name": "Psychic Girl",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "482",
+    "hp": "963",
+    "ability": {
+      "name": "Psychic Precognition",
+      "text": "- While Psychic Girl is alive in your party, all your cards have a 25% chance to dodge any attack.\n- Does not stack with multiple copies."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232233.png"
+  },
+  {
+    "id": "puppeteer",
+    "name": "Puppeteer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "284",
+    "hp": "567",
+    "ability": {
+      "name": "Hitokugutsu — Human Puppet",
+      "text": "- Attacks apply puppet poison: -10% attack permanently per hit (stacking).\n- Puppeteer takes 20% reduced damage (puppet body)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:poison"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232123.png"
+  },
+  {
+    "id": "rain-mage",
+    "name": "Rain Mage",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "171",
+    "hp": "341",
+    "ability": {
+      "name": "Water Lock",
+      "text": "On entry, the enemy deals 30% less damage for 2 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232009.png"
+  },
+  {
+    "id": "realm-cleaver",
+    "name": "Realm Cleaver",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Realm Cleaver",
+      "text": "- Every attack pierces the next enemy card for 60% of the damage, with the same on-hit effects.\n- With no next card, 50% is added to the main hit instead."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:pierce"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233536.png"
+  },
+  {
+    "id": "reapers-lantern",
+    "name": "Reaper's Lantern",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Soul Harvest",
+      "text": "- Each Burn, Poison, Bleed or Stun your team puts on an enemy adds a soul.\n- At 4 souls the lantern empties: +50% ATK and HP for the rest of the battle (max 3)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:stun",
+      "trait:burn",
+      "trait:poison",
+      "trait:bleed"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233617.png"
+  },
+  {
+    "id": "red-dog",
+    "name": "Red Dog",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "6.3K",
+    "hp": "12.6K",
+    "ability": {
+      "name": "Meigou / Absolute Justice",
+      "text": "- Attacks apply Magma Burn for 20% of this card's ATK per turn for 2 turns, stacking.\n- If an enemy dies while burned, the burn transfers to the next card entering the field.\n- On death, Red Dog erupts and deals 30% of his max HP to all enemy cards."
+    },
+    "atkScaling": [
+      {
+        "label": "Magma Burn per turn",
+        "pct": 20
+      }
+    ],
+    "traits": [
+      "trait:burn",
+      "trait:hits-all",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232629.png"
+  },
+  {
+    "id": "regressor",
+    "name": "Regressor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.57K",
+    "hp": "3.15K",
+    "ability": {
+      "name": "Regression",
+      "text": "On death, if Regressor has killed at least one card this fight, revive at 40% HP with ability refreshed."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232504.png"
+  },
+  {
+    "id": "rejection-maiden",
+    "name": "Rejection Maiden",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "13.5K",
+    "hp": "27K",
+    "ability": {
+      "name": "I Reject",
+      "text": "- Once per battle, when your strongest card (most max HP) dies, it comes back with the HP it had at the start of its last turn.\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:once-per-battle",
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232511.png"
+  },
+  {
+    "id": "restless-coffin",
+    "name": "Restless Coffin",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Restless Coffin",
+      "text": "When it comes back to life through its own ability, the enemy that killed it loses its ability for 2 turns and takes double damage from your team for 4 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233500.png"
+  },
+  {
+    "id": "revival-seed",
+    "name": "Revival Seed",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Revival Seed",
+      "text": "- Heal 20% max HP every turn.\n- The first time below 25% HP, heal 50% at once."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233213.png"
+  },
+  {
+    "id": "rift-anchor",
+    "name": "Rift Anchor",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Rift Anchor",
+      "text": "Once per battle, on taking lethal damage, HP goes back to what it was 3 turns ago."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:once-per-battle"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233707.png"
+  },
+  {
+    "id": "royal-vanguard",
+    "name": "Royal Vanguard",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "891",
+    "hp": "1.78K",
+    "ability": {
+      "name": "Pride of the Prince",
+      "text": "When any card in your party dies, Royal Vanguard gains 25% attack permanently."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232517.png"
+  },
+  {
+    "id": "rubberbound-captain",
+    "name": "Rubberbound Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "243",
+    "hp": "485",
+    "ability": {
+      "name": "Gear Second: Jet Gatling",
+      "text": "25% chance on attack to hit again for 75% more damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232151.png"
+  },
+  {
+    "id": "ruler",
+    "name": "Ruler",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.93K",
+    "hp": "9.87K",
+    "ability": {
+      "name": "Venuzdonoa",
+      "text": "- On death, revive at 100% HP (once).\n- All attacks deal 2x damage.\n- Enemy's damage reduction effects are ignored entirely.\n- Ruler cannot be affected by any status effect."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive",
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232636.png"
+  },
+  {
+    "id": "sand-vessel",
+    "name": "Sand Vessel",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "316",
+    "hp": "631",
+    "ability": {
+      "name": "Sand Burial",
+      "text": "- Every 3 turns, Sand Burial: guaranteed hit dealing 2x damage, ignores dodge/stealth.\n- Between Sand Burials, auto-block 25% of incoming damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232142.png"
+  },
+  {
+    "id": "sand-warden",
+    "name": "Sand Warden",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "877",
+    "hp": "1.75K",
+    "ability": {
+      "name": "Sand Shield",
+      "text": "- Sand Warden automatically blocks the first hit every 4 turns.\n- Below 30% HP, the sand spirit partially awakens: Sand Warden gains 50% attack and blocked hits reflect 30% damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232212.png"
+  },
+  {
+    "id": "sand-warlord",
+    "name": "Sand Warlord",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.95K",
+    "hp": "7.9K",
+    "ability": {
+      "name": "Desert Spada / Sables",
+      "text": "- Each hit that lands dries out the target: it loses 10% of its ATK (up to 50%), and Sand Warlord gains 50% of his starting ATK.\n- Sand Warlord is immune to attacks from cards below 40% HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232548.png"
+  },
+  {
+    "id": "scythe-meister",
+    "name": "Scythe Meister",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "23.3K",
+    "hp": "46.6K",
+    "ability": {
+      "name": "Soul Resonance",
+      "text": "- She starts with 1 Resonance, and every attack and every hit she takes builds 1 more.\n- On the 3rd, she unleashes Witch Hunter: a giant slash that deals 200% of her ATK to the enemy and 50% to every other enemy (bench included).\n\n**Reaper's Verdict**\n- Any enemy Witch Hunter leaves below 20% HP is reaped instantly."
+    },
+    "atkScaling": [
+      {
+        "label": "Witch Hunter (target)",
+        "pct": 200
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Witch Hunter (others)",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:hits-all"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232222.png"
+  },
+  {
+    "id": "sea-sovereign",
+    "name": "Sea Sovereign",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "470",
+    "hp": "939",
+    "ability": {
+      "name": "Divine Trident",
+      "text": "- Attacks hit 3 times (each hit at 50% damage).\n- Every 4 turns, Sea Sovereign uses 40-Day Flood: deal 2x damage, guaranteed kill on cards below 20% HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232215.png"
+  },
+  {
+    "id": "sea-valkyrie",
+    "name": "Sea Valkyrie",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "389",
+    "hp": "777",
+    "ability": {
+      "name": "Sea Dragon's Roar",
+      "text": "Every 3rd attack, unleash Sea Dragon: deal 2.5x damage, ignoring any damage reduction on the enemy."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:ignores-defense"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232140.png"
+  },
+  {
+    "id": "serpent-sage",
+    "name": "Serpent Sage",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "971",
+    "hp": "1.94K",
+    "ability": {
+      "name": "Shedding Skin",
+      "text": "- Every 5 turns, Serpent Sage sheds, healing to 60% HP and gaining 10% stats.\n- On death, he revives once at 30% HP in a new form with 25% more attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232231.png"
+  },
+  {
+    "id": "serpent-witch",
+    "name": "Serpent Witch",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "800",
+    "hp": "1.6K",
+    "ability": {
+      "name": "Vector Venom",
+      "text": "- Attacks add a Poison stack to the enemy (50% of this card's ATK per turn for 3 turns).\n\n**Snake Migration**\n- When a Poisoned enemy dies, its Poison slithers to another enemy."
+    },
+    "atkScaling": [
+      {
+        "label": "Poison per turn",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:poison"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232223.png"
+  },
+  {
+    "id": "shade-prince",
+    "name": "Shade Prince",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "11.1K",
+    "hp": "22.3K",
+    "ability": {
+      "name": "Living Shadow",
+      "text": "**Shadow Lash**\n- On entry, he hits all enemies for 10% of his ATK.\n\n**Living Shadow**\n- Whenever he damages an enemy, all other enemies take 50% of that damage (20% when the damage comes from an ability or a support).\n\n**Devour**\n- When that shadow damage kills an enemy, he permanently gains +20% ATK and max HP (max 3 times).\n\n**Homunculus Core**\n- The first time he would die, he revives with 40% of his max HP."
+    },
+    "atkScaling": [
+      {
+        "label": "Entry hit (all)",
+        "pct": 10
+      }
+    ],
+    "traits": [
+      "trait:revive",
+      "trait:hits-all",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232542.png"
+  },
+  {
+    "id": "shadow-armor",
+    "name": "Shadow Armor",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Shadow Armor",
+      "text": "+100% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233339.png"
+  },
+  {
+    "id": "shadow-fragment",
+    "name": "Shadow Fragment",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Shadow Fragment",
+      "text": "On kill, gain +60% attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233329.png"
+  },
+  {
+    "id": "shadow-heir",
+    "name": "Shadow Heir",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.78K",
+    "hp": "3.56K",
+    "ability": {
+      "name": "Amenotejikara / Susanoo Chidori",
+      "text": "- On entry, Amenotejikara causes the enemy's first attack to miss and Shadow Heir immediately counters for 1.5x damage.\n- Every 3 turns, Shadow Heir dodges the next attack.\n- Every 4th attack becomes a Susanoo Chidori dealing 3x damage and ignoring damage reduction.\n- Below 30% HP, Perfect Susanoo activates, granting 40% damage reduction and causing attacks to burn the enemy for 40% of this card's ATK per turn for 2 turns."
+    },
+    "atkScaling": [
+      {
+        "label": "Susanoo burn per turn",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:dodge",
+      "trait:burn",
+      "trait:ignores-defense",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232617.png"
+  },
+  {
+    "id": "shadow-king",
+    "name": "Shadow King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "7.04K",
+    "hp": "14K",
+    "ability": {
+      "name": "Eternal Legion",
+      "text": "- Enemies he kills rise as Shadows on your side, in front of him, with 75% of the stats they started the battle with (no effect on boss NPCs or Shadows).\n- Each time one of his Shadows dies, he permanently gains +75% ATK and max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses",
+      "trait:summon"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232545.png"
+  },
+  {
+    "id": "shadow-monarch",
+    "name": "Shadow Monarch",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2K",
+    "hp": "4K",
+    "ability": {
+      "name": "Arise",
+      "text": "- On kill, raise the defeated card as a shadow with 40% of its stats.\n- The shadow fights in Shadow Monarch's place for 2 turns, or until it falls."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:summon"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232522.png"
+  },
+  {
+    "id": "shadow-strategist",
+    "name": "Shadow Strategist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "36",
+    "hp": "71",
+    "ability": {
+      "name": "Shadow Paralysis",
+      "text": "On entry, stun the enemy card for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231924.png"
+  },
+  {
+    "id": "shark-swordsman",
+    "name": "Shark Swordsman",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "444",
+    "hp": "888",
+    "ability": {
+      "name": "Super Shark Bomb",
+      "text": "- Every 4 turns, flood dealing 10% max HP to all cards (both sides), Shark Swordsman heals for double what he took if he survives.\n- Attacks heal for 20% of damage dealt."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232206.png"
+  },
+  {
+    "id": "sharpshooter",
+    "name": "Sharpshooter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "9.19K",
+    "hp": "18.3K",
+    "ability": {
+      "name": "Scoped Shot",
+      "text": "Every 3rd attack is a charged shot that deals 220% damage, cannot be dodged and stuns the enemy for 1 turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Charged shot",
+        "pct": 220
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:cant-miss"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232419.png"
+  },
+  {
+    "id": "shrine-maiden-princess",
+    "name": "Shrine Maiden Princess",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.78K",
+    "hp": "17.5K",
+    "ability": {
+      "name": "Purifying Ward",
+      "text": "- At the start of each of your cards' turns, it heals 20% of its max HP.\n- Healing past full HP becomes a shield, up to 50% of its max HP.\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:shield",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232645.png"
+  },
+  {
+    "id": "silent-swordsman",
+    "name": "Silent Swordsman",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "184",
+    "hp": "367",
+    "ability": {
+      "name": "Water Breathing: Dead Calm",
+      "text": "- Dodge all attacks for the first 2 turns.\n- After that, next attack deals 2x damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Post-dodge hit",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232023.png"
+  },
+  {
+    "id": "sixfold-prophet",
+    "name": "Sixfold Prophet",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "676",
+    "hp": "1.35K",
+    "ability": {
+      "name": "Six Paths",
+      "text": "- Each turn he uses the next Path: Deva: his attack hits every enemy for 75% ATK.\n\n**Asura**\n- His attack hits 3 times for 60% ATK.\n\n**Preta**\n- Blocks the next hit he takes.\n\n**Animal**\n- Summons a Path body with 30% of his stats (once per battle).\n\n**Human**\n- His attack makes the target lose its ability for 2 turns.\n\n**Naraka**\n- Heals himself 30% of his max HP and removes his debuffs."
+    },
+    "atkScaling": [
+      {
+        "label": "Deva (all enemies)",
+        "pct": 75
+      },
+      {
+        "label": "Asura (per hit, x3)",
+        "pct": 60
+      }
+    ],
+    "traits": [
+      "trait:once-per-battle",
+      "trait:summon",
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232450.png"
+  },
+  {
+    "id": "skeleton-boy",
+    "name": "Skeleton Boy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.95K",
+    "hp": "5.9K",
+    "ability": {
+      "name": "Anti-Void Strings",
+      "text": "- On enemy entry, wrap strings around the enemy: they deal 40% less damage and take 30% more damage for the entire fight.\n- Skeleton Boy's attacks deal 2x damage.\n- On death, crash the anti-void: deal 100% of Skeleton Boy's max HP to the active enemy."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232513.png"
+  },
+  {
+    "id": "sketching-menace",
+    "name": "Sketching Menace",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.61K",
+    "hp": "3.22K",
+    "ability": {
+      "name": "Me Hoy Minoy",
+      "text": "- Permanently erase the enemy's ability on hit.\n- Each turn, erase 20% of the enemy's max HP (no effect on boss NPCs)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232344.png"
+  },
+  {
+    "id": "slime",
+    "name": "Slime",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "14",
+    "hp": "27",
+    "ability": {
+      "name": "Mitosis",
+      "text": "The first time Slime falls, it gets back up with half its stats."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231911.png"
+  },
+  {
+    "id": "slime-virtuoso",
+    "name": "Slime Virtuoso",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "20.1K",
+    "hp": "40.3K",
+    "ability": {
+      "name": "Concerto",
+      "text": "**Concerto**\n- Her attacks hit 5 times for 40% damage each and can't be dodged.\n- Every attack she lands adds 1 hit to the next (max 6).\n\n**Finale**\n- The 6th hit deals 300% of her ATK, then she goes back to 5 hits."
+    },
+    "atkScaling": [
+      {
+        "label": "Finale hit",
+        "pct": 300
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Concerto hit",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:cant-miss"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232304.png"
+  },
+  {
+    "id": "snacktime-menace",
+    "name": "Snacktime Menace",
+    "type": "battle",
+    "rarity": "TODO",
+    "source": "weather:cataclysm",
+    "dmg": "8.06K",
+    "hp": "16.1K",
+    "ability": {
+      "name": "Hungry",
+      "text": "- Heals for 15% of the damage she deals, plus 1% more for every 1% HP she's missing.\n- Each kill heals 30% of her missing HP and gives +100% ATK.\n- Attacking and taking hits fill her Hunger: at 5 she frenzies for 2 turns, attacking random enemies (bench included) for 200% damage with double healing, but she takes 25% more damage.\n- Each kill adds a turn of frenzy.\n- The first hit that would kill her deals 80% less: she heals 50% of her missing HP and hits every enemy for 200% ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Frenzy attack",
+        "pct": 200
+      },
+      {
+        "label": "Near-death hit (all)",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232543.png"
+  },
+  {
+    "id": "solar-brawler",
+    "name": "Solar Brawler",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "549",
+    "hp": "1.09K",
+    "ability": {
+      "name": "Saiyan Growth",
+      "text": "Every turn, gain 20% stats."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232358.png"
+  },
+  {
+    "id": "sorceresss-sorrow",
+    "name": "Sorceress's Sorrow",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Sorceress's Sorrow",
+      "text": "On death, curse the enemy's active card: -25% stats and a poison for 30% of the fallen card's ATK per turn for 2 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:poison",
+      "trait:death-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233441.png"
+  },
+  {
+    "id": "soul-reaper",
+    "name": "Soul Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "445",
+    "hp": "890",
+    "ability": {
+      "name": "Hollow Resurrection",
+      "text": "- On death, revive at 50% HP with 20% more attack.\n- One time."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232335.png"
+  },
+  {
+    "id": "soul-siphon",
+    "name": "Soul Siphon",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Soul Siphon",
+      "text": "Boost attack by 25% of max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233252.png"
+  },
+  {
+    "id": "sovereign-will",
+    "name": "Sovereign Will",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Sovereign Will",
+      "text": "- +35% attack on entry.\n- If it kills an enemy, the next card in your party enters with +60% attack per enemy killed."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233334.png"
+  },
+  {
+    "id": "spider-tattoo",
+    "name": "Spider Tattoo",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Spider Tattoo",
+      "text": "Its Burn, Poison and Bleed also land on the enemy behind the target."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:burn",
+      "trait:poison",
+      "trait:bleed",
+      "trait:pierce"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233524.png"
+  },
+  {
+    "id": "spirit-thread",
+    "name": "Spirit Thread",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Spirit Thread",
+      "text": "- 20% chance any incoming hit fails.\n- Every hit that misses heals 10% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:heal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233218.png"
+  },
+  {
+    "id": "spirit-undertaker",
+    "name": "Spirit Undertaker",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Paramita Papilio",
+      "text": "- Below 50% HP, it deals 100% more damage and heals for 15% of the damage it deals.\n\n**Farewell Ghost**\n- The first time it drops below 50% HP, a ghost blocks the next hit."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:lifesteal"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233207.png"
+  },
+  {
+    "id": "steel-alchemist",
+    "name": "Steel Alchemist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.67K",
+    "hp": "17.3K",
+    "ability": {
+      "name": "Equivalent Exchange",
+      "text": "**Clap**\n- On entry he raises 2 stone guardians (summons), and 1 more every 4 turns (max 2).\n- While no card in your party has more ATK (fallen ones included), a guardian blocks each hit on him and crumbles.\n\n**Equivalent Exchange**\n- Every hit a guardian blocks permanently gives him +35% of his starting ATK (max 8 times)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232643.png"
+  },
+  {
+    "id": "stitched-professor",
+    "name": "Stitched Professor",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Soul Surgery",
+      "text": "**Dissection**\n- Hits make the enemy take 40% more damage from everything for 2 turns.\n\n**Soul Force**\n- Every 3rd attack has a 50% chance to stun the enemy for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:stun"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233232.png"
+  },
+  {
+    "id": "stone-world-scientist",
+    "name": "Stone World Scientist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "9.4K",
+    "hp": "18.8K",
+    "ability": {
+      "name": "Chemistry",
+      "text": "- Burn, Poison and Bleed from your cards deal 50% more damage.\n- Works from anywhere in your party.\n- Copies don't stack."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232654.png"
+  },
+  {
+    "id": "string-emperor",
+    "name": "String Emperor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "5.12K",
+    "hp": "10.2K",
+    "ability": {
+      "name": "Parasite String / Ever White",
+      "text": "- On entry, place strings on 2 random enemy cards, causing them to deal 25% less damage.\n- Every 3 turns, String Emperor heals 10% max HP.\n- Below 25% HP, he awakens the battlefield, dealing 8% of his max HP to all enemy cards each turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232615.png"
+  },
+  {
+    "id": "sun-god",
+    "name": "Sun God",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.63K",
+    "hp": "9.27K",
+    "ability": {
+      "name": "Rubber Field",
+      "text": "- On entry, turns the battlefield into rubber.\n- While he's on it, he takes 50% less damage from attacks and bounces the other 50% back at the attacker.\n- Attackers become Dizzy: 20% more damage taken from everything per stack, for 3 turns.\n- Dizzy stacks."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232511.png"
+  },
+  {
+    "id": "sunbreath-swordsman",
+    "name": "Sunbreath Swordsman",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "69",
+    "hp": "137",
+    "ability": {
+      "name": "Water Breathing: First Form",
+      "text": "First hit against any new card deals 35% more damage."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231934.png"
+  },
+  {
+    "id": "sungsho",
+    "name": "Sungsho",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "746",
+    "hp": "1.49K",
+    "ability": {
+      "name": "Shadow Inheritance",
+      "text": "When any card in your party dies, Sungsho gains 20% of their stats."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232304.png"
+  },
+  {
+    "id": "surgeon",
+    "name": "Surgeon",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "750",
+    "hp": "1.49K",
+    "ability": {
+      "name": "Chakra Scalpel",
+      "text": "- Attacks permanently reduce the enemy's attack by 8%, stacking with each hit.\n- Every 3 turns, Surgeon heals for 20% max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232156.png"
+  },
+  {
+    "id": "symmetry-reaper",
+    "name": "Symmetry Reaper",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "400",
+    "hp": "800",
+    "ability": {
+      "name": "Perfect Symmetry",
+      "text": "**Twin Pistols**\n- Every attack fires 2 shots of 60% damage.\n- Each shot that lands adds 1 Symmetry.\n- At 8 Symmetry he fires the Death Cannon: 400% of his ATK that can't be dodged or blocked."
+    },
+    "atkScaling": [
+      {
+        "label": "Death Cannon",
+        "pct": 400
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Pistol shot",
+        "pct": 60
+      }
+    ],
+    "traits": [
+      "trait:cant-miss"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232017.png"
+  },
+  {
+    "id": "territory-surge",
+    "name": "Territory Surge",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Territory Surge",
+      "text": "Every 3rd attack also hits every other enemy for 100% of its attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:hits-all"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233349.png"
+  },
+  {
+    "id": "the-dancer",
+    "name": "The Dancer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1K",
+    "hp": "2K",
+    "ability": {
+      "name": "Sword of Light",
+      "text": "- Deal 15% more damage to cards with higher stats than The Dancer.\n- Every 3rd attack is a guaranteed crit (2x damage)."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232342.png"
+  },
+  {
+    "id": "the-griefer",
+    "name": "The Griefer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.58K",
+    "hp": "5.16K",
+    "ability": {
+      "name": "World Corruption",
+      "text": "- On enemy entry, corrupt the enemy's ability: every 3rd turn it glitches and hits itself for 200% of The Griefer's attack.\n- Each glitch gives your party +10% damage for the rest of the battle.\n- The first time The Griefer dies he is removed, then returns behind your last card with 50% HP.\n- The Griefer attacks deal 1.3x damage."
+    },
+    "atkScaling": [
+      {
+        "label": "Glitch self-hit",
+        "pct": 200
+      }
+    ],
+    "traits": [
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232458.png"
+  },
+  {
+    "id": "the-needle-hunter",
+    "name": "The Needle Hunter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "75.6K",
+    "hp": "151K",
+    "ability": {
+      "name": "Needle Dance",
+      "text": "- Dodges the first attack from each enemy and counters for 150% damage.\n- Whenever this card attacks, it has a 33% chance to launch a needle through the target, dealing 150% damage to all enemies behind it."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Dodge counter",
+        "pct": 150
+      },
+      {
+        "label": "Needle pierce",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:dodge",
+      "trait:hits-all",
+      "trait:pierce"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232206.png"
+  },
+  {
+    "id": "the-struggler",
+    "name": "The Struggler",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.26K",
+    "hp": "2.51K",
+    "ability": {
+      "name": "Berserker Armor",
+      "text": "- Lose 5% max HP every turn (never below 1), gain 15% attack.\n- Below 20% HP, Berserker Armor: immune to death for 2 turns, 2x attack.\n- After 2 turns, The Struggler dies."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232336.png"
+  },
+  {
+    "id": "thorn-fragment",
+    "name": "Thorn Fragment",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Thorn Fragment",
+      "text": "On entry, gain 10% attack, 10% lifesteal, 10% damage reduction, 10% max HP and a 10% chance to dodge attacks."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:lifesteal",
+      "trait:dodge",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233401.png"
+  },
+  {
+    "id": "thread-demon",
+    "name": "Thread Demon",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.13K",
+    "hp": "2.27K",
+    "ability": {
+      "name": "Blood Demon Art: Threads",
+      "text": "- On entry, place threads on the enemy team.\n- The first card to attack Thread Demon takes reflected damage equal to 20% of its own attack.\n- Threads break after triggering once, but Thread Demon replaces them every 3 turns.\n- On death, the threads deal 10% max HP damage to all enemy cards."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232312.png"
+  },
+  {
+    "id": "threeblade-ronin",
+    "name": "Threeblade Ronin",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "620",
+    "hp": "1.24K",
+    "ability": {
+      "name": "Three Thousand Worlds / Ashura",
+      "text": "- Every 4th attack, Ashura manifests: 3x damage strike.\n\n**Last Stand**\n- The first time Threeblade Ronin would fall, it stays at 1 HP and still attacks for 1 more turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Ashura strike",
+        "pct": 300
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232420.png"
+  },
+  {
+    "id": "thriller-king",
+    "name": "Thriller King",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.92K",
+    "hp": "3.84K",
+    "ability": {
+      "name": "Biokinesis",
+      "text": "- Every turn Thriller King is alive, the active enemy card takes 8% max HP damage (no effect on boss NPCs).\n- On death, Thriller King splits with 70% of his previous stats and can split up to 3 times."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses",
+      "trait:revive"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232429.png"
+  },
+  {
+    "id": "thunder-maniac",
+    "name": "Thunder Maniac",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "85",
+    "hp": "169",
+    "ability": {
+      "name": "Lightning Battle Fiend",
+      "text": "- On entry, attack immediately for 60% damage, unless he is stunned, frozen or asleep.\n- Every 3rd attack has a 50% chance to stun for 1 turn.\n- Whenever he stuns an enemy, he permanently gains 8% attack, stacking up to 5 times."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Entry hit",
+        "pct": 60
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231937.png"
+  },
+  {
+    "id": "thunder-prodigy",
+    "name": "Thunder Prodigy",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "219",
+    "hp": "438",
+    "ability": {
+      "name": "Thunderclap Flash",
+      "text": "- Falls asleep for 1 turn.\n- Next attack deals 4x damage, and damage beyond what kills the target hits the next enemy."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232046.png"
+  },
+  {
+    "id": "tidal-queen",
+    "name": "Tidal Queen",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "15.1K",
+    "hp": "30.2K",
+    "ability": {
+      "name": "Relentless Tide",
+      "text": "- Tidal Queen enters with the flood at level 1 and raises it by 1 every turn (max 4).\n- Each flood level gives her +15% attack and makes enemy cards deal 9% less damage.\n- When the flood is full, she unleashes Tidal Crash instead of attacking: 150% damage to all enemy cards, the active card is silenced for 2 turns, and the flood drops to 2.\n- Tidal Queen deals 30% more damage to Silenced cards."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Tidal Crash",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:hits-all"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232350.png"
+  },
+  {
+    "id": "time-master",
+    "name": "Time Master",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.56K",
+    "hp": "7.12K",
+    "ability": {
+      "name": "Gold Experience Requiem",
+      "text": "- On enemy entry, permanently disables enemy ability.\n- The first lethal hit is reverted, leaving him at 1 HP."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232611.png"
+  },
+  {
+    "id": "time-trickster",
+    "name": "Time Trickster",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.61K",
+    "hp": "7.23K",
+    "ability": {
+      "name": "Z-Drive Resonance",
+      "text": "- On entry, stuns the enemy in front for 1 turn.\n- Once per battle, when he would die, he revives with full HP, permanently gains +70% attack, deals 100% of his max HP to the enemy in front and stuns it for 1 turn."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:once-per-battle",
+      "trait:stun",
+      "trait:revive",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232455.png"
+  },
+  {
+    "id": "titan-hunter",
+    "name": "Titan Hunter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "362",
+    "hp": "723",
+    "ability": {
+      "name": "Ackerman Reflex",
+      "text": "- 35% chance to dodge any attack.\n- When Titan Hunter dodges, next attack deals 40% more damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232302.png"
+  },
+  {
+    "id": "transmutation-circle",
+    "name": "Transmutation Circle",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Transmutation Circle",
+      "text": "Its summons get +50% ATK and max HP and enter with a shield that blocks 1 hit."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support",
+      "trait:shield"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233559.png"
+  },
+  {
+    "id": "trash-kid",
+    "name": "Trash Kid",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "247",
+    "hp": "494",
+    "ability": {
+      "name": "Trash Armament",
+      "text": "- On attack, equip a random trash weapon: Blow Dryer (+40% damage this hit), Nail Gun (pierce to next card for 25%), Amulet (deal 50% damage but block the next incoming attack).\n- Different weapon every attack."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Nail Gun pierce",
+        "pct": 25
+      },
+      {
+        "label": "Amulet hit",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:pierce"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232025.png"
+  },
+  {
+    "id": "tremor-emperor",
+    "name": "Tremor Emperor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.39K",
+    "hp": "4.78K",
+    "ability": {
+      "name": "Worldshaker",
+      "text": "- On entry, quake dealing 10% of their max HP to ALL enemy cards.\n- Every attack sends a shockwave hitting all enemies for 15% of Tremor Emperor's attack.\n- On death, Tremor Emperor stays for 1 extra turn before falling."
+    },
+    "atkScaling": [
+      {
+        "label": "Shockwave (all)",
+        "pct": 15
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:entry-effect",
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232634.png"
+  },
+  {
+    "id": "trickster-ace",
+    "name": "Trickster Ace",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.36K",
+    "hp": "2.73K",
+    "ability": {
+      "name": "Bungee Gum",
+      "text": "- After being attacked, attach Bungee Gum — for 2 turns, all of Trickster Ace's attacks deal 30% bonus damage to that opponent.\n- If the gummed opponent dies, gum transfers to the next card entering."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232551.png"
+  },
+  {
+    "id": "true-hero",
+    "name": "True Hero",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "7",
+    "hp": "13",
+    "ability": {
+      "name": "Justice Crash",
+      "text": "- All cards in your party take 15% less damage while True Hero is alive.\n- When True Hero dies, the next card to enter deals 10% more damage for 2 turns."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:death-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231900.png"
+  },
+  {
+    "id": "turbo-occultist",
+    "name": "Turbo Occultist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "936",
+    "hp": "1.87K",
+    "ability": {
+      "name": "Turbo Granny Acceleration",
+      "text": "- After surviving 2 turns, gain an extra attack per turn at 25% damage.\n- Stacks up to 3 times maximum."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Extra attack",
+        "pct": 25
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232423.png"
+  },
+  {
+    "id": "undying-rogue",
+    "name": "Undying Rogue",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.09K",
+    "hp": "2.19K",
+    "ability": {
+      "name": "Snatch",
+      "text": "When Undying Rogue defeats a card, permanently steal 15% of its stats added to his own."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232530.png"
+  },
+  {
+    "id": "volcano-head",
+    "name": "Volcano Head",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.31K",
+    "hp": "16.6K",
+    "ability": {
+      "name": "Disaster Flames / Coffin of the Iron Mountain",
+      "text": "- Attacks apply burn for 16% of this card's ATK per turn for 2 turns.\n- Every 3 turns, Volcano Head creates a Domain for 2 turns where all attacks from both sides deal 50% more damage.\n- The winner is healed for all damage taken inside the Domain."
+    },
+    "atkScaling": [
+      {
+        "label": "Burn per turn",
+        "pct": 16
+      }
+    ],
+    "traits": [
+      "trait:burn",
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skarmbild_2026-11-09_232659.png"
+  },
+  {
+    "id": "voodoo-doll",
+    "name": "Voodoo Doll",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Cursed Pins",
+      "text": "- Each attack sticks a pin in the target (max 3).\n- Each pin takes away 10% of its ATK and makes it take 10% more damage from your team."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233631.png"
+  },
+  {
+    "id": "warhammer-titan",
+    "name": "Warhammer Titan",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "542",
+    "hp": "1.08K",
+    "ability": {
+      "name": "War Hammer Arsenal",
+      "text": "- Every 3 rounds swap to a new weapon.\n\n**Spear**\n- Pierces the next enemy for 30% damage.\n\n**Axe**\n- 40% more damage against enemies missing HP.\n\n**Hammer**\n- Stuns the enemy for 1 turn (2 turn cooldown)."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:pierce"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232041.png"
+  },
+  {
+    "id": "weirdo-warrior",
+    "name": "Weirdo Warrior",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "539",
+    "hp": "1.07K",
+    "ability": {
+      "name": "Chaotic Arsenal",
+      "text": "Each attack randomly triggers one of three: apply poison for 20% of this card's ATK per turn for 2 turns, stun for 1 turn, or permanently reduce enemy attack by 15%."
+    },
+    "atkScaling": [
+      {
+        "label": "Poison per turn",
+        "pct": 20
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:poison"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232307.png"
+  },
+  {
+    "id": "white-hawk",
+    "name": "White Hawk",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.4K",
+    "hp": "2.8K",
+    "ability": {
+      "name": "Godhand Causality",
+      "text": "- When attacked, the enemy's ability is permanently removed.\n- Every 3 turns, the enemy's next attack misses."
+    },
+    "atkScaling": [],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232346.png"
+  },
+  {
+    "id": "white-lotus",
+    "name": "White Lotus",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1K",
+    "hp": "2K",
+    "ability": {
+      "name": "Crystal Ice Mirrors",
+      "text": "- On entry, create ice mirrors: 35% chance every turn to dodge the attack.\n- Attacks deal 1.5x damage to frozen targets.\n- Every 3 turns, trap enemy in ice mirrors: freeze for 1 turn and deal 2x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge",
+      "trait:freeze",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232328.png"
+  },
+  {
+    "id": "wildheart-hunter",
+    "name": "Wildheart Hunter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "130",
+    "hp": "259",
+    "ability": {
+      "name": "Jajanken – Rock",
+      "text": "- Below 30% HP, next attack deals 2.2x damage.\n- Wildheart Hunter dies at end of turn."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Low-HP hit",
+        "pct": 220
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231946.png"
+  },
+  {
+    "id": "wind-shinobi",
+    "name": "Wind Shinobi",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "154",
+    "hp": "308",
+    "ability": {
+      "name": "Wind Scythe Jutsu",
+      "text": "Every attack hits the active card AND one card in the enemy lineup for 20% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Lineup splash hit",
+        "pct": 20
+      }
+    ],
+    "traits": [],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232003.png"
+  },
+  {
+    "id": "worthy-fighter",
+    "name": "Worthy Fighter",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "1.33K",
+    "hp": "2.67K",
+    "ability": {
+      "name": "Compass Needle / Annihilation Type",
+      "text": "- Worthy Fighter gains 8% stats every time he takes a hit.\n- Below 30% HP, he regenerates 5% HP per turn.\n- His attacks have a 20% chance to become a Disorder attack that deals 1.5x damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232332.png"
+  },
+  {
+    "id": "wraith-mask-fragment",
+    "name": "Wraith Mask Fragment",
+    "type": "support",
+    "rarity": "TODO",
+    "ability": {
+      "name": "Wraith Mask Fragment",
+      "text": "Below 50% HP, gain +75% attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:support"
+    ],
+    "screenshot": "Supports/Skarmbild_2026-11-09_233124.png"
+  },
+  {
+    "id": "yellow-flash",
+    "name": "Yellow Flash",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "250",
+    "hp": "499",
+    "ability": {
+      "name": "Flying Raijin: Yellow Flash",
+      "text": "- On entry, mark the enemy with a Flying Raijin seal.\n- Yellow Flash dodges an attack from a marked enemy every 3 turns and counters for 60% damage.\n- Every 3rd attack becomes a Flying Raijin Rasengan dealing 2x damage which marks the enemy with a seal."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232120.png"
+  },
+  {
+    "id": "yo-yo-kid",
+    "name": "Yo-Yo Kid",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "235",
+    "hp": "469",
+    "ability": {
+      "name": "Godspeed",
+      "text": "- On entry, attack once immediately.\n- Attacks have a 30% chance to stun for 1 turn.\n- Every 3 turns, Lightning Palm: 1.5x damage with guaranteed stun."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232108.png"
+  },
+  {
+    "id": "yordle-inventor",
+    "name": "Yordle Inventor",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "3.81K",
+    "hp": "7.63K",
+    "ability": {
+      "name": "H-28G Evolution Turret",
+      "text": "- On entry, deploys 2 turrets, then 1 more every 2 turns.\n- Each turret gives him +25% attack.\n- After each of his attacks, every turret shoots the enemy in front for 25% of his attack.\n- When he's hit, there's a 40% chance a turret takes the hit instead and is destroyed."
+    },
+    "atkScaling": [
+      {
+        "label": "Turret shot (each)",
+        "pct": 25
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_232502.png"
+  },
+  {
+    "id": "young-shadow-heir",
+    "name": "Young Shadow Heir",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "56",
+    "hp": "111",
+    "ability": {
+      "name": "Fireball Jutsu",
+      "text": "50% chance on attack to burn the enemy for 16% of this card's ATK per turn for 2 turns."
+    },
+    "atkScaling": [
+      {
+        "label": "Burn per turn",
+        "pct": 16
+      }
+    ],
+    "traits": [
+      "trait:burn"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231931.png"
+  },
+  {
+    "id": "young-spirit-vessel",
+    "name": "Young Spirit Vessel",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "44",
+    "hp": "88",
+    "ability": {
+      "name": "Shadow Clone Dodge",
+      "text": "Young Spirit Vessel dodges the first hit aimed at it."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:dodge"
+    ],
+    "screenshot": "Battles/Skrmbillede_2026-11-09_231929.png"
   }
 ]
