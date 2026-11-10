@@ -444,9 +444,118 @@
     resetBtn.addEventListener('click', function () {
       f.q.value = ''; f.type.value = ''; f.origin.value = ''; f.trait.value = ''; f.sort.value = 'name'; f.mainonly.checked = false;
       chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      ['type', 'origin', 'trait', 'sort'].forEach(function (k) { f[k].dispatchEvent(new Event('dd:sync')); });
       apply();
     });
     if (p.toString()) apply(true);
+  });
+
+  /* ---------------- Styled dropdowns ----------------
+     Each <select data-dd> stays in the page (and keeps working without JS);
+     with JS it is hidden and replaced by a button + list styled like the site. */
+  var openDd = null;
+  function closeDd(focusBtn) {
+    if (!openDd) return;
+    openDd.menu.hidden = true;
+    openDd.btn.setAttribute('aria-expanded', 'false');
+    if (focusBtn) openDd.btn.focus();
+    openDd = null;
+  }
+  $$('select[data-dd]').forEach(function (sel, n) {
+    var wrap = doc.createElement('span');
+    wrap.className = 'dd';
+    var btn = doc.createElement('button');
+    btn.type = 'button';
+    btn.className = 'dd__btn';
+    btn.setAttribute('aria-haspopup', 'listbox');
+    btn.setAttribute('aria-expanded', 'false');
+    var label = sel.closest('label') && sel.closest('label').querySelector('span');
+    if (label) btn.setAttribute('aria-label', label.textContent + ': ' + sel.options[sel.selectedIndex].text);
+    var menu = doc.createElement('ul');
+    menu.className = 'dd__menu';
+    menu.setAttribute('role', 'listbox');
+    menu.id = 'dd-menu-' + n;
+    menu.hidden = true;
+    btn.setAttribute('aria-controls', menu.id);
+    var items = Array.prototype.map.call(sel.options, function (o, i) {
+      var li = doc.createElement('li');
+      li.setAttribute('role', 'option');
+      li.className = 'dd__item';
+      li.id = menu.id + '-' + i;
+      li.setAttribute('data-value', o.value);
+      li.innerHTML = '<span>' + esc(o.text) + '</span>' + iconSvg('check');
+      menu.appendChild(li);
+      return li;
+    });
+    var active = 0;
+    function sync() {
+      btn.innerHTML = '<span class="dd__value">' + esc(sel.options[sel.selectedIndex].text) + '</span>' + iconSvg('chev-down');
+      if (label) btn.setAttribute('aria-label', label.textContent + ': ' + sel.options[sel.selectedIndex].text);
+      items.forEach(function (li, i) { li.setAttribute('aria-selected', i === sel.selectedIndex ? 'true' : 'false'); });
+    }
+    function highlight(i) {
+      active = (i + items.length) % items.length;
+      items.forEach(function (li, j) { li.classList.toggle('is-active', j === active); });
+      menu.setAttribute('aria-activedescendant', items[active].id);
+      items[active].scrollIntoView({ block: 'nearest' });
+    }
+    function choose(i) {
+      if (sel.selectedIndex !== i) {
+        sel.selectedIndex = i;
+        sel.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      sync();
+      closeDd(true);
+    }
+    function open() {
+      if (openDd && openDd.menu !== menu) closeDd(false);
+      menu.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      openDd = { menu: menu, btn: btn };
+      highlight(sel.selectedIndex);
+      menu.focus();
+    }
+    menu.tabIndex = -1;
+    btn.addEventListener('click', function () { if (menu.hidden) open(); else closeDd(true); });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); open(); }
+    });
+    menu.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); highlight(active + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(active - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); highlight(0); }
+      else if (e.key === 'End') { e.preventDefault(); highlight(items.length - 1); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(active); }
+      else if (e.key === 'Escape' || e.key === 'Tab') { e.preventDefault(); closeDd(true); }
+      else if (e.key.length === 1) {
+        var k = e.key.toLowerCase();
+        for (var j = 1; j <= items.length; j++) {
+          var idx = (active + j) % items.length;
+          if (items[idx].textContent.trim().toLowerCase().indexOf(k) === 0) { highlight(idx); break; }
+        }
+      }
+    });
+    menu.addEventListener('click', function (e) {
+      var li = e.target.closest('.dd__item');
+      if (li) choose(items.indexOf(li));
+    });
+    menu.addEventListener('mousemove', function (e) {
+      var li = e.target.closest('.dd__item');
+      if (li && items.indexOf(li) !== active) highlight(items.indexOf(li));
+    });
+    // Filters may change the select from code (e.g. Clear filters).
+    sel.addEventListener('change', sync);
+    sel.addEventListener('dd:sync', sync);
+    sel.classList.add('dd__native');
+    sel.tabIndex = -1;
+    sel.setAttribute('aria-hidden', 'true');
+    sel.parentNode.insertBefore(wrap, sel.nextSibling);
+    wrap.appendChild(btn);
+    wrap.appendChild(menu);
+    sync();
+  });
+  doc.addEventListener('click', function (e) {
+    if (openDd && !e.target.closest('.dd')) closeDd(false);
   });
 
   /* ---------------- Search ---------------- */

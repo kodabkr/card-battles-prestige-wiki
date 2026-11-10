@@ -1,21 +1,113 @@
 [
-  { "_about": "Ability roles: the wiki's own labels for what a card's ability mainly does. They are not shown like this in the game. Cards list them in 'roles' (first one = main role). Used by the Card Database filters." },
-  { "id": "nuker", "name": "Nuker", "order": 1, "summary": "Lands very big single hits or bursts, well above a normal attack." },
-  { "id": "area-damage", "name": "Area damage", "order": 2, "summary": "Hits several or all enemies at once: splash, pierce, hits-all." },
-  { "id": "multi-hit", "name": "Multi-hit", "order": 3, "summary": "Attacks more than once per turn, or gets extra or follow-up attacks." },
-  { "id": "self-scaling", "name": "Self-scaling", "order": 4, "summary": "Grows its own stats during the battle: stacking or permanent ATK/HP gains." },
-  { "id": "team-support", "name": "Team support", "order": 5, "summary": "Mainly helps allies: buffs, shields or effects for the rest of the party." },
-  { "id": "healer", "name": "Healer", "order": 6, "summary": "Restores HP to itself or allies, including lifesteal." },
-  { "id": "tank", "name": "Tank", "order": 7, "summary": "Hard to kill: damage reduction, shields, blocks or soaking hits for the team." },
-  { "id": "crowd-control", "name": "Crowd control", "order": 8, "summary": "Stops enemies acting: stuns, freezes, silences, disables or skipped turns." },
-  { "id": "debuffer", "name": "Debuffer", "order": 9, "summary": "Weakens enemies: lowers their stats, makes them take more damage, stops healing." },
-  { "id": "damage-over-time", "name": "Damage over time", "order": 10, "summary": "Burn, bleed, poison or other damage dealt at the end of turns." },
-  { "id": "counter", "name": "Counter", "order": 11, "summary": "Strikes back or reflects damage when it or its allies are attacked." },
-  { "id": "evasion", "name": "Evasion", "order": 12, "summary": "Dodges attacks or makes enemies miss." },
-  { "id": "cheat-death", "name": "Cheat death", "order": 13, "summary": "Revives, survives a lethal hit, or comes back after dying." },
-  { "id": "execute", "name": "Execute", "order": 14, "summary": "Instantly kills or finishes off weakened enemies." },
-  { "id": "summoner", "name": "Summoner", "order": 15, "summary": "Creates extra units or allies on the field." },
-  { "id": "death-effect", "name": "Death effect", "order": 16, "summary": "Does something big when it is knocked out." },
-  { "id": "entry-effect", "name": "Entry effect", "order": 17, "summary": "Does something the moment it enters battle." },
-  { "id": "bench", "name": "Works from the bench", "order": 18, "summary": "Its effect works while it is on the bench or anywhere in the party." }
+  {
+    "_about": "Ability roles: the wiki's own labels for what a card's ability mainly does. They are not shown like this in the game. Cards list them in 'roles' (first one = main role). Used by the Card Database filters."
+  },
+  {
+    "id": "nuker",
+    "name": "Nuker",
+    "order": 1,
+    "summary": "Lands very big single hits or bursts, well above a normal attack."
+  },
+  {
+    "id": "splash-damage",
+    "name": "Splash Damage",
+    "order": 2,
+    "summary": "Hits several or all enemies at once: splash, pierce, hits-all."
+  },
+  {
+    "id": "multi-hit",
+    "name": "Multi-hit",
+    "order": 3,
+    "summary": "Attacks more than once per turn, or gets extra or follow-up attacks."
+  },
+  {
+    "id": "self-scaling",
+    "name": "Self-scaling",
+    "order": 4,
+    "summary": "Grows its own stats during the battle: stacking or permanent ATK/HP gains."
+  },
+  {
+    "id": "team-support",
+    "name": "Team support",
+    "order": 5,
+    "summary": "Mainly helps allies: buffs, shields or effects for the rest of the party."
+  },
+  {
+    "id": "healer",
+    "name": "Healer",
+    "order": 6,
+    "summary": "Restores HP to itself or allies, including lifesteal."
+  },
+  {
+    "id": "tank",
+    "name": "Tank",
+    "order": 7,
+    "summary": "Hard to kill: damage reduction, shields, blocks or soaking hits for the team."
+  },
+  {
+    "id": "crowd-control",
+    "name": "Crowd control",
+    "order": 8,
+    "summary": "Stops enemies acting: stuns, freezes, silences, disables or skipped turns."
+  },
+  {
+    "id": "debuffer",
+    "name": "Debuffer",
+    "order": 9,
+    "summary": "Weakens enemies: lowers their stats, makes them take more damage, stops healing."
+  },
+  {
+    "id": "damage-over-time",
+    "name": "Damage over time",
+    "order": 10,
+    "summary": "Burn, bleed, poison or other damage dealt at the end of turns."
+  },
+  {
+    "id": "counter",
+    "name": "Counter",
+    "order": 11,
+    "summary": "Strikes back or reflects damage when it or its allies are attacked."
+  },
+  {
+    "id": "evasion",
+    "name": "Evasion",
+    "order": 12,
+    "summary": "Dodges attacks or makes enemies miss."
+  },
+  {
+    "id": "cheat-death",
+    "name": "Cheat death",
+    "order": 13,
+    "summary": "Revives, survives a lethal hit, or comes back after dying."
+  },
+  {
+    "id": "execute",
+    "name": "Execute",
+    "order": 14,
+    "summary": "Instantly kills or finishes off weakened enemies."
+  },
+  {
+    "id": "summoner",
+    "name": "Summoner",
+    "order": 15,
+    "summary": "Creates extra units or allies on the field."
+  },
+  {
+    "id": "death-effect",
+    "name": "Death effect",
+    "order": 16,
+    "summary": "Does something big when it is knocked out."
+  },
+  {
+    "id": "entry-effect",
+    "name": "Entry effect",
+    "order": 17,
+    "summary": "Does something the moment it enters battle."
+  },
+  {
+    "id": "bench",
+    "name": "Works from the bench",
+    "order": 18,
+    "summary": "Its effect works while it is on the bench or anywhere in the party."
+  }
 ]

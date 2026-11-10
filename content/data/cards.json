@@ -125,7 +125,7 @@
     "screenshot": "Battles/Skarmbild_2026-11-09_231951.png",
     "roles": [
       "damage-over-time",
-      "area-damage",
+      "splash-damage",
       "counter",
       "crowd-control"
     ]
@@ -237,7 +237,7 @@
     "roles": [
       "self-scaling",
       "nuker",
-      "area-damage",
+      "splash-damage",
       "cheat-death"
     ]
   },
@@ -278,7 +278,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_232425.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "healer"
     ]
   },
@@ -403,7 +403,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232713.png",
     "roles": [
       "team-support",
-      "area-damage",
+      "splash-damage",
       "bench"
     ]
   },
@@ -539,7 +539,7 @@
     "roles": [
       "damage-over-time",
       "healer",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -703,7 +703,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232330.png",
     "roles": [
       "debuffer",
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -866,7 +866,7 @@
     "roles": [
       "tank",
       "healer",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -887,7 +887,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232101.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -907,7 +907,7 @@
     ],
     "screenshot": "Supports/Skarmbild_2026-11-09_233239.png",
     "roles": [
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -1191,7 +1191,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232313.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "tank",
       "entry-effect"
     ]
@@ -1237,7 +1237,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_232532.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "healer",
       "damage-over-time"
     ]
@@ -1300,7 +1300,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232442.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "healer",
       "cheat-death"
     ]
@@ -1454,7 +1454,7 @@
     "origin": "weather",
     "roles": [
       "self-scaling",
-      "area-damage",
+      "splash-damage",
       "healer",
       "bench"
     ]
@@ -1528,7 +1528,7 @@
       "evasion",
       "counter",
       "tank",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -1582,7 +1582,7 @@
     "roles": [
       "self-scaling",
       "nuker",
-      "area-damage",
+      "splash-damage",
       "healer"
     ]
   },
@@ -1746,7 +1746,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232438.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "counter",
       "healer"
     ]
@@ -1773,7 +1773,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232401.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -1879,7 +1879,7 @@
       "crowd-control",
       "self-scaling",
       "death-effect",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -1977,7 +1977,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_231930.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "damage-over-time",
       "team-support",
       "entry-effect"
@@ -2195,7 +2195,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232350.png",
     "roles": [
       "self-scaling",
-      "area-damage",
+      "splash-damage",
       "tank"
     ]
   },
@@ -2331,7 +2331,7 @@
     "roles": [
       "evasion",
       "multi-hit",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -2378,7 +2378,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232031.png",
     "roles": [
       "nuker",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -2404,7 +2404,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232519.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "self-scaling",
       "healer"
     ]
@@ -2433,7 +2433,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232515.png",
     "roles": [
       "crowd-control",
-      "area-damage",
+      "splash-damage",
       "multi-hit"
     ]
   },
@@ -2623,7 +2623,7 @@
     "screenshot": "Battles/Skarmbild_2026-11-09_232324.png",
     "roles": [
       "nuker",
-      "area-damage",
+      "splash-damage",
       "self-scaling",
       "healer"
     ]
@@ -2849,7 +2849,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232338.png",
     "roles": [
       "summoner",
-      "area-damage",
+      "splash-damage",
       "tank"
     ]
   },
@@ -3010,7 +3010,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232323.png",
     "roles": [
       "nuker",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -3129,7 +3129,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232257.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "evasion",
       "entry-effect"
     ]
@@ -3159,7 +3159,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232028.png",
     "roles": [
       "crowd-control",
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -3263,7 +3263,7 @@
     "roles": [
       "nuker",
       "healer",
-      "area-damage",
+      "splash-damage",
       "self-scaling"
     ]
   },
@@ -3335,7 +3335,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232228.png",
     "roles": [
       "nuker",
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -3395,7 +3395,7 @@
     "roles": [
       "cheat-death",
       "debuffer",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -3629,7 +3629,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232158.png",
     "roles": [
       "healer",
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -3756,7 +3756,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_231951.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "entry-effect"
     ]
   },
@@ -3815,7 +3815,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_231837.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "nuker",
       "entry-effect",
       "death-effect"
@@ -3860,7 +3860,7 @@
     ],
     "screenshot": "Supports/Skarmbild_2026-11-09_233805.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "nuker"
     ]
   },
@@ -3916,7 +3916,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232606.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "entry-effect",
       "death-effect"
     ]
@@ -3973,7 +3973,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232524.png",
     "roles": [
       "multi-hit",
-      "area-damage",
+      "splash-damage",
       "cheat-death"
     ]
   },
@@ -4057,7 +4057,7 @@
     ],
     "screenshot": "Supports/Skarmbild_2026-11-09_233536.png",
     "roles": [
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -4108,7 +4108,7 @@
     "roles": [
       "damage-over-time",
       "death-effect",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -4355,7 +4355,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_232222.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "execute"
     ]
   },
@@ -4470,7 +4470,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_232542.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "self-scaling",
       "cheat-death",
       "entry-effect"
@@ -4625,7 +4625,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232206.png",
     "roles": [
       "healer",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -4735,7 +4735,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232450.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "multi-hit",
       "crowd-control",
       "summoner"
@@ -4867,7 +4867,7 @@
     "roles": [
       "healer",
       "self-scaling",
-      "area-damage",
+      "splash-damage",
       "cheat-death"
     ]
   },
@@ -4990,7 +4990,7 @@
     "screenshot": "Supports/Skarmbild_2026-11-09_233524.png",
     "roles": [
       "damage-over-time",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -5117,7 +5117,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232615.png",
     "roles": [
       "debuffer",
-      "area-damage",
+      "splash-damage",
       "healer",
       "entry-effect"
     ]
@@ -5250,7 +5250,7 @@
     ],
     "screenshot": "Supports/Skarmbild_2026-11-09_233349.png",
     "roles": [
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -5329,7 +5329,7 @@
     "roles": [
       "evasion",
       "counter",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -5395,7 +5395,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232312.png",
     "roles": [
       "counter",
-      "area-damage",
+      "splash-damage",
       "entry-effect",
       "death-effect"
     ]
@@ -5492,7 +5492,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232046.png",
     "roles": [
       "nuker",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -5518,7 +5518,7 @@
     ],
     "screenshot": "Battles/Skarmbild_2026-11-09_232350.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "self-scaling",
       "debuffer",
       "crowd-control"
@@ -5637,7 +5637,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232025.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "tank"
     ]
   },
@@ -5665,7 +5665,7 @@
     ],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232634.png",
     "roles": [
-      "area-damage",
+      "splash-damage",
       "entry-effect",
       "cheat-death"
     ]
@@ -5816,7 +5816,7 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_232041.png",
     "roles": [
       "crowd-control",
-      "area-damage"
+      "splash-damage"
     ]
   },
   {
@@ -5936,7 +5936,7 @@
     "traits": [],
     "screenshot": "Battles/Skrmbillede_2026-11-09_232003.png",
     "roles": [
-      "area-damage"
+      "splash-damage"
     ]
   },
   {

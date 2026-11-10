@@ -271,7 +271,8 @@ export function gameCard(e, ctx, opts = {}) {
 </span>
 </span>
 </button>
-<p class="gcard-meta">${isHome(e, ctx) ? `<span>${typeLabel}</span>` : `<a class="gcard-meta__link" href="${e.url}">${nameHtml(e)}</a>`}<span class="gcard-meta__src">${srcEnt ? entityLink(srcEnt.key, ctx) : src ? rich(src, ctx) : ''}</span></p>
+${isHome(e, ctx) ? '' : `<p class="gcard-meta"><span class="gcard-meta__name">${nameHtml(e)}</span><span class="gcard-meta__src">${srcEnt ? entityLink(srcEnt.key, ctx) : src ? rich(src, ctx) : ''}</span></p>
+<a class="gcard-open" href="${e.url}">Open card profile${icon('arrow-right')}</a>`}
 </div>`;
 }
 
@@ -598,10 +599,10 @@ function cardBrowser(args, ctx) {
   return `<div class="browser" data-browser>
 <div class="browser__bar">
 <label class="browser__search">${icon('search')}<input type="search" data-f="q" placeholder="Search name or ability…" autocomplete="off" spellcheck="false" aria-label="Search cards by name or ability"></label>
-<label class="browser__select"><span>Type</span><select data-f="type">${opt('', 'All')}${opt('battle', 'Battle')}${opt('support', 'Support')}</select></label>
-<label class="browser__select"><span>Origin</span><select data-f="origin">${opt('', 'All')}${origins(ctx).map((o) => opt(o.id, o.name)).join('')}${opt('unknown', 'Not known yet')}</select></label>
-<label class="browser__select"><span>Trait</span><select data-f="trait">${opt('', 'Any')}${traits.map((t) => opt(t.id, t.name)).join('')}</select></label>
-<label class="browser__select"><span>Sort</span><select data-f="sort">${opt('name', 'Name A–Z')}${opt('dmg-desc', 'DMG: high to low')}${opt('dmg-asc', 'DMG: low to high')}${opt('hp-desc', 'HP: high to low')}${opt('rarity-desc', 'Rarest first')}</select></label>
+<label class="browser__select"><span>Type</span><select data-dd data-f="type">${opt('', 'All')}${opt('battle', 'Battle')}${opt('support', 'Support')}</select></label>
+<label class="browser__select"><span>Origin</span><select data-dd data-f="origin">${opt('', 'All')}${origins(ctx).map((o) => opt(o.id, o.name)).join('')}${opt('unknown', 'Not known yet')}</select></label>
+<label class="browser__select"><span>Trait</span><select data-dd data-f="trait">${opt('', 'Any')}${traits.map((t) => opt(t.id, t.name)).join('')}</select></label>
+<label class="browser__select"><span>Sort</span><select data-dd data-f="sort">${opt('name', 'Name A–Z')}${opt('dmg-desc', 'DMG: high to low')}${opt('dmg-asc', 'DMG: low to high')}${opt('hp-desc', 'HP: high to low')}${opt('rarity-desc', 'Rarest first')}</select></label>
 </div>
 <div class="browser__roles" role="group" aria-label="Filter by role">
 <span class="browser__label">Roles</span>

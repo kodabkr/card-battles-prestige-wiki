@@ -3,7 +3,7 @@ title: Card Database
 description: Every battle and support card. Search by name or ability, filter by role, origin or trait, and sort by DMG.
 icon: cards
 ---
-Search and filter every card below. Each card has its own profile page with its ability and a table of all its [[Borders|variants]]. Press a card to flip it, or open its profile from the name under it.
+Search and filter every card below. Each card has its own profile page with its ability and a table of all its [[Borders|variants]]. Press a card to flip it and read its ability, or use **Open card profile** under it to see everything about it.
 
 {{card-browser}}
 
