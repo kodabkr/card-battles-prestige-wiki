@@ -98,31 +98,41 @@ What we know:
 ### Enemy stats in the Prestige Tower
 **Every enemy card on a floor has exactly the same DMG and HP. It depends only on the floor number.** The enemy card's own base stats and its variant (Prismatic, Shiny Cosmic and so on) do **not** matter in the tower. Enemy cards still have their own abilities. Assume any "% of ATK" in an enemy's ability uses that floor's DMG.
 
-Measured in game:
+Measured in game (stats change every single floor):
 
-| Floor | Enemy DMG | Enemy HP | HP ÷ DMG |
+| Floor | Enemy DMG | Enemy HP | DMG ÷ HP |
 |---|---|---|---|
-| 100 | 2,660 | 4,430 | 1.665 |
-| 1,000 | 34,000 | 56,600 | 1.665 |
-| 2,000 | 641,000 | 1,280,000 | 1.997 |
-| 3,000 | 12,900,000 | 25,900,000 | 2.008 |
-| 3,800 | 77,700,000 | 155,000,000 | 1.995 |
+| 100 | 2,660 | 4,430 | 0.60 |
+| 1,000 | 34,000 | 56,600 | 0.60 |
+| 1,250 | 53,700 | 107,000 | 0.50 |
+| 1,500 | 132,000 | 264,000 | 0.50 |
+| 1,750 | 262,000 | 525,000 | 0.50 |
+| 2,000 | 641,000 | 1,280,000 | 0.50 |
+| 3,000 | 12,900,000 | 25,900,000 | 0.50 |
+| 3,800 | 77,700,000 | 155,000,000 | 0.50 |
 
-Shape of the data:
-- **DMG grows exponentially**, about **1.33–1.35x every 100 floors up to floor 3,000** (1.327x for floors 100–1,000, 1.341x for 1,000–2,000, 1.350x for 2,000–3,000), then **slows to about 1.25x every 100 floors after floor 3,000**.
-- **HP is 5/3 of DMG up to at least floor 1,000, and 2x DMG from floor 2,000 on.** Somewhere between floors 1,000 and 2,000 enemy HP gets an extra x1.2. Where exactly is not known yet.
-- No single smooth formula fits all five points: the best ones are off by up to 20%.
+What the data shows:
+- **HP is the steady number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to at least floor 1,000, and **0.5 × HP** from floor 1,250 on. Exactly where between 1,001 and 1,250 it switches is not known.
+- **HP growth per 100 floors, between measured floors:**
+
+  | Floors | HP growth per 100 floors |
+  |---|---|
+  | 100 → 1,000 | x1.327 |
+  | 1,000 → 1,250 | x1.290 |
+  | 1,250 → 1,500 | x1.435 |
+  | 1,500 → 1,750 | x1.317 |
+  | 1,750 → 2,000 | x1.428 |
+  | 2,000 → 3,000 | x1.351 |
+  | 3,000 → 3,800 | x1.251 |
+
+- **The stretches ending on a multiple of 500 grow faster.** That suggests a likely (not yet confirmed) pattern: steady growth of about x1.29–1.32 per 100 floors, plus an **extra jump of about x1.25 at every multiple of 500 floors**, with slower steady growth after floor 3,000.
+- No single smooth formula fits: simple exponential fits are off by up to 43%.
 
 **Use this model** (call it `enemyStats(floor)`):
-1. **DMG:** interpolate log-linearly between the measured floors above. It is exact at those floors and smooth in between. Below floor 100, continue the 100–1,000 rate. Above floor 3,800, continue the 3,000–3,800 rate (x1.002247 per floor).
-   In formula form: `DMG(f) = D1 × (D2 / D1) ^ ((f − f1) / (f2 − f1))` between two measured floors f1 < f ≤ f2.
-2. **HP:** interpolate the measured HP the same way. Below floor 1,000 use DMG × 5/3; above floor 3,800 use DMG × 2.
-3. Keep the measured table in a config file so new measurements make the model more accurate without code changes.
-
-A simpler approximation, for reading only (within about 9% of every measured floor):
-- Floors up to 3,000: `DMG ≈ 2,660 × 1.002931^(floor − 100)`
-- Floors above 3,000: `DMG ≈ 12,900,000 × 1.002247^(floor − 3,000)`
-- `HP ≈ DMG × 5/3` (up to floor 1,000) or `DMG × 2` (from about floor 2,000)
+1. **HP:** interpolate log-linearly between the measured floors above: `HP(f) = H1 × (H2 / H1) ^ ((f − f1) / (f2 − f1))` for measured floors f1 < f ≤ f2. It is exact at every measured floor. Below floor 100, continue the 100–1,000 rate. Above floor 3,800, continue the 3,000–3,800 rate (x1.002241 per floor).
+2. **DMG:** 0.6 × HP up to floor 1,000, 0.5 × HP from floor 1,250. Between 1,001 and 1,249, use the measured switch point once the user provides it (until then, switch at 1,001 and flag it).
+3. Keep the measured table and the DMG ratio in a config file, so new measurements improve the model without code changes.
+4. **Optional, once confirmed:** if the user confirms the jump at every 500th floor, switch to "steady per-floor growth plus a jump at each multiple of 500" fitted to the table. That is more accurate between measured floors than plain interpolation.
 
 ---
 
@@ -148,7 +158,7 @@ These words appear in ability texts. Implement each one once and reuse it. Where
 
 These are not known yet. Build them as configuration, mark them clearly, and ask the user for each one before relying on results:
 
-1. **More enemy stat measurements** to tighten the model in Part 3: in particular a few floors between 1,000 and 2,000 (to find where HP jumps from 5/3 to 2x DMG), floors past 3,800, and two floors in the same hundred (for example 101 and 199) to see whether stats change every floor or only every 100 floors.
+1. **More enemy stat measurements** to tighten the model in Part 3: floors just before and after a multiple of 500 (for example 1,499 and 1,500, or 2,499 and 2,500) to confirm the jump; a few floors between 1,000 and 1,250 to find where DMG switches from 0.6 to 0.5 of HP; and floors past 3,800.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
 4. **Turn order in detail**: after the player's first attack, do sides alternate one action each? When does a new card enter, and does it act immediately?
@@ -174,18 +184,6 @@ The full space is huge: {{battleCount}} battle cards make about {{fourCardTeams}
 5. **Measure strength as the highest floor cleared.** For each finalist, find the highest Prestige Tower floor it clears at least 90% of the time, at Base variant and at the user's chosen variants and Awakening levels.
 
 The search space per team is: 4 battle cards (order matters), 4 supports (one per slot, copies allowed), each card's variant and Awakening level.
-
-### A real team, as a starting point
-The user currently runs this team. Use it as a baseline to beat, and as an example of the kind of idea to look for:
-
-| Slot | Battle card | Support | Role in the team |
-|---|---|---|---|
-| 1 | Noble Companion | Sorceress's Sorrow | Fodder: +20% damage to the whole party on its own, and its support curses and poisons the enemy when it dies |
-| 2 | Noble Companion | Sorceress's Sorrow | Same again: the two Nobles stack to +40% party damage |
-| 3 | KO King | (a 1-in-120M support) | Main damage |
-| 4 | (a 1-in-130Qa card) | (a 1-in-9B support) | Main damage |
-
-The idea: cards that do little damage themselves can still buff the team and use their support slot to debuff the enemy before they fall. Look for more patterns like this, such as cheap fodder with strong death-trigger supports, or stacking party-wide buffs from copies.
 
 Look especially for **cheese**: teams that win because of a rule interaction rather than big stats. Examples: permanent stuns or silences, immunity loops, revive chains, reflected damage that scales with enemy stats, abilities that ignore enemy scaling ("not a boss's", fixed HP percentages), and anything that keeps working as enemy HP grows.
 
