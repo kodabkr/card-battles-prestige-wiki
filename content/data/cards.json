@@ -96,6 +96,38 @@
     ]
   },
   {
+    "id": "apex-of-curses",
+    "name": "Apex of Curses",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "4.3K",
+    "hp": "8.6K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "2.42M",
+        "dmg": "1.21M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "King's Feast",
+      "text": "**Feast**\n- Its attacks heal it for 5% of the damage dealt.\n- Healing past full HP permanently raises its max HP.\n- Whenever its max HP grows, its attack grows by the same percentage.\n\n**Wheel**\n- The Wheel spins once each time it attacks or is hit, and 3 times when it kills a card.\n- Each spin permanently raises its max HP by 5% and its lifesteal by 2%.\n\n**Dread**\n- Every enemy card that comes in front of it is Stunned for 1 turn and Frightened for 3 turns.\n- It deals 50% more damage to Frightened cards, and Feast heals twice as much from them.\n\n**Divine General**\n- The first time it would die, it returns with 10% of its max HP for every spin of the Wheel (up to 300%), and the Wheel spins 3 times."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:lifesteal",
+      "trait:stun"
+    ],
+    "roles": [
+      "self-scaling",
+      "healer",
+      "crowd-control",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_apex-of-curses.webp"
+  },
+  {
     "id": "architect-of-agony",
     "name": "Architect of Agony",
     "type": "battle",
@@ -248,18 +280,25 @@
     "rarity": "TODO",
     "dmg": "69.4K",
     "hp": "138K",
+    "seenStats": [
+      {
+        "hp": "39.1M",
+        "dmg": "19.5M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Nine Titans",
-      "text": "**Nine Titans**\n- Every other Titan in your party also gives him its ability (copies of the same Titan count once).\n\n**Titan Devour**\n- When a Titan in your party dies, he devours it.\n- He keeps its ability for the rest of the battle, and his ATK and max HP permanently double.\n\n**Attack Titan**\n- His attacks deal 25% more damage, plus 25% more for every Titan ability he holds."
+      "text": "**Nine Titans**\n- Every other Titan in your party also gives him its ability (copies of the same Titan count once).\n\n**Titan Devour**\n- When a Titan in your party dies, he devours it.\n- He keeps its ability for the rest of the battle, and his own ATK and max HP permanently double.\n\n**Attack Titan**\n- His attacks deal 25% more damage, plus 25% more for every Titan ability he holds."
     },
     "atkScaling": [],
     "traits": [
       "trait:one-per-party"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_231946.png",
     "roles": [
       "self-scaling"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_attack-titan.webp"
   },
   {
     "id": "axe-prodigy",
@@ -845,6 +884,68 @@
     "screenshot": "Battles/Skrmbillede_2026-11-09_231956.png"
   },
   {
+    "id": "chrome-bruiser",
+    "name": "Chrome Bruiser",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "57.6K",
+    "hp": "115K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "32.4M",
+        "dmg": "16.2M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Cyber Rage",
+      "text": "- Every hit Chrome Bruiser takes, and every time he heals, gives him 1 Rage (max 5).\n- Each Rage gives him 300% more attack.\n- While he has 3 or more Rage he takes 40% less damage.\n- At 5 Rage his next attack is Piston Smash: 3 hits for 120% damage each, then his Rage drops to 0."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Piston Smash hit",
+        "pct": 120
+      }
+    ],
+    "traits": [
+      "trait:heal"
+    ],
+    "roles": [
+      "self-scaling",
+      "tank",
+      "multi-hit"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_chrome-bruiser.webp"
+  },
+  {
+    "id": "chrome-runner",
+    "name": "Chrome Runner",
+    "type": "battle",
+    "rarity": 8000000000,
+    "dmg": "11.9K",
+    "hp": "23.9K",
+    "ability": {
+      "name": "Sandevistan",
+      "text": "**Sandevistan**\n- Every 3 turns, starting with his first, his attack hits 4 times and the next enemy attack on him misses.\n- Extra attacks he gets do the same.\n\n**Chrome Body**\n- His other attacks hit 2 times for 60% damage each.\n\n**Cyberpsychosis**\n- Every hit he lands permanently gives him +10% of his starting ATK (max +300%).\n- Once he has gained +100% ATK or more, at the end of each of his turns he loses 5% of his max HP for every +50% ATK he has gained."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Chrome Body hit",
+        "pct": 60
+      }
+    ],
+    "traits": [],
+    "roles": [
+      "multi-hit",
+      "self-scaling",
+      "evasion"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_chrome-runner.webp"
+  },
+  {
     "id": "cleanup-kaiju",
     "name": "Cleanup Kaiju",
     "type": "battle",
@@ -1103,6 +1204,34 @@
     ]
   },
   {
+    "id": "crimson-moon-captain",
+    "name": "Crimson Moon Captain",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "37.8K",
+    "hp": "75.6K",
+    "ability": {
+      "name": "Crimson Moon",
+      "text": "- On entry, he leaps above the field and hurls the Crimson Moon: the next attack on him misses, every enemy card is Scorched (deals 50% less damage for 4 turns) and the enemy in front takes 150% of his attack.\n- Whenever he defeats a card, he gains 25% attack permanently and the next enemy card enters Scorched."
+    },
+    "atkScaling": [
+      {
+        "label": "Crimson Moon hit",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:entry-effect"
+    ],
+    "roles": [
+      "debuffer",
+      "entry-effect",
+      "self-scaling",
+      "evasion"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_crimson-moon-captain.webp"
+  },
+  {
     "id": "crimson-phantom",
     "name": "Crimson Phantom",
     "type": "battle",
@@ -1195,6 +1324,38 @@
       "tank",
       "entry-effect"
     ]
+  },
+  {
+    "id": "crooked-fixer",
+    "name": "Crooked Fixer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "44.8K",
+    "hp": "89.6K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "25.2M",
+        "dmg": "12.6M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Bounty",
+      "text": "- On entry, Crooked Fixer puts a Bounty on the enemy card in front.\n- His team deals 100% more damage to the Bounty card.\n- When it dies, every card in his party heals 20% of its max HP, Crooked Fixer permanently gains 250% attack (max 3 times), and the next enemy card that enters gets the Bounty."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:heal",
+      "trait:entry-effect"
+    ],
+    "roles": [
+      "team-support",
+      "debuffer",
+      "healer",
+      "self-scaling"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_crooked-fixer.webp"
   },
   {
     "id": "crowned-strategist",
@@ -1778,6 +1939,50 @@
     ]
   },
   {
+    "id": "eclipse-twins",
+    "name": "Eclipse Twins",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "2.15K",
+    "hp": "4.3K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "1.21M",
+        "dmg": "605K",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Eclipse",
+      "text": "**Moon Breathing**\n- Its first attack slashes 3 times, and every attack after that adds 1 more slash (max 6).\n- Each slash deals 40% damage.\n\n**Sun Breathing**\n- Every slash Burns the target for 8% of its attack every turn for 3 turns.\n\n**Demon Blood**\n- It heals for all the damage its Burns deal.\n- Its Burns stay on enemies after it dies.\n\n**Severing Strike**\n- When a slash kills a card, the rest of its slashes go on into the next enemy card.\n- The first time it would die, it returns at 50% HP."
+    },
+    "atkScaling": [
+      {
+        "label": "Burn per turn",
+        "pct": 8
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Slash",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:burn",
+      "trait:revive",
+      "trait:heal"
+    ],
+    "roles": [
+      "multi-hit",
+      "damage-over-time",
+      "healer",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_eclipse-twins.webp"
+  },
+  {
     "id": "eight-handled-general",
     "name": "Eight-Handled General",
     "type": "battle",
@@ -1797,7 +2002,8 @@
       "tank",
       "healer",
       "cheat-death"
-    ]
+    ],
+    "notes": "Cards can be Awakened (shown as \"Awakened Lv 1/5\" on the card). Each level makes the ability stronger: at Lv 1 it is 10% stronger, so the heal is 27.5% instead of 25% and the damage per spin +110% instead of +100%. This page shows the un-awakened (base) numbers."
   },
   {
     "id": "eternal-blight",
@@ -2015,9 +2221,16 @@
     "id": "flame-colonel",
     "name": "Flame Colonel",
     "type": "battle",
-    "rarity": "TODO",
+    "rarity": 6000000000,
     "dmg": "13.1K",
     "hp": "26.3K",
+    "seenStats": [
+      {
+        "hp": "21.9K",
+        "dmg": "10.9K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Flame Alchemy",
       "text": "**Oxygen Theft**\n- On entry, he hits the enemy in front for 50% of his ATK and it loses its ability for 2 turns.\n\n**Wildfire**\n- When he kills an enemy, the next enemy to enter takes the same hit and loses its ability for 2 turns.\n\n**Flame Alchemy**\n- His attacks on enemies that have lost their ability deal bonus damage equal to 100% of his starting ATK.\n\n**Cauterize**\n- The first time he would die, he stays at 1 HP and his next attack deals 500% of its normal damage."
@@ -2035,13 +2248,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232430.png",
     "roles": [
       "crowd-control",
       "nuker",
       "cheat-death",
       "entry-effect"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_flame-colonel.webp"
   },
   {
     "id": "flame-core",
@@ -2178,6 +2391,42 @@
     ]
   },
   {
+    "id": "full-borg-enforcer",
+    "name": "Full-Borg Enforcer",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "26.4K",
+    "hp": "52.6K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "14.8M",
+        "dmg": "7.44M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Full Chrome",
+      "text": "- Full-Borg Enforcer takes 40% less damage from attacks and can't be Stunned or Silenced.\n- His attacks deal extra damage equal to 40% of his max HP.\n- After each of his attacks, his launcher fires 3 missiles at random enemy cards (bench included) for 50% damage each.\n\n**Reboot**\n- The first time he would die, he returns at 60% HP with 50% more attack and fires 10 missiles at once."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Missile",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:revive"
+    ],
+    "roles": [
+      "tank",
+      "splash-damage",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_full-borg-enforcer.webp"
+  },
+  {
     "id": "galactic-tyrant",
     "name": "Galactic Tyrant",
     "type": "battle",
@@ -2250,9 +2499,16 @@
     "id": "ghost-netrunner",
     "name": "Ghost Netrunner",
     "type": "battle",
-    "rarity": "TODO",
+    "rarity": 1200000000,
     "dmg": "6.76K",
     "hp": "13.5K",
+    "seenStats": [
+      {
+        "hp": "13.5K",
+        "dmg": "6.76K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Breach Protocol",
       "text": "**Breach Protocol**\n- On entry, every enemy takes 25% more damage from your team for the rest of the battle.\n\n**Daemons**\n- Every hit your cards land adds a Daemon to the enemy, each +5% damage taken from your team (max 6).\n\n**Flatline**\n- When an enemy with Daemons dies, its Daemons move to the next enemy.\n- Daemons and Flatline work while she's alive anywhere in your party.\n- Copies don't stack."
@@ -2261,12 +2517,12 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skrmbillede_2026-11-09_232648.png",
     "roles": [
       "debuffer",
       "entry-effect",
       "bench"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_ghost-netrunner.webp"
   },
   {
     "id": "glitched-entity",
@@ -2313,6 +2569,49 @@
     ]
   },
   {
+    "id": "golden-requiem",
+    "name": "Golden Requiem",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "269K",
+    "hp": "537K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "151M",
+        "dmg": "75.6M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Return to Zero",
+      "text": "- Return to Zero: enemy abilities aimed at him do nothing, and every 3rd attack aimed at him is reset to zero and never happens: it comes back on its owner for 500% of his ATK and Stuns it for 1 turn.\n\n**Life Giver**\n- At the start of each of his turns he heals 10% of his max HP and every enemy's ATK is set back to where it started (not a boss's).\n\n**Requiem**\n- Every attack he makes deals 500% damage that ignores damage reduction."
+    },
+    "atkScaling": [
+      {
+        "label": "Return to Zero",
+        "pct": 500
+      },
+      {
+        "label": "Requiem attack",
+        "pct": 500
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:stun",
+      "trait:ignores-defense",
+      "trait:heal"
+    ],
+    "roles": [
+      "counter",
+      "nuker",
+      "healer",
+      "debuffer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_golden-requiem.webp"
+  },
+  {
     "id": "grapple-harness",
     "name": "Grapple Harness",
     "type": "support",
@@ -2351,6 +2650,37 @@
     "roles": [
       "self-scaling"
     ]
+  },
+  {
+    "id": "green-day",
+    "name": "Green Day",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "195K",
+    "hp": "387K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "109M",
+        "dmg": "54.8M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Mold",
+      "text": "**Mold**\n- Every attack poisons its target for 3 turns (5% a turn).\n- The lower you go, the faster it grows: his attacks deal up to +100% damage, the more HP the target is missing.\n- When a card he molded dies, the mold moves into the next enemy that comes in.\n- When he dies, his spores mold every enemy.\n\n**Rot**\n- A card with his poison on it deals 45% less damage."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party",
+      "trait:poison"
+    ],
+    "roles": [
+      "damage-over-time",
+      "debuffer",
+      "death-effect"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_green-day.webp"
   },
   {
     "id": "half-demon",
@@ -2441,9 +2771,16 @@
     "id": "hawkeye-sniper",
     "name": "Hawkeye Sniper",
     "type": "battle",
-    "rarity": "TODO",
+    "rarity": 2000000000,
     "dmg": "9.46K",
     "hp": "18.9K",
+    "seenStats": [
+      {
+        "hp": "15.7K",
+        "dmg": "7.88K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Overwatch",
       "text": "**Overwatch**\n- While she's not in front, at the end of every round she shoots the enemy in front for 75% of her ATK.\n\n**Hawk's Eye**\n- Every 3rd shot is a headshot for 300% of her ATK.\n\n**Covering Fire**\n- When another of your cards dies, she shoots its killer.\n- Her shots are attacks that can't be dodged."
@@ -2461,12 +2798,12 @@
     "traits": [
       "trait:cant-miss"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232626.png",
     "roles": [
       "bench",
       "nuker",
       "counter"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_hawkeye-sniper.webp"
   },
   {
     "id": "height-of-painting",
@@ -2574,6 +2911,13 @@
     "rarity": "TODO",
     "dmg": "11.6K",
     "hp": "23.3K",
+    "seenStats": [
+      {
+        "hp": "19.4K",
+        "dmg": "9.71K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Blood Seal",
       "text": "**Empty Armor**\n- +100% max HP.\n- His attacks deal bonus damage equal to 20% of his max HP.\n\n**Blood Seal**\n- 2 times per battle, when he would die while no card in your party has more max HP (fallen ones included), he survives, gains +25% max HP and heals to 50% of his max HP."
@@ -2582,12 +2926,12 @@
     "traits": [
       "trait:heal"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232537.png",
     "roles": [
       "tank",
       "cheat-death",
       "healer"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_hollow-armor.webp"
   },
   {
     "id": "hollow-bat",
@@ -2629,6 +2973,34 @@
     ]
   },
   {
+    "id": "hollow-shinobi",
+    "name": "Hollow Shinobi",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "37.8K",
+    "hp": "75.6K",
+    "ability": {
+      "name": "Hollow Body",
+      "text": "- His attacks deal 25% more damage for every 10% of his HP that's missing.\n- The first time he would die, he stays at 1 HP and burns the card that hit him for 25% of his attack every turn for 3 turns.\n- His attacks can't be dodged."
+    },
+    "atkScaling": [
+      {
+        "label": "Burn per turn",
+        "pct": 25
+      }
+    ],
+    "traits": [
+      "trait:burn",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "self-scaling",
+      "cheat-death",
+      "damage-over-time"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_hollow-shinobi.webp"
+  },
+  {
     "id": "hotheaded-gunner",
     "name": "Hotheaded Gunner",
     "type": "battle",
@@ -2654,7 +3026,7 @@
     "id": "hush-talisman",
     "name": "Hush Talisman",
     "type": "support",
-    "rarity": "TODO",
+    "rarity": 150000000,
     "ability": {
       "name": "Hush Talisman",
       "text": "- On death, its killer loses its ability for 2 turns.\n- If a burn, poison or bleed kills it, the card that applied it counts as the killer."
@@ -2665,11 +3037,11 @@
       "trait:support",
       "trait:death-effect"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233510.png",
     "roles": [
       "crowd-control",
       "death-effect"
-    ]
+    ],
+    "screenshot": "Supports/Chat_2026-11-20_hush-talisman.webp"
   },
   {
     "id": "ice-queen",
@@ -2947,18 +3319,16 @@
     },
     "atkScaling": [
       {
-        "label": "Rasengan turn 3",
-        "pct": 400
-      }
-    ],
-    "impliedScaling": [
-      {
         "label": "Rasengan turn 1",
         "pct": 200
       },
       {
         "label": "Rasengan turn 2",
         "pct": 300
+      },
+      {
+        "label": "Rasengan turn 3",
+        "pct": 400
       }
     ],
     "traits": [
@@ -2971,6 +3341,49 @@
       "counter",
       "nuker"
     ]
+  },
+  {
+    "id": "killer-queen",
+    "name": "Killer Queen",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "179K",
+    "hp": "355K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "100M",
+        "dmg": "50.4M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Bites the Dust",
+      "text": "**First Bomb**\n- Every attack turns its target into a bomb, which detonates at the start of her next turn for 400% of her ATK.\n\n**Sheer Heart Attack**\n- At the end of each of her turns it hunts the enemy with the highest ATK, bench included, for 400% of her ATK.\n\n**Bites the Dust**\n- Once per battle, when she would die, time rewinds: she returns with the HP she had 3 turns ago (at least 75%) and the enemy in front blows up for 400% of her ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Bomb",
+        "pct": 400
+      },
+      {
+        "label": "Sheer Heart Attack",
+        "pct": 400
+      },
+      {
+        "label": "Bites the Dust",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle"
+    ],
+    "roles": [
+      "nuker",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_killer-queen.webp"
   },
   {
     "id": "kindness-spreader",
@@ -2991,6 +3404,48 @@
     "roles": [
       "debuffer"
     ]
+  },
+  {
+    "id": "king-crimson",
+    "name": "King Crimson",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "191K",
+    "hp": "380K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "107M",
+        "dmg": "53.6M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Epitaph / Time Erasure",
+      "text": "**Epitaph**\n- He has already seen the future.\n- The first attack each enemy card aims at him, and every 2nd attack after it, is dodged, and he counters each dodge for 200% of his ATK.\n\n**Time Erasure**\n- His every 3rd turn erases the enemy's next turn, and he strikes for 400% of his ATK.\n- That strike can't be dodged or reduced."
+    },
+    "atkScaling": [
+      {
+        "label": "Dodge counter",
+        "pct": 200
+      },
+      {
+        "label": "Time Erasure strike",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:dodge",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "evasion",
+      "counter",
+      "nuker",
+      "crowd-control"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_king-crimson.webp"
   },
   {
     "id": "ko-king",
@@ -3268,25 +3723,34 @@
     ]
   },
   {
-    "id": "mach-20-teacher",
-    "name": "Mach 20 Teacher",
-    "unconfirmed": true,
-    "source": "zone:lantern-cistern",
+    "id": "mach-twenty-teacher",
+    "name": "Mach Twenty Teacher",
+    "type": "battle",
     "rarity": "TODO",
-    "hp": "TODO",
-    "dmg": "TODO",
+    "origin": "echo-depths",
+    "source": "zone:lantern-cistern",
+    "dmg": "37.8K",
+    "hp": "75.6K",
     "ability": {
       "name": "Mach 20 Lesson",
-      "text": "The first attack against each card in his party misses. He dodges 35% of attacks. Whenever an ally dodges, he strikes the attacker for 100% of his attack, and that attacker deals 30% less damage for 2 turns."
+      "text": "- Every card in his party enters under his watch: the first attack it takes misses.\n- He dodges 35% of attacks.\n- Whenever a card in his party dodges, he strikes the attacker for 100% of his attack, and it deals 30% less damage for 2 turns."
     },
-    "type": "battle",
-    "origin": "echo-depths",
+    "atkScaling": [
+      {
+        "label": "Counter strike",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:dodge"
+    ],
     "roles": [
       "evasion",
       "team-support",
       "counter",
       "debuffer"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_mach-twenty-teacher.webp"
   },
   {
     "id": "madness-blade",
@@ -3317,6 +3781,48 @@
     ]
   },
   {
+    "id": "masked-chrome",
+    "name": "Masked Chrome",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "60.4K",
+    "hp": "121K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "34.1M",
+        "dmg": "17M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Mantis Rush",
+      "text": "- Masked Chrome's attacks slash 3 times for 45% damage each, and each slash adds a Bleed stack (max 9).\n- A Bleeding card takes 5% of Masked Chrome's attack as damage per stack at the start of each of its turns.\n- When a Bleeding card dies, its stacks move to the next enemy card that enters.\n- The first attack each enemy card makes on her is dodged."
+    },
+    "atkScaling": [
+      {
+        "label": "Bleed per stack",
+        "pct": 5
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Slash",
+        "pct": 45
+      }
+    ],
+    "traits": [
+      "trait:dodge",
+      "trait:bleed"
+    ],
+    "roles": [
+      "multi-hit",
+      "damage-over-time",
+      "evasion"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_masked-chrome.webp"
+  },
+  {
     "id": "meteor-conqueror",
     "name": "Meteor Conqueror",
     "type": "battle",
@@ -3338,6 +3844,37 @@
       "splash-damage",
       "entry-effect"
     ]
+  },
+  {
+    "id": "millennium-mage",
+    "name": "Millennium Mage",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "37.8K",
+    "hp": "75.6K",
+    "ability": {
+      "name": "Hidden Mana",
+      "text": "- Her defensive magic blocks the first 5 hits on her, and each blocked hit stuns the attacker for 1 turn.\n- Her first attack releases her hidden mana: 300% damage that can't be dodged.\n- Every attack ignores damage reduction."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Hidden mana release",
+        "pct": 300
+      }
+    ],
+    "traits": [
+      "trait:stun",
+      "trait:ignores-defense",
+      "trait:cant-miss",
+      "trait:shield"
+    ],
+    "roles": [
+      "tank",
+      "crowd-control",
+      "nuker"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_millennium-mage.webp"
   },
   {
     "id": "mimic",
@@ -3698,6 +4235,37 @@
       "nuker",
       "cheat-death"
     ]
+  },
+  {
+    "id": "pale-snake",
+    "name": "Pale Snake",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "147K",
+    "hp": "294K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "82.6M",
+        "dmg": "41.3M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Stand Disc / Memory Disc",
+      "text": "**Stand Disc**\n- When he enters, and on his every 3rd turn, he pulls the active enemy's disc out.\n- It is silenced for 2 turns and he keeps 25% of its ATK for the rest of the battle.\n\n**Memory Disc**\n- The first attack each enemy card aims at him is forgotten and never lands.\n- His attacks deal +50% damage to silenced targets."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:one-per-party"
+    ],
+    "roles": [
+      "crowd-control",
+      "self-scaling",
+      "evasion",
+      "debuffer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_pale-snake.webp"
   },
   {
     "id": "panther-king",
@@ -4453,13 +5021,20 @@
     "rarity": "TODO",
     "dmg": "11.1K",
     "hp": "22.3K",
+    "seenStats": [
+      {
+        "hp": "18.6K",
+        "dmg": "9.33K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Living Shadow",
       "text": "**Shadow Lash**\n- On entry, he hits all enemies for 10% of his ATK.\n\n**Living Shadow**\n- Whenever he damages an enemy, all other enemies take 50% of that damage (20% when the damage comes from an ability or a support).\n\n**Devour**\n- When that shadow damage kills an enemy, he permanently gains +20% ATK and max HP (max 3 times).\n\n**Homunculus Core**\n- The first time he would die, he revives with 40% of his max HP."
     },
     "atkScaling": [
       {
-        "label": "Entry hit (all)",
+        "label": "Entry hit",
         "pct": 10
       }
     ],
@@ -4468,13 +5043,13 @@
       "trait:hits-all",
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232542.png",
     "roles": [
       "splash-damage",
       "self-scaling",
       "cheat-death",
       "entry-effect"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_shade-prince.webp"
   },
   {
     "id": "shadow-armor",
@@ -4705,6 +5280,50 @@
       "evasion",
       "nuker"
     ]
+  },
+  {
+    "id": "silver-chariot",
+    "name": "Silver Chariot",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "175K",
+    "hp": "350K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "98.4M",
+        "dmg": "49.2M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Rapier Flurry / Armor Off",
+      "text": "**Rapier Flurry**\n- Every attack strikes 3 times for 55% damage each.\n\n**Armor**\n- Attacks deal 25% less damage to him.\n\n**Armor Off**\n- Once he falls to 50% HP, or the first time he would die (he survives at 1 HP), he sheds his armor and fires his blade: his next attack deals 500% damage, can't be dodged and ignores damage reduction.\n- After that his flurries strike 5 times, and his afterimages dodge every 2nd attack aimed at him."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Flurry hit",
+        "pct": 55
+      },
+      {
+        "label": "Blade shot",
+        "pct": 500
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:dodge",
+      "trait:ignores-defense",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "multi-hit",
+      "tank",
+      "nuker",
+      "evasion"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_silver-chariot.webp"
   },
   {
     "id": "sixfold-prophet",
@@ -4994,6 +5613,31 @@
     ]
   },
   {
+    "id": "spiral-digger",
+    "name": "Spiral Digger",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "37.8K",
+    "hp": "75.6K",
+    "ability": {
+      "name": "Spiral Drill",
+      "text": "- On entry, he drills through the enemy in front: it's stunned for 1 turn.\n- Every time he's attacked, his Spiral grows: +20% attack, up to 3 times.\n- The first time he dies, he gets back up at 50% HP with 100% more attack."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:revive",
+      "trait:entry-effect"
+    ],
+    "roles": [
+      "self-scaling",
+      "crowd-control",
+      "cheat-death",
+      "entry-effect"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_spiral-digger.webp"
+  },
+  {
     "id": "spirit-thread",
     "name": "Spirit Thread",
     "type": "support",
@@ -5035,12 +5679,102 @@
     ]
   },
   {
+    "id": "star-fist",
+    "name": "Star Fist",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "290K",
+    "hp": "579K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "163M",
+        "dmg": "81.7M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Ora Rush / Restore",
+      "text": "**Ora Rush**\n- Every attack strikes 4 times for 40% damage each, and every 2nd attack fuses the target into the wall (Stun, 1 turn).\n\n**Rage**\n- Every attack that lands on him or an ally, even while he waits on the bench, gives him +100% ATK (up to +400%).\n\n**Restore**\n- He can fix anything but himself.\n- At the start of his turns the most hurt ally on the bench heals 20% of its max HP, and once per battle the first ally to fall is restored at 50% HP."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Ora hit",
+        "pct": 40
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle",
+      "trait:stun",
+      "trait:heal"
+    ],
+    "roles": [
+      "multi-hit",
+      "self-scaling",
+      "team-support",
+      "healer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_star-fist.webp"
+  },
+  {
+    "id": "static-ghost",
+    "name": "Static Ghost",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "8.17K",
+    "hp": "16.4K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "4.61M",
+        "dmg": "2.3M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Ghost Protocol",
+      "text": "- Static Ghost starts the battle jacked into the Net for 3 turns: he takes 90% less damage, and his attacks hit every enemy card for 100% damage that can't be dodged.\n\n**Possession**\n- The first time each enemy card uses its ability, he hacks it: it is Silenced for 2 turns and he permanently gains 15% attack.\n\n**Blackwall**\n- The first time he would die, he returns at full HP and jacks back into the Net for 3 turns.\n- After that, his attacks also hit every other enemy card for 50% damage."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Net hit (all)",
+        "pct": 100
+      },
+      {
+        "label": "Blackwall splash",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:hits-all",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "splash-damage",
+      "tank",
+      "crowd-control",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_static-ghost.webp"
+  },
+  {
     "id": "steel-alchemist",
     "name": "Steel Alchemist",
     "type": "battle",
-    "rarity": "TODO",
+    "rarity": 1500000000,
     "dmg": "8.67K",
     "hp": "17.3K",
+    "seenStats": [
+      {
+        "hp": "14.4K",
+        "dmg": "7.23K",
+        "where": "pack card list, 20 Nov 2026"
+      }
+    ],
     "ability": {
       "name": "Equivalent Exchange",
       "text": "**Clap**\n- On entry he raises 2 stone guardians (summons), and 1 more every 4 turns (max 2).\n- While no card in your party has more ATK (fallen ones included), a guardian blocks each hit on him and crumbles.\n\n**Equivalent Exchange**\n- Every hit a guardian blocks permanently gives him +35% of his starting ATK (max 8 times)."
@@ -5049,13 +5783,13 @@
     "traits": [
       "trait:entry-effect"
     ],
-    "screenshot": "Battles/Skarmbild_2026-11-09_232643.png",
     "roles": [
       "tank",
       "summoner",
       "self-scaling",
       "entry-effect"
-    ]
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_steel-alchemist.webp"
   },
   {
     "id": "stitched-professor",
@@ -5272,6 +6006,42 @@
     ]
   },
   {
+    "id": "the-eminence",
+    "name": "The Eminence",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "24.8K",
+    "hp": "49.6K",
+    "ability": {
+      "name": "I Am Atomic",
+      "text": "**Godstep**\n- Whenever an enemy attacks him, he strikes it first for 60% of his ATK.\n- If that kills it, its attack is cancelled.\n\n**I Am Atomic**\n- He gets 2 Atomic per Godstep and 1 per attack he lands.\n- At 5 Atomic he uses it all to deal 200% of his ATK to the enemy in front (can't be dodged) and 100% of his ATK to every other enemy.\n- The first time he would die, he stays at 1 HP and uses I Am Atomic."
+    },
+    "atkScaling": [
+      {
+        "label": "Godstep strike",
+        "pct": 60
+      },
+      {
+        "label": "Atomic (front)",
+        "pct": 200
+      },
+      {
+        "label": "Atomic (others)",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:hits-all",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "counter",
+      "splash-damage",
+      "cheat-death"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_the-eminence.webp"
+  },
+  {
     "id": "the-griefer",
     "name": "The Griefer",
     "type": "battle",
@@ -5297,6 +6067,47 @@
       "team-support",
       "cheat-death"
     ]
+  },
+  {
+    "id": "the-hand",
+    "name": "The Hand",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "248K",
+    "hp": "494K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "139M",
+        "dmg": "69.7M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Erase",
+      "text": "**Erase**\n- His every 2nd attack scrapes space away.\n- It deals 400% damage, can't be dodged, ignores all damage reduction, and permanently erases 15% of the target's max HP (not a boss's).\n\n**Scrape Space**\n- When he kills a card, the next enemy that comes in is dragged straight to him and takes 500% of his ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Scrape Space",
+        "pct": 500
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Erase",
+        "pct": 400
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "nuker",
+      "debuffer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_the-hand.webp"
   },
   {
     "id": "the-needle-hunter",
@@ -5350,6 +6161,60 @@
       "self-scaling",
       "cheat-death"
     ]
+  },
+  {
+    "id": "the-world",
+    "name": "The World",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "243K",
+    "hp": "483K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "136M",
+        "dmg": "68.4M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Time Stop",
+      "text": "**Time Stop**\n- The moment he enters time stops and the enemy loses its next 2 turns.\n- It stops again on his every 3rd turn, for 2 enemy turns.\n- While time is stopped his attacks deal 300% damage and can't be dodged, and when it moves again the knives he left in the air hit every enemy for 300% of his ATK.\n\n**Muda Barrage**\n- Every attack strikes 3 times for 50% damage each, and he heals for 50% of the damage his hits deal.\n\n**Road Roller**\n- Once per battle, at or under 30% HP, he heals 40% of his max HP and drops it on the enemy in front for 800% of his ATK."
+    },
+    "atkScaling": [
+      {
+        "label": "Knives (all)",
+        "pct": 300
+      },
+      {
+        "label": "Time-stop attack",
+        "pct": 300
+      },
+      {
+        "label": "Road Roller",
+        "pct": 800
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Barrage hit",
+        "pct": 50
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle",
+      "trait:lifesteal",
+      "trait:hits-all",
+      "trait:cant-miss"
+    ],
+    "roles": [
+      "crowd-control",
+      "nuker",
+      "multi-hit",
+      "healer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_the-world.webp"
   },
   {
     "id": "thorn-fragment",
@@ -5594,7 +6459,7 @@
     "id": "transmutation-circle",
     "name": "Transmutation Circle",
     "type": "support",
-    "rarity": "TODO",
+    "rarity": 500000000,
     "ability": {
       "name": "Transmutation Circle",
       "text": "Its summons get +50% ATK and max HP and enter with a shield that blocks 1 hit."
@@ -5604,11 +6469,11 @@
       "trait:support",
       "trait:shield"
     ],
-    "screenshot": "Supports/Skarmbild_2026-11-09_233559.png",
     "roles": [
       "summoner",
       "tank"
-    ]
+    ],
+    "screenshot": "Supports/Chat_2026-11-20_transmutation-circle.webp"
   },
   {
     "id": "trash-kid",
@@ -5735,6 +6600,106 @@
     ]
   },
   {
+    "id": "turncoat-netrunner",
+    "name": "Turncoat Netrunner",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "47.6K",
+    "hp": "95.3K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "26.8M",
+        "dmg": "13.4M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Quickhack",
+      "text": "**Quickhack**\n- Every attack has a chance to Stun the target for 1 turn, starting at 30%.\n- An attack that doesn't Stun raises the chance by 15%, and a Stun lowers it by 15%.\n\n**Double-Cross**\n- The first time she would die, she survives and heals 30% of her max HP."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:stun",
+      "trait:heal"
+    ],
+    "roles": [
+      "crowd-control",
+      "cheat-death",
+      "healer"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_turncoat-netrunner.webp"
+  },
+  {
+    "id": "twin-gun-gremlin",
+    "name": "Twin-Gun Gremlin",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "43K",
+    "hp": "86K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "24.2M",
+        "dmg": "12.1M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Trigger Happy",
+      "text": "**Trigger Happy**\n- Twin-Gun Gremlin's attacks fire 2 shots for 175% damage each.\n- Shots deal 100% more damage to cards below 50% HP.\n\n**Guts**\n- When an ally dies, her next attack is a single blast for 300% damage that also hits the card behind for 150%."
+    },
+    "atkScaling": [],
+    "impliedScaling": [
+      {
+        "label": "Shot",
+        "pct": 175
+      },
+      {
+        "label": "Guts blast",
+        "pct": 300
+      },
+      {
+        "label": "Guts pierce",
+        "pct": 150
+      }
+    ],
+    "traits": [
+      "trait:pierce"
+    ],
+    "roles": [
+      "multi-hit",
+      "nuker",
+      "splash-damage"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_twin-gun-gremlin.webp"
+  },
+  {
+    "id": "undead-overlord",
+    "name": "Undead Overlord",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "37.8K",
+    "hp": "75.6K",
+    "ability": {
+      "name": "Grasp Heart",
+      "text": "- On entry, Grasp Heart: the enemy in front is stunned for 2 turns (no effect on boss NPCs).\n- The first time he would die, his undead body holds: he stays at 1 HP and every enemy card deals 45% less damage for the rest of the battle."
+    },
+    "atkScaling": [],
+    "traits": [
+      "trait:not-on-bosses",
+      "trait:stun",
+      "trait:entry-effect"
+    ],
+    "roles": [
+      "crowd-control",
+      "cheat-death",
+      "debuffer",
+      "entry-effect"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20b_undead-overlord.webp"
+  },
+  {
     "id": "undying-rogue",
     "name": "Undying Rogue",
     "type": "battle",
@@ -5795,7 +6760,8 @@
     "screenshot": "Supports/Skarmbild_2026-11-09_233631.png",
     "roles": [
       "debuffer"
-    ]
+    ],
+    "notes": "Sold in the Trophy shop for 2K Trophies (\"Unlocks it in your rolls\")."
   },
   {
     "id": "warhammer-titan",
@@ -5818,6 +6784,52 @@
       "crowd-control",
       "splash-damage"
     ]
+  },
+  {
+    "id": "weather-report",
+    "name": "Weather Report",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "210K",
+    "hp": "419K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "118M",
+        "dmg": "59.2M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Heavy Weather",
+      "text": "**Cloud Suit**\n- Attacks deal 60% less damage to him.\n- At the start of each of his turns the weather turns, in order: Storm (200% of his ATK to the enemy in front, 100% to every other enemy), Blizzard (Freeze for 1 turn), Scorching Sun (Burn for 3 turns).\n\n**Heavy Weather**\n- Once per battle, at or under 40% HP, every enemy is silenced for 2 turns and all three weathers strike at once."
+    },
+    "atkScaling": [
+      {
+        "label": "Storm (front)",
+        "pct": 200
+      }
+    ],
+    "impliedScaling": [
+      {
+        "label": "Storm (others)",
+        "pct": 100
+      }
+    ],
+    "traits": [
+      "trait:one-per-party",
+      "trait:once-per-battle",
+      "trait:freeze",
+      "trait:burn",
+      "trait:hits-all"
+    ],
+    "roles": [
+      "splash-damage",
+      "crowd-control",
+      "tank",
+      "damage-over-time"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_weather-report.webp"
   },
   {
     "id": "weirdo-warrior",
@@ -5938,6 +6950,45 @@
     "roles": [
       "splash-damage"
     ]
+  },
+  {
+    "id": "wonder-of-u",
+    "name": "Wonder of U",
+    "type": "battle",
+    "rarity": "TODO",
+    "dmg": "314K",
+    "hp": "626K",
+    "statsEstimated": true,
+    "seenStats": [
+      {
+        "hp": "176M",
+        "dmg": "88.3M",
+        "where": "battle menu (boosted by prestige floor), 20 Nov 2026"
+      }
+    ],
+    "ability": {
+      "name": "Calamity",
+      "text": "**Calamity**\n- Whoever pursues him is struck.\n- A card that damages him takes 150% of that damage back, even if the hit kills him, and every 2nd attack aimed at him is struck down before it lands: the attacker takes 300% of his ATK instead.\n\n**Pursuit**\n- Every attack a card aims at him counts against it.\n- At the start of each enemy turn the active enemy takes 75% of his ATK for every pursuit it has made.\n- When he dies, calamity lands one last time on every enemy, and every enemy permanently loses 70% of its ATK (not a boss's)."
+    },
+    "atkScaling": [
+      {
+        "label": "Struck-down attacker",
+        "pct": 300
+      },
+      {
+        "label": "Pursuit per stack",
+        "pct": 75
+      }
+    ],
+    "traits": [
+      "trait:one-per-party"
+    ],
+    "roles": [
+      "counter",
+      "debuffer",
+      "death-effect"
+    ],
+    "screenshot": "Battles/Chat_2026-11-20_wonder-of-u.webp"
   },
   {
     "id": "worthy-fighter",

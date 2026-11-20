@@ -24,7 +24,7 @@ const rows = fs
   .readdirSync(batchDir)
   .filter((f) => /^batch-\d+\.json$/.test(f))
   .sort((a, b) => parseInt(a.match(/\d+/)) - parseInt(b.match(/\d+/)))
-  .flatMap((f) => JSON.parse(fs.readFileSync(path.join(batchDir, f), 'utf8')));
+  .flatMap((f) => JSON.parse(fs.readFileSync(path.join(batchDir, f), 'utf8')).map((r) => ({ ...r, _batch: parseInt(f.match(/\d+/)) })));
 
 const review = { noName: [], duplicates: [], dropped: [], added: [], lowConf: [], notes: [], noImage: [] };
 
@@ -32,9 +32,14 @@ const review = { noName: [], duplicates: [], dropped: [], added: [], lowConf: []
 // must not be a buff like "+25% ATK".
 function atkPercents(text) {
   const found = new Set();
-  const re = /([+-])?\b(\d+(?:\.\d+)?)%\s*(?:of\s+(?:[\w']+\s+){0,3})?(?:ATK|attack)\b/gi;
+  // Also catches lists like "200%, then 300%, then 400% of his ATK".
+  const re = /([+-])?((?:\b\d+(?:\.\d+)?%\s*(?:,\s*then\s+|,\s*|\s+then\s+|\s+or\s+|\s+and\s+))*)\b(\d+(?:\.\d+)?)%\s*(?:of\s+(?:[\w']+\s+){0,3})?(?:ATK|attack)\b/gi;
   let m;
-  while ((m = re.exec(text))) if (!m[1]) found.add(parseFloat(m[2]));
+  while ((m = re.exec(text))) {
+    if (m[1]) continue;
+    found.add(parseFloat(m[3]));
+    for (const x of (m[2] || '').matchAll(/(\d+(?:\.\d+)?)%/g)) found.add(parseFloat(x[1]));
+  }
   return found;
 }
 
@@ -60,7 +65,9 @@ const byId = new Map(existing.filter((e) => e.id).map((e) => [e.id, e]));
 const traitMap = new Map();
 
 for (const [id, list] of groups) {
-  list.sort((a, b) => score(b) - score(a));
+  // Screenshots from batch 10 on are newer and win over older ones of the same card.
+  const newer = (r) => (r._batch >= 10 ? 1 : 0);
+  list.sort((a, b) => newer(b) - newer(a) || score(b) - score(a));
   const best = list[0];
   if (list.length > 1) {
     const stats = [...new Set(list.map((r) => `${r.hp ?? '?'} HP / ${r.dmg ?? '?'} DMG`))];
@@ -99,12 +106,15 @@ for (const [id, list] of groups) {
     id,
     name: prev.name || best.name,
     type,
-    rarity: prev.rarity ?? 'TODO',
+    rarity: typeof best.rarity === 'number' ? best.rarity : prev.rarity ?? 'TODO',
     ...(prev.origin ? { origin: prev.origin } : {}),
     ...(prev.source ? { source: prev.source } : {}),
     ...(prev.border ? { border: prev.border } : {}),
     ...(prev.unconfirmed ? { unconfirmed: prev.unconfirmed } : {}),
-    ...(type === 'battle' ? { dmg: best.dmg ?? 'TODO', hp: best.hp ?? 'TODO' } : {}),
+    // Keep the stored base stats when this screenshot only showed boosted ones.
+    ...(type === 'battle' ? { dmg: best.dmg ?? prev.dmg ?? 'TODO', hp: best.hp ?? prev.hp ?? 'TODO' } : {}),
+    ...((best.hp ? best.statsEstimated : prev.statsEstimated) ? { statsEstimated: true } : {}),
+    ...(best.seenStats?.length ? { seenStats: best.seenStats } : prev.seenStats ? { seenStats: prev.seenStats } : {}),
     ability: { name: best.abilityName || prev.ability?.name || 'TODO', text: text || prev.ability?.text || 'TODO' },
     atkScaling,
     ...(impliedScaling.length ? { impliedScaling } : {}),
@@ -130,12 +140,30 @@ for (const [id, list] of groups) {
   } else review.noImage.push({ id, name: card.name, file: best.file });
 }
 
+// Re-check every battle card's hits against its ability text, so improvements
+// to the "% of ATK" check also apply to cards imported earlier.
+for (const card of byId.values()) {
+  if (card.type !== 'battle' || !card.ability) continue;
+  const valid = atkPercents(card.ability.text || '');
+  const all = [...(card.atkScaling || []), ...(card.impliedScaling || [])];
+  // Order hits by where their percentage first appears in the ability text.
+  const at = (x) => { const i = (card.ability.text || '').indexOf(`${x.pct}%`); return i < 0 ? 1e9 : i; };
+  card.atkScaling = all.filter((x) => valid.has(x.pct)).sort((a, b) => at(a) - at(b));
+  const implied = all.filter((x) => !valid.has(x.pct));
+  if (implied.length) card.impliedScaling = implied;
+  else delete card.impliedScaling;
+}
+
 const cards = [...byId.values()].sort((a, b) => a.name.localeCompare(b.name));
 fs.writeFileSync(cardsFile, JSON.stringify([...header, ...cards], null, 2) + '\n');
 
-const traits = [...traitMap.values()]
-  .map((t) => ({ id: t.id, name: t.name, summary: [...t.texts.entries()].sort((a, b) => b[1] - a[1])[0][0] }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+// Traits: keep every trait already known and add any new ones.
+const oldTraits = fs.existsSync(traitsFile) ? JSON.parse(fs.readFileSync(traitsFile, 'utf8')) : [];
+const traitById = new Map(oldTraits.filter((t) => t.id).map((t) => [t.id, t]));
+for (const t of traitMap.values()) {
+  if (!traitById.has(t.id)) traitById.set(t.id, { id: t.id, name: t.name, summary: [...t.texts.entries()].sort((a, b) => b[1] - a[1])[0][0] });
+}
+const traits = [...traitById.values()].sort((a, b) => a.name.localeCompare(b.name));
 fs.writeFileSync(traitsFile, JSON.stringify(traits, null, 2) + '\n');
 
 // Review notes for a human.

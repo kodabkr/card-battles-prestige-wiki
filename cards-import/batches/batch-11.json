@@ -1,0 +1,162 @@
+[
+ {
+  "file": "Chat_2026-11-20b_millennium-mage.webp",
+  "folder": "Battles",
+  "name": "Millennium Mage",
+  "abilityName": "Hidden Mana",
+  "abilityText": "- Her defensive magic blocks the first 5 hits on her, and each blocked hit stuns the attacker for 1 turn.\n- Her first attack releases her hidden mana: 300% damage that can't be dodged.\n- Every attack ignores damage reduction.",
+  "traits": [
+   {
+    "name": "Stun",
+    "text": "Can stun enemies so they skip a turn."
+   },
+   {
+    "name": "Ignores Defense",
+    "text": "Some of its damage ignores the enemy's damage reduction."
+   },
+   {
+    "name": "Can't Miss",
+    "text": "Some of its attacks can't be dodged."
+   },
+   {
+    "name": "Shield",
+    "text": "Can block hits with a shield."
+   }
+  ],
+  "atkScaling": [
+   {
+    "label": "Hidden mana release",
+    "pct": 300
+   }
+  ],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ },
+ {
+  "file": "Chat_2026-11-20b_mach-twenty-teacher.webp",
+  "folder": "Battles",
+  "name": "Mach Twenty Teacher",
+  "abilityName": "Mach 20 Lesson",
+  "abilityText": "- Every card in his party enters under his watch: the first attack it takes misses.\n- He dodges 35% of attacks.\n- Whenever a card in his party dodges, he strikes the attacker for 100% of his attack, and it deals 30% less damage for 2 turns.",
+  "traits": [
+   {
+    "name": "Dodge",
+    "text": "Can dodge enemy attacks."
+   }
+  ],
+  "atkScaling": [
+   {
+    "label": "Counter strike",
+    "pct": 100
+   }
+  ],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ },
+ {
+  "file": "Chat_2026-11-20b_hollow-shinobi.webp",
+  "folder": "Battles",
+  "name": "Hollow Shinobi",
+  "abilityName": "Hollow Body",
+  "abilityText": "- His attacks deal 25% more damage for every 10% of his HP that's missing.\n- The first time he would die, he stays at 1 HP and burns the card that hit him for 25% of his attack every turn for 3 turns.\n- His attacks can't be dodged.",
+  "traits": [
+   {
+    "name": "Burn",
+    "text": "Can burn enemies, hurting them for a few turns."
+   },
+   {
+    "name": "Can't Miss",
+    "text": "Some of its attacks can't be dodged."
+   }
+  ],
+  "atkScaling": [
+   {
+    "label": "Burn per turn",
+    "pct": 25
+   }
+  ],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ },
+ {
+  "file": "Chat_2026-11-20b_crimson-moon-captain.webp",
+  "folder": "Battles",
+  "name": "Crimson Moon Captain",
+  "abilityName": "Crimson Moon",
+  "abilityText": "- On entry, he leaps above the field and hurls the Crimson Moon: the next attack on him misses, every enemy card is Scorched (deals 50% less damage for 4 turns) and the enemy in front takes 150% of his attack.\n- Whenever he defeats a card, he gains 25% attack permanently and the next enemy card enters Scorched.",
+  "traits": [
+   {
+    "name": "Entry Effect",
+    "text": "Does something as soon as this card enters a fight."
+   }
+  ],
+  "atkScaling": [
+   {
+    "label": "Crimson Moon hit",
+    "pct": 150
+   }
+  ],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ },
+ {
+  "file": "Chat_2026-11-20b_spiral-digger.webp",
+  "folder": "Battles",
+  "name": "Spiral Digger",
+  "abilityName": "Spiral Drill",
+  "abilityText": "- On entry, he drills through the enemy in front: it's stunned for 1 turn.\n- Every time he's attacked, his Spiral grows: +20% attack, up to 3 times.\n- The first time he dies, he gets back up at 50% HP with 100% more attack.",
+  "traits": [
+   {
+    "name": "Stun",
+    "text": "Can stun enemies so they skip a turn."
+   },
+   {
+    "name": "Revive",
+    "text": "Can come back after being knocked out."
+   },
+   {
+    "name": "Entry Effect",
+    "text": "Does something as soon as this card enters a fight."
+   }
+  ],
+  "atkScaling": [],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ },
+ {
+  "file": "Chat_2026-11-20b_undead-overlord.webp",
+  "folder": "Battles",
+  "name": "Undead Overlord",
+  "abilityName": "Grasp Heart",
+  "abilityText": "- On entry, Grasp Heart: the enemy in front is stunned for 2 turns (no effect on boss NPCs).\n- The first time he would die, his undead body holds: he stays at 1 HP and every enemy card deals 45% less damage for the rest of the battle.",
+  "traits": [
+   {
+    "name": "Not On Bosses",
+    "text": "Part of this card's ability doesn't work on bosses."
+   },
+   {
+    "name": "Stun",
+    "text": "Can stun enemies so they skip a turn."
+   },
+   {
+    "name": "Entry Effect",
+    "text": "Does something as soon as this card enters a fight."
+   }
+  ],
+  "atkScaling": [],
+  "confidence": "high",
+  "notes": "Screenshot was sent mid-turn and not saved, so there is no card image yet.",
+  "hp": "75.6K",
+  "dmg": "37.8K"
+ }
+]

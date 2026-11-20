@@ -18,13 +18,22 @@ if (!inDir || !outDir) {
   process.exit(1);
 }
 
-const FRAME = 108; // the frame grey
-const TOL = 3;
+// The frame is a flat neutral grey: rgb(108,108,108) in most screenshots, about
+// rgb(118,118,118) in others, with a little noise from image compression.
+const FRAME_MIN = 100;
+const FRAME_MAX = 126;
+const SPREAD = 8; // how far apart R, G and B may be and still count as grey
 const RATIO = 1.428; // card interior height / width
 const MIN_RUN = 120; // shortest frame side worth considering (px)
 
+// Strict pass: exactly rgb(108,108,108) +-3 (most screenshots). Loose pass:
+// any neutral grey in range (compressed or brighter screenshots).
+let LOOSE = false;
 function isFrame(d, i) {
-  return Math.abs(d[i] - FRAME) <= TOL && Math.abs(d[i + 1] - FRAME) <= TOL && Math.abs(d[i + 2] - FRAME) <= TOL;
+  const r = d[i], g = d[i + 1], b = d[i + 2];
+  if (!LOOSE) return Math.abs(r - 108) <= 3 && Math.abs(g - 108) <= 3 && Math.abs(b - 108) <= 3;
+  const lo = Math.min(r, g, b), hi = Math.max(r, g, b);
+  return hi - lo <= SPREAD && lo >= FRAME_MIN && hi <= FRAME_MAX;
 }
 
 // Longest run of frame pixels per column (or row), with where that run starts.
@@ -32,13 +41,17 @@ function runsAlong(d, w, h, vertical, from = 0, to = vertical ? h : w) {
   const n = vertical ? w : h;
   const out = [];
   for (let a = 0; a < n; a++) {
-    let cur = 0, best = 0, bestEnd = -1;
+    // In the loose pass a run may jump small gaps (art or compression bleeding
+    // over the frame); the strict pass needs an unbroken run.
+    const gap = LOOSE ? 8 : 0;
+    let start = -1, last = -1, best = 0, bestEnd = -1;
     for (let b = from; b < to; b++) {
       const i = vertical ? (b * w + a) * 4 : (a * w + b) * 4;
       if (isFrame(d, i)) {
-        cur++;
-        if (cur > best) { best = cur; bestEnd = b; }
-      } else cur = 0;
+        if (start < 0 || b - last - 1 > gap) start = b;
+        last = b;
+        if (b - start + 1 > best) { best = b - start + 1; bestEnd = b; }
+      }
     }
     out.push({ len: best, start: bestEnd - best + 1, end: bestEnd });
   }
@@ -151,7 +164,13 @@ const report = { cropped: [], failed: [] };
 for (const f of files) {
   const src = path.join(inDir, f);
   try {
-    const r = await cropOne(src);
+    LOOSE = false;
+    let r = await cropOne(src);
+    if (!r.ok || r.notes.length) {
+      LOOSE = true;
+      const r2 = await cropOne(src);
+      if (r2.ok && (!r.ok || r2.notes.length < r.notes.length)) r = r2;
+    }
     if (!r.ok) {
       report.failed.push({ file: f, reason: r.reason });
       continue;

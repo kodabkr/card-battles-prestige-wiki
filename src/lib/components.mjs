@@ -532,8 +532,9 @@ function cardProfile(args, ctx) {
   };
   if (src) facts.Source = src;
   if (isBattle) {
-    facts['Base DMG'] = e.dmg != null ? statText(e.dmg) : 'TODO';
-    facts['Base HP'] = e.hp != null ? statText(e.hp) : 'TODO';
+    const est = e.statsEstimated ? '≈ ' : '';
+    facts[e.statsEstimated ? 'Base DMG (estimate)' : 'Base DMG'] = e.dmg != null && !isTodo(e.dmg) ? est + statText(e.dmg) : 'TODO';
+    facts[e.statsEstimated ? 'Base HP (estimate)' : 'Base HP'] = e.hp != null && !isTodo(e.hp) ? est + statText(e.hp) : 'TODO';
   }
   const factHtml = `<dl class="facts">${Object.entries(facts).map(([k, v]) => `<div class="facts__row"><dt>${esc(k)}</dt><dd>${rich(v, ctx)}</dd></div>`).join('')}</dl>`;
   const traitChips = asArray(e.traits).length ? refChips(e.traits, ctx) : '';
@@ -544,7 +545,14 @@ function cardProfile(args, ctx) {
   const scaleNote = isBattle && asArray(e.atkScaling).length
     ? `<p class="table-note">Ability columns show the damage of each hit for that variant: the variant's DMG times the ability's percentage of ATK. In-game numbers can differ slightly because of rounding.</p>`
     : `<p class="table-note">In-game numbers can differ slightly because of rounding.</p>`;
-  const notes = e.notes ? callout('note', 'Notes', `<p>${rich(e.notes, ctx)}</p>`) : '';
+  let notes = e.notes ? callout('note', 'Notes', `<p>${rich(e.notes, ctx)}</p>`) : '';
+  if (isBattle && e.statsEstimated) {
+    notes = callout('warning', 'Estimated base stats', `<p>This card's base stats are worked out from the battle menu, where every card is boosted by your prestige floor (about 281x when these were recorded). The variant table uses the estimate. It will be replaced with the exact card index numbers.</p>`) + notes;
+  }
+  const seen = asArray(e.seenStats).filter((s) => s && s.hp);
+  if (isBattle && seen.length) {
+    notes += `<p class="table-note">Also seen: ${seen.map((s) => `${esc(s.hp)} HP / ${esc(s.dmg)} DMG in the ${esc(s.where)}`).join('; ')}. These include boosts, so they are not base stats.</p>`;
+  }
   return `<div class="profile">
 <div class="profile__card">${gameCard(e, ctx)}</div>
 <div class="profile__info">
