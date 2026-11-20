@@ -125,13 +125,19 @@ Measured in game (stats change every single floor):
 | 2,000 | 641,000 | 1,280,000 | 0.50 |
 | 2,499 | 2,660,000 | 5,320,000 | 0.50 |
 | 2,500 | 3,170,000 | 6,340,000 | 0.50 |
+| 2,750 | 6,360,000 | 12,700,000 | 0.50 |
 | 3,000 | 12,900,000 | 25,900,000 | 0.50 |
-| 3,800 | 77,700,000 | 155,000,000 | 0.50 |
+| 3,250 | 21,000,000 | 42,100,000 | 0.50 |
+| 3,499 | 34,100,000 | 68,300,000 | 0.50 |
+| 3,800 | 77,700,000* | 155,000,000 | 0.50 |
+| 3,803 | 77,500,000 | 155,000,000 | 0.50 |
+
+\* The floor 3,800 DMG reading (77.7M) is slightly higher than floor 3,803's (77.5M), which can't be right because stats rise every floor. It was probably a small buff on that card. Use HP and the DMG share instead.
 
 What the data shows:
 - **HP is the base number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to at least floor 1,000, and **0.5 × HP** from floor 1,250 on. Where exactly between 1,001 and 1,250 it switches is not known.
 - **Every 500th floor (500, 1,000, 1,500, 2,000 …) adds a one-time jump of about x1.187** on top of normal growth. Confirmed directly at 1,499 → 1,500 and 2,499 → 2,500. The jumps at 1,000, 2,000 and 3,000 are inferred: the curve only lines up if they are there.
-- **Between jumps, HP grows a little every floor.** The rate drifts: about x1.28–1.29 per 100 floors below 1,250, about x1.32–1.34 per 100 floors from 1,250 to 2,500, about x1.28 from 2,500 to 3,000, and about x1.22 from 3,000 to 3,800.
+- **Between jumps, HP grows a little every floor.** The rate drifts: about x1.28–1.29 per 100 floors below floor 1,250, about x1.32–1.34 from 1,250 to 2,750, then slower: about x1.21–1.24 from 2,750 to 3,800.
 
 **Use this model** (call it `enemyStats(floor)`):
 1. Let `J = 1.187` and `n(f) = floor(f / 500)`, the number of 500-floor jumps reached, counting floor f itself if it is a multiple of 500.
@@ -140,7 +146,7 @@ What the data shows:
 4. **DMG** = 0.6 × HP up to floor 1,000, and 0.5 × HP from floor 1,250. Between 1,001 and 1,249, switch at 1,001 and flag it until the user measures the exact floor.
 5. Keep the measured table, `J` and the DMG ratio in a config file, so new measurements improve the model without code changes.
 
-**Accuracy:** predicting each measured floor from its neighbours lands within 5% for floors 1,000–2,500. Between 2,500 and 3,800 there are fewer measurements, so errors up to about 13% are possible until more floors are added.
+**Accuracy:** predicting each measured floor from its neighbours lands within about 3% for most floors between 1,000 and 3,500, and 7% at worst (floor 2,750, where the growth rate slows down). Past floor 3,803 the model extends the last slope, so check it against new measurements.
 
 A rough rule of thumb, for reading only (it can be 10–20% off): enemy HP grows about **x1.3 every 100 floors, plus x1.19 at every 500th floor**, and enemy DMG is half of HP.
 
@@ -168,7 +174,7 @@ These words appear in ability texts. Implement each one once and reuse it. Where
 
 These are not known yet. Build them as configuration, mark them clearly, and ask the user for each one before relying on results:
 
-1. **More enemy stat measurements** to tighten the model in Part 3: floors between 2,500 and 3,800 (for example 2,750, 3,250 and 3,499), floors past 3,800, and a few floors between 1,000 and 1,250 to find where DMG switches from 0.6 to 0.5 of HP.
+1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a few floors between 1,000 and 1,250 to find where DMG switches from 0.6 to 0.5 of HP, and any floors past 3,803.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
 4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
