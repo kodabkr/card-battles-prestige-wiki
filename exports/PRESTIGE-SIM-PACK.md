@@ -165,7 +165,7 @@ What the data shows:
 - No single smooth formula fits: simple exponential fits are off by up to 43%.
 
 **Use this model** (call it `enemyStats(floor)`):
-1. **HP:** interpolate log-linearly between the measured floors above: `HP(f) = H1 × (H2 / H1) ^ ((f − f1) / (f2 − f1))` for measured floors f1 < f ≤ f2. It is exact at every measured floor. Below floor 100, continue the 100–1,000 rate. Above floor 3,800, continue the 3,000–3,800 rate (x1.002241 per floor).
+1. **HP:** interpolate log-linearly between the measured floors above: `HP(f) = H1 × (H2 / H1) ^ ((f − f1) / (f2 − f1))` for measured floors f1 < f ≤ f2. It is exact at every measured floor. Below floor 100, continue the 100–1,000 rate. Above floor 3,800, continue the 3,000–3,800 rate (x1.002239 per floor).
 2. **DMG:** 0.6 × HP up to floor 1,000, 0.5 × HP from floor 1,250. Between 1,001 and 1,249, use the measured switch point once the user provides it (until then, switch at 1,001 and flag it).
 3. Keep the measured table and the DMG ratio in a config file, so new measurements improve the model without code changes.
 4. **Optional, once confirmed:** if the user confirms the jump at every 500th floor, switch to "steady per-floor growth plus a jump at each multiple of 500" fitted to the table. That is more accurate between measured floors than plain interpolation.
