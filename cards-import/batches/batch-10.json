@@ -13,16 +13,10 @@
   ],
   "atkScaling": [],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "19.4K",
-    "dmg": "9.71K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ]
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "19.4K",
+  "dmg": "9.71K",
+  "seenStats": []
  },
  {
   "file": "Chat_2026-11-20_shade-prince.webp",
@@ -51,16 +45,10 @@
    }
   ],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "18.6K",
-    "dmg": "9.33K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ]
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "18.6K",
+  "dmg": "9.33K",
+  "seenStats": []
  },
  {
   "file": "Chat_2026-11-20_hawkeye-sniper.webp",
@@ -85,16 +73,10 @@
    }
   ],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "15.7K",
-    "dmg": "7.88K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ],
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "15.7K",
+  "dmg": "7.88K",
+  "seenStats": [],
   "rarity": 2000000000.0
  },
  {
@@ -111,16 +93,10 @@
   ],
   "atkScaling": [],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "14.4K",
-    "dmg": "7.23K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ],
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "14.4K",
+  "dmg": "7.23K",
+  "seenStats": [],
   "rarity": 1500000000.0
  },
  {
@@ -137,16 +113,10 @@
   ],
   "atkScaling": [],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "13.5K",
-    "dmg": "6.76K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ],
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "13.5K",
+  "dmg": "6.76K",
+  "seenStats": [],
   "rarity": 1200000000.0
  },
  {
@@ -163,7 +133,7 @@
    }
   ],
   "confidence": "high",
-  "notes": "Stats from the pack card list. An earlier screenshot showed about 28.7K HP (cut off).",
+  "notes": "Base stats from the Forge Pack card list.",
   "hp": "23.9K",
   "dmg": "11.9K",
   "seenStats": [],
@@ -192,16 +162,10 @@
    }
   ],
   "confidence": "high",
-  "notes": "",
-  "hp": null,
-  "dmg": null,
-  "seenStats": [
-   {
-    "hp": "21.9K",
-    "dmg": "10.9K",
-    "where": "pack card list, 20 Nov 2026"
-   }
-  ],
+  "notes": "Base stats from the Forge Pack card list.",
+  "hp": "21.9K",
+  "dmg": "10.9K",
+  "seenStats": [],
   "rarity": 6000000000.0
  },
  {

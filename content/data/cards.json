@@ -924,6 +924,8 @@
     "name": "Chrome Runner",
     "type": "battle",
     "rarity": 8000000000,
+    "origin": "pack",
+    "source": "pack:forge",
     "dmg": "11.9K",
     "hp": "23.9K",
     "ability": {
@@ -2222,15 +2224,10 @@
     "name": "Flame Colonel",
     "type": "battle",
     "rarity": 6000000000,
-    "dmg": "13.1K",
-    "hp": "26.3K",
-    "seenStats": [
-      {
-        "hp": "21.9K",
-        "dmg": "10.9K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
+    "origin": "pack",
+    "source": "pack:forge",
+    "dmg": "10.9K",
+    "hp": "21.9K",
     "ability": {
       "name": "Flame Alchemy",
       "text": "**Oxygen Theft**\n- On entry, he hits the enemy in front for 50% of his ATK and it loses its ability for 2 turns.\n\n**Wildfire**\n- When he kills an enemy, the next enemy to enter takes the same hit and loses its ability for 2 turns.\n\n**Flame Alchemy**\n- His attacks on enemies that have lost their ability deal bonus damage equal to 100% of his starting ATK.\n\n**Cauterize**\n- The first time he would die, he stays at 1 HP and his next attack deals 500% of its normal damage."
@@ -2500,15 +2497,10 @@
     "name": "Ghost Netrunner",
     "type": "battle",
     "rarity": 1200000000,
+    "origin": "pack",
+    "source": "pack:forge",
     "dmg": "6.76K",
     "hp": "13.5K",
-    "seenStats": [
-      {
-        "hp": "13.5K",
-        "dmg": "6.76K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
     "ability": {
       "name": "Breach Protocol",
       "text": "**Breach Protocol**\n- On entry, every enemy takes 25% more damage from your team for the rest of the battle.\n\n**Daemons**\n- Every hit your cards land adds a Daemon to the enemy, each +5% damage taken from your team (max 6).\n\n**Flatline**\n- When an enemy with Daemons dies, its Daemons move to the next enemy.\n- Daemons and Flatline work while she's alive anywhere in your party.\n- Copies don't stack."
@@ -2772,15 +2764,10 @@
     "name": "Hawkeye Sniper",
     "type": "battle",
     "rarity": 2000000000,
-    "dmg": "9.46K",
-    "hp": "18.9K",
-    "seenStats": [
-      {
-        "hp": "15.7K",
-        "dmg": "7.88K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
+    "origin": "pack",
+    "source": "pack:forge",
+    "dmg": "7.88K",
+    "hp": "15.7K",
     "ability": {
       "name": "Overwatch",
       "text": "**Overwatch**\n- While she's not in front, at the end of every round she shoots the enemy in front for 75% of her ATK.\n\n**Hawk's Eye**\n- Every 3rd shot is a headshot for 300% of her ATK.\n\n**Covering Fire**\n- When another of your cards dies, she shoots its killer.\n- Her shots are attacks that can't be dodged."
@@ -2909,15 +2896,10 @@
     "name": "Hollow Armor",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "11.6K",
-    "hp": "23.3K",
-    "seenStats": [
-      {
-        "hp": "19.4K",
-        "dmg": "9.71K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
+    "origin": "pack",
+    "source": "pack:forge",
+    "dmg": "9.71K",
+    "hp": "19.4K",
     "ability": {
       "name": "Blood Seal",
       "text": "**Empty Armor**\n- +100% max HP.\n- His attacks deal bonus damage equal to 20% of his max HP.\n\n**Blood Seal**\n- 2 times per battle, when he would die while no card in your party has more max HP (fallen ones included), he survives, gains +25% max HP and heals to 50% of his max HP."
@@ -3027,6 +3009,8 @@
     "name": "Hush Talisman",
     "type": "support",
     "rarity": 150000000,
+    "origin": "pack",
+    "source": "pack:forge",
     "ability": {
       "name": "Hush Talisman",
       "text": "- On death, its killer loses its ability for 2 turns.\n- If a burn, poison or bleed kills it, the card that applied it counts as the killer."
@@ -5019,15 +5003,10 @@
     "name": "Shade Prince",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "11.1K",
-    "hp": "22.3K",
-    "seenStats": [
-      {
-        "hp": "18.6K",
-        "dmg": "9.33K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
+    "origin": "pack",
+    "source": "pack:forge",
+    "dmg": "9.33K",
+    "hp": "18.6K",
     "ability": {
       "name": "Living Shadow",
       "text": "**Shadow Lash**\n- On entry, he hits all enemies for 10% of his ATK.\n\n**Living Shadow**\n- Whenever he damages an enemy, all other enemies take 50% of that damage (20% when the damage comes from an ability or a support).\n\n**Devour**\n- When that shadow damage kills an enemy, he permanently gains +20% ATK and max HP (max 3 times).\n\n**Homunculus Core**\n- The first time he would die, he revives with 40% of his max HP."
@@ -5766,15 +5745,10 @@
     "name": "Steel Alchemist",
     "type": "battle",
     "rarity": 1500000000,
-    "dmg": "8.67K",
-    "hp": "17.3K",
-    "seenStats": [
-      {
-        "hp": "14.4K",
-        "dmg": "7.23K",
-        "where": "pack card list, 20 Nov 2026"
-      }
-    ],
+    "origin": "pack",
+    "source": "pack:forge",
+    "dmg": "7.23K",
+    "hp": "14.4K",
     "ability": {
       "name": "Equivalent Exchange",
       "text": "**Clap**\n- On entry he raises 2 stone guardians (summons), and 1 more every 4 turns (max 2).\n- While no card in your party has more ATK (fallen ones included), a guardian blocks each hit on him and crumbles.\n\n**Equivalent Exchange**\n- Every hit a guardian blocks permanently gives him +35% of his starting ATK (max 8 times)."
@@ -6460,6 +6434,8 @@
     "name": "Transmutation Circle",
     "type": "support",
     "rarity": 500000000,
+    "origin": "pack",
+    "source": "pack:forge",
     "ability": {
       "name": "Transmutation Circle",
       "text": "Its summons get +50% ATK and max HP and enter with a shield that blocks 1 hit."
