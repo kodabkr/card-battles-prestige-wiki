@@ -9,7 +9,8 @@
     "dev": "node src/dev.mjs",
     "serve": "node src/serve.mjs",
     "preview": "node src/build.mjs && node src/serve.mjs",
-    "sounds": "node src/tools/make-sounds.mjs"
+    "sounds": "node src/tools/make-sounds.mjs",
+    "sim-pack": "node src/tools/export-sim-pack.mjs"
   },
   "engines": {
     "node": ">=20"

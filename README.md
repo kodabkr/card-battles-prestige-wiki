@@ -22,6 +22,7 @@ image or code file rebuilds the site and reloads the browser.
 | `npm run build` | Build the finished site into `dist/` |
 | `npm run preview` | Build, then serve `dist/` (no auto-reload) |
 | `npm run sounds` | Regenerate the UI sound files |
+| `npm run sim-pack` | Export every card and the battle simulator brief to `exports/` |
 
 The build prints warnings for broken links, missing sections or bad data, and
 writes **`IMAGES.md`**: the checklist of every image the site uses and whether it
