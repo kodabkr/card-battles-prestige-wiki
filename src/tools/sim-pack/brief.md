@@ -80,9 +80,37 @@ Traits are short labels the game shows on each card. They summarise what the abi
 
 What we know:
 - You climb floors in 4v4 battles. **Prestige luck** grows at milestones every 100 floors (this does not affect battles).
-- **Enemies get stronger every time the player prestiges.** At floor 3,001, enemies are about **130–143x their base strength**.
-- **The player's own cards are also boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x).
-- The enemy stat formula per floor is **not known yet** (see Part 5).
+- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). The exact rule is still unknown (Part 5).
+- Outside the tower, world NPC enemies (secret bosses included) also scale up: at floor 3,001 they are about 130–143x their base strength. That is separate from the tower enemies below.
+
+### Enemy stats in the Prestige Tower
+**Every enemy card on a floor has exactly the same DMG and HP. It depends only on the floor number.** The enemy card's own base stats and its variant (Prismatic, Shiny Cosmic and so on) do **not** matter in the tower. Enemy cards still have their own abilities. Assume any "% of ATK" in an enemy's ability uses that floor's DMG.
+
+Measured in game:
+
+| Floor | Enemy DMG | Enemy HP | HP ÷ DMG |
+|---|---|---|---|
+| 100 | 2,660 | 4,430 | 1.665 |
+| 1,000 | 34,000 | 56,600 | 1.665 |
+| 2,000 | 641,000 | 1,280,000 | 1.997 |
+| 3,000 | 12,900,000 | 25,900,000 | 2.008 |
+| 3,800 | 77,700,000 | 155,000,000 | 1.995 |
+
+Shape of the data:
+- **DMG grows exponentially**, about **1.33–1.35x every 100 floors up to floor 3,000** (1.327x for floors 100–1,000, 1.341x for 1,000–2,000, 1.350x for 2,000–3,000), then **slows to about 1.25x every 100 floors after floor 3,000**.
+- **HP is 5/3 of DMG up to at least floor 1,000, and 2x DMG from floor 2,000 on.** Somewhere between floors 1,000 and 2,000 enemy HP gets an extra x1.2. Where exactly is not known yet.
+- No single smooth formula fits all five points: the best ones are off by up to 20%.
+
+**Use this model** (call it `enemyStats(floor)`):
+1. **DMG:** interpolate log-linearly between the measured floors above. It is exact at those floors and smooth in between. Below floor 100, continue the 100–1,000 rate. Above floor 3,800, continue the 3,000–3,800 rate (x1.002247 per floor).
+   In formula form: `DMG(f) = D1 × (D2 / D1) ^ ((f − f1) / (f2 − f1))` between two measured floors f1 < f ≤ f2.
+2. **HP:** interpolate the measured HP the same way. Below floor 1,000 use DMG × 5/3; above floor 3,800 use DMG × 2.
+3. Keep the measured table in a config file so new measurements make the model more accurate without code changes.
+
+A simpler approximation, for reading only (within about 9% of every measured floor):
+- Floors up to 3,000: `DMG ≈ 2,660 × 1.002931^(floor − 100)`
+- Floors above 3,000: `DMG ≈ 12,900,000 × 1.002247^(floor − 3,000)`
+- `HP ≈ DMG × 5/3` (up to floor 1,000) or `DMG × 2` (from about floor 2,000)
 
 ---
 
@@ -108,7 +136,7 @@ These words appear in ability texts. Implement each one once and reuse it. Where
 
 These are not known yet. Build them as configuration, mark them clearly, and ask the user for each one before relying on results:
 
-1. **Prestige Tower enemy formula**: enemy HP and DMG for any floor, and how the player's prestige count changes it. The user will send floor samples. Fit a formula to them and show the fit.
+1. **More enemy stat measurements** to tighten the model in Part 3: in particular a few floors between 1,000 and 2,000 (to find where HP jumps from 5/3 to 2x DMG), floors past 3,800, and two floors in the same hundred (for example 101 and 199) to see whether stats change every floor or only every 100 floors.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
 4. **Turn order in detail**: after the player's first attack, do sides alternate one action each? When does a new card enter, and does it act immediately?
