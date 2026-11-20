@@ -167,8 +167,11 @@ Measured in game (stats change every single floor):
 | 3,499 | 34,100,000 | 68,300,000 | 0.50 |
 | 3,800 | 77,000,000 (interpolated) | 154,000,000 (interpolated) | 0.50 |
 | 3,803 | 77,500,000 | 155,000,000 | 0.50 |
+| 5,000 (Difficulty Cut maxed) | 1,870,000,000 | ~3,740,000,000 (from DMG) | 0.50 (assumed) |
 
 Floor 3,800 is interpolated from floors 3,499 and 3,803 using the model below. The in-game reading there (77.7M DMG) was buffed, so it is not used.
+
+**Difficulty Cut (player upgrade, 5 levels):** "Prestige floor 4,000+: enemies grow slower." It only changes enemy growth from floor 4,000 on, so every reading below 4,000 is unaffected. The floor 5,000 reading comes from a player with all 5 levels, and only DMG was measured. The effect per level is not known, so model floors above 4,000 as a player with Difficulty Cut maxed and flag it. Without the upgrade, enemies above floor 4,000 are stronger than this table says.
 
 What the data shows:
 - **HP is the base number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to at least floor 1,000, and **0.5 × HP** from floor 1,250 on. Where exactly between 1,001 and 1,250 it switches is not known.
@@ -178,11 +181,11 @@ What the data shows:
 **Use this model** (call it `enemyStats(floor)`):
 1. Let `J = 1.187` and `n(f) = floor(f / 500)`, the number of 500-floor jumps reached, counting floor f itself if it is a multiple of 500.
 2. For every measured floor, compute the smooth part `y = ln(HP) − n(f) × ln(J)`.
-3. For any floor f, interpolate `y` linearly between the two nearest measured floors, then `HP(f) = e^(y(f) + n(f) × ln(J))`. Below floor 100, continue the 100–1,000 slope. Above 3,800, continue the 3,000–3,800 slope.
+3. For any floor f, interpolate `y` linearly between the two nearest measured floors, then `HP(f) = e^(y(f) + n(f) × ln(J))`. Below floor 100, continue the 100–1,000 slope. Above 5,000, continue the 3,803–5,000 slope (about x1.25 per 100 floors plus the jumps).
 4. **DMG** = 0.6 × HP up to floor 1,000, and 0.5 × HP from floor 1,250. Between 1,001 and 1,249, switch at 1,001 and flag it until the user measures the exact floor.
 5. Keep the measured table, `J` and the DMG ratio in a config file, so new measurements improve the model without code changes.
 
-**Accuracy:** predicting each measured floor from its neighbours lands within about 3% for most floors between 1,000 and 3,500, and 7% at worst (floor 2,750, where the growth rate slows down). Past floor 3,803 the model extends the last slope, so check it against new measurements.
+**Accuracy:** predicting each measured floor from its neighbours lands within about 3% for most floors between 1,000 and 3,500, and 7% at worst (floor 2,750, where the growth rate slows down). Between 3,803 and 5,000 there are no readings in between, so that stretch is a straight line through two points; past 5,000 it is a guess. Before the floor 5,000 reading, extending the 3,000–3,803 slope predicted about 1.5B DMG there, 20% under the real 1.87B, so growth speeds up again somewhere above 3,803.
 
 A rough rule of thumb, for reading only (it can be 10–20% off): enemy HP grows about **x1.3 every 100 floors, plus x1.19 at every 500th floor**, and enemy DMG is half of HP.
 
@@ -218,6 +221,7 @@ These are not known yet. Build them as configuration, mark them clearly, and ask
 6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
 7. **"X% damage" without ATK**: confirm it means X% of a normal attack.
 8. **Awakening exceptions**: which percentages do not scale.
+9. **Difficulty Cut**: how much each of its 5 levels slows enemy growth above floor 4,000, and the enemy HP at floor 5,000.
 
 When the user answers, update `ASSUMPTIONS.md` and re-run the affected tests.
 
