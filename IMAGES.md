@@ -349,7 +349,7 @@ Drop each image into `images/<folder>/<name>.<any image extension>` (PNG, JPG, W
 |---|---|---|---|---|
 | ⬜ | `images/packs/ascended.png` | Ascended Pack — card pack pack image | Pack art, portrait (3:4), at least 600×800. Transparent background if possible. | /cards/packs/ |
 | ⬜ | `images/packs/cursed.png` | Cursed Pack — card pack pack image | Pack art, portrait (3:4), at least 600×800. Transparent background if possible. | /cards/packs/ |
-| ⬜ | `images/packs/forge.png` | Forge Pack — card pack pack image | Pack art, portrait (3:4), at least 600×800. Transparent background if possible. | /cards/packs/ |
+| ⬜ | `images/packs/forge.png` | Forged Pack — card pack pack image | Pack art, portrait (3:4), at least 600×800. Transparent background if possible. | /cards/packs/ |
 | ⬜ | `images/packs/otherworld.png` | Otherworld Pack — card pack pack image | Pack art, portrait (3:4), at least 600×800. Transparent background if possible. | /cards/packs/ |
 
 ## places (0/17)
