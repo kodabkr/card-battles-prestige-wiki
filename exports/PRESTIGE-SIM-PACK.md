@@ -36,6 +36,18 @@ Build it in this order, and check in with the user at each step:
 
 ### Teams and turns
 - Prestige Tower battles are **4v4**, like Infinite.
+- **A party has 4 slots. Each slot is one battle card plus exactly one support card:**
+
+  | Slot | Battle card | Support card |
+  |---|---|---|
+  | 1 | Battle slot 1 | Support slot 1 |
+  | 2 | Battle slot 2 | Support slot 2 |
+  | 3 | Battle slot 3 | Support slot 3 |
+  | 4 | Battle slot 4 | Support slot 4 |
+
+- **A support only affects the battle card in its own slot**, unless the support's ability text says otherwise.
+- **Copies are allowed.** The same battle card and the same support can appear more than once in a party, except cards with the **One Per Party** trait.
+- Some battle cards affect other cards in the party, but only when their ability says so. For example, **Noble Companion** gives every card in your party +20% damage for each Noble Companion in the party (stacking).
 - **The player always gets the first turn**: on entry, your card attacks first, then the enemy acts.
 - For now, **any card in the game can be an enemy**. The user will later send which cards actually appear in the Prestige Tower (Part 5).
 - Many abilities refer to the **front** card (the active one), the **bench** (cards waiting their turn), "the next card that comes in", and "fallen" cards. Model a lineup where one card per side is in front and the others wait.
@@ -177,7 +189,7 @@ These are not known yet. Build them as configuration, mark them clearly, and ask
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
 4. **Turn order in detail**: after the player's first attack, do sides alternate one action each? When does a new card enter, and does it act immediately?
 5. **Targeting**: does a normal attack always hit the enemy in front? Can the bench be hit except where an ability says so?
-6. **Team rules**: team size (4?), how many supports each battle card can equip, and whether copies of a card are allowed (cards with **One Per Party** are limited to one).
+6. **Slot order**: does slot 1 always fight first, then slot 2, and so on? (Team size, one support per battle card and copies are known; see Part 2.)
 7. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
 8. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
 9. **"X% damage" without ATK**: confirm it means X% of a normal attack.
@@ -196,6 +208,20 @@ The full space is huge: 238 battle cards make about 130 million different 4-card
 3. **Full teams.** Use beam search or a genetic algorithm over 4-card teams (and their order, supports and variants), seeded with the best singles and pairs.
 4. **Exhaustive check on the shortlist.** Take the best few dozen cards and try every 4-card team and order among them.
 5. **Measure strength as the highest floor cleared.** For each finalist, find the highest Prestige Tower floor it clears at least 90% of the time, at Base variant and at the user's chosen variants and Awakening levels.
+
+The search space per team is: 4 battle cards (order matters), 4 supports (one per slot, copies allowed), each card's variant and Awakening level.
+
+### A real team, as a starting point
+The user currently runs this team. Use it as a baseline to beat, and as an example of the kind of idea to look for:
+
+| Slot | Battle card | Support | Role in the team |
+|---|---|---|---|
+| 1 | Noble Companion | Sorceress's Sorrow | Fodder: +20% damage to the whole party on its own, and its support curses and poisons the enemy when it dies |
+| 2 | Noble Companion | Sorceress's Sorrow | Same again: the two Nobles stack to +40% party damage |
+| 3 | KO King | (a 1-in-120M support) | Main damage |
+| 4 | (a 1-in-130Qa card) | (a 1-in-9B support) | Main damage |
+
+The idea: cards that do little damage themselves can still buff the team and use their support slot to debuff the enemy before they fall. Look for more patterns like this, such as cheap fodder with strong death-trigger supports, or stacking party-wide buffs from copies.
 
 Look especially for **cheese**: teams that win because of a rule interaction rather than big stats. Examples: permanent stuns or silences, immunity loops, revive chains, reflected damage that scales with enemy stats, abilities that ignore enemy scaling ("not a boss's", fixed HP percentages), and anything that keeps working as enemy HP grows.
 
