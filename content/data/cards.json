@@ -6761,7 +6761,8 @@
     "roles": [
       "debuffer"
     ],
-    "notes": "Sold in the Trophy shop for 2K Trophies (\"Unlocks it in your rolls\")."
+    "notes": "Sold in the PvP shop (paid in Trophies) for 2K Trophies. Buying it unlocks it in your rolls.",
+    "origin": "pvp-shop"
   },
   {
     "id": "warhammer-titan",
