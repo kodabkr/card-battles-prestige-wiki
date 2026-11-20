@@ -129,10 +129,10 @@ Measured in game (stats change every single floor):
 | 3,000 | 12,900,000 | 25,900,000 | 0.50 |
 | 3,250 | 21,000,000 | 42,100,000 | 0.50 |
 | 3,499 | 34,100,000 | 68,300,000 | 0.50 |
-| 3,800 | 77,700,000* | 155,000,000 | 0.50 |
+| 3,800 | 77,000,000 (interpolated) | 154,000,000 (interpolated) | 0.50 |
 | 3,803 | 77,500,000 | 155,000,000 | 0.50 |
 
-\* The floor 3,800 DMG reading (77.7M) is slightly higher than floor 3,803's (77.5M), which can't be right because stats rise every floor. It was probably a small buff on that card. Use HP and the DMG share instead.
+Floor 3,800 is interpolated from floors 3,499 and 3,803 using the model below. The in-game reading there (77.7M DMG) was buffed, so it is not used.
 
 What the data shows:
 - **HP is the base number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to at least floor 1,000, and **0.5 × HP** from floor 1,250 on. Where exactly between 1,001 and 1,250 it switches is not known.
