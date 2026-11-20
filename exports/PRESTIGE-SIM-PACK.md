@@ -14,7 +14,7 @@ Build it in this order, and check in with the user at each step:
 2. **Write the battle engine** that follows the rules in Part 2 exactly. Anything Part 5 lists as unknown must be a clearly named, configurable assumption, never hard-coded silently.
 3. **Implement every card's ability** from its exact text in Part 7. Abilities are the hard part: each card needs its own implementation. Build them on shared building blocks (status effects, triggers, stacking buffs, damage instances) so they behave consistently.
 4. **Test each ability.** Give every card at least one unit test that checks its main numbers (for example, "Hawkeye Sniper's 3rd shot deals 300% of her ATK"). Whenever an ability is ambiguous, list the question for the user instead of guessing. Collect all of these in an `ASSUMPTIONS.md` file.
-5. **Add the Prestige Tower model:** enemy stats per floor from the formula in Part 5, and which cards can appear there.
+5. **Add the Prestige Tower model:** enemy stats per floor from the model in Part 3, and which cards can appear there (Part 5).
 6. **Search for strong teams** using the strategy in Part 6, and write a readable report.
 
 ### What "properly simulate" means
@@ -48,9 +48,23 @@ Build it in this order, and check in with the user at each step:
 - **A support only affects the battle card in its own slot**, unless the support's ability text says otherwise.
 - **Copies are allowed.** The same battle card and the same support can appear more than once in a party, except cards with the **One Per Party** trait.
 - Some battle cards affect other cards in the party, but only when their ability says so. For example, **Noble Companion** gives every card in your party +20% damage for each Noble Companion in the party (stacking).
-- **The player always gets the first turn**: on entry, your card attacks first, then the enemy acts.
+- **Slot order:** each side fights in slot order. Slot 1 is in front first. When it dies, the card in the next slot comes in (slot 2, then 3, then 4). The other cards wait on the **bench**.
+- **The player always gets the first turn.** After that, **the two sides alternate one action each**: player, enemy, player, enemy…
+- **Effects can break the alternation.** Stuns, freezes, lost turns and similar effects skip or change turns exactly as each ability says. Examples:
+  - **Time Master** permanently disables the entering enemy's ability.
+  - **Ice Reaper** freezes the enemy for 3 turns when it dies.
+  - **Blessed Sorcerer** stuns every enemy when it drops below 20% HP.
+- **Targeting:** a normal attack hits **the enemy in front**, unless an ability or a combination of abilities changes that.
 - For now, **any card in the game can be an enemy**. The user will later send which cards actually appear in the Prestige Tower (Part 5).
-- Many abilities refer to the **front** card (the active one), the **bench** (cards waiting their turn), "the next card that comes in", and "fallen" cards. Model a lineup where one card per side is in front and the others wait.
+- Abilities refer to the **front** card (the active one), the **bench**, "the next card that comes in", and "fallen" cards.
+
+### Abilities combine
+Cards and supports can **copy, borrow or steal abilities**, and a card can then hold **more than one ability at once and use them all**. The engine must support this generally, not as special cases. An example of how abilities can work together (an illustration of a mechanic, not a known strong combo):
+- **Assimilator Kaiju** copies the ability of each enemy that enters.
+- The support **Destiny Thread** makes the next card in your party borrow the fallen card's ability for 2 turns.
+- So with Destiny Thread on the card in front of it, Assimilator Kaiju can borrow that card's ability (for example a multi-hit) and also copy the enemy's ability, then use both at once.
+
+Interactions like this are exactly what the search is looking for. Model abilities as components a card can gain or lose during a battle, and make every trigger (on entry, on attack, on hit, on death, start or end of turn) work for any ability a card holds at the time.
 
 ### Stats
 - Every battle card has **DMG** (its attack, also called ATK in ability text) and **HP**.
@@ -197,19 +211,19 @@ These are not known yet. Build them as configuration, mark them clearly, and ask
 1. **More enemy stat measurements** to tighten the model in Part 3: floors just before and after a multiple of 500 (for example 1,499 and 1,500, or 2,499 and 2,500) to confirm the jump; a few floors between 1,000 and 1,250 to find where DMG switches from 0.6 to 0.5 of HP; and floors past 3,800.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
-4. **Turn order in detail**: after the player's first attack, do sides alternate one action each? When does a new card enter, and does it act immediately?
-5. **Targeting**: does a normal attack always hit the enemy in front? Can the bench be hit except where an ability says so?
-6. **Slot order**: does slot 1 always fight first, then slot 2, and so on? (Team size, one support per battle card and copies are known; see Part 2.)
-7. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
-8. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
-9. **"X% damage" without ATK**: confirm it means X% of a normal attack.
-10. **Awakening exceptions**: which percentages do not scale.
+4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
+5. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
+6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
+7. **"X% damage" without ATK**: confirm it means X% of a normal attack.
+8. **Awakening exceptions**: which percentages do not scale.
 
 When the user answers, update `ASSUMPTIONS.md` and re-run the affected tests.
 
 ---
 
 ## Part 6 — Finding broken teams
+
+**The goal is to simulate as many battles, with as many different card combinations, as possible**, to find the cards and teams that can fight at the highest Prestige Tower floors.
 
 The full space is huge: 238 battle cards make about 130 million different 4-card teams before order, variants, Awakening and supports. Simulating all of them is not realistic, so search in stages. The goal is that nothing promising is skipped:
 
