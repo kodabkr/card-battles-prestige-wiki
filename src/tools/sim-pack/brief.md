@@ -26,8 +26,7 @@ Part 5 lists what is still unknown. **Don't wait for those answers before the fi
 | Which cards appear as tower enemies | Every battle card in Part 7 |
 | How an enemy team is picked | 4 random battle cards from that pool, random order, a new draw per battle (seeded). Enemy stats come from the floor (Part 3), never from the card or its variant |
 | Enemy supports | None |
-| Player boost | Every player card's DMG and HP x281, the same on every floor |
-| Player variants and Awakening | Base variant, no Awakening. Then a second pass of the finalists at Shiny Galactic and Awakening Lv 5, to show the best case |
+| Player variants and Awakening | Base variant, no Awakening. Then a second pass of the finalists with each card at the strongest variant the rarity cap allows (Rainbow, x2,048, when there is no cap) and Awakening Lv 5, to show the best case |
 | Difficulty Cut | Maxed (the floor table as written) |
 | Between floors | Each floor is a fresh battle at full HP with no carried-over effects |
 | A new card coming in | The alternation simply continues; the new card does not get a free action |
@@ -88,7 +87,8 @@ Interactions like this are exactly what the search is looking for. Model abiliti
 ### Stats
 - Every battle card has **DMG** (its attack, also called ATK in ability text) and **HP**.
 - **HP is exactly 2x DMG** on every card seen so far (small differences are rounding).
-- Stats in Part 7 are **base stats**: no variant, no Awakening, no prestige boost.
+- Stats in Part 7 are **base stats**: no variant, no Awakening.
+- **In battle, a player's card fights with its base stats × its variant's stat multiplier, and nothing else.** The prestige floor does not boost the player's cards. Awakening changes ability percentages, not stats. The only other changes happen inside a battle, through abilities and supports, for example a stat transfer like the **Last Legacy** support (on death, it passes 40% of the card's stats to the next card in line).
 - Abilities saying "X% of his ATK", "X% of her attack" or "X% ATK damage" deal X% of that card's **current** DMG. Ability text saying just "X% damage" (for example "3 shots for 175% damage each") most likely means X% of a normal attack's damage. Treat that as an assumption.
 - "Starting ATK" means the card's DMG when the battle began (before buffs).
 
@@ -125,7 +125,7 @@ Traits are short labels the game shows on each card. They summarise what the abi
 
 What we know:
 - You climb floors in 4v4 battles. **Prestige luck** grows at milestones every 100 floors (this does not affect battles).
-- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). **But it is not the same for every card:** comparing battle-menu stats with base stats from the deck view on 14 more cards gave anything from 1x to about 3,300x (most between 25x and 530x). So the battle-menu number depends on more than the floor, probably the copy the user owns (its variant, and maybe pack upgrade levels or other boosts). The exact rule is still unknown (Part 5). Make the player boost a per-card setting with 281x as the default, so real numbers for the user's copies can be dropped in later.
+- **The player's cards are not boosted by the prestige floor.** They fight with base stats × their variant's stat multiplier (Part 2). Only the enemies scale with the floor. So the variants the player uses decide how high a team can climb.
 - Outside the tower, world NPC enemies (secret bosses included) also scale up: at floor 3,001 they are about 130–143x their base strength. That is separate from the tower enemies below.
 
 ### Enemy stats in the Prestige Tower
@@ -208,7 +208,7 @@ These are not known yet. Build them as configuration and mark them clearly. Use 
 
 1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a recheck of floors 1,250 and 3,803, the exact floor between 1,001 and 1,100 where DMG switches from 0.6 to 0.5 of HP, and any floors past 5,001.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
-3. **Player boost**: exactly how the player's prestige floor boosts their own cards. About 281x was observed on 5 cards at one floor, but other cards showed 1x to 3,300x (Part 3).
+3. **Final Flame**: the user mentioned "final flame", a stat transfer that buffs the next card in line. Check with the user whether it works like the Last Legacy support or is something else.
 4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
 5. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
 6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
@@ -242,8 +242,8 @@ Look especially for **cheese**: teams that win because of a rule interaction rat
 Write everything into a `results/` folder, and overwrite it on every full run:
 
 1. **`results/RESULTS.md`**, the readable report, with these sections:
-   - **Run summary:** the date, how many battles and teams were simulated, the random seed, and the config used (boost, variants, Awakening, Difficulty Cut).
-   - **Top 25 teams:** a table with rank, slot 1–4 battle cards, slot 1–4 supports, highest floor cleared (90%+ win rate), win rate there, the highest floor won at least once, and average turns per win. Show Base / no Awakening and the best-case pass (Shiny Galactic, Awakening Lv 5) in separate tables.
+   - **Run summary:** the date, how many battles and teams were simulated, the random seed, and the config used (variants, Awakening, rarity cap, Difficulty Cut).
+   - **Top 25 teams:** a table with rank, slot 1–4 battle cards, slot 1–4 supports, highest floor cleared (90%+ win rate), win rate there, the highest floor won at least once, and average turns per win. Show Base / no Awakening and the best-case pass (strongest allowed variant, Awakening Lv 5) in separate tables, and list each card's variant in the best-case table.
    - **Why they work:** for each of the top 10, two or three sentences on the key interaction (which abilities carry the team, and what goes wrong without each card).
    - **Cheese and surprises:** teams that reach high floors with low stats or common cards, and any interaction that keeps working no matter how strong enemies get. Flag any team whose floor looks unlimited (it may be a bug in the engine or a real exploit; say which you think it is).
    - **Best single cards** and **best supports:** the top 20 of each, by how much they raise a team's highest floor.
@@ -260,6 +260,6 @@ Also print a short summary to the console when a run finishes: the top 5 teams a
 
 ## Part 7 — Every card
 
-Card stats are **base** (no variant, Awakening or prestige boost). Rarity is "1 in N" before variants. Cards marked **(estimated)** had their base stats worked out from boosted battle-menu numbers; treat them as approximate. "Roles" are the wiki's own summary labels, not from the game.
+Card stats are **base** (no variant or Awakening), from the in-game deck view. Rarity is "1 in N" before variants. "Roles" are the wiki's own summary labels, not from the game.
 
 For each ability, the **Ability numbers** table lists every percentage in the text, in order, with its value at each Awakening level (base x 1.1, 1.2, 1.3, 1.4, 1.5).
