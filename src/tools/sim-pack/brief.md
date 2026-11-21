@@ -125,7 +125,7 @@ Traits are short labels the game shows on each card. They summarise what the abi
 
 What we know:
 - You climb floors in 4v4 battles. **Prestige luck** grows at milestones every 100 floors (this does not affect battles).
-- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). The exact rule is still unknown (Part 5).
+- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). **But it is not the same for every card:** comparing battle-menu stats with base stats from the deck view on 14 more cards gave anything from 1x to about 3,300x (most between 25x and 530x). So the battle-menu number depends on more than the floor, probably the copy the user owns (its variant, and maybe pack upgrade levels or other boosts). The exact rule is still unknown (Part 5). Make the player boost a per-card setting with 281x as the default, so real numbers for the user's copies can be dropped in later.
 - Outside the tower, world NPC enemies (secret bosses included) also scale up: at floor 3,001 they are about 130–143x their base strength. That is separate from the tower enemies below.
 
 ### Enemy stats in the Prestige Tower
@@ -208,7 +208,7 @@ These are not known yet. Build them as configuration and mark them clearly. Use 
 
 1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a recheck of floors 1,250 and 3,803, the exact floor between 1,001 and 1,100 where DMG switches from 0.6 to 0.5 of HP, and any floors past 5,001.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
-3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
+3. **Player boost**: exactly how the player's prestige floor boosts their own cards. About 281x was observed on 5 cards at one floor, but other cards showed 1x to 3,300x (Part 3).
 4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
 5. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
 6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?

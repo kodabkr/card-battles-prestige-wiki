@@ -100,10 +100,14 @@
     "name": "Apex of Curses",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "4.3K",
-    "hp": "8.6K",
-    "statsEstimated": true,
+    "dmg": "1.21M",
+    "hp": "2.42M",
     "seenStats": [
+      {
+        "hp": "2.42M",
+        "dmg": "1.21M",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "2.42M",
         "dmg": "1.21M",
@@ -888,10 +892,14 @@
     "name": "Chrome Bruiser",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "57.6K",
-    "hp": "115K",
-    "statsEstimated": true,
+    "dmg": "30.7K",
+    "hp": "61.4K",
     "seenStats": [
+      {
+        "hp": "61.4K",
+        "dmg": "30.7K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "32.4M",
         "dmg": "16.2M",
@@ -1231,7 +1239,14 @@
       "self-scaling",
       "evasion"
     ],
-    "screenshot": "Battles/Chat_2026-11-20b_crimson-moon-captain.webp"
+    "screenshot": "Battles/Chat_2026-11-20b_crimson-moon-captain.webp",
+    "seenStats": [
+      {
+        "hp": "75.6K",
+        "dmg": "37.8K",
+        "where": "deck view, base, 21 Nov 2026"
+      }
+    ]
   },
   {
     "id": "crimson-phantom",
@@ -1332,10 +1347,14 @@
     "name": "Crooked Fixer",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "44.8K",
-    "hp": "89.6K",
-    "statsEstimated": true,
+    "dmg": "27.9K",
+    "hp": "55.8K",
     "seenStats": [
+      {
+        "hp": "55.8K",
+        "dmg": "27.9K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "25.2M",
         "dmg": "12.6M",
@@ -1945,10 +1964,14 @@
     "name": "Eclipse Twins",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "2.15K",
-    "hp": "4.3K",
-    "statsEstimated": true,
+    "dmg": "605K",
+    "hp": "1.21M",
     "seenStats": [
+      {
+        "hp": "1.21M",
+        "dmg": "605K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "1.21M",
         "dmg": "605K",
@@ -2392,10 +2415,14 @@
     "name": "Full-Borg Enforcer",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "26.4K",
-    "hp": "52.6K",
-    "statsEstimated": true,
+    "dmg": "39.4K",
+    "hp": "78.9K",
     "seenStats": [
+      {
+        "hp": "78.9K",
+        "dmg": "39.4K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "14.8M",
         "dmg": "7.44M",
@@ -2899,7 +2926,7 @@
     "id": "hollow-armor",
     "name": "Hollow Armor",
     "type": "battle",
-    "rarity": 4000000000.0,
+    "rarity": 4000000000,
     "origin": "pack",
     "source": "pack:forge",
     "dmg": "9.71K",
@@ -3335,10 +3362,14 @@
     "name": "Killer Queen",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "179K",
-    "hp": "355K",
-    "statsEstimated": true,
+    "dmg": "684K",
+    "hp": "1.36M",
     "seenStats": [
+      {
+        "hp": "1.36M",
+        "dmg": "684K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "100M",
         "dmg": "50.4M",
@@ -3398,10 +3429,14 @@
     "name": "King Crimson",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "191K",
-    "hp": "380K",
-    "statsEstimated": true,
+    "dmg": "797K",
+    "hp": "1.59M",
     "seenStats": [
+      {
+        "hp": "1.59M",
+        "dmg": "797K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "107M",
         "dmg": "53.6M",
@@ -3773,10 +3808,14 @@
     "name": "Masked Chrome",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "60.4K",
-    "hp": "121K",
-    "statsEstimated": true,
+    "dmg": "33.9K",
+    "hp": "67.9K",
     "seenStats": [
+      {
+        "hp": "67.9K",
+        "dmg": "33.9K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "34.1M",
         "dmg": "17M",
@@ -5006,7 +5045,7 @@
     "id": "shade-prince",
     "name": "Shade Prince",
     "type": "battle",
-    "rarity": 3500000000.0,
+    "rarity": 3500000000,
     "origin": "pack",
     "source": "pack:forge",
     "dmg": "9.33K",
@@ -5666,10 +5705,14 @@
     "name": "Star Fist",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "290K",
-    "hp": "579K",
-    "statsEstimated": true,
+    "dmg": "30.7K",
+    "hp": "61.4K",
     "seenStats": [
+      {
+        "hp": "61.4K",
+        "dmg": "30.7K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "163M",
         "dmg": "81.7M",
@@ -5706,10 +5749,14 @@
     "name": "Static Ghost",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "8.17K",
-    "hp": "16.4K",
-    "statsEstimated": true,
+    "dmg": "93.5K",
+    "hp": "187K",
     "seenStats": [
+      {
+        "hp": "187K",
+        "dmg": "93.5K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "4.61M",
         "dmg": "2.3M",
@@ -6051,10 +6098,14 @@
     "name": "The Hand",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "248K",
-    "hp": "494K",
-    "statsEstimated": true,
+    "dmg": "21.3K",
+    "hp": "42.7K",
     "seenStats": [
+      {
+        "hp": "42.7K",
+        "dmg": "21.3K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "139M",
         "dmg": "69.7M",
@@ -6584,10 +6635,14 @@
     "name": "Turncoat Netrunner",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "47.6K",
-    "hp": "95.3K",
-    "statsEstimated": true,
+    "dmg": "25.3K",
+    "hp": "50.7K",
     "seenStats": [
+      {
+        "hp": "50.7K",
+        "dmg": "25.3K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "26.8M",
         "dmg": "13.4M",
@@ -6615,10 +6670,14 @@
     "name": "Twin-Gun Gremlin",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "43K",
-    "hp": "86K",
-    "statsEstimated": true,
+    "dmg": "22.9K",
+    "hp": "45.9K",
     "seenStats": [
+      {
+        "hp": "45.9K",
+        "dmg": "22.9K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "24.2M",
         "dmg": "12.1M",
@@ -6677,7 +6736,14 @@
       "debuffer",
       "entry-effect"
     ],
-    "screenshot": "Battles/Chat_2026-11-20b_undead-overlord.webp"
+    "screenshot": "Battles/Chat_2026-11-20b_undead-overlord.webp",
+    "seenStats": [
+      {
+        "hp": "75.6K",
+        "dmg": "37.8K",
+        "where": "deck view, base, 21 Nov 2026"
+      }
+    ]
   },
   {
     "id": "undying-rogue",
@@ -6937,10 +7003,14 @@
     "name": "Wonder of U",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "314K",
-    "hp": "626K",
-    "statsEstimated": true,
+    "dmg": "1.96M",
+    "hp": "3.93M",
     "seenStats": [
+      {
+        "hp": "3.93M",
+        "dmg": "1.96M",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "176M",
         "dmg": "88.3M",

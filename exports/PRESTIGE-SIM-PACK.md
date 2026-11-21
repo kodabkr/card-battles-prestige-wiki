@@ -161,7 +161,7 @@ Traits are short labels the game shows on each card. They summarise what the abi
 
 What we know:
 - You climb floors in 4v4 battles. **Prestige luck** grows at milestones every 100 floors (this does not affect battles).
-- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). The exact rule is still unknown (Part 5).
+- **The player's own cards are boosted in battle by their prestige floor.** At the user's current floor, cards in the battle menu showed about **281x their base stats** (5 cards measured: 280.7x to 281.8x). **But it is not the same for every card:** comparing battle-menu stats with base stats from the deck view on 14 more cards gave anything from 1x to about 3,300x (most between 25x and 530x). So the battle-menu number depends on more than the floor, probably the copy the user owns (its variant, and maybe pack upgrade levels or other boosts). The exact rule is still unknown (Part 5). Make the player boost a per-card setting with 281x as the default, so real numbers for the user's copies can be dropped in later.
 - Outside the tower, world NPC enemies (secret bosses included) also scale up: at floor 3,001 they are about 130–143x their base strength. That is separate from the tower enemies below.
 
 ### Enemy stats in the Prestige Tower
@@ -244,7 +244,7 @@ These are not known yet. Build them as configuration and mark them clearly. Use 
 
 1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a recheck of floors 1,250 and 3,803, the exact floor between 1,001 and 1,100 where DMG switches from 0.6 to 0.5 of HP, and any floors past 5,001.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
-3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
+3. **Player boost**: exactly how the player's prestige floor boosts their own cards. About 281x was observed on 5 cards at one floor, but other cards showed 1x to 3,300x (Part 3).
 4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
 5. **Timing words**: exactly when "on entry", "start of turn", "end of turn", "end of round" and "at the start of each enemy turn" trigger, relative to each other.
 6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
@@ -405,7 +405,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 4.3K (4,300) · **Base HP:** 8.6K (8,600) **(estimated)**
+**Base DMG:** 1.21M (1,210,000) · **Base HP:** 2.42M (2,420,000)
 
 **Traits:** Lifesteal, Stun
 
@@ -1184,7 +1184,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 57.6K (57,600) · **Base HP:** 115K (115,000) **(estimated)**
+**Base DMG:** 30.7K (30,700) · **Base HP:** 61.4K (61,400)
 
 **Traits:** Heal
 
@@ -1519,7 +1519,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 44.8K (44,800) · **Base HP:** 89.6K (89,600) **(estimated)**
+**Base DMG:** 27.9K (27,900) · **Base HP:** 55.8K (55,800)
 
 **Traits:** Heal, Entry Effect
 
@@ -2067,7 +2067,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 2.15K (2,150) · **Base HP:** 4.3K (4,300) **(estimated)**
+**Base DMG:** 605K (605,000) · **Base HP:** 1.21M (1,210,000)
 
 **Traits:** Burn, Revive, Heal
 
@@ -2450,7 +2450,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 26.4K (26,400) · **Base HP:** 52.6K (52,600) **(estimated)**
+**Base DMG:** 39.4K (39,400) · **Base HP:** 78.9K (78,900)
 
 **Traits:** Revive
 
@@ -3275,7 +3275,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 179K (179,000) · **Base HP:** 355K (355,000) **(estimated)**
+**Base DMG:** 684K (684,000) · **Base HP:** 1.36M (1,360,000)
 
 **Traits:** One Per Party, Once Per Battle
 
@@ -3333,7 +3333,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 191K (191,000) · **Base HP:** 380K (380,000) **(estimated)**
+**Base DMG:** 797K (797,000) · **Base HP:** 1.59M (1,590,000)
 
 **Traits:** One Per Party, Dodge, Can't Miss
 
@@ -3664,7 +3664,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 60.4K (60,400) · **Base HP:** 121K (121,000) **(estimated)**
+**Base DMG:** 33.9K (33,900) · **Base HP:** 67.9K (67,900)
 
 **Traits:** Dodge, Bleed
 
@@ -5223,7 +5223,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 290K (290,000) · **Base HP:** 579K (579,000) **(estimated)**
+**Base DMG:** 30.7K (30,700) · **Base HP:** 61.4K (61,400)
 
 **Traits:** One Per Party, Once Per Battle, Stun, Heal
 
@@ -5259,7 +5259,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 8.17K (8,170) · **Base HP:** 16.4K (16,400) **(estimated)**
+**Base DMG:** 93.5K (93,500) · **Base HP:** 187K (187,000)
 
 **Traits:** One Per Party, Hits All, Can't Miss
 
@@ -5573,7 +5573,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 248K (248,000) · **Base HP:** 494K (494,000) **(estimated)**
+**Base DMG:** 21.3K (21,300) · **Base HP:** 42.7K (42,700)
 
 **Traits:** One Per Party, Can't Miss
 
@@ -6025,7 +6025,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 47.6K (47,600) · **Base HP:** 95.3K (95,300) **(estimated)**
+**Base DMG:** 25.3K (25,300) · **Base HP:** 50.7K (50,700)
 
 **Traits:** Stun, Heal
 
@@ -6055,7 +6055,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 43K (43,000) · **Base HP:** 86K (86,000) **(estimated)**
+**Base DMG:** 22.9K (22,900) · **Base HP:** 45.9K (45,900)
 
 **Traits:** Pierce
 
@@ -6333,7 +6333,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 314K (314,000) · **Base HP:** 626K (626,000) **(estimated)**
+**Base DMG:** 1.96M (1,960,000) · **Base HP:** 3.93M (3,930,000)
 
 **Traits:** One Per Party
 
