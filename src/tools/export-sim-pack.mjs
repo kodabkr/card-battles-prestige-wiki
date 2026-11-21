@@ -59,6 +59,15 @@ function stat(v) {
   return n == null ? null : n;
 }
 
+// Rarity from stats: base DMG = K x 2^(log10 rarity), the same rule as variants
+// (every 10x rarer = 2x stats). K is calibrated on cards whose rarity is known.
+const calib = battle
+  .filter((c) => typeof c.rarity === 'number' && !c.statsEstimated && stat(c.dmg))
+  .map((c) => stat(c.dmg) / 2 ** Math.log10(c.rarity))
+  .sort((a, b) => a - b);
+const K = calib.length ? calib[Math.floor(calib.length / 2)] : null;
+const rarityFromStats = (dmg) => (K && dmg ? Math.max(1, 10 ** Math.log2(dmg / K)) : null);
+
 // ---- JSON ----
 const json = cards.map((c) => {
   const isBattle = c.type !== 'support';
@@ -67,6 +76,8 @@ const json = cards.map((c) => {
     name: c.name,
     type: isBattle ? 'battle' : 'support',
     rarity: typeof c.rarity === 'number' ? c.rarity : null,
+    rarityFromStats: isBattle ? Math.round(rarityFromStats(stat(c.dmg)) || 0) || null : null,
+    rarityForFilter: typeof c.rarity === 'number' ? c.rarity : isBattle ? Math.round(rarityFromStats(stat(c.dmg)) || 0) || null : null,
     image: cardImage(c),
     origin: originName(c),
     source: name(Array.isArray(c.source) ? c.source[0] : c.source),

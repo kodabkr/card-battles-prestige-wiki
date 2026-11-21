@@ -2564,11 +2564,15 @@
     "id": "golden-requiem",
     "name": "Golden Requiem",
     "type": "battle",
-    "rarity": "TODO",
-    "dmg": "269K",
-    "hp": "537K",
-    "statsEstimated": true,
+    "rarity": 300000000000000000,
+    "dmg": "2.73M",
+    "hp": "5.47M",
     "seenStats": [
+      {
+        "hp": "5.47M",
+        "dmg": "2.73M",
+        "where": "deck view, base, 1/300Qa, 21 Nov 2026"
+      },
       {
         "hp": "151M",
         "dmg": "75.6M",
