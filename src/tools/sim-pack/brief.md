@@ -112,46 +112,56 @@ What we know:
 ### Enemy stats in the Prestige Tower
 **Every enemy card on a floor has exactly the same DMG and HP. It depends only on the floor number.** The enemy card's own base stats and its variant (Prismatic, Shiny Cosmic and so on) do **not** matter in the tower. Enemy cards still have their own abilities. Assume any "% of ATK" in an enemy's ability uses that floor's DMG.
 
-Measured in game (stats change every single floor):
+Measured in game (stats change every single floor). "Cut 5" means the reading came from a player with the Difficulty Cut upgrade maxed (see below); it only matters from floor 4,000 on.
 
-| Floor | Enemy DMG | Enemy HP | DMG ÷ HP |
-|---|---|---|---|
-| 100 | 2,660 | 4,430 | 0.60 |
-| 1,000 | 34,000 | 56,600 | 0.60 |
-| 1,250 | 53,700 | 107,000 | 0.50 |
-| 1,499 | 111,000 | 222,000 | 0.50 |
-| 1,500 | 132,000 | 264,000 | 0.50 |
-| 1,750 | 262,000 | 525,000 | 0.50 |
-| 2,000 | 641,000 | 1,280,000 | 0.50 |
-| 2,499 | 2,660,000 | 5,320,000 | 0.50 |
-| 2,500 | 3,170,000 | 6,340,000 | 0.50 |
-| 2,750 | 6,360,000 | 12,700,000 | 0.50 |
-| 3,000 | 12,900,000 | 25,900,000 | 0.50 |
-| 3,250 | 21,000,000 | 42,100,000 | 0.50 |
-| 3,499 | 34,100,000 | 68,300,000 | 0.50 |
-| 3,800 | 77,000,000 (interpolated) | 154,000,000 (interpolated) | 0.50 |
-| 3,803 | 77,500,000 | 155,000,000 | 0.50 |
-| 5,000 (Difficulty Cut maxed) | 1,870,000,000 | ~3,740,000,000 (from DMG) | 0.50 (assumed) |
+| Floor | Enemy DMG | Enemy HP | DMG ÷ HP | Note |
+|---|---|---|---|---|
+| 100 | 2,660 | 4,430 | 0.60 | |
+| 1,000 | 34,000 | 56,600 | 0.60 | |
+| 1,100 | 38,300 | 76,700 | 0.50 | |
+| 1,200 | 52,100 | 104,000 | 0.50 | |
+| 1,250 | 53,700 | 107,000 | 0.50 | about 9% under the curve, **not used** (recheck) |
+| 1,499 | 111,000 | 222,000 | 0.50 | |
+| 1,500 | 132,000 | 264,000 | 0.50 | |
+| 1,750 | 262,000 | 525,000 | 0.50 | |
+| 2,000 | 641,000 | 1,280,000 | 0.50 | |
+| 2,499 | 2,660,000 | 5,320,000 | 0.50 | |
+| 2,500 | 3,170,000 | 6,340,000 | 0.50 | |
+| 2,750 | 6,360,000 | 12,700,000 | 0.50 | |
+| 3,000 | 12,900,000 | 25,900,000 | 0.50 | |
+| 3,250 | 21,000,000 | 42,100,000 | 0.50 | |
+| 3,499 | 34,100,000 | 68,300,000 | 0.50 | |
+| 3,800 | ~70,400,000 | ~141,000,000 | 0.50 | interpolated from 3,499 and 3,999 |
+| 3,803 | 77,500,000 | 155,000,000 | 0.50 | about 9% over the curve (buffed, like the 3,800 reading), **not used** |
+| 3,999 | 101,000,000 | 203,000,000 | 0.50 | |
+| 4,000 | 120,000,000 | 240,000,000 | 0.50 | Cut 5 |
+| 4,250 | 187,000,000 | 374,000,000 | 0.50 | Cut 5 |
+| 4,499 | 290,000,000 | 581,000,000 | 0.50 | Cut 5 |
+| 4,500 | 343,000,000 | 686,000,000 | 0.50 | Cut 5 |
+| 4,750 | 522,000,000 | 1,040,000,000 | 0.50 | Cut 5 |
+| 4,999 | 794,000,000 | 1,580,000,000 | 0.50 | Cut 5 |
+| 5,000 | 936,000,000 | 1,870,000,000 | 0.50 | Cut 5 |
+| 5,001 | 936,000,000 | 1,870,000,000 | 0.50 | Cut 5 |
 
-Floor 3,800 is interpolated from floors 3,499 and 3,803 using the model below. The in-game reading there (77.7M DMG) was buffed, so it is not used.
+The in-game readings at floors 3,800 and 3,803 were both higher than the floors around them allow, so they were probably buffed. Floor 3,800 is interpolated instead, and 3,803 is left out of the model.
 
-**Difficulty Cut (player upgrade, 5 levels):** "Prestige floor 4,000+: enemies grow slower." It only changes enemy growth from floor 4,000 on, so every reading below 4,000 is unaffected. The floor 5,000 reading comes from a player with all 5 levels, and only DMG was measured. The effect per level is not known, so model floors above 4,000 as a player with Difficulty Cut maxed and flag it. Without the upgrade, enemies above floor 4,000 are stronger than this table says.
+**Difficulty Cut (player upgrade, 5 levels):** "Prestige floor 4,000+: enemies grow slower." It only changes enemy growth from floor 4,000 on; every reading below 4,000 is unaffected. With all 5 levels, growth from 4,000 to 5,000 is only slightly slower than just before 4,000 (x1.19 and x1.18 per 100 floors, against x1.20 from 3,500 to 4,000), and that fits the slowdown the curve already had. So either the cut is small, or it can't be told apart from the natural slowdown yet. Readings at a lower Difficulty Cut level above 4,000 are still to come. Until then, model floors above 4,000 as a player with Difficulty Cut maxed and flag it; with fewer levels, enemies above 4,000 are at least this strong.
 
 What the data shows:
-- **HP is the base number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to at least floor 1,000, and **0.5 × HP** from floor 1,250 on. Where exactly between 1,001 and 1,250 it switches is not known.
-- **Every 500th floor (500, 1,000, 1,500, 2,000 …) adds a one-time jump of about x1.187** on top of normal growth. Confirmed directly at 1,499 → 1,500 and 2,499 → 2,500. The jumps at 1,000, 2,000 and 3,000 are inferred: the curve only lines up if they are there.
-- **Between jumps, HP grows a little every floor.** The rate drifts: about x1.28–1.29 per 100 floors below floor 1,250, about x1.32–1.34 from 1,250 to 2,750, then slower: about x1.21–1.24 from 2,750 to 3,800.
+- **HP is the base number, and DMG is a fixed share of it:** DMG = **0.6 × HP** up to floor 1,000, and **0.5 × HP** from floor 1,100 on. The exact switch floor is between 1,001 and 1,100.
+- **Every 500th floor (500, 1,000, 1,500 …) adds a one-time jump of about x1.187** on top of normal growth. Confirmed directly at 1,500, 2,500, 4,000, 4,500 and 5,000 (each x1.18–1.19, with or without Difficulty Cut).
+- **Between jumps, HP grows a little every floor, and the rate slowly drops**, per 100 floors: about x1.28 (100–1,000), x1.32–1.36 (1,000–2,750), x1.24 (2,750–3,000), x1.21 (3,000–3,500), x1.20 (3,500–4,000), x1.19 (4,000–4,500, Cut 5), x1.18 (4,500–5,000, Cut 5).
 
 **Use this model** (call it `enemyStats(floor)`):
 1. Let `J = 1.187` and `n(f) = floor(f / 500)`, the number of 500-floor jumps reached, counting floor f itself if it is a multiple of 500.
-2. For every measured floor, compute the smooth part `y = ln(HP) − n(f) × ln(J)`.
-3. For any floor f, interpolate `y` linearly between the two nearest measured floors, then `HP(f) = e^(y(f) + n(f) × ln(J))`. Below floor 100, continue the 100–1,000 slope. Above 5,000, continue the 3,803–5,000 slope (about x1.25 per 100 floors plus the jumps).
-4. **DMG** = 0.6 × HP up to floor 1,000, and 0.5 × HP from floor 1,250. Between 1,001 and 1,249, switch at 1,001 and flag it until the user measures the exact floor.
+2. For every measured floor not marked "not used", compute the smooth part `y = ln(HP) − n(f) × ln(J)`.
+3. For any floor f, interpolate `y` linearly between the two nearest measured floors, then `HP(f) = e^(y(f) + n(f) × ln(J))`. Below floor 100, continue the 100–1,000 slope. Above 5,000, continue the 4,500–5,000 slope (x1.18 per 100 floors plus the jumps), and flag it: the rate has kept dropping, so far floors are probably overestimated, but Difficulty Cut is said to stop at floor 5,000, which would push the other way.
+4. **DMG** = 0.6 × HP up to floor 1,000, and 0.5 × HP from floor 1,001 (flag floors 1,001–1,099 until the exact switch floor is known).
 5. Keep the measured table, `J` and the DMG ratio in a config file, so new measurements improve the model without code changes.
 
-**Accuracy:** predicting each measured floor from its neighbours lands within about 3% for most floors between 1,000 and 3,500, and 7% at worst (floor 2,750, where the growth rate slows down). Between 3,803 and 5,000 there are no readings in between, so that stretch is a straight line through two points; past 5,000 it is a guess. Before the floor 5,000 reading, extending the 3,000–3,803 slope predicted about 1.5B DMG there, 20% under the real 1.87B, so growth speeds up again somewhere above 3,803.
+**Accuracy:** predicting each measured floor from its neighbours lands within about 3% for most floors, and 8% at worst (floor 2,750, where the growth rate drops). Floors 4,250 and 4,750 are predicted within 0.2%. There are no readings above 5,001.
 
-A rough rule of thumb, for reading only (it can be 10–20% off): enemy HP grows about **x1.3 every 100 floors, plus x1.19 at every 500th floor**, and enemy DMG is half of HP.
+A rough rule of thumb, for reading only (it can be 10–20% off): enemy HP grows about **x1.3 every 100 floors up to floor 2,750 and about x1.2 after that, plus x1.19 at every 500th floor**. Enemy DMG is half of HP.
 
 ---
 
@@ -177,7 +187,7 @@ These words appear in ability texts. Implement each one once and reuse it. Where
 
 These are not known yet. Build them as configuration, mark them clearly, and ask the user for each one before relying on results:
 
-1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a few floors between 1,000 and 1,250 to find where DMG switches from 0.6 to 0.5 of HP, and any floors past 3,803.
+1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a recheck of floors 1,250 and 3,803, the exact floor between 1,001 and 1,100 where DMG switches from 0.6 to 0.5 of HP, and any floors past 5,001.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
 3. **Player boost**: exactly how the player's prestige floor boosts their own cards (about 281x was observed at one floor).
 4. **When a new card comes in** after the one in front dies: does it act right away, or does the alternation simply continue?
@@ -185,7 +195,7 @@ These are not known yet. Build them as configuration, mark them clearly, and ask
 6. **Stacking**: do two damage reductions add or multiply? Do buffs from several cards stack?
 7. **"X% damage" without ATK**: confirm it means X% of a normal attack.
 8. **Awakening exceptions**: which percentages do not scale.
-9. **Difficulty Cut**: how much each of its 5 levels slows enemy growth above floor 4,000, and the enemy HP at floor 5,000.
+9. **Difficulty Cut**: how much each of its 5 levels slows enemy growth above floor 4,000 (readings at a lower level are coming), and whether it really stops at floor 5,000.
 
 When the user answers, update `ASSUMPTIONS.md` and re-run the affected tests.
 
