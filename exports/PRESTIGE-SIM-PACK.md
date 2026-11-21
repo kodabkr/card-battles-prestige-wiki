@@ -2687,7 +2687,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 195K (195,000) · **Base HP:** 387K (387,000) **(estimated)**
+**Base DMG:** 10.6K (10,600) · **Base HP:** 21.3K (21,300)
 
 **Traits:** One Per Party, Poison
 
@@ -4052,7 +4052,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 147K (147,000) · **Base HP:** 294K (294,000) **(estimated)**
+**Base DMG:** 15.3K (15,300) · **Base HP:** 30.7K (30,700)
 
 **Traits:** One Per Party
 
@@ -4942,7 +4942,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 175K (175,000) · **Base HP:** 350K (350,000) **(estimated)**
+**Base DMG:** 7.68K (7,680) · **Base HP:** 15.3K (15,300)
 
 **Traits:** One Per Party, Dodge, Ignores Defense, Can't Miss
 
@@ -5657,7 +5657,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 243K (243,000) · **Base HP:** 483K (483,000) **(estimated)**
+**Base DMG:** 1.36M (1,360,000) · **Base HP:** 2.73M (2,730,000)
 
 **Traits:** One Per Party, Once Per Battle, Lifesteal, Hits All, Can't Miss
 
@@ -6190,7 +6190,7 @@ Battle card · Rarity: unknown · Origin: unknown
 
 Battle card · Rarity: unknown · Origin: unknown
 
-**Base DMG:** 210K (210,000) · **Base HP:** 419K (419,000) **(estimated)**
+**Base DMG:** 151K (151,000) · **Base HP:** 302K (302,000)
 
 **Traits:** One Per Party, Once Per Battle, Freeze, Burn, Hits All
 

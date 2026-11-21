@@ -2679,10 +2679,14 @@
     "name": "Green Day",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "195K",
-    "hp": "387K",
-    "statsEstimated": true,
+    "dmg": "10.6K",
+    "hp": "21.3K",
     "seenStats": [
+      {
+        "hp": "21.3K",
+        "dmg": "10.6K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "109M",
         "dmg": "54.8M",
@@ -4268,10 +4272,14 @@
     "name": "Pale Snake",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "147K",
-    "hp": "294K",
-    "statsEstimated": true,
+    "dmg": "15.3K",
+    "hp": "30.7K",
     "seenStats": [
+      {
+        "hp": "30.7K",
+        "dmg": "15.3K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "82.6M",
         "dmg": "41.3M",
@@ -5308,10 +5316,14 @@
     "name": "Silver Chariot",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "175K",
-    "hp": "350K",
-    "statsEstimated": true,
+    "dmg": "7.68K",
+    "hp": "15.3K",
     "seenStats": [
+      {
+        "hp": "15.3K",
+        "dmg": "7.68K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "98.4M",
         "dmg": "49.2M",
@@ -6196,10 +6208,14 @@
     "name": "The World",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "243K",
-    "hp": "483K",
-    "statsEstimated": true,
+    "dmg": "1.36M",
+    "hp": "2.73M",
     "seenStats": [
+      {
+        "hp": "2.73M",
+        "dmg": "1.36M",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "136M",
         "dmg": "68.4M",
@@ -6837,10 +6853,14 @@
     "name": "Weather Report",
     "type": "battle",
     "rarity": "TODO",
-    "dmg": "210K",
-    "hp": "419K",
-    "statsEstimated": true,
+    "dmg": "151K",
+    "hp": "302K",
     "seenStats": [
+      {
+        "hp": "302K",
+        "dmg": "151K",
+        "where": "deck view, base, 21 Nov 2026"
+      },
       {
         "hp": "118M",
         "dmg": "59.2M",
