@@ -8,14 +8,32 @@
 
 You are building a **battle simulator for the Roblox game Card Battles: Prestige**. Its purpose is to find **unusually strong ("cheese") teams for the Prestige Tower**: teams that can clear far higher floors than their rarity or stats suggest, ideally ones nobody has noticed yet.
 
-Build it in this order, and check in with the user at each step:
+Build it in this order. Show the user your progress after step 4 (the ability tests and `ASSUMPTIONS.md`) and after step 6 (the results), but don't stop and wait in between:
 
 1. **Read everything in this file.** Parts 2–4 are the rules, Part 5 is what is still unknown, and Part 7 is every card in the game.
 2. **Write the battle engine** that follows the rules in Part 2 exactly. Anything Part 5 lists as unknown must be a clearly named, configurable assumption, never hard-coded silently.
 3. **Implement every card's ability** from its exact text in Part 7. Abilities are the hard part: each card needs its own implementation. Build them on shared building blocks (status effects, triggers, stacking buffs, damage instances) so they behave consistently.
 4. **Test each ability.** Give every card at least one unit test that checks its main numbers (for example, "Hawkeye Sniper's 3rd shot deals 300% of her ATK"). Whenever an ability is ambiguous, list the question for the user instead of guessing. Collect all of these in an `ASSUMPTIONS.md` file.
 5. **Add the Prestige Tower model:** enemy stats per floor from the model in Part 3, and which cards can appear there (Part 5).
-6. **Search for strong teams** using the strategy in Part 6, and write a readable report.
+6. **Search for strong teams** using the strategy in Part 6, and write the results files it describes (`results/RESULTS.md` and the rest).
+
+### First run: start now, with these defaults
+Part 5 lists what is still unknown. **Don't wait for those answers before the first run.** Use the defaults below, put each one in a config file, list them in `ASSUMPTIONS.md` and in the results, and re-run when the user answers.
+
+| Unknown | Default for the first run |
+|---|---|
+| Which cards appear as tower enemies | Every battle card in Part 7 |
+| How an enemy team is picked | 4 random battle cards from that pool, random order, a new draw per battle (seeded). Enemy stats come from the floor (Part 3), never from the card or its variant |
+| Enemy supports | None |
+| Player boost | Every player card's DMG and HP x281, the same on every floor |
+| Player variants and Awakening | Base variant, no Awakening. Then a second pass of the finalists at Shiny Galactic and Awakening Lv 5, to show the best case |
+| Difficulty Cut | Maxed (the floor table as written) |
+| Between floors | Each floor is a fresh battle at full HP with no carried-over effects |
+| A new card coming in | The alternation simply continues; the new card does not get a free action |
+| Timing words | Order: on entry, then start of turn, then the action, then end of turn, then end of round |
+| Stacking | Damage reductions multiply (two 50% reductions take 75% off); buffs from different sources add |
+| "X% damage" with no ATK | X% of the card's current DMG |
+| Awakening | Every percentage scales, as in Part 7 |
 
 ### What "properly simulate" means
 
@@ -185,7 +203,7 @@ These words appear in ability texts. Implement each one once and reuse it. Where
 
 ## Part 5 — Still to be provided (ask the user)
 
-These are not known yet. Build them as configuration, mark them clearly, and ask the user for each one before relying on results:
+These are not known yet. Build them as configuration and mark them clearly. Use the defaults in Part 1 ("First run") until the user answers, and ask the user about each one:
 
 1. **More enemy stat measurements** (optional, to tighten the model in Part 3): a recheck of floors 1,250 and 3,803, the exact floor between 1,001 and 1,100 where DMG switches from 0.6 to 0.5 of HP, and any floors past 5,001.
 2. **Which cards appear as enemies in the Prestige Tower**, and how enemy teams are picked per floor (random? fixed? does a team size or ordering change?).
@@ -217,11 +235,24 @@ The search space per team is: 4 battle cards (order matters), 4 supports (one pe
 
 Look especially for **cheese**: teams that win because of a rule interaction rather than big stats. Examples: permanent stuns or silences, immunity loops, revive chains, reflected damage that scales with enemy stats, abilities that ignore enemy scaling ("not a boss's", fixed HP percentages), and anything that keeps working as enemy HP grows.
 
-### Report
-- The top teams, with highest floor cleared, win rate, and why they work (the key interaction).
-- Surprising teams: low rarity or low stats, but high floors.
-- For each team, one full battle log at its hardest cleared floor, so the user can try it in game.
-- The list of assumptions each result depends on.
+**Finding the highest floor:** enemies only get stronger as the floor rises, so binary-search the floor for each team. Run at least 200 battles per floor checked, and call a floor cleared at a win rate of 90% or more.
+
+### Results files
+Write everything into a `results/` folder, and overwrite it on every full run:
+
+1. **`results/RESULTS.md`**, the readable report, with these sections:
+   - **Run summary:** the date, how many battles and teams were simulated, the random seed, and the config used (boost, variants, Awakening, Difficulty Cut).
+   - **Top 25 teams:** a table with rank, slot 1–4 battle cards, slot 1–4 supports, highest floor cleared (90%+ win rate), win rate there, the highest floor won at least once, and average turns per win. Show Base / no Awakening and the best-case pass (Shiny Galactic, Awakening Lv 5) in separate tables.
+   - **Why they work:** for each of the top 10, two or three sentences on the key interaction (which abilities carry the team, and what goes wrong without each card).
+   - **Cheese and surprises:** teams that reach high floors with low stats or common cards, and any interaction that keeps working no matter how strong enemies get. Flag any team whose floor looks unlimited (it may be a bug in the engine or a real exploit; say which you think it is).
+   - **Best single cards** and **best supports:** the top 20 of each, by how much they raise a team's highest floor.
+   - **Best pairs:** the top 20 synergies.
+   - **Assumptions:** every default from "First run" that the results depend on, and which top teams would change if it turned out wrong.
+2. **`results/teams.csv`**: every team that finished the full-team stage, one row each, with columns `rank, card1, card2, card3, card4, support1, support2, support3, support4, variant, awakening, highest_floor_90, win_rate_at_that_floor, highest_floor_won, avg_turns, key_interaction`.
+3. **`results/cards.csv`**: every battle card and support, with its single-card score and the best team it appears in.
+4. **`results/logs/`**: for each top-10 team, one full turn-by-turn battle log at its highest cleared floor, as a text file named after the rank and cards. The user can follow this in game to check the simulation.
+
+Also print a short summary to the console when a run finishes: the top 5 teams and their floors.
 
 ---
 
