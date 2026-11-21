@@ -26,6 +26,19 @@ const trim = (n) => String(Math.round(n * 100) / 100);
 const plain = (t) => String(t || '').replace(/\*\*/g, '').replace(/\[\[([^\]|]+\|)?([^\]]+)\]\]/g, '$2');
 const choose4 = (n) => (n * (n - 1) * (n - 2) * (n - 3)) / 24;
 
+// Card images: copied into exports/card-images/<id>.<ext> (zipped afterwards for attaching).
+const imgDir = path.join(root, 'exports', 'card-images');
+fs.rmSync(imgDir, { recursive: true, force: true });
+fs.mkdirSync(imgDir, { recursive: true });
+function cardImage(c) {
+  const dir = path.join(root, 'images', c.type === 'support' ? 'supports' : 'cards');
+  const file = fs.existsSync(dir) ? fs.readdirSync(dir).find((f) => path.parse(f).name === c.id) : null;
+  if (!file) return null;
+  const out = c.id + path.extname(file).toLowerCase();
+  fs.copyFileSync(path.join(dir, file), path.join(imgDir, out));
+  return `card-images/${out}`;
+}
+
 // Every percentage in an ability, with a short piece of the sentence around it.
 function percentages(text) {
   const t = plain(text).replace(/\n+/g, ' ').replace(/\s+-\s+/g, ' · ').replace(/\s+/g, ' ');
@@ -54,6 +67,7 @@ const json = cards.map((c) => {
     name: c.name,
     type: isBattle ? 'battle' : 'support',
     rarity: typeof c.rarity === 'number' ? c.rarity : null,
+    image: cardImage(c),
     origin: originName(c),
     source: name(Array.isArray(c.source) ? c.source[0] : c.source),
     baseDmg: isBattle ? stat(c.dmg) : null,
@@ -123,14 +137,23 @@ let md = brief.trimEnd() + '\n\n';
 md += `### Index\n\n- [Battle cards (${battle.length})](#battle-cards)\n- [Support cards (${support.length})](#support-cards)\n\n`;
 md += `## Battle cards\n\n` + battle.map((c) => cardMd(c, byId.get(c.id))).join('\n');
 md += `\n## Support cards\n\n` + support.map((c) => cardMd(c, byId.get(c.id))).join('\n');
+const appPart = fs.readFileSync(path.join(root, 'src/tools/sim-pack/results-app.md'), 'utf8');
+md += '\n' + appPart;
+const appPrompt =
+  "Add the results app below to the simulator. I've attached `card-images.zip` (card images named by card id) and an updated `prestige-sim-cards.json` with an `image` field on every card. Use the new JSON from now on.\n\n" +
+  appPart.replace(/^## Part 8 — /, '## ').replace(/\(Part 2\)/g, '(Part 2 of the pack)');
 
 const outDir = path.join(root, 'exports');
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, 'PRESTIGE-SIM-PACK.md'), md);
+fs.writeFileSync(path.join(outDir, 'RESULTS-APP-PROMPT.md'), appPrompt);
 fs.writeFileSync(path.join(outDir, 'prestige-sim-cards.json'), JSON.stringify({ generated: new Date().toISOString(), variants: variants.map((v) => ({ name: v.name, rarityMult: v.rarityMult, statMult: v.statMult, combo: v.combo || null })), traits: traits.map((t) => ({ name: t.name, meaning: t.summary })), cards: json }, null, 1));
 
 const pctCount = json.reduce((s, j) => s + j.percentages.length, 0);
 const unknownStats = battle.filter((c) => byId.get(c.id).baseDmg == null).map((c) => c.name);
 console.log(`wrote exports/PRESTIGE-SIM-PACK.md (${(md.length / 1024).toFixed(0)} KB) and exports/prestige-sim-cards.json`);
+const noImage = cards.filter((c) => !byId.get(c.id).image).map((c) => c.name);
+const rarityKnown = cards.filter((c) => byId.get(c.id).rarity != null).length;
+console.log(`images: ${cards.length - noImage.length}/${cards.length}${noImage.length ? ` (missing: ${noImage.join(', ')})` : ''}; rarity known: ${rarityKnown}/${cards.length}`);
 console.log(`${cards.length} cards, ${pctCount} ability percentages, ${battle.filter((c) => c.statsEstimated).length} with estimated stats`);
 if (unknownStats.length) console.log(`battle cards without base stats: ${unknownStats.join(', ')}`);

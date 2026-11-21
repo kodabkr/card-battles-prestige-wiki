@@ -2,3 +2,5 @@ node_modules/
 dist/
 .cache/
 .claude/
+exports/card-images/
+exports/card-images.zip

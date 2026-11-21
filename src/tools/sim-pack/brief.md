@@ -16,6 +16,7 @@ Build it in this order. Show the user your progress after step 4 (the ability te
 4. **Test each ability.** Give every card at least one unit test that checks its main numbers (for example, "Hawkeye Sniper's 3rd shot deals 300% of her ATK"). Whenever an ability is ambiguous, list the question for the user instead of guessing. Collect all of these in an `ASSUMPTIONS.md` file.
 5. **Add the Prestige Tower model:** enemy stats per floor from the model in Part 3, and which cards can appear there (Part 5).
 6. **Search for strong teams** using the strategy in Part 6, and write the results files it describes (`results/RESULTS.md` and the rest).
+7. **Build the results app** in Part 8 (at the end of this file): pictures of the top teams, and a rarity filter that limits which cards the search may use.
 
 ### First run: start now, with these defaults
 Part 5 lists what is still unknown. **Don't wait for those answers before the first run.** Use the defaults below, put each one in a config file, list them in `ASSUMPTIONS.md` and in the results, and re-run when the user answers.
@@ -249,8 +250,9 @@ Write everything into a `results/` folder, and overwrite it on every full run:
    - **Best pairs:** the top 20 synergies.
    - **Assumptions:** every default from "First run" that the results depend on, and which top teams would change if it turned out wrong.
 2. **`results/teams.csv`**: every team that finished the full-team stage, one row each, with columns `rank, card1, card2, card3, card4, support1, support2, support3, support4, variant, awakening, highest_floor_90, win_rate_at_that_floor, highest_floor_won, avg_turns, key_interaction`.
-3. **`results/cards.csv`**: every battle card and support, with its single-card score and the best team it appears in.
-4. **`results/logs/`**: for each top-10 team, one full turn-by-turn battle log at its highest cleared floor, as a text file named after the rank and cards. The user can follow this in game to check the simulation.
+3. **`results/teams.json`**: everything in `teams.csv`, plus each team's card ids, variant, Awakening, rarest-card rarity and the filter it was searched with. The results app (Part 8) reads this.
+4. **`results/cards.csv`**: every battle card and support, with its single-card score and the best team it appears in.
+5. **`results/logs/`**: for each top-10 team, one full turn-by-turn battle log at its highest cleared floor, as a text file named after the rank and cards. The user can follow this in game to check the simulation.
 
 Also print a short summary to the console when a run finishes: the top 5 teams and their floors.
 
